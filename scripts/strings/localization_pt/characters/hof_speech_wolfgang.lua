@@ -119,6 +119,9 @@ WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Wolfgang se sente fraco novamente!"
 WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "As árvores dão muito mais madeira ao Wolfgang!"
 WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "As árvores voltaram ao normal."
 
+WOLFGANG.ANNOUNCE_KYNO_THORNSBUFF_START = "Wolfgang está espinhoso agora!"
+WOLFGANG.ANNOUNCE_KYNO_THORNSBUFF_END = "Wolfgang não está mais espinhoso."
+
 WOLFGANG.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou! Wolfgang se sente forte novamente!"
 
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é o correto."
@@ -1153,6 +1156,7 @@ WOLFGANG.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "É só garrafa."
 
 WOLFGANG.DESCRIBE.KYNO_OCEANTRAP = "Peixinho não tem chance."
 
+WOLFGANG.DESCRIBE.OCEANFISH_GLASS_CARP = "Peixe de vidro pequenino é muito brilhante!"
 WOLFGANG.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Peixe noturno pequeno. Wolfgang poderia comer muitos!"
 WOLFGANG.DESCRIBE.OCEANFISH_PUFFERFISH = "Peixinho pequeno, mas cheio de espinhos! Wolfgang precisa ter cuidado!"
 WOLFGANG.DESCRIBE.OCEANFISH_STURGEON = "Peixe forte! Wolfgang respeita peixe forte!"
@@ -1342,7 +1346,6 @@ WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang odiava esses lá no circo ant
 WOLFGANG.DESCRIBE.WX78MODULE_GOURMAND = "É lanche de robô, sim?"
 WOLFGANG.DESCRIBE.WX78MODULE_COOKER = "É lanche de robô, sim?"
 WOLFGANG.DESCRIBE.WX78MODULE_DRYER = "É lanche de robô, sim?"
-WOLFGANG.DESCRIBE.WX78MODULE_DRYER2 = "É lanche de robô, sim?"
 WOLFGANG.DESCRIBE.WX78MODULE_BREWER = "É lanche de robô, sim?"
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Algo de bom para o Wolfgang?",
-}
-
-WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

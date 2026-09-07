@@ -124,6 +124,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Tăng độ no tối đa 
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Tăng tinh thần tối đa thêm 30% trong một khoảng thời gian."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Tăng máu tối đa thêm 30% trong một khoảng thời gian.\nTạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Tăng máu, độ no và tinh thần tối đa thêm 15% trong một khoảng thời gian.\n\nTạm thời giảm nhiệt độ."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_BRAMBLE = "Bao phủ người sống sót bằng lớp gai; kẻ tấn công sẽ chịu sát thương trong phạm vi nhỏ khi tấn công người sống sót.\n\nTạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Tăng năng suất cây trồng trong một khoảng thời gian nhất định.\n\Tạm thời giảm nhiệt độ."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Trấn an các sinh vật xung quanh người sống sót."
@@ -138,6 +139,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Làm giảm may mắn trong
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gây ra một tác dụng phụ ngẫu nhiên.\n\n\"CÙNG ĐI ĐÁNH BẠC NÀO!\" - Có lẽ là ai đó."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Khiến người sống sót miễn nhiễm với mọi nguồn sát thương nhận vào trong 30 giây, nhưng gây ra Bệnh Suy Nhược Chữa Lành Bằng Thức Ăn.\n\n\"Một loại quả được chạm đến bởi vĩnh hằng, vị ngọt rực rỡ của nó che giấu một sức mạnh mà không phàm nhân nào đáng được nắm giữ. Trong khoảnh khắc, thân xác trở nên bất khuất, và ngay cả cái chết cũng buộc phải ngoảnh mặt khi một nguồn sức mạnh rực rỡ được ban tặng.\" - Tác giả vô danh."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "Tăng hiệu suất chặt cây trong một khoảng thời gian nhất định. Cây sẽ cho nhiều gỗ hơn khi bị chặt hạ."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_THORNS = "Bao phủ người sống sót bằng lớp gai, kẻ tấn công sẽ chịu sát thương trong phạm vi nhỏ khi tấn công người sống sót."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Có thể thêm vào món ăn trong Nồi Hầm bằng Trạm Gia Vị Di Động.\n\nĂn món được tẩm Bột Bảo Quản sẽ khôi phục hoàn toàn độ tươi của nó.\n\nGiảm tốc độ hư hỏng của vật phẩm trong túi đồ đi 25%.\n\nTăng thời gian tồn tại của các hiệu ứng phụ khác thêm 25%.\n\nThời lượng: 4 phút."
@@ -200,8 +202,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "Một vật chứa có thể m
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "Một vật chứa cầm tay có 6 ngăn, chỉ dùng để đựng tiền xu và các loại tiền tệ khác.\n\nCó thể nâng cấp thêm bằng Elastispacer để tăng cường khả năng chứa đồ."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_GOURMAND = "Cắm vào bo mạch Beta của WX-78. Công thức chế tạo được quét từ bất kỳ Pet hoặc Trưởng Lão Heo nào.\n\nYêu cầu 2 socket và tăng các chỉ số tích cực, đồng thời giảm các chỉ số tiêu cực nhận được từ Thực phẩm chế biến sẵn thêm 5 điểm.\n\nThử nghiệm Mạch điện II nâng cấp mạch này, tăng các chỉ số tích cực và giảm các chỉ số tiêu cực thêm 5 điểm, đồng thời cho phép WX-78 ăn thức ăn nhanh hơn."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_COOKER = "Cắm vào bo mạch Beta của WX-78. Công thức chế tạo được quét từ Ấu trùng hoặc Những ấu trùng siêu đáng yêu.\n\nYêu cầu 1 socket và đặt một hộp nấu ăn vào ô hành trang ngoài cùng bên phải của WX-78, tự động nấu thức ăn trong ô đầu tiên sau mỗi 5 giây.\n\nThử nghiệm Mạch điện II nâng cấp mạch này, cho phép đặt bất kỳ vật phẩm dễ cháy nào vào bên trong. Các vật phẩm liên quan đến gỗ sẽ biến thành Than, trong khi các vật phẩm khác sẽ biến thành Tro tàn."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "Cắm vào bo mạch Beta của WX-78. Công thức chế tạo được quét từ Cookie Cutter.\n\nYêu cầu 3 socket và đặt một hộp sấy 1 ô vào ô hành trang ngoài cùng bên phải của WX-78.\n\nThử nghiệm Mạch điện II nâng cấp mạch này, cung cấp cho WX-78 25% khả năng chống nước."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER2 = "Cắm vào bo mạch Beta của WX-78. Công thức chế tạo được quét từ Chó Mặn.\n\nYêu cầu 2 socket và đặt một hộp sấy 2 ô vào ô hành trang ngoài cùng bên phải của WX-78.\n\nThử nghiệm Mạch điện II nâng cấp mạch này, cung cấp cho WX-78 50% khả năng chống nước và cho phép sản xuất Tinh thể muối."
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "Cắm vào bảng mạch beta của WX-78. Công thức chế tạo được quét từ Kẻ Cắt Bánh hoặc Chó Mặn.\n\nCần 2 ô cắm và đặt một vật chứa sấy khô vào ô hành trang ngoài cùng bên phải của WX-78.\n\nTinh Chỉnh Mạch Beta II cường hóa mạch này, cung cấp cho WX-78 50% khả năng chống nước và cho phép sản xuất Tinh Thể Muối."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_BREWER = "Cắm vào bo mạch Gamma của WX-78. Công thức chế tạo được quét từ Sóc Piko hoặc Sóc Piko Cam.\n\nYêu cầu 4 socket và cho phép WX-78 ủ Artisan Goods từ Wooden Keg và Preserves Jar bên trong cơ thể, với chi phí bằng 50% giá trị sự đói của thức uống được tạo ra.\n\nThử nghiệm Mạch Gamma II nâng cấp mạch này, giảm 25% thời gian ủ và lượng sự đói tiêu hao khi ủ."
 
 -- Creatures.

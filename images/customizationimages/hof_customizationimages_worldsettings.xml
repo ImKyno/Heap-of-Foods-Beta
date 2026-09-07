@@ -1,1 +1,59 @@
-<Atlas><Texture filename="hof_customizationimages_worldsettings.tex" /><Elements><Element name="pikos_setting.tex" u1="0.000244140625" u2="0.062255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="taroroots_setting.tex" u1="0.062744140625" u2="0.124755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="hofbirthday.tex" u1="0.125244140625" u2="0.187255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="islandcrates_setting.tex" u1="0.187744140625" u2="0.249755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="limpetrocks_setting.tex" u1="0.250244140625" u2="0.312255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="aloes_setting.tex" u1="0.312744140625" u2="0.374755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="fennels_setting.tex" u1="0.375244140625" u2="0.437255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="wildwheats_setting.tex" u1="0.437744140625" u2="0.499755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="lotusplants_setting.tex" u1="0.500244140625" u2="0.562255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="kingfishers_setting.tex" u1="0.562744140625" u2="0.624755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="brainrocks_setting.tex" u1="0.625244140625" u2="0.687255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="jellyfishes_setting.tex" u1="0.687744140625" u2="0.749755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="seacucumbers_setting.tex" u1="0.750244140625" u2="0.812255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="asparaguses_setting.tex" u1="0.812744140625" u2="0.874755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="oceancrates_setting.tex" u1="0.875244140625" u2="0.937255859375" v1="0.87548828125" v2="0.99951171875" /><Element name="pebblecrabs_setting.tex" u1="0.937744140625" u2="0.999755859375" v1="0.87548828125" v2="0.99951171875" /><Element name="sap2sugartrees_setting.tex" u1="0.000244140625" u2="0.062255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="sugarflies_setting.tex" u1="0.062744140625" u2="0.124755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="sugartrees_setting.tex" u1="0.125244140625" u2="0.187255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="rockflippables_setting.tex" u1="0.187744140625" u2="0.249755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="hermitwobsters_setting.tex" u1="0.250244140625" u2="0.312255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="fishermerms_setting.tex" u1="0.312744140625" u2="0.374755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="jellyfishes2_setting.tex" u1="0.375244140625" u2="0.437255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="eldermandrakes_setting.tex" u1="0.437744140625" u2="0.499755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="oceanwrecks_setting.tex" u1="0.500244140625" u2="0.562255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="parznips_setting.tex" u1="0.562744140625" u2="0.624755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="mushstumps_setting.tex" u1="0.625244140625" u2="0.687255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="sapsugartrees_setting.tex" u1="0.687744140625" u2="0.749755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="chickens_setting.tex" u1="0.750244140625" u2="0.812255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="spotbushes_setting.tex" u1="0.812744140625" u2="0.874755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="turnips_setting.tex" u1="0.875244140625" u2="0.937255859375" v1="0.75048828125" v2="0.87451171875" /><Element name="puffermonsters_setting.tex" u1="0.937744140625" u2="0.999755859375" v1="0.75048828125" v2="0.87451171875" /><Element name="kokonuttrees_setting.tex" u1="0.000244140625" u2="0.062255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="cavetubertrees_setting.tex" u1="0.062744140625" u2="0.124755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="pineapplebushes_setting.tex" u1="0.125244140625" u2="0.187255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="saltponds_setting.tex" u1="0.187744140625" u2="0.249755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="pikosorange_setting.tex" u1="0.250244140625" u2="0.312255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="sandhills_setting.tex" u1="0.312744140625" u2="0.374755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="coffeebushes_setting.tex" u1="0.375244140625" u2="0.437255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="giantparznips_setting.tex" u1="0.437744140625" u2="0.499755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="oceanhunts_setting.tex" u1="0.500244140625" u2="0.562255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="ruinedsugartrees_setting.tex" u1="0.562744140625" u2="0.624755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="sugarflowers_setting.tex" u1="0.625244140625" u2="0.687255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="sweetpotatoes_setting.tex" u1="0.687744140625" u2="0.749755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="swordfishes_setting.tex" u1="0.750244140625" u2="0.812255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="teatrees_setting.tex" u1="0.812744140625" u2="0.874755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="truffles_setting.tex" u1="0.875244140625" u2="0.937255859375" v1="0.62548828125" v2="0.74951171875" /><Element name="radishes_setting.tex" u1="0.937744140625" u2="0.999755859375" v1="0.62548828125" v2="0.74951171875" /><Element name="waterycresses_setting.tex" u1="0.000244140625" u2="0.062255859375" v1="0.50048828125" v2="0.62451171875" /><Element name="weedsea_setting.tex" u1="0.062744140625" u2="0.124755859375" v1="0.50048828125" v2="0.62451171875" /><Element name="dogfishes_setting.tex" u1="0.125244140625" u2="0.187255859375" v1="0.50048828125" v2="0.62451171875" /><Element name="oceanhuntalts_setting.tex" u1="0.187744140625" u2="0.247802734375" v1="0.50244140625" v2="0.62451171875" /></Elements></Atlas>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Atlas>
+	<Texture filename="hof_customizationimages_worldsettings.tex" />
+	<Elements>
+		<Element name="aloes_setting.tex" u1="0.001" u2="0.124" v2="0.999" v1="0.876" variant="" />
+		<Element name="asparaguses_setting.tex" u1="0.126" u2="0.249" v2="0.999" v1="0.876" variant="" />
+		<Element name="brainrocks_setting.tex" u1="0.001" u2="0.124" v2="0.874" v1="0.751" variant="" />
+		<Element name="cavetubertrees_setting.tex" u1="0.126" u2="0.249" v2="0.874" v1="0.751" variant="" />
+		<Element name="chickens_setting.tex" u1="0.251" u2="0.374" v2="0.999" v1="0.876" variant="" />
+		<Element name="coffeebushes_setting.tex" u1="0.376" u2="0.499" v2="0.999" v1="0.876" variant="" />
+		<Element name="dogfishes_setting.tex" u1="0.251" u2="0.374" v2="0.874" v1="0.751" variant="" />
+		<Element name="eldermandrakes_setting.tex" u1="0.376" u2="0.499" v2="0.874" v1="0.751" variant="" />
+		<Element name="fennels_setting.tex" u1="0.001" u2="0.124" v2="0.749" v1="0.626" variant="" />
+		<Element name="fishermerms_setting.tex" u1="0.126" u2="0.249" v2="0.749" v1="0.626" variant="" />
+		<Element name="giantparznips_setting.tex" u1="0.251" u2="0.374" v2="0.749" v1="0.626" variant="" />
+		<Element name="hermitwobsters_setting.tex" u1="0.376" u2="0.499" v2="0.749" v1="0.626" variant="" />
+		<Element name="hofbirthday.tex" u1="0.001" u2="0.124" v2="0.624" v1="0.501" variant="" />
+		<Element name="islandcrates_setting.tex" u1="0.126" u2="0.249" v2="0.624" v1="0.501" variant="" />
+		<Element name="jellyfishes_setting.tex" u1="0.251" u2="0.374" v2="0.624" v1="0.501" variant="" />
+		<Element name="jellyfishes2_setting.tex" u1="0.376" u2="0.499" v2="0.624" v1="0.501" variant="" />
+		<Element name="kingfishers_setting.tex" u1="0.501" u2="0.624" v2="0.999" v1="0.876" variant="" />
+		<Element name="kokonuttrees_setting.tex" u1="0.626" u2="0.749" v2="0.999" v1="0.876" variant="" />
+		<Element name="limpetrocks_setting.tex" u1="0.751" u2="0.874" v2="0.999" v1="0.876" variant="" />
+		<Element name="lotusplants_setting.tex" u1="0.876" u2="0.999" v2="0.999" v1="0.876" variant="" />
+		<Element name="mushstumps_setting.tex" u1="0.501" u2="0.624" v2="0.874" v1="0.751" variant="" />
+		<Element name="nightbirds_setting.tex" u1="0.626" u2="0.749" v2="0.874" v1="0.751" variant="" />
+		<Element name="oceancrates_setting.tex" u1="0.751" u2="0.874" v2="0.874" v1="0.751" variant="" />
+		<Element name="oceanhuntalts_setting.tex" u1="0.876" u2="0.99509375" v2="0.874" v1="0.752953125" variant="" />
+		<Element name="oceanhunts_setting.tex" u1="0.876" u2="0.999" v2="0.750953125" v1="0.627953125" variant="" />
+		<Element name="oceanwrecks_setting.tex" u1="0.501" u2="0.624" v2="0.749" v1="0.626" variant="" />
+		<Element name="parznips_setting.tex" u1="0.626" u2="0.749" v2="0.749" v1="0.626" variant="" />
+		<Element name="pebblecrabs_setting.tex" u1="0.751" u2="0.874" v2="0.749" v1="0.626" variant="" />
+		<Element name="pikos_setting.tex" u1="0.876" u2="0.999" v2="0.625953125" v1="0.502953125" variant="" />
+		<Element name="pikosorange_setting.tex" u1="0.501" u2="0.624" v2="0.624" v1="0.501" variant="" />
+		<Element name="pineapplebushes_setting.tex" u1="0.626" u2="0.749" v2="0.624" v1="0.501" variant="" />
+		<Element name="puffermonsters_setting.tex" u1="0.751" u2="0.874" v2="0.624" v1="0.501" variant="" />
+		<Element name="radishes_setting.tex" u1="0.876" u2="0.999" v2="0.500953125" v1="0.377953125" variant="" />
+		<Element name="rockflippables_setting.tex" u1="0.001" u2="0.124" v2="0.499" v1="0.376" variant="" />
+		<Element name="ruinedsugartrees_setting.tex" u1="0.126" u2="0.249" v2="0.499" v1="0.376" variant="" />
+		<Element name="saltponds_setting.tex" u1="0.251" u2="0.374" v2="0.499" v1="0.376" variant="" />
+		<Element name="sandhills_setting.tex" u1="0.376" u2="0.499" v2="0.499" v1="0.376" variant="" />
+		<Element name="sap2sugartrees_setting.tex" u1="0.501" u2="0.624" v2="0.499" v1="0.376" variant="" />
+		<Element name="sapsugartrees_setting.tex" u1="0.626" u2="0.749" v2="0.499" v1="0.376" variant="" />
+		<Element name="seacucumbers_setting.tex" u1="0.751" u2="0.874" v2="0.499" v1="0.376" variant="" />
+		<Element name="spotbushes_setting.tex" u1="0.876" u2="0.999" v2="0.375953125" v1="0.252953125" variant="" />
+		<Element name="sugarflies_setting.tex" u1="0.001" u2="0.124" v2="0.374" v1="0.251" variant="" />
+		<Element name="sugarflowers_setting.tex" u1="0.126" u2="0.249" v2="0.374" v1="0.251" variant="" />
+		<Element name="sugartrees_setting.tex" u1="0.251" u2="0.374" v2="0.374" v1="0.251" variant="" />
+		<Element name="sweetpotatoes_setting.tex" u1="0.376" u2="0.499" v2="0.374" v1="0.251" variant="" />
+		<Element name="swordfishes_setting.tex" u1="0.501" u2="0.624" v2="0.374" v1="0.251" variant="" />
+		<Element name="taroroots_setting.tex" u1="0.626" u2="0.749" v2="0.374" v1="0.251" variant="" />
+		<Element name="teatrees_setting.tex" u1="0.751" u2="0.874" v2="0.374" v1="0.251" variant="" />
+		<Element name="truffles_setting.tex" u1="0.876" u2="0.999" v2="0.250953125" v1="0.127953125" variant="" />
+		<Element name="turnips_setting.tex" u1="0.001" u2="0.124" v2="0.249" v1="0.126" variant="" />
+		<Element name="waterycresses_setting.tex" u1="0.126" u2="0.249" v2="0.249" v1="0.126" variant="" />
+		<Element name="weedsea_setting.tex" u1="0.251" u2="0.374" v2="0.249" v1="0.126" variant="" />
+		<Element name="wildwheats_setting.tex" u1="0.376" u2="0.499" v2="0.249" v1="0.126" variant="" />
+	</Elements>
+</Atlas>

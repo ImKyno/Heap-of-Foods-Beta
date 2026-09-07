@@ -317,6 +317,12 @@ local fishroes =
 		goldvalue           = 3,
 		stacksize           = TUNING.STACK_SIZE_MEDITEM,
 	},
+
+	{
+		name                = "oceanfish_glass_carp",
+		goldvalue           = 2,
+		stacksize           = TUNING.STACK_SIZE_MEDITEM,
+	},
 }
 
 local prefabs = {}

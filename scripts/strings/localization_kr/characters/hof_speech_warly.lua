@@ -119,6 +119,9 @@ WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The enchantment has vanished!"
 WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Ah, the forest is being particularly generous today."
 WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "And the forest's generosity has come to an end."
 
+WARLY.ANNOUNCE_KYNO_THORNSBUFF_START = "A prickly little defense."
+WARLY.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns have lost their bite."
+
 WARLY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ahh, what a relief. I feel like myself again."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Wrong, wrong..."
@@ -1153,6 +1156,7 @@ WARLY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "I wonder what vintage used to be in t
 
 WARLY.DESCRIBE.KYNO_OCEANTRAP = "I can trick some delicious sea creatures into this!"
 
+WARLY.DESCRIBE.OCEANFISH_GLASS_CARP = "Ah, a translucent little delicacy!"
 WARLY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ah, a fish that reveals itself under moonlight!"
 WARLY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, le poisson fugu... very dangerous if not prepared right."
 WARLY.DESCRIBE.OCEANFISH_STURGEON = "Caviar dreams begin here, mon ami!"
@@ -1342,7 +1346,6 @@ WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "That's one juicy tomato wasted..."
 WARLY.DESCRIBE.WX78MODULE_GOURMAND = "They give our metal friend a little extra zest, non?"
 WARLY.DESCRIBE.WX78MODULE_COOKER = "They give our metal friend a little extra zest, non?"
 WARLY.DESCRIBE.WX78MODULE_DRYER = "They give our metal friend a little extra zest, non?"
-WARLY.DESCRIBE.WX78MODULE_DRYER2 = "They give our metal friend a little extra zest, non?"
 WARLY.DESCRIBE.WX78MODULE_BREWER = "They give our metal friend a little extra zest, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "What did our metal friend leave here?",
-}
-
-WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

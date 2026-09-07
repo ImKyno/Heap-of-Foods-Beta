@@ -549,6 +549,24 @@ FISHREGISTRY_FISH_DEFS.oceanfish_medium_9_inv =
 	worlds           = ALL_WORLDS,
 }
 
+FISHREGISTRY_FISH_DEFS.oceanfish_glass_carp_inv =
+{
+	name             = "OCEANFISH_GLASS_CARP_INV",
+	
+	bank             = "kyno_oceanfish_glass_carp",
+	build            = "kyno_oceanfish_glass_carp",
+	anim             = "flop_pst",
+	
+	scale            = 0.25,
+	xpos             = 0,
+	ypos             = 37,
+	
+	phases           = { "night" },
+	moonphases       = { "full", "glassed" },
+	seasons          = ALL_SEASONS,
+	worlds           = { "forest" },
+}
+
 FISHREGISTRY_FISH_DEFS.oceanfish_midnight_carp_inv =
 {
 	name             = "OCEANFISH_MIDNIGHT_CARP_INV",
@@ -747,6 +765,22 @@ FISHREGISTRY_FISH_DEFS.kyno_swordfish_blue =
 	worlds           = { "cave" },
 }
 
+FISHREGISTRY_FISH_DEFS.kyno_pebblecrab =
+{
+	name             = "KYNO_PEBBLECRAB",
+
+	bank             = "quagmire_pebble_crab",
+	build            = "quagmire_pebble_crab",
+	anim             = "idle",
+
+	ypos             = 37,
+
+	phases           = ALL_PHASES,
+	moonphases       = ALL_MOONPHASES,
+	seasons          = { "autumn", "spring", "summer" },
+	worlds           = ALL_WORLDS,
+}
+
 for fish, data in pairs(FISHREGISTRY_FISH_DEFS) do
 	if data.name == nil then
 		data.name = string.upper(fish)
@@ -787,6 +821,7 @@ local FISH_SORT_ORDER =
 	"oceanfish_medium_7_inv",
 	"oceanfish_medium_8_inv",
 	"oceanfish_medium_9_inv",
+	"oceanfish_glass_carp_inv",
 	"oceanfish_midnight_carp_inv",
 	"oceanfish_sturgeon_inv",
 	"kyno_tropicalfish",
@@ -798,6 +833,7 @@ local FISH_SORT_ORDER =
 	"kyno_jellyfish",
 	"kyno_jellyfish_rainbow",
 	"kyno_swordfish_blue",
+	"kyno_pebblecrab",
 }
 
 global("FISHREGISTRY_ROE_DEFS")
@@ -1069,6 +1105,17 @@ FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_medium_9 =
 	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
 }
 
+FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_glass_carp =
+{
+	name        = "KYNO_ROE_OCEANFISH_GLASS_CARP",
+	
+	atlas       = FISHREGISTRY_INVENTORY_ATLAS,
+	image       = "kyno_roe_oceanfish_glass_carp",
+	
+	roe_time    = TUNING.OCEANFISH_MEDIUM_ROETIME,
+	baby_time   = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+}
+
 FISHREGISTRY_ROE_DEFS.kyno_roe_oceanfish_midnight_carp =
 {
 	name        = "KYNO_ROE_OCEANFISH_MIDNIGHT_CARP",
@@ -1196,6 +1243,20 @@ FISHREGISTRY_ROE_DEFS.kyno_roe_swordfish_blue =
 	baby_time   = TUNING.SWORDFISH_BLUE_BABYTIME,
 }
 
+-- Barnacles aren't roes, yeah we can change the system to include new types of products I guess...
+FISHREGISTRY_ROE_DEFS.barnacle =
+{
+	name        = "BARNACLE",
+	
+	atlas       = "images/inventoryimages1.xml",
+	image       = "barnacle",
+	
+	roe_time    = TUNING.PEBBLECRAB_ROETIME,
+	baby_time   = TUNING.PEBBLECRAB_BABYTIME,
+
+	is_product  = true, -- Key for overriding default roe strings in the widget.
+}
+
 for roe, data in pairs(FISHREGISTRY_ROE_DEFS) do
 	if data.name == nil then
 		data.name = string.upper(roe)
@@ -1236,6 +1297,7 @@ local ROE_SORT_ORDER =
 	"kyno_roe_oceanfish_medium_7",
 	"kyno_roe_oceanfish_medium_8",
 	"kyno_roe_oceanfish_medium_9",
+	"kyno_roe_oceanfish_glass_carp",
 	"kyno_roe_oceanfish_midnight_carp",
 	"kyno_roe_oceanfish_sturgeon",
 	"kyno_roe_tropicalfish",
@@ -1247,6 +1309,9 @@ local ROE_SORT_ORDER =
 	"kyno_roe_jellyfish",
 	"kyno_roe_jellyfish_rainbow",
 	"kyno_roe_swordfish_blue",
+
+	-- Products that are not roe must be sorted by last.
+	"barnacle",
 }
 
 return 

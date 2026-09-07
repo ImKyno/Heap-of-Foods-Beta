@@ -73,11 +73,12 @@ local LOOT                         =
 	SMALL                          = { "fishmeat_small"            },
 	SMALL_COOKED                   = { "fishmeat_small_cooked"     },
 	MEDIUM                         = { "fishmeat"                  },
-	LARGE                          = { "fishmeat", "fishmeat"      },
-	HUGE                           = { "fishmeat"                  },
+	LARGE                          = { "fishmeat"                  },
+	HUGE                           = { "fishmeat", "fishmeat"      },
 	ICE                            = { "fishmeat", "ice", "ice"    },
 	PLANTMEAT                      = { "plantmeat"                 },
 	PUFFERFISH                     = { "fishmeat_small", "stinger" },
+	GLASS_CARP                     = { "fishmeat", "moonglass"     },
 }
 
 local HEAVY_LOOT                   =
@@ -86,8 +87,10 @@ local HEAVY_LOOT                   =
 	SMALL_COOKED                   = { "fishmeat_cooked"                          },
 	MEDIUM                         = { "fishmeat", "fishmeat_small"               },
 	LARGE                          = { "fishmeat", "fishmeat", "fishmeat_small",  },
+	HUGE                           = { "fishmeat", "fishmeat", "fishmeat",        },
 	ICE                            = { "fishmeat", "fishmeat_small", "ice", "ice" },
 	PUFFERFISH                     = { "fishmeat", "stinger", "stinger"           },
+	GLASS_CARP                     = { "fishmeat", "fishmeat_small", "moonglass"  },
 }
 
 local PERISH                       =
@@ -114,11 +117,12 @@ local COOKER_INGREDIENT_SMALL      = { meat = 0.5, fish = 0.5            }
 local COOKER_INGREDIENT_MEDIUM     = { meat = 1,   fish  = 1             }
 local COOKER_INGREDIENT_MEDIUM_ICE = { meat = 1,   fish  = 1, frozen = 1 }
 
-local EDIBLE_VALUES_SMALL_MEAT     = { health = TUNING.HEALING_TINY,     hunger = TUNING.CALORIES_SMALL, sanity = 0,                    foodtype = FOODTYPE.MEAT   }
-local EDIBLE_VALUES_MEDIUM_MEAT    = { health = TUNING.HEALING_MEDSMALL, hunger = TUNING.CALORIES_MED,   sanity = 0,                    foodtype = FOODTYPE.MEAT   }
-local EDIBLE_VALUES_SMALL_VEGGIE   = { health = TUNING.HEALING_SMALL,    hunger = TUNING.CALORIES_SMALL, sanity = 0,                    foodtype = FOODTYPE.VEGGIE }
-local EDIBLE_VALUES_MEDIUM_VEGGIE  = { health = TUNING.HEALING_SMALL,    hunger = TUNING.CALORIES_MED,   sanity = 0,                    foodtype = FOODTYPE.VEGGIE }
-local EDIBLE_VALUES_PLANTMEAT      = { health = 0,                       hunger = TUNING.CALORIES_SMALL, sanity = -TUNING.SANITY_SMALL, foodtype = FOODTYPE.MEAT   }
+local EDIBLE_VALUES_SMALL_MEAT     = { health = TUNING.HEALING_TINY,     hunger = TUNING.CALORIES_SMALL, sanity = 0,                    foodtype = FOODTYPE.MEAT         }
+local EDIBLE_VALUES_MEDIUM_MEAT    = { health = TUNING.HEALING_MEDSMALL, hunger = TUNING.CALORIES_MED,   sanity = 0,                    foodtype = FOODTYPE.MEAT         }
+local EDIBLE_VALUES_SMALL_VEGGIE   = { health = TUNING.HEALING_SMALL,    hunger = TUNING.CALORIES_SMALL, sanity = 0,                    foodtype = FOODTYPE.VEGGIE       }
+local EDIBLE_VALUES_MEDIUM_VEGGIE  = { health = TUNING.HEALING_SMALL,    hunger = TUNING.CALORIES_MED,   sanity = 0,                    foodtype = FOODTYPE.VEGGIE       }
+local EDIBLE_VALUES_PLANTMEAT      = { health = 0,                       hunger = TUNING.CALORIES_SMALL, sanity = -TUNING.SANITY_SMALL, foodtype = FOODTYPE.MEAT         }
+local EDIBLE_VALUES_GLASS_CARP     = { health = -25,                     hunger = TUNING.CALORIES_SMALL, sanity = 25,                   foodtype = FOODTYPE.LUNAR_SHARDS }
 
 local SET_HOOK_TIME_SHORT          = { base = 1, var = 0.5 }
 local SET_HOOK_TIME_MEDIUM         = { base = 2, var = 0.5 }
@@ -134,6 +138,17 @@ local ALL_PHASES                   = { "day", "dusk", "night"                   
 local ALL_MOONPHASES               = { "new", "quarter", "half", "threequarter", "full" }
 local ALL_SEASONS                  = { "autumn", "winter", "spring", "summer"           }
 local ALL_WORLDS                   = { "forest", "cave"                                 }
+
+local MOON_ISLAND_IDS              =
+{
+	"MoonIsland_IslandShard",
+	"MoonIsland_Beach",
+	"MoonIsland_Blank",
+	"MoonIsland_Forest",
+	"MoonIsland_Mine",
+	"MoonIsland_Baths",
+	"MoonIsland_Meadows",
+}
 
 -- New Ocean Fishes,
 local OCEANFISHES                  =
@@ -239,7 +254,7 @@ local OCEANFISHES                  =
 		breach_fx                  = BREACH_FX_MEDIUM,
 
 		loot                       = LOOT.LARGE,
-		heavy_loot                 = HEAVY_LOOT.MEAT,
+		heavy_loot                 = HEAVY_LOOT.LARGE,
 
 		cooking_product            = COOKING_PRODUCT.MEDIUM,
 		perish_product             = PERISH.MEDIUM,
@@ -303,8 +318,8 @@ local OCEANFISHES                  =
 
 		luckitem                   = { luck = TUNING.KYNO_LUCK_HUGE },
 
-		loot                       = LOOT.LARGE,
-		heavy_loot                 = HEAVY_LOOT.LARGE, -- Sturgeons are very big.
+		loot                       = LOOT.HUGE,
+		heavy_loot                 = HEAVY_LOOT.HUGE, -- Sturgeons are very big.
 
 		cooking_product            = COOKING_PRODUCT.MEDIUM,
 		perish_product             = PERISH.MEDIUM,
@@ -328,6 +343,71 @@ local OCEANFISHES                  =
 		seasons                    = { "summer", "winter" },
 		worlds                     = ALL_WORLDS,
 	},
+
+	oceanfish_glass_carp           =
+	{
+		prefab                     = "oceanfish_glass_carp",
+		bank                       = "kyno_oceanfish_glass_carp",
+		build                      = "kyno_oceanfish_glass_carp",
+
+		weight_min                 = TUNING.KYNO_OCEANFISH_GLASS_CARP_MIN_WEIGHT,
+		weight_max                 = TUNING.KYNO_OCEANFISH_GLASS_CARP_MAX_WEIGHT,
+
+		walkspeed                  = TUNING.KYNO_OCEANFISH_GLASS_CARP_WALKSPEED,
+		runspeed                   = TUNING.KYNO_OCEANFISH_GLASS_CARP_RUNSPEED,
+
+		stamina                    =
+		{
+			drain_rate             = 0.01,
+			recover_rate           = 0.10,
+			struggle_times	       = { low = 5, r_low = 1, high = 6, r_high = 6 },
+			tired_times		       = { low = 4, r_low = 1, high = 2, r_high = 0 },
+			tiredout_angles        = { has_tention = 60, low_tention = 90 },
+		},
+
+		schoolphases               = { "night" },
+		schoolmoonphases           = { "full", "glassed" },
+		schoolbiomes               = MOON_ISLAND_IDS, -- Only spawns near the Lunar Island.
+		schoolmin                  = SCHOOL_SIZE.MEDIUM.min,
+		schoolmax                  = SCHOOL_SIZE.MEDIUM.max,
+		schoolrange                = SCHOOL_AREA.SMALL,
+		schoollifetimemin          = SCHOOL_WORLD_TIME.MEDIUM.min,
+		schoollifetimemax          = SCHOOL_WORLD_TIME.MEDIUM.max,
+
+		herdwandermin              = WANDER_DIST.MEDIUM.min,
+		herdwandermax              = WANDER_DIST.MEDIUM.max,
+		herdarrivedist             = ARRIVE_DIST.MEDIUM,
+		herdwanderdelaymin         = WANDER_DELAY.SHORT.min,
+		herdwanderdelaymax         = WANDER_DELAY.SHORT.max,
+
+		set_hook_time              = SET_HOOK_TIME_SHORT,
+		breach_fx                  = BREACH_FX_MEDIUM,
+
+		loot                       = LOOT.GLASS_CARP,
+		heavy_loot                 = HEAVY_LOOT.GLASS_CARP,
+
+		cooking_product            = COOKING_PRODUCT.MEDIUM,
+		perish_product             = PERISH.MEDIUM,
+		fishtype                   = "meat",
+
+		lures                      = TUNING.OCEANFISH_LURE_PREFERENCE.OMNI,
+		diet                       = DIET.MEAT,
+		cooker_ingredient_value    = COOKER_INGREDIENT_MEDIUM,
+		edible_values              = EDIBLE_VALUES_GLASS_CARP,
+
+		dynamic_shadow             = SHADOW_LARGE,
+
+		roe_prefab                 = "kyno_roe_oceanfish_glass_carp",
+		baby_prefab                = "oceanfish_glass_carp_inv",
+
+		roe_time                   = TUNING.OCEANFISH_MEDIUM_ROETIME,
+		baby_time                  = TUNING.OCEANFISH_MEDIUM_BABYTIME,
+
+		phases                     = { "night" },
+		moonphases                 = { "full", "glassed" },
+		seasons                    = ALL_SEASONS,
+		worlds                     = { "forest" },
+	},
 }
 
 for k, v in pairs(OCEANFISHES) do
@@ -335,19 +415,24 @@ for k, v in pairs(OCEANFISHES) do
 end
 
 -- Pufferfish school locations.
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish  = SCHOOL_VERY_COMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish      = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_pufferfish      = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_HAZARDOUS].oceanfish_pufferfish     = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_pufferfish         = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_pufferfish         = SCHOOL_RARE
 
 -- Midnight Carp school locations.
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp   = SCHOOL_VERY_COMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp   = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp = SCHOOL_RARE
-SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp = SCHOOL_VERY_COMMON
-SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp   = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp   = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp      = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp      = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp    = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_COASTAL].oceanfish_midnight_carp    = SCHOOL_VERY_COMMON
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_ROUGH].oceanfish_midnight_carp      = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.WINTER][WORLD_TILES.OCEAN_SWELL].oceanfish_midnight_carp      = SCHOOL_RARE
 
 -- Sturgeon school locations.
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_BRINEPOOL].oceanfish_sturgeon    = SCHOOL_COMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_sturgeon        = SCHOOL_UNCOMMON
-SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_sturgeon        = SCHOOL_RARE
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_BRINEPOOL].oceanfish_sturgeon       = SCHOOL_COMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_sturgeon           = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_sturgeon           = SCHOOL_RARE
+
+-- Glassed Carp school locations.
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_COASTAL].oceanfish_glass_carp       = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_SWELL].oceanfish_glass_carp         = SCHOOL_UNCOMMON
+SCHOOL_WEIGHTS[SEASONS.AUTUMN][WORLD_TILES.OCEAN_ROUGH].oceanfish_glass_carp         = SCHOOL_UNCOMMON

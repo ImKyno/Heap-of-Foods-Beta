@@ -20,38 +20,36 @@ end
 local function BirdTrapPostInit(inst)
 	local _CatchOffScreen = UpvalueHacker.GetUpvalue(_G.Prefabs.birdtrap.fn, "OnEntitySleep", "CatchOffScreen")
 
-	local function CatchOffScreen(inst)
-		if not _G.TheWorld.state.isnight then
-			return _CatchOffScreen(inst)
-		end
+	if _CatchOffScreen ~= nil then
+		local function CatchOffScreen(inst)
+			if not _G.TheWorld.state.isnight then
+				return _CatchOffScreen(inst)
+			else
+				inst._sleeptask = nil
 
-		inst._sleeptask = nil
+				if not inst:IsInLimbo() and inst.components.trap ~= nil
+				and inst.components.trap:IsBaited() and math.random() < 0.5 then
+					local nightbirdspawner = TheWorld.components.nightbirdspawner
 
-		if not inst:IsInLimbo() and inst.components.trap ~= nil and inst.components.trap:IsBaited() and math.random() < 0.5 then
-			local birdspawner = _G.TheWorld.components.birdspawner
+					if nightbirdspawner ~= nil then
+						local pos = inst:GetPosition()
+						local bird = nightbirdspawner:SpawnBird(pos)
 
-			if birdspawner ~= nil then
-				local pos = inst:GetPosition()
-				local prefab = GetNightBirdPrefab()
+						if bird ~= nil then
+							bird.Physics:Teleport(pos:Get())
+							bird:ReturnToScene()
 
-				if prefab ~= nil then
-					local bird = _G.SpawnPrefab(prefab)
-
-					if bird ~= nil then
-						bird.Physics:Teleport(pos:Get())
-						bird:ReturnToScene()
-
-						inst.components.trap.target = bird
-						inst.components.trap:DoSpring()
-
-						inst.sg:GoToState("full")
+							inst.components.trap.target = bird
+							inst.components.trap:DoSpring()
+							inst.sg:GoToState("full")
+						end
 					end
 				end
 			end
 		end
-	end
 
-	UpvalueHacker.SetUpvalue(_G.Prefabs.birdtrap.fn, CatchOffScreen, "OnEntitySleep", "CatchOffScreen")
+		UpvalueHacker.SetUpvalue(_G.Prefabs.birdtrap.fn, CatchOffScreen, "OnEntitySleep", "CatchOffScreen")
+	end
 end
 
 AddPrefabPostInit("birdtrap", BirdTrapPostInit)

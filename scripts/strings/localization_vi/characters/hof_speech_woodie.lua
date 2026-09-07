@@ -119,6 +119,9 @@ WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "I'm back to bein' breakable."
 WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Now that's what I call a good haul!"
 WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Well, back to the usual amount of wood."
 
+WOODIE.ANNOUNCE_KYNO_THORNSBUFF_START = "I'm a little prickly now."
+WOODIE.ANNOUNCE_KYNO_THORNSBUFF_END = "The prickles are gone."
+
 WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Well, that's one nasty sickness outta the way."
 
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Có lẽ cần thứ gì đó để nhấc nó lên?"
@@ -1153,6 +1156,7 @@ WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Bên trong từng có gì vậy?"
 
 WOODIE.DESCRIBE.KYNO_OCEANTRAP = "Mình đang mong một bữa hải sản đây."
 
+WOODIE.DESCRIBE.OCEANFISH_GLASS_CARP = "Never seen a fish quite like this one."
 WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Eh, trông như nó thích đi câu sau khi trời tối."
 WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Ối, con này còn nhiều gai hơn nhím nữa, eh?"
 WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Đúng là con cá có lịch sử, eh?"
@@ -1342,7 +1346,6 @@ WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Careful where you aim at!"
 WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Some fancy robot bits."
 WOODIE.DESCRIBE.WX78MODULE_COOKER = "Some fancy robot bits."
 WOODIE.DESCRIBE.WX78MODULE_DRYER = "Some fancy robot bits."
-WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Some fancy robot bits."
 WOODIE.DESCRIBE.WX78MODULE_BREWER = "Some fancy robot bits."
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Anything good in there, Lucy?",
-}
-
-WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

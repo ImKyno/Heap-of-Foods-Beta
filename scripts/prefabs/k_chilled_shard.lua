@@ -17,10 +17,10 @@ local function OnUpdateFlock(inst)
 
 	local x, y, z = inst.Transform:GetWorldPosition()
 
-	for i, v in ipairs(TheSim:FindEntities(x, y, z, inst.range + 3, COMBAT_TARGET_TAGS, 
-	inst.canhitplayers and NO_TAGS or NO_TAGS_NO_PLAYERS)) do
+	for i, v in ipairs(TheSim:FindEntities(x, y, z, inst.range + 3, COMBAT_TARGET_TAGS, inst.canhitplayers and NO_TAGS or NO_TAGS_NO_PLAYERS)) do
 		if not inst.ignore[v] and v:IsValid() and v.entity:IsVisible() and v.components.combat ~= nil
-		and not (v.components.inventory ~= nil and v.components.inventory:EquipHasTag("cutlassblue")) then
+		and not (v.components.inventory ~= nil and v.components.inventory:EquipHasTag("cutlassblue"))
+		and not (v.components.debuffable ~= nil and v.components.debuffable:HasDebuff("kyno_chilledbuff")) then
 			local range = inst.range + v:GetPhysicsRadius(0)
 
 			if v:GetDistanceSqToPoint(x, y, z) < range * range then

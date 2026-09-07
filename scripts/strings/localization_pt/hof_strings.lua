@@ -135,6 +135,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Garante ataques críticos"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Diminui a sorte"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Garante um efeito aleatório"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER = "Aumenta a eficiência de cortar árvores"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_THORNS = "Garante defesa espinhosa"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Vegetal esverdeado, o rei das pastagens e florestas tropicais. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "Um dos muitos presentes do mar, muito apreciado pelos homens de cultura. -W"
@@ -851,7 +852,7 @@ STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE =
 STRINGS.FISHREGISTRY =
 {
 	TAB_FISH = "Peixes",
-	TAB_ROE = "Ovas",
+	TAB_ROE = "Ovas e Produtos",
 
 	MYSTERY_FISH = "Peixe Desconhecido",
 	MISSING_FISH = "Peixe Ausente",
@@ -859,10 +860,14 @@ STRINGS.FISHREGISTRY =
 	MYSTERY_ROE = "Ova Desconhecida",
 	MISSING_ROE = "Ova Ausente",
 
+	MYSTERY_PRODUCT = "Produto Desconhecido",
+	MISSING_PRODUCT = "Produto Ausente",
+
 	MYSTERY_BABY = "Filhote Desconhecido",
 	MISSING_BABY = "Filhote Ausente",
 
 	MISSING_ROE_TIME = "Tempo da Ova Desconhecido",
+	MISSING_PRODUCT_TIME = "Tempo do Produto Desconhecido",
 	MISSING_BABY_TIME = "Tempo do Filhote Desconhecido",
 
 	PHASE_DAY = "Dia",
@@ -885,6 +890,7 @@ STRINGS.FISHREGISTRY =
 	WORLD_CAVE = "Cavernas",
 
 	ROE_TIME = "Tempo da Ova",
+	PRODUCT_TIME = "Tempo do Produto",
 	BABY_TIME = "Tempo do Filhote",
 
 	ROE_TIME_HALF_DAY = "Cerca de meio dia",
@@ -932,6 +938,7 @@ STRINGS.NAMES.KYNO_ROE_JELLYFISH_RAINBOW = "Ovas de Água-viva Arco-íris"
 STRINGS.NAMES.KYNO_ROE_SALMONFISH = "Ovas de Salmão"
 STRINGS.NAMES.KYNO_ROE_KOI = "Ovas de Koi Tropical"
 STRINGS.NAMES.KYNO_ROE_SWORDFISH_BLUE = "Ovas de Peixe-espada Gélido"
+STRINGS.NAMES.KYNO_ROE_OCEANFISH_GLASS_CARP = "Ovas de Carpa de Vidro"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_1 = "Ovas de Peixinho Nanico"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_2 = "Ovas de Espirra-agulha"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_3 = "Ovas de Isca Miúda"
@@ -2174,6 +2181,7 @@ STRINGS.NAMES.AGEDROE_JELLYFISH_RAINBOW = "Ovas Maturadas de Água-viva Arco-ír
 STRINGS.NAMES.AGEDROE_SALMONFISH = "Ovas Maturadas de Salmão"
 STRINGS.NAMES.AGEDROE_KOI = "Ovas Maturadas de Koi Tropical"
 STRINGS.NAMES.AGEDROE_SWORDFISH_BLUE = "Ovas Maturadas de Peixe-espada Gélido"
+STRINGS.NAMES.AGEDROE_OCEANFISH_GLASS_CARP = "Ovas Maturadas de Carpa de Vidro"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_1 = "Ovas Maturadas de Peixinho Nanico"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_2 = "Ovas Maturadas de Espirra-agulha"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_3 = "Ovas Maturadas de Isca Miúda"
@@ -2214,6 +2222,9 @@ STRINGS.RECIPE_DESC.KYNO_MESSAGEBOTTLE_EMPTY = "Não se esqueça de reciclar!"
 
 STRINGS.NAMES.KYNO_OCEANTRAP = "Armadilha de Oceano"
 STRINGS.RECIPE_DESC.KYNO_OCEANTRAP = "Uma armadilha para pequenas criaturas do mar."
+
+STRINGS.NAMES.OCEANFISH_GLASS_CARP = "Carpa de Vidro"
+STRINGS.NAMES.OCEANFISH_GLASS_CARP_INV = "Carpa de Vidro"
 
 STRINGS.NAMES.OCEANFISH_MIDNIGHT_CARP = "Carpa da Meia Noite"
 STRINGS.NAMES.OCEANFISH_MIDNIGHT_CARP_INV = "Carpa da Meia Noite"
@@ -2418,10 +2429,7 @@ STRINGS.NAMES.WX78MODULE_COOKER = "Circuito de Combustão"
 STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Aplicação controlada de calor para cozimento e refino."
 
 STRINGS.NAMES.WX78MODULE_DRYER = "Circuito de Dessecante"
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "Um sistema rudimentar de controle de umidade."
-
-STRINGS.NAMES.WX78MODULE_DRYER2 = "Circuito de Super-Dessecante"
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "Um regulador de umidade aperfeiçoado."
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "Um sistema de controle de umidade."
 
 STRINGS.NAMES.WX78MODULE_BREWER = "Circuito de Fermentação"
 STRINGS.RECIPE_DESC.WX78MODULE_BREWER = "Processe materia orgânica em fermentações refinadas."
@@ -2431,9 +2439,6 @@ STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Unidade de Combustão Colapsada"
 
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Unidade de Secagem Portátil"
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Unidade de Secagem Portátil Colapsada"
-
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Unidade de Super Secagem Portátil"
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Unidade de Super Secagem Portátil Colapsada"
 
 STRINGS.NAMES.KYNO_PIGGYBANK = "Cofrinho"
 STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Cofrinho Sem Fundo"
@@ -2454,6 +2459,8 @@ STRINGS.NAMES.SWORDFISHBLUEDINNER = "Bento Gélido"
 STRINGS.NAMES.KYNO_CHILLED_SHARD = "Estilhaços Gélidos"
 
 STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Vigilante Noturno"
+
+STRINGS.NAMES.KYNO_BIRD_ROBIN_BLUE_NIGHT = "Pássaro-Delft"
 
 STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Grito-do-Norte"
 
@@ -2477,3 +2484,5 @@ STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Apostar Excessivamente"
 
 STRINGS.NAMES.KYNO_OPALPRECIOUSAPPLE = "Maçã Cintilante Encantada"
 STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSAPPLE_M = "Transborda com um poder místico e inigualável."
+
+STRINGS.NAMES.NUKACOLA_BRAMBLE = "Nuka-Cola Espinhosa"

@@ -119,6 +119,9 @@ WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "De volta aos capacetes de proteção.
 WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Isso sim é eficiência!"
 WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "De volta ao ritmo de sempre."
 
+WINONA.ANNOUNCE_KYNO_THORNSBUFF_START = "Quero ver você passar por isso!"
+WINONA.ANNOUNCE_KYNO_THORNSBUFF_END = "Bom, isso é o fim disso."
+
 WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Assim está melhor. De pé novamente."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não."
@@ -1153,6 +1156,7 @@ WINONA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Posso te usar pra alguma coisa."
 
 WINONA.DESCRIBE.KYNO_OCEANTRAP = "Pegadora de jantar!"
 
+WINONA.DESCRIBE.OCEANFISH_GLASS_CARP = "Eu quase que consigo ver através dele!"
 WINONA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Acho que esse aí trabalha no turno da noite."
 WINONA.DESCRIBE.OCEANFISH_PUFFERFISH = "Parece uma bolinha de estresse com espinhos. Passo."
 WINONA.DESCRIBE.OCEANFISH_STURGEON = "Peixe velho e resistente. Respeito."
@@ -1342,7 +1346,6 @@ WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Mantenha isso longe de minhas máquinas!
 WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, você precisa parar de deixar essas coisas jogadas por aí!"
 WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, você precisa parar de deixar essas coisas jogadas por aí!"
 WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, você precisa parar de deixar essas coisas jogadas por aí!"
-WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, você precisa parar de deixar essas coisas jogadas por aí!"
 WINONA.DESCRIBE.WX78MODULE_BREWER = "WX, você precisa parar de deixar essas coisas jogadas por aí!"
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Me pergunto o que o WX deixou para trás.",
-}
-
-WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

@@ -119,6 +119,9 @@ WENDY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A morte está à espreita novamente...
 WENDY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "A floresta dá mais do que deveria."
 WENDY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A floresta voltou à sua generosidade habitual."
 
+WENDY.ANNOUNCE_KYNO_THORNSBUFF_START = "Até os vivos podem ter espinhos."
+WENDY.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos desapareceram."
+
 WENDY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença passou... por enquanto."
 
 WENDY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo para colher?"
@@ -1153,6 +1156,7 @@ WENDY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Vazia. Como minha alma."
 
 WENDY.DESCRIBE.KYNO_OCEANTRAP = "Venham, criaturas do mar! Um lanchinho delicioso espera!"
 
+WENDY.DESCRIBE.OCEANFISH_GLASS_CARP = "Parece pertencer a outro mundo."
 WENDY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ele nada onde a luz não ousa seguir."
 WENDY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ele se infla de medo... sei bem como é."
 WENDY.DESCRIBE.OCEANFISH_STURGEON = "Viveu muitos anos... talvez até demais."
@@ -1342,7 +1346,6 @@ WENDY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Cresceu para ser jogado fora, o cruel cic
 WENDY.DESCRIBE.WX78MODULE_GOURMAND = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 WENDY.DESCRIBE.WX78MODULE_COOKER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 WENDY.DESCRIBE.WX78MODULE_DRYER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
-WENDY.DESCRIBE.WX78MODULE_DRYER2 = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 WENDY.DESCRIBE.WX78MODULE_BREWER = "Parece tão frágil... Tomara que nenhum acidente trágico ocorra."
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WENDY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Me pergunto o que sobrou dentro.",
-}
-
-WENDY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

@@ -122,6 +122,9 @@ WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Parece que meus poderes de proteção
 WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Mais troncos para cortar! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Chega de troncos extras, que tédio!"
 
+WORTOX.ANNOUNCE_KYNO_THORNSBUFF_START = "Espinhos espinhosos!"
+WORTOX.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos se foram!"
+
 WORTOX.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença desagradável passou!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de outra coisa."
@@ -1156,6 +1159,7 @@ WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Ela está vazia."
 
 WORTOX.DESCRIBE.KYNO_OCEANTRAP = "Eles não vão ver essa chegando. Hyuyu!"
 
+WORTOX.DESCRIBE.OCEANFISH_GLASS_CARP = "Um pequeno carinha brilhante!"
 WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Um nadador da meia-noite!"
 WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "Tão cheio de ar e ainda assim tão mortal! Hyuyu!"
 WORTOX.DESCRIBE.OCEANFISH_STURGEON = "Tão antigo! Aposto que já viu muita travessura mortal! Hyuyu!"
@@ -1345,7 +1349,6 @@ WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A gente faz uma pequena pegadinha..."
 WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_COOKER = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER = "Você é o mais brilhante da turma?"
-WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Você é o mais brilhante da turma?"
 WORTOX.DESCRIBE.WX78MODULE_BREWER = "Você é o mais brilhante da turma?"
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1356,13 +1359,6 @@ WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Mais um caso encerrado pelo bom e velho Cara de Metal!",
-}
-
-WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

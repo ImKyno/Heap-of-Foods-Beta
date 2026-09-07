@@ -117,6 +117,7 @@ local function fn()
 
 	inst.entity:AddTransform()
 	inst.entity:Hide()
+
 	inst.persists = false
 
 	inst:AddTag("CLASSIFIED")

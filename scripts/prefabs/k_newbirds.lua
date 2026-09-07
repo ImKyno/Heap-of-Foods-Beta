@@ -125,7 +125,6 @@ local function MakeBird(data)
 		inst.entity:AddTransform()
 		inst.entity:AddAnimState()
 		inst.entity:AddSoundEmitter()
-		inst.entity:AddLightWatcher()
 		inst.entity:AddPhysics()
 		inst.entity:AddNetwork()
 
@@ -134,12 +133,11 @@ local function MakeBird(data)
 		shadow:Enable(false)
 
 		inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
-		inst.Physics:ClearCollisionMask()
 
 		if data.water_bank ~= nil then
-			inst.Physics:CollidesWith(COLLISION.GROUND)
+			inst.Physics:SetCollisionMask(COLLISION.GROUND)
 		else
-			inst.Physics:CollidesWith(COLLISION.WORLD)
+			inst.Physics:SetCollisionMask(COLLISION.WORLD)
 		end
 
 		inst.Physics:SetMass(1)
@@ -185,7 +183,9 @@ local function MakeBird(data)
 		inst.gestalt_possession_chance = TUNING.BIRD_RIFT_POSSESSION_SPAWN_CHANCE
 
 		inst:AddComponent("occupier")
+
 		inst:AddComponent("inspectable")
+		inst.components.inspectable.nameoverride = data.nameoverride or nil
 
 		inst:AddComponent("locomotor")
 		inst.components.locomotor:EnableGroundSpeedMultiplier(false)
@@ -256,11 +256,22 @@ local function MakeBird(data)
 		end
 
 		local birdspawner = TheWorld.components.birdspawner
+		local nightbirdspawner = TheWorld.components.nightbirdspawner
 
-		if birdspawner ~= nil then
-			inst:ListenForEvent("onremove", birdspawner.StopTrackingFn)
-			inst:ListenForEvent("enterlimbo", birdspawner.StopTrackingFn)
-			birdspawner:StartTracking(inst)
+		if data.nightbird ~= nil then
+			if nightbirdspawner ~= nil then
+				inst:ListenForEvent("onremove", nightbirdspawner.StopTrackingFn)
+				inst:ListenForEvent("enterlimbo", nightbirdspawner.StopTrackingFn)
+
+				nightbirdspawner:StartTracking(inst)
+			end
+		else
+			if birdspawner ~= nil then
+				inst:ListenForEvent("onremove", birdspawner.StopTrackingFn)
+				inst:ListenForEvent("enterlimbo", birdspawner.StopTrackingFn)
+
+				birdspawner:StartTracking(inst)
+			end
 		end
 
 		MakeSmallBurnableCharacter(inst, "crow_body")
@@ -356,6 +367,21 @@ local birds =
 		{
 			takeoff     = "hof_sounds/creatures/robin_winter_night/take_off",
 			chirp       = "hof_sounds/creatures/robin_winter_night/chirp",
+			flyin       = "dontstarve/birds/flyin",
+		},
+	},
+	{
+		name            = "kyno_bird_robin_blue_night",
+		nameoverride    = "KYNO_BIRD_ROBIN_NIGHT",
+		water_bank      = nil,
+		feather_name    = "feather_robin_winter",
+		loot            = "smallmeat",
+		cookable        = "cookedsmallmeat",
+		nightbird       = true,
+		sounds          =
+		{
+			takeoff     = "dontstarve/birds/takeoff_canary",
+			chirp       = "dontstarve/birds/chirp_canary",
 			flyin       = "dontstarve/birds/flyin",
 		},
 	},

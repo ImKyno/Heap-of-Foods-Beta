@@ -119,6 +119,9 @@ WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A bênção dos deuses se dissipo
 WATHGRITHR.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "A floresta oferecerá sua riqueza!"
 WATHGRITHR.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A riqueza da floresta se esgotou!"
 
+WATHGRITHR.ANNOUNCE_KYNO_THORNSBUFF_START = "Tente me perfurar agora!"
+WATHGRITHR.ANNOUNCE_KYNO_THORNSBUFF_END = "Minha defesa de espinhos enfraquece!"
+
 WATHGRITHR.ANNOUNCE_KYNO_SICKNESSBUFF_END = "A doença foi vencida!"
 
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado!"
@@ -1153,6 +1156,7 @@ WATHGRITHR.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Vazia de mensagem e bebida. Que 
 
 WATHGRITHR.DESCRIBE.KYNO_OCEANTRAP = "Traga-me os despojos do mar!"
 
+WATHGRITHR.DESCRIBE.OCEANFISH_GLASS_CARP = "Um peixe cintilante digno dos salões de Valhalla!"
 WATHGRITHR.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uma nadadora iluminada pela lua das águas sombrias!"
 WATHGRITHR.DESCRIBE.OCEANFISH_PUFFERFISH = "Veste uma armadura de espinhos! Um inimigo digno do mar!"
 WATHGRITHR.DESCRIBE.OCEANFISH_STURGEON = "Um peixe lendário e poderoso! Um banquete digno!"
@@ -1342,7 +1346,6 @@ WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Eu vou te golpear, se você duvidar!
 WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 WATHGRITHR.DESCRIBE.WX78MODULE_BREWER = "Estas dádivas fortalecerão o nosso guerreiro de metal."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Que despojos o nosso guerreiro de metal concedeu?",
-}
-
-WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

@@ -124,6 +124,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "Increases Max Hunger by 3
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "Increases Max Sanity by 30% for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "Increases Max Health by 30% for a certain amount of time.\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "Increases Max Health, Hunger and Sanity by 15% for a certain amount of time.\n\nBriefly decreases the temperature."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_BRAMBLE = "Renders the survivor with thorns, attackers will suffer damage in a small area when attacking the survivor.\n\nBriefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "Increased plant yield for a certain amount of time."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "Increased plant yield for a certain amount of time.\n\Briefly decreases the temperature."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "Soothes nearby creatures around the survivor."
@@ -138,6 +139,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "Decreases luck for a certai
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "Gives off a random side effect.\n\n\"LET'S GO GAMBLING!\" - Someone, probably."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "Renders the survivor immune from all incoming damage sources for 30 seconds and causes Food Healing Sickness.\n\n\"A fruit touched by eternity, its radiant sweetness conceals a power no mortal was meant to wield. For a moment, flesh becomes unyielding, and even death itself is forced to look away while a radiant force is bestowed.\" - Unknown Author."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "Increases the chopping efficiency for a certain amount of time. Trees will drop more logs when chopped down."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_THORNS = "Renders the survivor with thorns, attackers will suffer damage in a small area when attacking the survivor."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "Can be added to Crock Pot food using a Portable Seasoning Station.\n\nEating a dish spiced with Preserver Powder fully restores its spoilage time.\n\nDecreases the spoilage rate of items inside the inventory by 25%.\n\nIncreases the duration of other side effects by 25%.\n\nDuration 4 minutes."
@@ -200,8 +202,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "A carryable container with 6 s
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "A carryable container with 6 slots that will only hold Koins and other types of currency.\n\nCan be further upgraded with an Elastispacer to enhance its storage capabilities."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_GOURMAND = "Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from any Critter, or Pig Elder.\n\nRequires 2 sockets and increases positive stats and decreases negative stats gained from Prepared Food by 5 points.\n\nBeta Circuits Tinkering II boosts this circuit to increase positive stats and decrease negative stats by 5 points and allows WX-78 to quickly eat food."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_COOKER = "Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from a Lavae, or Extra-Adorable Lavae.\n\nRequires 1 socket and places a cooking container in WX-78's right-most inventory slot that automatically cook food in the first slot every 5 seconds.\n\nBeta Circuits Tinkering II boosts this circuit to allow any burnable item to be placed inside. Any wood-related items will turn into Charcoal while other items will turn into Ashes."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from a Cookie Cutter.\n\nRequires 3 sockets and places a 1 slot drying container in WX-78's right-most inventory slot.\n\nBeta Circuits Tinkering II boosts this circuit to provide WX-78 with 25% waterproofness."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER2 = "Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from Salty Dog.\n\nRequires 2 sockets and places a 2 slots drying container in WX-78's right-most inventory slot.\n\nBeta Circuits Tinkering II boosts this circuit to provide WX-78 with 50% waterproofness and allows the production of Salt Crystals."
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "Plugs into WX-78's Beta circuit board. Crafting recipe is scanned from a Cookie Cutter, or Salty Dog.\n\nRequires 2 sockets and places a drying container in WX-78's right-most inventory slot.\n\nBeta Circuits Tinkering II boosts this circuit to provide WX-78 with 50% waterproofness and allows the production of Salt Crystals from some of the dried items."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_BREWER = "Plugs into WX-78's Gamma circuit board. Crafting recipe is scanned from a Piko, or Orange Piko.\n\nRequires 4 sockets and allows WX-78 to brew Artisan Goods from the Wooden Keg and Preserves Jar inside of his body at the cost of 50% hunger equal to the resulting brew's hunger value.\n\nGamma Circuits Tinkering II boosts this circuits to decrease the brewing time and brewing hunger consumption by 25%."
 
 -- Creatures.
@@ -211,7 +212,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.KINGFISHER = "Kingfishers will often drop Tropical
 STRINGS.SCRAPBOOK.SPECIALINFO.JELLYFISH_RAINBOW = "Emits a colorful healthy glow during dusk and night."
 STRINGS.SCRAPBOOK.SPECIALINFO.HULLBREAKER_CREATURE = "Can damage the boat's hull when landing successful attacks."
 STRINGS.SCRAPBOOK.SPECIALINFO.PACKIMBAGGIMS = "Things can be stored in Packim Baggims much like a chest.\n\nHe loves eating all kinds of fish."
-STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "A bird only found at night and flies away at dawn."
+STRINGS.SCRAPBOOK.SPECIALINFO.NIGHTBIRD = "A bird only found at night that flies away at dawn."
 
 -- Structures, Misc & Point of Interest.
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGELDER = "A Merchant from a distant archipelago. He's willing to trade his best cooking utensils and other useful items for delicious meals.\n\nThe Elder is craving a meal with extreme sweetness or Butter mixed with seafood. He will reward you accordingly.\n\nBringing Elder's favourite meal will unlock more trade deals."

@@ -119,6 +119,9 @@ WILLOW.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww! The fun's over."
 WILLOW.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More wood for the fire!"
 WILLOW.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "I'll have to chop more trees now."
 
+WILLOW.ANNOUNCE_KYNO_THORNSBUFF_START = "Try getting through these!"
+WILLOW.ANNOUNCE_KYNO_THORNSBUFF_END = "Aw, my thorns are gone."
+
 WILLOW.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Finally! I don't feel sick anymore."
 
 WILLOW.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "I need to put something in here!"
@@ -157,6 +160,8 @@ WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_START =
 }
 
 WILLOW.ANNOUNCE_KYNO_ICENETTLE_TOXIN_END = "I HATE that plant!"
+
+WILLOW.ANNOUNCE_KYNO_SCANNED_BY_WX78 = "WHAT are you doing WX?! STOP SCANNING ME!!"
 
 WILLOW.DESCRIBE.KYNO_ROE = "Ughh! That's nasty!!"
 WILLOW.DESCRIBE.KYNO_ROE_COOKED = "I cooked them, but they're still nasty."
@@ -1153,6 +1158,7 @@ WILLOW.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "It's a bottle."
 
 WILLOW.DESCRIBE.KYNO_OCEANTRAP = "C'mon, swim inside! It's cozy in there!"
 
+WILLOW.DESCRIBE.OCEANFISH_GLASS_CARP = "It's pretty. I wonder if it burns."
 WILLOW.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A fish that likes the dark? I get it."
 WILLOW.DESCRIBE.OCEANFISH_PUFFERFISH = "Heh. It's just full of hot air, like Maxwell!"
 WILLOW.DESCRIBE.OCEANFISH_STURGEON = "Old fish, smells even older."
@@ -1342,7 +1348,6 @@ WILLOW.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Boo! You stink!"
 WILLOW.DESCRIBE.WX78MODULE_GOURMAND = "Hey WX, when are you gonna install a flamethrower?"
 WILLOW.DESCRIBE.WX78MODULE_COOKER = "Hey WX, when are you gonna install a flamethrower?"
 WILLOW.DESCRIBE.WX78MODULE_DRYER = "Hey WX, when are you gonna install a flamethrower?"
-WILLOW.DESCRIBE.WX78MODULE_DRYER2 = "Hey WX, when are you gonna install a flamethrower?"
 WILLOW.DESCRIBE.WX78MODULE_BREWER = "Hey WX, when are you gonna install a flamethrower?"
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1358,6 @@ WILLOW.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "What do I care about WX's old stuff?",
-}
-
-WILLOW.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

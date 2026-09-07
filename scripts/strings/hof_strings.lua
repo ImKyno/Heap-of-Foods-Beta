@@ -135,6 +135,7 @@ STRINGS.UI.COOKBOOK.FOOD_EFFECTS_CRITDAMAGE = "Grants critical attacks"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_BADLUCK = "Decreases luck"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_RANDOM = "Grants a random side effect"
 STRINGS.UI.COOKBOOK.FOOD_EFFECTS_WOODCUTTER = "Increases chopping efficiency"
+STRINGS.UI.COOKBOOK.FOOD_EFFECTS_THORNS = "Grants thorns defense"
 
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_ALOE = "Green-ish vegetable, the king of grasslands and rainforests. -W"
 STRINGS.UI.PLANTREGISTRY.DESCRIPTIONS.KYNO_CUCUMBER = "One of the many sea gifts, very appreciated by men of culture. -W"
@@ -851,7 +852,7 @@ STRINGS.DECIDUOUSFORESTTRADER_APPRECIATE =
 STRINGS.FISHREGISTRY =
 {
 	TAB_FISH = "Fishes",
-	TAB_ROE = "Roes",
+	TAB_ROE = "Roes & Products",
 
 	MYSTERY_FISH = "Unknown Fish",
 	MISSING_FISH = "Missing Fish",
@@ -859,10 +860,14 @@ STRINGS.FISHREGISTRY =
 	MYSTERY_ROE = "Unknown Roe",
 	MISSING_ROE = "Missing Roe",
 
+	MYSTERY_PRODUCT = "Unknown Product",
+	MISSING_PRODUCT = "Missing Product",
+
 	MYSTERY_BABY = "Unknown Offspring",
 	MISSING_BABY = "Missing Offspring",
 
 	MISSING_ROE_TIME = "Missing Roe Time",
+	MISSING_PRODUCT_TIME = "Missing Product Time",
 	MISSING_BABY_TIME = "Missing Offspring Time",
 
 	PHASE_DAY = "Day",
@@ -885,6 +890,7 @@ STRINGS.FISHREGISTRY =
 	WORLD_CAVE = "Caves",
 
 	ROE_TIME = "Roe Time",
+	PRODUCT_TIME = "Product Time",
 	BABY_TIME = "Offspring Time",
 
 	ROE_TIME_HALF_DAY = "About half a day",
@@ -932,6 +938,7 @@ STRINGS.NAMES.KYNO_ROE_JELLYFISH_RAINBOW = "Rainbow Jellyfish Roe"
 STRINGS.NAMES.KYNO_ROE_SALMONFISH = "Salmon Roe"
 STRINGS.NAMES.KYNO_ROE_KOI = "Tropical Koi Roe"
 STRINGS.NAMES.KYNO_ROE_SWORDFISH_BLUE = "Chilled Swordfish Roe"
+STRINGS.NAMES.KYNO_ROE_OCEANFISH_GLASS_CARP = "Glassed Carp Roe"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_1 = "Runty Guppy Roe"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_2 = "Needlenosed Squirt Roe"
 STRINGS.NAMES.KYNO_ROE_OCEANFISH_SMALL_3 = "Bitty Baitfish Roe"
@@ -2174,6 +2181,7 @@ STRINGS.NAMES.AGEDROE_JELLYFISH_RAINBOW = "Aged Rainbow Jellyfish Roe"
 STRINGS.NAMES.AGEDROE_SALMONFISH = "Aged Salmon Roe"
 STRINGS.NAMES.AGEDROE_KOI = "Aged Tropical Koi Roe"
 STRINGS.NAMES.AGEDROE_SWORDFISH_BLUE = "Aged Chilled Swordfish Roe"
+STRINGS.NAMES.AGEDROE_OCEANFISH_GLASS_CARP = "Aged Glassed Carp Roe"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_1 = "Aged Runty Guppy Roe"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_2 = "Aged Needlenosed Squirt Roe"
 STRINGS.NAMES.AGEDROE_OCEANFISH_SMALL_3 = "Aged Bitty Baitfish Roe"
@@ -2214,6 +2222,9 @@ STRINGS.RECIPE_DESC.KYNO_MESSAGEBOTTLE_EMPTY = "Don't forget to recycle!"
 
 STRINGS.NAMES.KYNO_OCEANTRAP = "Ocean Trap"
 STRINGS.RECIPE_DESC.KYNO_OCEANTRAP = "It's a trap for small ocean creatures."
+
+STRINGS.NAMES.OCEANFISH_GLASS_CARP = "Glassed Carp"
+STRINGS.NAMES.OCEANFISH_GLASS_CARP_INV = "Glassed Carp"
 
 STRINGS.NAMES.OCEANFISH_MIDNIGHT_CARP = "Midnight Carp"
 STRINGS.NAMES.OCEANFISH_MIDNIGHT_CARP_INV = "Midnight Carp"
@@ -2418,10 +2429,7 @@ STRINGS.NAMES.WX78MODULE_COOKER = "Combustion Circuit"
 STRINGS.RECIPE_DESC.WX78MODULE_COOKER = "Controlled heat application for cooking and refinement."
 
 STRINGS.NAMES.WX78MODULE_DRYER = "Desiccant Circuit"
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A rudimentary humidity control system."
-
-STRINGS.NAMES.WX78MODULE_DRYER2 = "Super-Desiccant Circuit"
-STRINGS.RECIPE_DESC.WX78MODULE_DRYER2 = "A perfected humidity regulator."
+STRINGS.RECIPE_DESC.WX78MODULE_DRYER = "A humidity control system."
 
 STRINGS.NAMES.WX78MODULE_BREWER = "Brewmaster Circuit"
 STRINGS.RECIPE_DESC.WX78MODULE_BREWER = "Process organic matter into refined brews."
@@ -2431,9 +2439,6 @@ STRINGS.NAMES.KYNO_WX78_INVENTORYCOOKER = "Collapsed Combustion Unit"
 
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER_HELD = "Portable Desiccant Unit"
 STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER = "Collapsed Desiccant Unit"
-
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2_HELD = "Portable Super-Desiccant Unit"
-STRINGS.NAMES.KYNO_WX78_INVENTORYDRYER2 = "Collapsed Super-Desiccant Unit"
 
 STRINGS.NAMES.KYNO_PIGGYBANK = "Piggy Bank"
 STRINGS.NAMES.KYNO_PIGGYBANK_UPGRADED = "Bottomless Piggy Bank"
@@ -2457,6 +2462,8 @@ STRINGS.NAMES.KYNO_BIRD_ROBIN_NIGHT = "Nightwatcher"
 
 STRINGS.NAMES.KYNO_BIRD_ROBIN_WINTER_NIGHT = "Northern Shrieker"
 
+STRINGS.NAMES.KYNO_BIRD_ROBIN_BLUE_NIGHT = "Delftbird"
+
 STRINGS.NAMES.KYNO_POND_SALT2 = "Artificial Salt Pond"
 STRINGS.RECIPE_DESC.KYNO_POND_SALT2 = "Extract and collect salt crystals with minimal effort."
 
@@ -2477,3 +2484,5 @@ STRINGS.NAMES.OPALPRECIOUSLOLLIPOP_CURSE = "Excessive Gambling"
 
 STRINGS.NAMES.KYNO_OPALPRECIOUSAPPLE = "Enchanted Shimmer Apple"
 STRINGS.RECIPE_DESC.KYNO_OPALPRECIOUSAPPLE_M = "It overflows with a mystic and unparalleled power."
+
+STRINGS.NAMES.NUKACOLA_BRAMBLE = "Nuka-Cola Bramble"

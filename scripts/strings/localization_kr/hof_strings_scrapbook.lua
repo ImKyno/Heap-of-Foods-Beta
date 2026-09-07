@@ -124,6 +124,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "일정 시간 동안 최�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "일정 시간 동안 최대 정신력이 30% 증가합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "일정 시간 동안 최대 체력이 30% 증가합니다.\n잠시 동안 체온이 감소합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "일정 시간 동안 최대 체력, 허기, 정신력이 각각 15%씩 증가합니다.\n\n잠시 동안 체온이 감소합니다."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_BRAMBLE = "생존자에게 가시 효과를 부여합니다. 공격자가 생존자를 공격하면 좁은 범위 내에서 피해를 입습니다.\n\n잠시 동안 체온이 감소합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "일정 시간 동안 식물 수확량이 증가합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "일정 시간 동안 식물 수확량이 증가합니다.\n잠시 동안 체온이 감소합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "생존자 주변에 있는 생물들을 진정시킵니다."
@@ -138,6 +139,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "일정 시간 동안 행운
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "무작위 부작용을 일으킵니다.\n\n\"도박하러 가자!\" - 아마도 누군가."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "30초 동안 생존자가 모든 피해에 면역이 되지만, 음식 치유 중독을 일으킵니다.\n\n\"영원의 손길이 닿은 과일. 눈부신 달콤함 속에는 어떤 필멸자도 다루어서는 안 될 힘이 숨겨져 있다. 잠시 동안 육신은 굴하지 않으며, 찬란한 힘이 부여되는 동안 죽음조차도 시선을 돌릴 수밖에 없다.\" - 작자 미상."
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "일정 시간 동안 벌목 효율을 높입니다. 나무를 베었을 때 더 많은 통나무를 얻을 수 있습니다."
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_THORNS = "생존자에게 가시 효과를 부여합니다. 공격자가 생존자를 공격하면 좁은 범위 내에서 피해를 입습니다."
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "휴대용 양념기를 사용하여 요리 냄비 음식에 추가할 수 있습니다.\n\n보존 가루를 첨가한 음식을 먹으면 해당 요리의 신선도가 완전히 회복됩니다.\n\n인벤토리에 있는 아이템의 부패 속도가 25% 감소합니다.\n\n다른 음식 부작용의 지속 시간이 25% 증가합니다.\n\n지속 시간 4분."
@@ -200,8 +202,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "요리 재료와 조리된 음
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "동전 및 기타 화폐만 보관할 수 있는 6칸짜리 휴대용 보관함입니다.\n\n'엘라스티스페이서(Elastispacer)'를 사용해 보관 능력을 더욱 강화할 수 있습니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_GOURMAND = "WX-78의 베타 회로 기판에 장착됩니다. 제작법은 모든 동료 동물 또는 장로 돼지를 스캔하여 습득할 수 있습니다.\n\n소켓 2개가 필요합니다. 조리된 음식으로 얻는 긍정적인 능력치는 5만큼 증가하고, 부정적인 능력치는 5만큼 감소합니다.\n\n베타 회로 정비 II로 강화하면 긍정적인 능력치가 5만큼 더 증가하고 부정적인 능력치가 5만큼 더 감소하며, WX-78이 음식을 빠르게 먹을 수 있게 됩니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_COOKER = "WX-78의 베타 회로 기판에 장착됩니다. 제작법은 용암 유충 또는 아주 귀여운 용암 유충을 스캔하여 습득할 수 있습니다.\n\n소켓 1개가 필요합니다. WX-78의 가장 오른쪽 인벤토리 슬롯에 조리 용기를 장착하며, 첫 번째 슬롯의 음식을 5초마다 자동으로 조리합니다.\n\n베타 회로 정비 II로 강화하면 모든 가연성 아이템을 넣을 수 있게 됩니다. 나무와 관련된 아이템은 숯으로 변하고, 다른 아이템은 재로 변합니다."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "WX-78의 베타 회로 기판에 장착됩니다. 제작법은 쿠키 커터를 스캔하여 습득할 수 있습니다.\n\n소켓 3개가 필요합니다. WX-78의 가장 오른쪽 인벤토리 슬롯에 1칸짜리 건조 용기를 장착합니다.\n\n베타 회로 정비 II로 강화하면 WX-78의 방수율이 25% 증가합니다."
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER2 = "WX-78의 베타 회로 기판에 장착됩니다. 제작법은 짭짤한 멍멍이를 스캔하여 습득할 수 있습니다.\n\n소켓 2개가 필요합니다. WX-78의 가장 오른쪽 인벤토리 슬롯에 2칸짜리 건조 용기를 장착합니다.\n\n베타 회로 정비 II로 강화하면 WX-78의 방수율이 50% 증가하고 소금 결정을 생산할 수 있게 됩니다."
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "WX-78의 베타 회로 기판에 장착합니다. 제작법은 쿠키 커터 또는 짠맛의 개를 통해 스캔됩니다.\n\n2개의 소켓이 필요하며 WX-78의 가장 오른쪽 인벤토리 칸에 건조 용기를 배치합니다.\n\n베타 회로 조정 II를 활성화하면 이 회로가 강화되어 WX-78에게 50%의 방수 효과를 제공하고 소금 결정체를 생산할 수 있게 합니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_BREWER = "WX-78의 감마 회로 기판에 장착됩니다. 제작법은 피코 또는 주황 피코를 스캔하여 습득할 수 있습니다.\n\n소켓 4개가 필요합니다. WX-78의 몸속에 있는 나무 술통과 보존병을 사용해 수제 식품을 양조할 수 있습니다. 양조 시 완성된 음료의 허기 수치에 해당하는 양의 50%만큼 허기를 소모합니다.\n\n감마 회로 정비 II로 강화하면 양조 시간과 양조에 필요한 허기 소모량이 25% 감소합니다."
 
 -- Creatures.

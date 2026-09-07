@@ -72,6 +72,25 @@ local function OnTakeOffFurniture(inst)
 	inst:RemoveTag("outofreach")
 end
 
+local function OnShine(inst)
+	inst.shinetask = nil
+
+	if not inst.AnimState:IsCurrentAnimation("sparkle") then
+		inst.AnimState:PlayAnimation("sparkle")
+		inst.AnimState:PushAnimation("idle", false)
+	end
+
+	if not inst:IsAsleep() then
+		inst.shinetask = inst:DoTaskInTime(5 + math.random() * 5, OnShine)
+	end
+end
+
+local function OnEntityWake(inst)
+	if inst.shinetask == nil then
+		inst.shinetask = inst:DoTaskInTime(5 + math.random() * 5, OnShine)
+	end
+end
+
 local function CreateCore()
 	local inst = CreateEntity()
 
@@ -138,8 +157,6 @@ local function MakePreparedBrew(data)
 		
 		if data.bloom ~= nil then
 			inst.AnimState:SetBloomEffectHandle("shaders/anim.ksh")
-			inst.AnimState:SetLightOverride(.1)
-			inst.lightcolour = data.bloomlight or nil
 		end
 
 		inst:AddTag("nospice")
@@ -292,6 +309,11 @@ local function MakePreparedBrew(data)
 
 		if data.isfertilizer ~= nil then
 			MakeDeployableFertilizer(inst)
+		end
+
+		if data.shine ~= nil then
+			OnShine(inst)
+			inst.OnEntityWake = OnEntityWake
 		end
 		
 		MakeHauntableLaunchAndPerish(inst)

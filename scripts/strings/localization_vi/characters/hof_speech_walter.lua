@@ -119,6 +119,9 @@ WALTER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww, the enchantment wore off."
 WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Wow! We're getting a lot more wood for kindling!"
 WALTER.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The forest must rest for a while."
 
+WALTER.ANNOUNCE_KYNO_THORNSBUFF_START = "They won't want to mess with us now, Woby!"
+WALTER.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns are done!"
+
 WALTER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Phew! I'm feeling better already. What about you, girl?"
 
 WALTER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Sai món rồi!"
@@ -1153,6 +1156,7 @@ WALTER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Tuyệt ghê. Một cái chai rỗng
 
 WALTER.DESCRIBE.KYNO_OCEANTRAP = "Trông như nó có thể nhốt cá bên trong."
 
+WALTER.DESCRIBE.OCEANFISH_GLASS_CARP = "Wow! I've never seen a fish like this before!"
 WALTER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Trông giống loài cá xuất hiện khi lửa trại sắp tàn."
 WALTER.DESCRIBE.OCEANFISH_PUFFERFISH = "Cơ chế tự vệ kinh điển của đại dương. Ngầu ghê!"
 WALTER.DESCRIBE.OCEANFISH_STURGEON = "Wow! Hóa thạch sống! Tuyệt thật!"
@@ -1342,7 +1346,6 @@ WALTER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Food fight!"
 WALTER.DESCRIBE.WX78MODULE_GOURMAND = "Robot guts! Neat!"
 WALTER.DESCRIBE.WX78MODULE_COOKER = "Robot guts! Neat!"
 WALTER.DESCRIBE.WX78MODULE_DRYER = "Robot guts! Neat!"
-WALTER.DESCRIBE.WX78MODULE_DRYER2 = "Robot guts! Neat!"
 WALTER.DESCRIBE.WX78MODULE_BREWER = "Robot guts! Neat!"
 
 WALTER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WALTER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Wonder if WX wants all this stuff back.",
-}
-
-WALTER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

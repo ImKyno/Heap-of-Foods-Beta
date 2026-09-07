@@ -58,13 +58,14 @@ local customizations_worldsettings =
 	fishermerms_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 3,   world = { "forest" }},
 	hermitwobsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 4,   world = { "forest" }},
 	jellyfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 5,   world = { "forest" }},
-	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
-	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
-	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
-	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
-	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
-	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
-	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 12,  world = { "forest" }},
+	jellyfishes2_setting     = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 11,  world = { "forest" }},
+	nightbirds_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 6,   world = { "forest" }},
+	pebblecrabs_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 8,   world = { "forest" }},
+	pikos_setting            = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 9,   world = { "forest" }},
+	pikosorange_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 7,   world = { "forest" }},
+	puffermonsters_setting   = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 10,  world = { "forest" }},
+	sugarflies_setting       = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 12,  world = { "forest" }},
+	swordfishes_setting      = { desc = "frequency_descriptions",  group = "hof_creatures_r", order = 13,  world = { "forest" }},
 }
 
 local function OverrideTuningVariables(tuning)
@@ -726,6 +727,33 @@ WSO.Pre.jellyfishes2_setting = function(difficulty)
 		{
 			KYNO_JELLYFISH_RAINBOW_REGEN_TIME = TUNING.TOTAL_DAY_TIME * 1,
 			KYNO_JELLYFISH_RAINBOW_AMOUNT = 5,
+		},
+	}
+
+	OverrideTuningVariables(tuning_vars[difficulty])
+end
+
+WSO.Pre.nightbirds_setting = function(difficulty)
+	local tuning_vars =
+	{
+		never =
+		{
+			KYNO_NIGHTBIRD_SPAWN_MAX = 0,
+		},
+
+		rare =
+		{
+			KYNO_NIGHTBIRD_SPAWN_MAX = 2,
+		},
+
+		often =
+		{
+			KYNO_NIGHTBIRD_SPAWN_MAX = 7,
+		},
+
+		always =
+		{
+			KYNO_NIGHTBIRD_SPAWN_MAX = 10,
 		},
 	}
 

@@ -119,6 +119,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "As medidas de proteção expira
 WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "As árvores parecem estar produzindo consideravelmente mais madeira."
 WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "A produção aumentada de madeira cessou."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_THORNSBUFF_START = "Um mecanismo de defesa botânico útil."
+WICKERBOTTOM.ANNOUNCE_KYNO_THORNSBUFF_END = "A defesa botânica cessou."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excelente. A doença parece ter passado."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Precisa de algo diferente."
@@ -1153,6 +1156,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Gosto quando há um manuscrito
 
 WICKERBOTTOM.DESCRIBE.KYNO_OCEANTRAP = "Coloque perto da toca da criatura."
 
+WICKERBOTTOM.DESCRIBE.OCEANFISH_GLASS_CARP = "Um espécime incomumente translúcido."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uma carpa adaptada ao comportamento noturno. Fascinante."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, Tetraodontidae. Deve ser manuseado com extremo cuidado."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_STURGEON = "Acipenseridae! Linhagem incrivelmente antiga, fascinante!"
@@ -1342,7 +1346,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Que desperdício de Solanum Lycope
 WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_BREWER = "Eles não gostam de formas orgânicas, mas não parecem avessos a se inspirar nelas."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Outrora um repositório, agora apenas os seus vestígios.",
-}
-
-WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

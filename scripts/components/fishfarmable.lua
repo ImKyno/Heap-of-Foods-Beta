@@ -15,7 +15,7 @@ local FishFarmable = Class(function(self, inst)
 end)
 
 function FishFarmable:IsPhaseValid()
-	local phase = TheWorld.state.phase -- Its always night in caves...
+	local phase = TheWorld.state.phase -- It's always night in caves...
 	
 	for _, p in ipairs(self.valid_phases) do
 		if p == phase then

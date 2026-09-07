@@ -5,6 +5,7 @@ local function ForestPostInit(inst)
 		return inst
 	end
 
+	inst:AddComponent("nightbirdspawner")
 	inst:AddComponent("sugarflyspawner")
 	inst:AddComponent("waterfowlhunter")
 	inst:AddComponent("retrofitforestmap_hof")

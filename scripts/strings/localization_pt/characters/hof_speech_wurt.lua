@@ -119,6 +119,9 @@ WURT.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "A proteção brilhante desapareceu!!"
 WURT.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Árvores dão mais gravetos, florp!"
 WURT.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Acho que as árvores voltaram ao normal."
 
+WURT.ANNOUNCE_KYNO_THORNSBUFF_START = "Tudo cheio de espinhos agora!"
+WURT.ANNOUNCE_KYNO_THORNSBUFF_END = "Já não tem mais espinhos, florp."
+
 WURT.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Já estou melhor, florp!"
 
 WURT.ANNOUNCE_KYNO_CANTBUILDHERE_FISHERMERMHOUSE = "Peixes bonitinhos sempre estão no pantano!"
@@ -1155,6 +1158,7 @@ WURT.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Tá sem nada, florp."
 
 WURT.DESCRIBE.KYNO_OCEANTRAP = "Glurgh! Ruim pros amiguinhos peixes..."
 
+WURT.DESCRIBE.OCEANFISH_GLASS_CARP = "Você é muito bonito!"
 WURT.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Amigo de águas escuras!"
 WURT.DESCRIBE.OCEANFISH_PUFFERFISH = "Amigo peixoso cheio de pontas, florp!"
 WURT.DESCRIBE.OCEANFISH_STURGEON = "Peixão velho! Muito forte, florp!"
@@ -1344,7 +1348,6 @@ WURT.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Jogue em mim, eu vou comer!"
 WURT.DESCRIBE.WX78MODULE_GOURMAND = "Crocante."
 WURT.DESCRIBE.WX78MODULE_COOKER = "Crocante."
 WURT.DESCRIBE.WX78MODULE_DRYER = "Crocante."
-WURT.DESCRIBE.WX78MODULE_DRYER2 = "Crocante."
 WURT.DESCRIBE.WX78MODULE_BREWER = "Crocante."
 
 WURT.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1355,13 +1358,6 @@ WURT.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Coisas dentro da caixa de metal?",
-}
-
-WURT.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

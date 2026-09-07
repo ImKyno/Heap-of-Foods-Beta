@@ -119,6 +119,9 @@ WOLFGANG.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Wolfgang feels weak again!"
 WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Trees give Wolfgang much more wood!"
 WOLFGANG.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Trees are back to normal."
 
+WOLFGANG.ANNOUNCE_KYNO_THORNSBUFF_START = "Wolfgang is prickly now!"
+WOLFGANG.ANNOUNCE_KYNO_THORNSBUFF_END = "Wolfgang is no longer prickly."
+
 WOLFGANG.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Sickness is gone! Wolfgang feels strong again!"
 
 WOLFGANG.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Is not the correct one."
@@ -1153,6 +1156,7 @@ WOLFGANG.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Is just a bottle."
 
 WOLFGANG.DESCRIBE.KYNO_OCEANTRAP = "Little fish does not stand a chance."
 
+WOLFGANG.DESCRIBE.OCEANFISH_GLASS_CARP = "Tiny glass fish is very shiny!"
 WOLFGANG.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Tiny night fish. Wolfgang could eat many!"
 WOLFGANG.DESCRIBE.OCEANFISH_PUFFERFISH = "Is small fish, but very spiky! Wolfgang must be careful!"
 WOLFGANG.DESCRIBE.OCEANFISH_STURGEON = "Strong fish! Wolfgang respects strong fish!"
@@ -1342,7 +1346,6 @@ WOLFGANG.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wolfgang hated those back at the circu
 WOLFGANG.DESCRIBE.WX78MODULE_GOURMAND = "Is robot snacks, yes?"
 WOLFGANG.DESCRIBE.WX78MODULE_COOKER = "Is robot snacks, yes?"
 WOLFGANG.DESCRIBE.WX78MODULE_DRYER = "Is robot snacks, yes?"
-WOLFGANG.DESCRIBE.WX78MODULE_DRYER2 = "Is robot snacks, yes?"
 WOLFGANG.DESCRIBE.WX78MODULE_BREWER = "Is robot snacks, yes?"
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Any goodie for Wolfgang?",
-}
-
-WOLFGANG.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

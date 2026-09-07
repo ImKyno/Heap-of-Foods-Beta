@@ -988,8 +988,8 @@ function c_hofwxcircuits()
 
 		c_give("wx78module_cooker",   nil, true)
 		c_give("wx78module_dryer",    nil, true)
-		c_give("wx78module_dryer2",   nil, true)
 		c_give("wx78module_gourmand", nil, true)
+		c_give("wx78module_brewer",   nil, true)
 	end
 end
 

@@ -119,6 +119,9 @@ WATHGRITHR.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The gods' blessing has faded away
 WATHGRITHR.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "The forest shall yield its bounty!"
 WATHGRITHR.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The forest's bounty has waned!"
 
+WATHGRITHR.ANNOUNCE_KYNO_THORNSBUFF_START = "Try pierce me now!"
+WATHGRITHR.ANNOUNCE_KYNO_THORNSBUFF_END = "My spiky defense weakens!"
+
 WATHGRITHR.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The illness has been vanquished!"
 
 WATHGRITHR.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Zło!"
@@ -1153,6 +1156,7 @@ WATHGRITHR.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Pusta z wiadomości i napoju. Sz
 
 WATHGRITHR.DESCRIBE.KYNO_OCEANTRAP = "Przynieś mi łupy morza!"
 
+WATHGRITHR.DESCRIBE.OCEANFISH_GLASS_CARP = "A gleaming fish fit for the halls of Valhalla!"
 WATHGRITHR.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Księżycowa pływaczka z cienistych wód!"
 WATHGRITHR.DESCRIBE.OCEANFISH_PUFFERFISH = "Noszę zbroję z kolców! Godny morski przeciwnik!"
 WATHGRITHR.DESCRIBE.OCEANFISH_STURGEON = "Potężna ryba legend! Uczta będzie wspaniała!"
@@ -1342,7 +1346,6 @@ WATHGRITHR.DESCRIBE.KYNO_FOODAMMO_TOMATO = "I'll smite you, if you even dare!"
 WATHGRITHR.DESCRIBE.WX78MODULE_GOURMAND = "These boons shall empower our metal warrior."
 WATHGRITHR.DESCRIBE.WX78MODULE_COOKER = "These boons shall empower our metal warrior."
 WATHGRITHR.DESCRIBE.WX78MODULE_DRYER = "These boons shall empower our metal warrior."
-WATHGRITHR.DESCRIBE.WX78MODULE_DRYER2 = "These boons shall empower our metal warrior."
 WATHGRITHR.DESCRIBE.WX78MODULE_BREWER = "These boons shall empower our metal warrior."
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "What spoils hath our metal warrior bestowed?",
-}
-
-WATHGRITHR.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

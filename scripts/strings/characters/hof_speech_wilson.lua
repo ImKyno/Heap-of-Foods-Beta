@@ -119,6 +119,9 @@ WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My invincibility is gone!"
 WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Looks like these trees are giving me extra wood!"
 WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The trees are back to normal."
 
+WILSON.ANNOUNCE_KYNO_THORNSBUFF_START = "I'll let the spikes do the talking."
+WILSON.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns have withered."
+
 WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ahh, much better. That sickness is gone."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "It's not this one."
@@ -1153,6 +1156,7 @@ WILSON.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Just an empty bottle."
 
 WILSON.DESCRIBE.KYNO_OCEANTRAP = "For the deadliest catch."
 
+WILSON.DESCRIBE.OCEANFISH_GLASS_CARP = "A fish with a crystalline appearance."
 WILSON.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "A curious carp that prefers the cover of night."
 WILSON.DESCRIBE.OCEANFISH_PUFFERFISH = "Careful! It looks... dangerously inflatable."
 WILSON.DESCRIBE.OCEANFISH_STURGEON = "A very old fish... practically prehistoric!"
@@ -1342,17 +1346,9 @@ WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Can't get saucy with the crowd if you se
 WILSON.DESCRIBE.WX78MODULE_GOURMAND = "So much science packed into one tiny gizmo."
 WILSON.DESCRIBE.WX78MODULE_COOKER = "So much science packed into one tiny gizmo."
 WILSON.DESCRIBE.WX78MODULE_DRYER = "So much science packed into one tiny gizmo."
-WILSON.DESCRIBE.WX78MODULE_DRYER2 = "So much science packed into one tiny gizmo."
 WILSON.DESCRIBE.WX78MODULE_BREWER = "So much science packed into one tiny gizmo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "An odd container.",
-}
-
-WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",

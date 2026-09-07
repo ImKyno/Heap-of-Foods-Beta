@@ -119,6 +119,9 @@ WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Minha trégua acabou."
 WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Um pouco de madeira extra nunca faz mal."
 WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "As árvores pararam de ser tão generosas."
 
+WAXWELL.ANNOUNCE_KYNO_THORNSBUFF_START = "Uma medida defensiva bastante afiada."
+WAXWELL.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos cumpriram seu propósito."
+
 WAXWELL.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Finalmente. Posso respirar aliviado novamente."
 
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Preciso de algo diferente."
@@ -1153,6 +1156,7 @@ WAXWELL.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Com tempo suficiente eu poderia con
 
 WAXWELL.DESCRIBE.KYNO_OCEANTRAP = "A curiosidade vai te pegar, eventualmente."
 
+WAXWELL.DESCRIBE.OCEANFISH_GLASS_CARP = "Uma criatura de aparência bastante delicada."
 WAXWELL.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Até os peixes daqui são criaturas da noite."
 WAXWELL.DESCRIBE.OCEANFISH_PUFFERFISH = "Um balão cheio de veneno. Que horrível."
 WAXWELL.DESCRIBE.OCEANFISH_STURGEON = "Parece ter saído direto de um fóssil."
@@ -1342,7 +1346,6 @@ WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Fruta fétida. É melhor que não seja 
 WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "Aquele robô precisa se recompor."
 WAXWELL.DESCRIBE.WX78MODULE_COOKER = "Aquele robô precisa se recompor."
 WAXWELL.DESCRIBE.WX78MODULE_DRYER = "Aquele robô precisa se recompor."
-WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "Aquele robô precisa se recompor."
 WAXWELL.DESCRIBE.WX78MODULE_BREWER = "Aquele robô precisa se recompor."
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Restos daquele robô.",
-}
-
-WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

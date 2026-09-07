@@ -119,6 +119,9 @@ WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "And time has caught up with me again."
 WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More wood, less work. Perfect."
 WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The extra yield has run its course."
 
+WANDA.ANNOUNCE_KYNO_THORNSBUFF_START = "Time to give them a prickly surprise."
+WANDA.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns have run their course."
+
 WANDA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Good. I don't have time to be sick."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不……我需要别的。"
@@ -1153,6 +1156,7 @@ WANDA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "我不知道能不能用这个做一�
 
 WANDA.DESCRIBE.KYNO_OCEANTRAP = "海洋生物的牢笼。"
 
+WANDA.DESCRIBE.OCEANFISH_GLASS_CARP = "Beautiful. I wonder how old this species is."
 WANDA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "来自深夜时分的鱼。"
 WANDA.DESCRIBE.OCEANFISH_PUFFERFISH = "是时候消消气了，刺头。"
 WANDA.DESCRIBE.OCEANFISH_STURGEON = "一条历经沧桑的鱼……我深有同感。"
@@ -1342,7 +1346,6 @@ WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time."
 WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these."
-WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_BREWER = "Aha! I was wondering when they'd started making these."
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "What's in there?",
-}
-
-WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

@@ -3,11 +3,10 @@ local require = _G.require
 
 local CUSTOM_MODULES =
 {
-	brewer   = true,
 	cooker   = true,
 	dryer    = true,
-	dryer2   = true,
 	gourmand = true,
+	brewer   = true,
 }
 
 AddClassPostConstruct("widgets/upgrademodulesdisplay", function(self)

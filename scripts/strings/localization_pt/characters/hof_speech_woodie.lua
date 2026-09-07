@@ -119,6 +119,9 @@ WOODIE.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Voltei a ser vulnerável."
 WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Isso sim é que é uma boa colheita!"
 WOODIE.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Bom, de volta à quantidade habitual de madeira."
 
+WOODIE.ANNOUNCE_KYNO_THORNSBUFF_START = "Estou meio espinhoso agora."
+WOODIE.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos sumiram."
+
 WOODIE.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Bom, lá se foi uma doença daquelas."
 
 WOODIE.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Talvez algo diferente se encaixe aqui"
@@ -1153,6 +1156,7 @@ WOODIE.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "O que tinha dentro?"
 
 WOODIE.DESCRIBE.KYNO_OCEANTRAP = "Mal posso esperar por um jantar de frutos do mar."
 
+WOODIE.DESCRIBE.OCEANFISH_GLASS_CARP = "Eu nunca vi um peixe igual este antes."
 WOODIE.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "É, parece que prefere pescar depois do anoitecer."
 WOODIE.DESCRIBE.OCEANFISH_PUFFERFISH = "Caramba, esse tem mais espinhos que um porco-espinho, hein?"
 WOODIE.DESCRIBE.OCEANFISH_STURGEON = "Esse aí tem história, hein?"
@@ -1342,7 +1346,6 @@ WOODIE.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Cuidado para onde você mira isso!"
 WOODIE.DESCRIBE.WX78MODULE_GOURMAND = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_COOKER = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_DRYER = "Algumas peças robóticas sofisticadas."
-WOODIE.DESCRIBE.WX78MODULE_DRYER2 = "Algumas peças robóticas sofisticadas."
 WOODIE.DESCRIBE.WX78MODULE_BREWER = "Algumas peças robóticas sofisticadas."
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WOODIE.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Tem alguma coisa boa aí, Lucy?",
-}
-
-WOODIE.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

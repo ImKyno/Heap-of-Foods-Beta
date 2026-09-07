@@ -642,14 +642,12 @@ local function MakeFish(data)
 	table.insert(fish_prefabs, Prefab(data.prefab.."_inv", function() return inventoryfn(data) end))
 end
 
--- calling FISH_DATA.fish from MakeFish will recreate ALL fishes, we don't want that.
--- The game register our fish through hof_main_oceanfish_data.lua but it does not register it in the mod environment.
--- I am going to manually register them in here...
 local FISH_DATA_HOF = 
 {
 	oceanfish_pufferfish    = true,
 	oceanfish_sturgeon      = true,
 	oceanfish_midnight_carp = true,
+	oceanfish_glass_carp    = true,
 }
 
 for prefab_name, fish_def in pairs(FISH_DATA.fish) do

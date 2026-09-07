@@ -122,6 +122,9 @@ WORTOX.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "It appears that my protective powers 
 WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More logs for the chopping! Hyuyu!"
 WORTOX.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "No more extra logs, what a bore!"
 
+WORTOX.ANNOUNCE_KYNO_THORNSBUFF_START = "Prickly prickles!"
+WORTOX.ANNOUNCE_KYNO_THORNSBUFF_END = "The prickles have gone!"
+
 WORTOX.ANNOUNCE_KYNO_SICKNESSBUFF_END = "The nasty sickness is gone!"
 
 WORTOX.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Potrzebuję czegoś jeszcze."
@@ -1156,6 +1159,7 @@ WORTOX.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Jest pusta."
 
 WORTOX.DESCRIBE.KYNO_OCEANTRAP = "Nie zauważą tej. Hyuyu!"
 
+WORTOX.DESCRIBE.OCEANFISH_GLASS_CARP = "A shiny little guy!"
 WORTOX.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Nocny pływak! Hee hee!"
 WORTOX.DESCRIBE.OCEANFISH_PUFFERFISH = "Tyle powietrza, a jednak tak śmiercionośna! Hyuyu!"
 WORTOX.DESCRIBE.OCEANFISH_STURGEON = "Taka starożytna! Pewnie widziała już wiele śmiertelnych psot! Hyuyu!"
@@ -1345,7 +1349,6 @@ WORTOX.DESCRIBE.KYNO_FOODAMMO_TOMATO = "We do a little silly tomfoolery."
 WORTOX.DESCRIBE.WX78MODULE_GOURMAND = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_COOKER = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_DRYER = "Are you the brightest bulb of the bunch?"
-WORTOX.DESCRIBE.WX78MODULE_DRYER2 = "Are you the brightest bulb of the bunch?"
 WORTOX.DESCRIBE.WX78MODULE_BREWER = "Are you the brightest bulb of the bunch?"
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1356,13 +1359,6 @@ WORTOX.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Once a case, dropped by ol' metal face!",
-}
-
-WORTOX.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

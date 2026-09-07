@@ -17,6 +17,10 @@ local function WilsonPostInit(inst)
 end
 
 local function WillowPostInit(inst)
+	local function OnScanStart(inst)
+		inst:PushEvent("scannedbywx78")
+	end
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end
@@ -25,6 +29,9 @@ local function WillowPostInit(inst)
 		inst.components.foodaffinity:AddPrefabAffinity("feijoada",       TUNING.AFFINITY_15_CALORIES_HUGE)
 		inst.components.foodaffinity:AddPrefabAffinity("pickles_pepper", TUNING.AFFINITY_15_CALORIES_HUGE)
 	end
+
+	-- Easter Egg for WX-78.
+	inst:ListenForEvent("wx78_scanner_start", OnScanStart)
 end
 
 local function WolfgangPostInit(inst)
@@ -50,6 +57,10 @@ local function WendyPostInit(inst)
 end
 
 local function WX78PostInit(inst)
+	local function OnScanStart(inst, data)
+		inst:PushEvent("wx78scan_character", data)
+	end
+
 	inst._brewer_container_net = net_entity(inst.GUID, "wx78._brewer_container")
 
 	if not _G.TheWorld.ismastersim then
@@ -95,6 +106,8 @@ local function WX78PostInit(inst)
 			brewer:OnLoadData(data.wxbrewer)
 		end
 	end
+
+	inst:ListenForEvent("wx78_scanned_character", OnScanStart)
 end
 
 local function WickerbottomPostInit(inst)

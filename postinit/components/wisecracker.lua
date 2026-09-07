@@ -101,7 +101,15 @@ local function DailyRecipeEaten(inst, data)
 	end
 end
 
-local function WX78MoistureImmune(inst, data)
+local function ScannedByWX78(inst, data)
+	if inst.components.talker ~= nil then
+		inst:DoTaskInTime(3.5, function()
+			inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_SCANNED_BY_WX78"))
+		end)
+	end
+end
+
+local function WX78StartRain(inst, data)
 	if inst.components.talker ~= nil and inst.prefab == "wx78" then
 		inst.components.talker:Say(_G.GetString(inst, "ANNOUNCE_KYNO_WX78_MOISTURE_IMMUNE"))
 	end
@@ -137,6 +145,23 @@ local function WX78BrewerDone(inst, data)
 	end
 end
 
+local function WX78ScanCharacter(inst, data)
+	if inst.components.talker ~= nil and inst.prefab == "wx78" then
+		local target = data ~= nil and data.target or nil
+
+		if target ~= nil then
+			local character_name = STRINGS.CHARACTERS[target.prefab] ~= nil
+			and STRINGS.CHARACTERS[target.prefab].NAME or target.prefab
+
+			character_name = string.upper(character_name)
+
+			inst:DoTaskInTime(1, function()
+				inst.components.talker:Say(string.format(_G.GetString(inst, "ANNOUNCE_KYNO_SCANNING_CHARACTER"), character_name))
+			end)
+		end
+	end
+end
+
 AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("firepitinstallfail",       FirepitInstallFail)
 	self.inst:ListenForEvent("cookwareinstallfail",      CookwareInstallFail)
@@ -154,10 +179,12 @@ AddComponentPostInit("wisecracker", function(self)
 	self.inst:ListenForEvent("fishregistryresearchfish", FishRegistryFishResearched)
 	self.inst:ListenForEvent("fishregistryresearchroe",  FishRegistryRoeResearched)
 	self.inst:ListenForEvent("dailyrecipeeaten",         DailyRecipeEaten)
-	self.inst:ListenForEvent("wx78moistureimmune",       WX78MoistureImmune)
+	self.inst:ListenForEvent("scannedbywx78",            ScannedByWX78)
+	self.inst:ListenForEvent("wx78startrain",            WX78StartRain)
 	self.inst:ListenForEvent("wx78brewer_start",         WX78BrewerStart)
 	self.inst:ListenForEvent("wx78brewer_pause",         WX78BrewerPause)
 	self.inst:ListenForEvent("wx78brewer_resume",        WX78BrewerResume)
 	self.inst:ListenForEvent("wx78brewer_cancel",        WX78BrewerCancel)
 	self.inst:ListenForEvent("wx78brewer_done",          WX78BrewerDone)
+	self.inst:ListenForEvent("wx78scan_character",       WX78ScanCharacter)
 end)

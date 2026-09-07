@@ -124,6 +124,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXHUNGER = "在一定时间内将最�
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_MAXSANITY = "在一定时间内将最大理智值提升30%。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_DARK = "在一定时间内将最大健康值提升30%。\n短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_TWIST = "在一定时间内，最大生命值、饥饿值和理智值提高 15%。\n\n短暂降低温度。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_NUKACOLA_BRAMBLE = "赋予幸存者荆棘效果，攻击者在攻击幸存者时，将受到小范围伤害。\n\n短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB = "在一定时间内提高植物产量。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_GREENTHUMB2 = "在一定时间内提高植物产量。\n\短暂降低温度。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_SOOTHING = "安抚幸存者周围的附近生物。"
@@ -138,6 +139,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_BADLUCK = "在一段时间内降低幸
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_RANDOM = "会产生随机副作用。\n\n\"我们去赌博吧！\"——大概是某个人会这么说。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_OPALAPPLE = "使幸存者在30秒内免疫所有伤害来源，但会导致食物治疗疾病。\n\n\"一颗被永恒触碰过的果实，其耀眼的甘甜之中隐藏着凡人本不应掌握的力量。刹那间，血肉变得坚不可摧，就连死亡本身也不得不移开目光，而一股璀璨的力量也随之降临。\" - 作者不详。"
 STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_WOODCUTTER = "在一段时间内提高砍伐效率。砍倒树木时会掉落更多原木。"
+STRINGS.SCRAPBOOK.SPECIALINFO.FOODEFFECTS_THORNS = "赋予幸存者荆棘效果，攻击者在攻击幸存者时，将受到小范围伤害。"
 
 -- Spice Effects.
 STRINGS.SCRAPBOOK.SPECIALINFO.SPICEEFFECTS_CURE = "可使用便携调味台添加到烹饪锅料理中。\n\n食用添加了保鲜粉的料理后，将完全恢复其新鲜度时间。\n\n使背包内物品的腐烂速度降低25%。\n\n使其他增益效果持续时间提高25%。\n\n持续时间：4分钟。"
@@ -200,8 +202,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.SPICEPACK_REWORK = "一个拥有6个格子的便�
 STRINGS.SCRAPBOOK.SPECIALINFO.PIGGYBANK = "一种拥有6个格位的便携式容器，仅能存放硬币及其他类型的货币。\n\n可使用“弹性间隔器”进行升级，以增强其存储能力。"
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_GOURMAND = "安装于 WX-78 的 Beta 电路板。可从任意小动物或猪长老身上扫描获得制作配方。\n\n需要 2 个插槽。熟食提供的正面属性增加 5 点，负面属性减少 5 点。\n\nBeta 电路调校 II 可强化该电路，使正面属性额外增加 5 点、负面属性额外减少 5 点，并让 WX-78 能够快速进食。"
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_COOKER = "安装于 WX-78 的 Beta 电路板。可从熔岩幼虫或超可爱熔岩幼虫身上扫描获得制作配方。\n\n需要 1 个插槽。会在 WX-78 背包最右侧的栏位安装一个烹饪容器，每 5 秒自动烹饪第一个栏位中的食物。\n\nBeta 电路调校 II 可强化该电路，使其能够放入任何可燃物品。木制相关物品会变成木炭，其他物品则会变成灰烬。"
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "安装于 WX-78 的 Beta 电路板。可从饼干切割者身上扫描获得制作配方。\n\n需要 3 个插槽。会在 WX-78 背包最右侧的栏位安装一个拥有 1 个栏位的干燥容器。\n\nBeta 电路调校 II 可强化该电路，为 WX-78 提供 25% 防水能力。"
-STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER2 = "安装于 WX-78 的 Beta 电路板。可从咸狗身上扫描获得制作配方。\n\n需要 2 个插槽。会在 WX-78 背包最右侧的栏位安装一个拥有 2 个栏位的干燥容器。\n\nBeta 电路调校 II 可强化该电路，为 WX-78 提供 50% 防水能力，并允许生产盐晶。"
+STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_DRYER = "安装于 WX-78 的 Beta 电路板。可从饼干切割者身上扫描获得制作配方。\n\n需要 2 个插槽。会在 WX-78 背包最右侧的栏位安装一个拥有 1 个栏位的干燥容器。\n\nBeta 电路调校 II 可强化该电路，为 WX-78 提供 50% 防水能力，并允许生产盐晶。"
 STRINGS.SCRAPBOOK.SPECIALINFO.WX78MODULE_BREWER = "安装于 WX-78 的 Gamma 电路板。可从异食松鼠或橙色异食松鼠身上扫描获得制作配方。\n\n需要 4 个插槽。允许 WX-78 使用安装在体内的木制酒桶和蜜饯罐酿造手工制品。每次酿造会消耗相当于成品饥饿值 50% 的饥饿值。\n\nGamma 电路调校 II 可强化该电路，使酿造时间和酿造过程中消耗的饥饿值减少 25%。"
 
 -- Creatures.

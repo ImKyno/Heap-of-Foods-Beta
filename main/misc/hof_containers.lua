@@ -350,7 +350,7 @@ function params.fishfarmplot.itemtestfn(container, item, slot)
 	if slot == 1 then
 		return item:HasTag("fishfarmable")
 	elseif slot == 2 then
-		return item:HasTag("roe") and item:GetTimeAlive() <= 0
+		return item:HasAnyTag("roe", "fishfarmable_product") and item:GetTimeAlive() <= 0
 	else
 		local valid_fish_slots =
 		{
@@ -674,7 +674,7 @@ params.wx78_inventorydryer =
 	{
 		slotbg =
 		{
-			{ image = "inv_slot_morsel.tex" },
+			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
 		},
 	
 		slotpos =
@@ -742,102 +742,6 @@ function params.wx78_inventorydryer.itemtestfn(container, item, slot)
 	or (TheWorld.ismastersim and (item:GetTimeAlive() == 0
 	or (item.dryingrack_lastinfo and item.dryingrack_lastinfo.container == container and item.dryingrack_lastinfo.slot == slot)))
 end
-
-local WX78_INVENTORY_DRYER2_OFFSET = Vector3(0, 185, 0)
-local WX78_INVENTORY_DRYER2_SLOTPOS = {}
-local WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS = {}
-
-for x = 0, 4 do
-	table.insert(WX78_INVENTORY_DRYER2_SLOTPOS, { Vector3(60 * x - 60 * 2, -320, 0), Vector3(60 * x - 60 * 2, -380, 0) })
-end
-
-for x = 0, 4 do
-	local offset = (x - 2) * 80
-
-	table.insert(WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS,
-	{
-		Vector3(-4 + offset, -354, 0),
-		Vector3(-2 + offset, -458, 0)
-	})
-end
-
-params.wx78_inventorydryer2 =
-{
-	widget =
-	{
-		slotbg =
-		{
-			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
-			{ image = "inv_slot_kelp.tex", atlas = "images/hud2.xml" },
-		},
-
-		slotpos =
-		{ 
-			Vector3(-3, -16, 0),
-			Vector3(-2, -149, 0),
-		},
-
-		slotposfn = function(container, doer)
-			local column = wx78_getcolumn(container)
-
-			if wx78_isinbackupbody(container, doer) then
-				return WX78_INVENTORY_DRYER2_BACKUP_SLOTPOS[column]
-			end
-
-			return nil
-		end,
-
-		slotscalefn = function(container, doer)
-			return wx78_isinbackupbody(container, doer) and 0.85 or nil
-		end,
-
-		slothighlightscalefn = function(container, doer)
-			return wx78_isinbackupbody(container, doer) and 1.08 or nil
-		end,
-
-		animbank = "ui_wx78_inventorydryer2_1x2",
-		animbuild = "ui_wx78_inventorydryer2_1x2",
-		animfn = function(container, doer, anim)
-			return wx78_isinbackupbody(container, doer)
-			and (anim..tostring(wx78_getcolumn(container))) or nil
-		end,
-
-		pos = WX78_INVENTORY_DRYER2_OFFSET,
-		posfn = function(container, doer)
-			if wx78_isinbackupbody(container, doer) then
-				return WX78_BACKUPBODY_POS_ALT
-			end
-
-			for k, v in pairs(doer.HUD.controls.inv.inv) do
-				if v.tile and v.tile.item == container then
-					return v:GetPosition() + WX78_INVENTORY_DRYER2_OFFSET
-				end
-			end
-		end,
-
-		opensound = "balatro/balatro_cabinet/cards_flip_HUD",
-		closesound = "balatro/balatro_cabinet/cards_flip_HUD",
-
-		bottom_align_tip_fn = function(container, doer)
-			return wx78_isinbackupbody(container, doer) and -90 or nil
-		end,
-
-		top_align_tip_fn = function(container, doer)
-			return not wx78_isinbackupbody(container, doer) and 70 or nil
-		end,
-
-		top_align_tip = 70,
-	},
-
-	acceptsstacks = false,
-	type = "inv",
-
-	typefn = function(container, doer)
-		return wx78_isinbackupbody(container, doer) and "chest_addon" or nil
-	end,
-}
-
-params.wx78_inventorydryer2.itemtestfn = params.wx78_inventorydryer.itemtestfn
 
 params.wx78_brewer =
 {
@@ -1046,6 +950,4 @@ end
 
 if TUNING.HOF_SPICEPACKREWORK then
 	containers.params.spicepack = params.spicepackrework
-else
-	containers.params.spicepack = containers.params.backpack
 end

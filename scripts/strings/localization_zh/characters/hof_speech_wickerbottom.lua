@@ -119,6 +119,9 @@ WICKERBOTTOM.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "The protective measures have ex
 WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "The trees appear to be yielding considerably more timber."
 WICKERBOTTOM.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The increased timber yield has ceased."
 
+WICKERBOTTOM.ANNOUNCE_KYNO_THORNSBUFF_START = "A useful botanical defense mechanism."
+WICKERBOTTOM.ANNOUNCE_KYNO_THORNSBUFF_END = "The botanical defense has subsided."
+
 WICKERBOTTOM.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Excellent. The illness appears to have passed."
 
 WICKERBOTTOM.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "这还需要其他条件。"
@@ -1153,6 +1156,7 @@ WICKERBOTTOM.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "我确实喜欢里面有手稿
 
 WICKERBOTTOM.DESCRIBE.KYNO_OCEANTRAP = "将其放置在生物巢穴附近。"
 
+WICKERBOTTOM.DESCRIBE.OCEANFISH_GLASS_CARP = "An unusually translucent specimen."
 WICKERBOTTOM.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "一种适应夜间活动的鲤鱼。真是有趣。"
 WICKERBOTTOM.DESCRIBE.OCEANFISH_PUFFERFISH = "啊，河豚科。务必极其谨慎地处理。"
 WICKERBOTTOM.DESCRIBE.OCEANFISH_STURGEON = "鲟科！如此古老的谱系，令人着迷！"
@@ -1342,7 +1346,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_FOODAMMO_TOMATO = "What a waste of Solanum Lycopersic
 WICKERBOTTOM.DESCRIBE.WX78MODULE_GOURMAND = "They dislike organics, but don't seem opposed to taking inspiration from them."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_COOKER = "They dislike organics, but don't seem opposed to taking inspiration from them."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER = "They dislike organics, but don't seem opposed to taking inspiration from them."
-WICKERBOTTOM.DESCRIBE.WX78MODULE_DRYER2 = "They dislike organics, but don't seem opposed to taking inspiration from them."
 WICKERBOTTOM.DESCRIBE.WX78MODULE_BREWER = "They dislike organics, but don't seem opposed to taking inspiration from them."
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Once a repository, now just the remains of it.",
-}
-
-WICKERBOTTOM.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

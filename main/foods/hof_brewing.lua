@@ -50,6 +50,7 @@ AddBrewingValues({"moon_tree_blossom"},         {veggie     = 0.5})
 AddBrewingValues({"purebrilliance"},            {lunar      = 1})
 AddBrewingValues({"horrorfuel"},                {shadow     = 1})
 AddBrewingValues({"seeds"},                     {seeds      = 1})
+AddBrewingValues({"mandrake"},                  {veggie     = 1,   magic         = 1, mandrake = 1})
 
 -- Mod Wooden Keg and Preserves Jar Ingredients.
 AddBrewingValues({"kyno_wheat"},                {veggie     = 1,   wheat         = 1})
@@ -85,6 +86,7 @@ AddBrewingValues({"kyno_rice"},                 {veggie     = 1})
 AddBrewingValues({"kyno_pineapple_halved"},     {fruit      = 1,   pineapple     = 1})
 AddBrewingValues({"nukacola"},                  {soda       = 1})
 AddBrewingValues({"nukacola_quantum"},          {soda       = 1,   quantum       = 1})
+AddBrewingValues({"nukashine"},                 {soda       = 2,   quantum       = 2})
 AddBrewingValues({"kyno_milk_beefalo"},         {dairy      = 1,   milk          = 1})
 AddBrewingValues({"kyno_milk_koalefant"},       {dairy      = 1,   milk          = 1})
 AddBrewingValues({"kyno_coffeebeans_cooked"},   {seeds      = 1})
@@ -99,7 +101,7 @@ AddBrewingValues({"truffleoil"},                {oil        = 1})
 AddBrewingValues({"kyno_bottle_soul"},          {soul       = 1})
 AddBrewingValues({"kyno_cavetuber"},            {veggie     = 1,   tuber         = 1, monster  = 1})
 AddBrewingValues({"kyno_cavetuber_blooming"},   {veggie     = 1,   tuber         = 1})
-AddBrewingValues({"mandrake"},                  {veggie     = 1,   magic         = 1, mandrake = 1})
+AddBrewingValues({"kyno_opalpreciouspowder"},   {precious   = 1,   sugar         = 2})
 
 local fishroes =
 {
@@ -108,6 +110,7 @@ local fishroes =
 	"kyno_roe_jellyfish_rainbow",
 	"kyno_roe_koi",
 	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_glass_carp",
 	"kyno_roe_oceanfish_medium_1",
 	"kyno_roe_oceanfish_medium_2",
 	"kyno_roe_oceanfish_medium_3",

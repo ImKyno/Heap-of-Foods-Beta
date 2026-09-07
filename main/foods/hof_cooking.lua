@@ -221,6 +221,7 @@ local fishroes_meat =
 	"kyno_roe_jellyfish_rainbow",
 	"kyno_roe_koi",
 	"kyno_roe_neonfish",
+	"kyno_roe_oceanfish_glass_carp",
 	"kyno_roe_oceanfish_medium_1",
 	"kyno_roe_oceanfish_medium_2",
 	"kyno_roe_oceanfish_medium_3",
@@ -267,14 +268,19 @@ end
 
 local oceanfishes =
 {
-	oceanfish_pufferfish_inv =
+	oceanfish_glass_carp_inv =
 	{
-		meat = 0.5, fish = 0.5,
+		meat = 1, fish = 1,
 	},
 
 	oceanfish_midnight_carp_inv =
 	{
 		meat = 1, fish = 1,
+	},
+
+	oceanfish_pufferfish_inv =
+	{
+		meat = 0.5, fish = 0.5,
 	},
 
 	oceanfish_sturgeon_inv =

@@ -376,7 +376,7 @@ function FishFarmManager:ProduceBaby(skiptask)
 		end
 	end
 
-	if not empty_slot == nil then
+	if empty_slot ~= nil then
 		local baby = SpawnPrefab(baby_prefab)
 
 		if baby ~= nil then

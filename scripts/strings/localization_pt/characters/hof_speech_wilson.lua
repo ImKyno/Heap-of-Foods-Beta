@@ -119,6 +119,9 @@ WILSON.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Minha invencibilidade acabou!"
 WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Parece que estas árvores estão me dando madeira extra!"
 WILSON.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "As árvores voltaram ao normal."
 
+WILSON.ANNOUNCE_KYNO_THORNSBUFF_START = "Vou deixar os espinhos falarem por mim."
+WILSON.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos murcharam."
+
 WILSON.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, muito melhor. Aquela doença passou."
 
 WILSON.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Não é este."
@@ -1153,6 +1156,7 @@ WILSON.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Apenas uma garrafa vazia."
 
 WILSON.DESCRIBE.KYNO_OCEANTRAP = "Para a captura mais mortal."
 
+WILSON.DESCRIBE.OCEANFISH_GLASS_CARP = "Um peixe com aparência cristalina."
 WILSON.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Uma carpa curiosa que prefere a proteção da noite."
 WILSON.DESCRIBE.OCEANFISH_PUFFERFISH = "Cuidado! Parece... perigosamente inflável."
 WILSON.DESCRIBE.OCEANFISH_STURGEON = "Um peixe muito antigo... praticamente pré-histórico!"
@@ -1342,17 +1346,9 @@ WILSON.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Não se pode contra uma multidão quando
 WILSON.DESCRIBE.WX78MODULE_GOURMAND = "Tanta ciência concentrada em um dispositivo minúsculo."
 WILSON.DESCRIBE.WX78MODULE_COOKER = "Tanta ciência concentrada em um dispositivo minúsculo."
 WILSON.DESCRIBE.WX78MODULE_DRYER = "Tanta ciência concentrada em um dispositivo minúsculo."
-WILSON.DESCRIBE.WX78MODULE_DRYER2 = "Tanta ciência concentrada em um dispositivo minúsculo."
 WILSON.DESCRIBE.WX78MODULE_BREWER = "Tanta ciência concentrada em um dispositivo minúsculo."
 
 WILSON.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Um armazém esquisito.",
-}
-
-WILSON.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
 {
 	HELD = "...",
 	NOPOWER = "...",

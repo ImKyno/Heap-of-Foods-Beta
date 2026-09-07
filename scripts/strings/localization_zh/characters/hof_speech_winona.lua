@@ -119,6 +119,9 @@ WINONA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Back to wearing protective hats."
 WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Now that's efficient!"
 WINONA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Back to the usual output."
 
+WINONA.ANNOUNCE_KYNO_THORNSBUFF_START = "Let's see you get past this!"
+WINONA.ANNOUNCE_KYNO_THORNSBUFF_END = "Well, that's the end of that."
+
 WINONA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "That's better. Back on my feet."
 
 WINONA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不行。"
@@ -1153,6 +1156,7 @@ WINONA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "我需要你帮忙办点事。"
 
 WINONA.DESCRIBE.KYNO_OCEANTRAP = "晚餐捕手！"
 
+WINONA.DESCRIBE.OCEANFISH_GLASS_CARP = "I can almost see through it!"
 WINONA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "看来它是上夜班的。"
 WINONA.DESCRIBE.OCEANFISH_PUFFERFISH = "看起来像个带刺的减压球。我不喜欢。"
 WINONA.DESCRIBE.OCEANFISH_STURGEON = "那可是条硬骨头的老鱼。佩服。"
@@ -1342,7 +1346,6 @@ WINONA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Don't get those juices near my machines!
 WINONA.DESCRIBE.WX78MODULE_GOURMAND = "WX, you gotta stop leavin' this stuff lying around!"
 WINONA.DESCRIBE.WX78MODULE_COOKER = "WX, you gotta stop leavin' this stuff lying around!"
 WINONA.DESCRIBE.WX78MODULE_DRYER = "WX, you gotta stop leavin' this stuff lying around!"
-WINONA.DESCRIBE.WX78MODULE_DRYER2 = "WX, you gotta stop leavin' this stuff lying around!"
 WINONA.DESCRIBE.WX78MODULE_BREWER = "WX, you gotta stop leavin' this stuff lying around!"
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WINONA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Wonder what WX left behind.",
-}
-
-WINONA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

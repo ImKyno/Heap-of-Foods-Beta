@@ -119,6 +119,9 @@ WARLY.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "O encantamento desapareceu!"
 WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "Ah, a floresta está sendo particularmente generosa hoje."
 WARLY.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "E a generosidade da floresta chegou ao fim."
 
+WARLY.ANNOUNCE_KYNO_THORNSBUFF_START = "Uma defesa espinhosa."
+WARLY.ANNOUNCE_KYNO_THORNSBUFF_END = "Os espinhos perderam o efeito."
+
 WARLY.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Ah, que alívio. Sinto-me eu mesmo novamente."
 
 WARLY.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Errado, errado..."
@@ -1153,6 +1156,7 @@ WARLY.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Fico curioso com o vinho que estava a
 
 WARLY.DESCRIBE.KYNO_OCEANTRAP = "Posso enganar umas delícias marinhas com isso!"
 
+WARLY.DESCRIBE.OCEANFISH_GLASS_CARP = "Ah, uma pequena iguaria translúcida!"
 WARLY.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ah, um peixe que se revela sob a luz da lua!"
 WARLY.DESCRIBE.OCEANFISH_PUFFERFISH = "Ah, o peixe fugu... muito perigoso se não for preparado direito."
 WARLY.DESCRIBE.OCEANFISH_STURGEON = "Sonhos de caviar começam aqui, mon ami!"
@@ -1342,7 +1346,6 @@ WARLY.DESCRIBE.KYNO_FOODAMMO_TOMATO = "É um belo tomate desperdiçado."
 WARLY.DESCRIBE.WX78MODULE_GOURMAND = "Eles dão um toque extra de vivacidade ao nosso amigo de metal, non?"
 WARLY.DESCRIBE.WX78MODULE_COOKER = "Eles dão um toque extra de vivacidade ao nosso amigo de metal, non?"
 WARLY.DESCRIBE.WX78MODULE_DRYER = "Eles dão um toque extra de vivacidade ao nosso amigo de metal, non?"
-WARLY.DESCRIBE.WX78MODULE_DRYER2 = "Eles dão um toque extra de vivacidade ao nosso amigo de metal, non?"
 WARLY.DESCRIBE.WX78MODULE_BREWER = "Eles dão um toque extra de vivacidade ao nosso amigo de metal, non?"
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WARLY.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "O que nosso amigo de metal deixou aqui?",
-}
-
-WARLY.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

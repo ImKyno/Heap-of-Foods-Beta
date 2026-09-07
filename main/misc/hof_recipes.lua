@@ -704,31 +704,29 @@ AddCharacterRecipe("transmute_kyno_worm_bone", {Ingredient("fossil_piece", 1)}, 
 AddCharacterRecipe("wx78module_cooker", {Ingredient("scandata", 3), Ingredient("charcoal", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
-	}
+	},
+	{"COOKING"}
 )
 
-AddCharacterRecipe("wx78module_dryer", {Ingredient("scandata", 4), Ingredient("saltrock", 1)}, TECH.ROBOTMODULECRAFT_ONE,
+AddCharacterRecipe("wx78module_dryer", {Ingredient("scandata", 6), Ingredient("saltrock", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
-	}
+	},
+	{"COOKING"}
 )
 
 AddCharacterRecipe("wx78module_brewer", {Ingredient("scandata", 4), Ingredient("beer", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
-	}
-)
-
-AddCharacterRecipe("wx78module_dryer2", {Ingredient("scandata", 6), Ingredient("desiccantboosted", 1), Ingredient("wx78module_dryer", 1)}, TECH.ROBOTMODULECRAFT_ONE,
-	{
-		builder_tag         = "upgrademoduleowner",
-	}
+	},
+	{"COOKING"}
 )
 
 AddCharacterRecipe("wx78module_gourmand", {Ingredient("scandata", 6), Ingredient("gorge_hamburger", 1)}, TECH.ROBOTMODULECRAFT_ONE,
 	{
 		builder_tag         = "upgrademoduleowner",
-	}
+	},
+	{"COOKING"}
 )
 
 -- For people who wants to use Warly's Grinding Mill as the Mealing Stone.

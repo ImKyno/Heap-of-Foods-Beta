@@ -112,7 +112,7 @@ end
 local function GourmandOnUpdate(wx)
 	local chips = wx._gourmandchips or 0
 
-	if chips > 0 and IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if chips > 0 and _G.IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		wx:AddTag("gourmand_fasteater")
 	else
 		wx:RemoveTag("gourmand_fasteater")
@@ -131,7 +131,7 @@ local function GourmandOnUpdate(wx)
 	end
 end
 
-local function GourmandSkillActivate(inst, wx)
+local function GourmandSkillActivate(inst, wx, isloading)
 	GourmandOnUpdate(wx)
 end
 
@@ -150,7 +150,7 @@ local function GourmandOnEat(wx, data)
 	local bonus = TUNING.KYNO_WX78_MODULES_GOURMAND_BONUS * chips
 	local penalty = 5 * chips
 
-	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
+	if _G.IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
 		penalty = penalty + 5
 	end
 
@@ -195,14 +195,11 @@ local function GourmandOnEat(wx, data)
 	end
 end
 
-local function GourmandActivate(inst, wx)
+local function GourmandActivate(inst, wx, isloading)
 	wx._gourmandchips = (wx._gourmandchips or 0) + 1
 
 	GourmandOnUpdate(wx)
-
-	if wx._gourmandchips == 1 then
-		Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_betabuffs_2", GourmandSkillActivate, GourmandSkillDeactivate)
-	end
+	Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_betabuffs_2", GourmandSkillActivate, GourmandSkillDeactivate, isloading)
 
 	if wx._gourmandoneat == nil then
 		wx._gourmandoneat = function(owner, data)
@@ -217,9 +214,10 @@ local function GourmandDeactivate(inst, wx)
 	wx._gourmandchips = math.max(0, (wx._gourmandchips or 1) - 1)
 
 	GourmandOnUpdate(wx)
+	Circuit_DestroySkillCb(inst, wx)
 
-	if wx._gourmandchips <= 0 then
-		Circuit_DestroySkillCb(inst, wx)
+	if wx._gourmandchips == 0 then
+		wx._gourmandchips = nil
 
 		if wx._gourmandoneat ~= nil then
 			wx:RemoveEventCallback("oneat", wx._gourmandoneat)
@@ -233,8 +231,10 @@ local GOURMAND_MODULE_DATA =
 	name                = "gourmand",
 	slots               = 2,
 	type                = CIRCUIT_BARS.BETA,
+
 	activatefn          = GourmandActivate,
 	deactivatefn        = GourmandDeactivate,
+
 	overridebank        = "kyno_wx78_chips",
 	overridebuild       = "kyno_wx78_chips",
 	overrideminiuibuild = "kyno_wx78_status",
@@ -345,10 +345,12 @@ local COOKER_MODULE_DATA =
 	name                = "cooker",
 	slots               = 1,
 	type                = CIRCUIT_BARS.BETA,
+
 	activatefn          = CookerActivate,
 	deactivatefn        = CookerDeactivate,
 	addedtoownerfn      = CookerAddedToOwner,
 	removedfromownerfn  = CookerRemovedFromOwner,
+
 	overridebank        = "kyno_wx78_chips",
 	overridebuild       = "kyno_wx78_chips",
 	overrideminiuibuild = "kyno_wx78_status",
@@ -361,30 +363,81 @@ table.insert(hof_module_definitions, COOKER_MODULE_DATA)
 
 -- Dessicant Circuit.
 -- Grants an inventory container that can dry items.
--- Beta Circuits Tinkering II provides 25% waterprofness.
+-- Beta Circuits Tinkering II provides 50% waterproofness and allows dried items to produce Salt Crystals.
 
 -- NOTE: wx._stacksize_modules is being reused here because it already takes into account the Spatializer Circuit as well!
 -- That means no extra shit to deal with choosing a valid inventory slot and whatever it needs too.
-local function DryerOnUpdate(wx)
+local function OnStartRain(wx)
+	wx:PushEvent("wx78startrain")
+end
+
+local function DryerUpdateState(wx)
 	local chips = wx._dryerchips or 0
 
-	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
-		if wx.components.moisture ~= nil then
-			wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, TUNING.KYNO_WX78_MODULES_DRYER_WATERPROOFNESS)
+	local VALUE = TUNING.KYNO_WX78_MODULES_DRYER_WATERPROOFNESS
+	local skillactive = _G.IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2")
+
+	local total_waterproofness = skillactive and (VALUE * chips) or 0
+	local should_force_dry = total_waterproofness >= 1
+
+	if should_force_dry then
+		if not wx._dryer_forcedry then
+			wx._dryer_forcedry = true
+
+			wx:WatchWorldState("startrain", OnStartRain)
+
+			if wx.components.moisture ~= nil then
+				wx.components.moisture:ForceDry(true, wx)
+			end
+
+			if _G.TheWorld.state.israining then
+				OnStartRain(wx)
+			end
 		end
 	else
-		if wx.components.moisture ~= nil then
-			wx.components.moisture.waterproofnessmodifiers:RemoveModifier(inst)
+		if wx._dryer_forcedry then
+			wx._dryer_forcedry = nil
+
+			wx:StopWatchingWorldState("startrain", OnStartRain)
+
+			if wx.components.moisture ~= nil then
+				wx.components.moisture:ForceDry(false, wx)
+			end
 		end
 	end
 end
 
-local function DryerSkillActivate(inst, wx)
-	DryerOnUpdate(wx)
+local function DryerOnUpdate(inst, wx)
+	local VALUE = TUNING.KYNO_WX78_MODULES_DRYER_WATERPROOFNESS
+	local skillactive = _G.IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2")
+
+	if wx.components.moisture ~= nil then
+		if skillactive then
+			wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, VALUE, "dryermoduleskill")
+		else
+			wx.components.moisture.waterproofnessmodifiers:RemoveModifier(inst, "dryermoduleskill")
+		end
+	end
+
+	DryerUpdateState(wx)
+end
+
+local function DryerSkillActivate(inst, wx, isloading)
+	local VALUE = TUNING.KYNO_WX78_MODULES_DRYER_WATERPROOFNESS
+
+	if wx.components.moisture ~= nil then
+		wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, VALUE, "dryermoduleskill")
+	end
+
+	DryerUpdateState(wx)
 end
 
 local function DryerSkillDeactivate(inst, wx)
-	DryerOnUpdate(wx)
+	if wx.components.moisture ~= nil then
+		wx.components.moisture.waterproofnessmodifiers:RemoveModifier(inst, "dryermoduleskill")
+	end
+
+	DryerUpdateState(wx)
 end
 
 local function DryerAddedToOwner(inst, wx, isloading)
@@ -450,11 +503,8 @@ end
 local function DryerActivate(inst, wx, isloading)
 	wx._dryerchips = (wx._dryerchips or 0) + 1
 
-	DryerOnUpdate(wx)
-
-	if wx._dryerchips == 1 then
-		Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_betabuffs_2", DryerSkillActivate, DryerSkillDeactivate)
-	end
+	DryerOnUpdate(inst, wx)
+	Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_betabuffs_2", DryerSkillActivate, DryerSkillDeactivate, isloading)
 
 	local inventory = wx.components.inventory or wx.components.container
 
@@ -473,11 +523,8 @@ end
 local function DryerDeactivate(inst, wx)
 	wx._dryerchips = math.max(0, (wx._dryerchips or 1) - 1)
 
-	DryerOnUpdate(wx)
-
-	if wx._dryerchips <= 0 then
-		Circuit_DestroySkillCb(inst, wx)
-	end
+	Circuit_DestroySkillCb(inst, wx)
+	DryerUpdateState(wx)
 
 	local inventory = wx.components.inventory or wx.components.container
 
@@ -496,12 +543,14 @@ end
 local DRYER_MODULE_DATA =
 {
 	name                = "dryer",
-	slots               = 3,
+	slots               = 2,
 	type                = CIRCUIT_BARS.BETA,
+
 	activatefn          = DryerActivate,
 	deactivatefn        = DryerDeactivate,
 	addedtoownerfn      = DryerAddedToOwner,
 	removedfromownerfn  = DryerRemovedFromOwner,
+
 	overridebank        = "kyno_wx78_chips",
 	overridebuild       = "kyno_wx78_chips",
 	overrideminiuibuild = "kyno_wx78_status",
@@ -511,175 +560,6 @@ local DRYER_MODULE_DATA =
 }
 
 table.insert(hof_module_definitions, DRYER_MODULE_DATA)
-
--- Super-Dessicant Circuit.
--- Grants an inventory container that can dry items.
--- Beta Circuits Tinkering II provides 50% waterproofness and allows dried items to produce Salt Crystals.
-
--- NOTE: wx._stacksize_modules is being reused here because it already takes into account the Spatializer Circuit as well!
--- That means no extra shit to deal with choosing a valid inventory slot and whatever it needs too.
-local function OnStartRain(wx)
-	wx:PushEvent("wx78moistureimmune")
-end
-
-local function Dryer2OnUpdate(wx)
-	local chips = wx._dryer2chips or 0
-
-	if IsPlayerSkillActivated(wx, "wx78_circuitry_betabuffs_2") then
-		if wx.components.moisture ~= nil then
-			wx.components.moisture.waterproofnessmodifiers:SetModifier(inst, TUNING.KYNO_WX78_MODULES_DRYER2_WATERPROOFNESS)
-		end
-
-		if chips >= 2 then
-			wx:WatchWorldState("startrain", OnStartRain)
-
-			if wx.components.moisture ~= nil then
-				wx.components.moisture:ForceDry(true, wx)
-			end
-		end
-	else
-		if wx.components.moisture ~= nil then
-			wx.components.moisture.waterproofnessmodifiers:RemoveModifier(inst)
-		end
-
-		if chips < 2 then
-			wx:StopWatchingWorldState("startrain", OnStartRain)
-		end
-	end
-end
-
-local function Dryer2SkillActivate(inst, wx)
-	Dryer2OnUpdate(wx)
-end
-
-local function Dryer2SkillDeactivate(inst, wx)
-	Dryer2OnUpdate(wx)
-end
-
-local function Dryer2AddedToOwner(inst, wx, isloading)
-	local inventory = wx.components.inventory or wx.components.container
-
-	if inventory then
-		wx._stacksize_modules = (wx._stacksize_modules or 0) + 1
-
-		if not isloading then
-			local invslot = inventory:GetNumSlots() - (wx._stacksize_modules - 1)
-			local itemtomove = inventory:GetItemInSlot(invslot)
-
-			if itemtomove and itemtomove.components.inventoryitem.islockedinslot then
-				if itemtomove.prefab == "kyno_wx78_inventorydryer2" then
-					itemtomove:SetPowered(false)
-				end
-
-				return
-			end
-
-			local chargelevel = wx.components.upgrademoduleowner:GetChargeLevel()
-
-			if chargelevel < wx._stacksize_modules then
-				if wx.components.inventory then
-					wx.components.inventory:DropItem(itemtomove, true, true)
-				else
-					wx.components.container:DropItemBySlot(invslot)
-				end
-
-				itemtomove = nil
-			else
-				itemtomove = inventory:RemoveItem(itemtomove, true)
-			end
-
-			local container = SpawnPrefab("kyno_wx78_inventorydryer2")
-
-			inventory:GiveItem(container, invslot)
-			container.components.inventoryitem.islockedinslot = true
-
-			if itemtomove then
-				container.components.container:GiveItem(itemtomove)
-			end
-		end
-	end
-end
-
-local function Dryer2RemovedFromOwner(inst, wx)
-	local inventory = wx.components.inventory or wx.components.container
-
-	if inventory then
-		wx._stacksize_modules = (wx._stacksize_modules or 1) - 1
-
-		local invslot = inventory:GetNumSlots() - wx._stacksize_modules
-		local container = inventory:GetItemInSlot(invslot)
-
-		if container and container.prefab == "kyno_wx78_inventorydryer2" and not container._backupbody_transferring then
-			container.components.inventoryitem.islockedinslot = false
-			inventory:DropItem(container)
-		end
-	end
-end
-
-local function Dryer2Activate(inst, wx, isloading)
-	wx._dryer2chips = (wx._dryer2chips or 0) + 1
-
-	Dryer2OnUpdate(wx)
-
-	if wx._dryer2chips == 1 then
-		Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_betabuffs_2", Dryer2SkillActivate, Dryer2SkillDeactivate)
-	end
-
-	local inventory = wx.components.inventory or wx.components.container
-
-	if inventory then
-		wx._stacksize_active_modules = (wx._stacksize_active_modules or 0) + 1
-
-		local invslot = inventory:GetNumSlots() - (wx._stacksize_active_modules - 1)
-		local container = inventory:GetItemInSlot(invslot)
-
-		if container and container.prefab == "kyno_wx78_inventorydryer2" then
-			container:SetPowered(true)
-		end
-	end
-end
-
-local function Dryer2Deactivate(inst, wx)
-	wx._dryer2chips = math.max(0, (wx._dryer2chips or 1) - 1)
-
-	Dryer2OnUpdate(wx)
-
-	if wx._dryer2chips <= 0 then
-		Circuit_DestroySkillCb(inst, wx)
-	end
-
-	local inventory = wx.components.inventory or wx.components.container
-
-	if inventory then
-		wx._stacksize_active_modules = (wx._stacksize_active_modules or 1) - 1
-
-		local invslot = inventory:GetNumSlots() - wx._stacksize_active_modules
-		local container = inventory:GetItemInSlot(invslot)
-
-		if container and container.prefab == "kyno_wx78_inventorydryer2" then
-			container:SetPowered(false)
-		end
-	end
-end
-
-local DRYER2_MODULE_DATA =
-{
-	name                = "dryer2",
-	slots               = 2,
-	type                = CIRCUIT_BARS.BETA,
-	activatefn          = Dryer2Activate,
-	deactivatefn        = Dryer2Deactivate,
-	addedtoownerfn      = Dryer2AddedToOwner,
-	removedfromownerfn  = Dryer2RemovedFromOwner,
-	overridebank        = "kyno_wx78_chips",
-	overridebuild       = "kyno_wx78_chips",
-	overrideminiuibuild = "kyno_wx78_status",
-	overrideuibuild     = "kyno_wx78_status_chest",
-
-	extra_prefabs       = { "kyno_wx78_inventorydryer2" },
-}
-
-table.insert(hof_module_definitions, DRYER2_MODULE_DATA)
 
 -- Brewmaster Circuit
 -- Grants a portable brewing container that is both Wooden Keg and Preserves Jar.
@@ -718,12 +598,12 @@ local function BrewerOnUpdate(wx)
 	local container = wx._brewer_container
 
 	if container ~= nil and container.components.wxbrewer ~= nil then
-		container.components.wxbrewer.brewtimemult = IsPlayerSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
+		container.components.wxbrewer.brewtimemult = _G.IsPlayerSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
 		and TUNING.KYNO_WX78_MODULES_BREWER_BREWTIMEMULT or 1
 	end
 end
 
-local function BrewerSkillActivate(inst, wx)
+local function BrewerSkillActivate(inst, wx, isloading)
 	BrewerOnUpdate(wx)
 end
 
@@ -916,10 +796,7 @@ local function BrewerActivate(inst, wx, isloading)
 	wx._brewerchips = (wx._brewerchips or 0) + 1
 
 	BrewerOnUpdate(wx)
-
-	if wx._brewerchips == 1 then
-		Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_gammabuffs_2", BrewerSkillActivate, BrewerSkillDeactivate)
-	end
+	Circuit_SetUpSkillCb(inst, wx, "wx78_circuitry_gammabuffs_2", BrewerSkillActivate, BrewerSkillDeactivate, isloading)
 
 	if wx.wx78_classified ~= nil and wx._brewerchips == 1 then
 		wx.wx78_classified:AddInherentAction(ACTIONS.OPENWXBREWER)
@@ -944,10 +821,9 @@ local function BrewerDeactivate(inst, wx)
 	wx._brewerchips = math.max(0, (wx._brewerchips or 1) - 1)
 
 	BrewerOnUpdate(wx)
+	Circuit_DestroySkillCb(inst, wx)
 
-	if wx._brewerchips <= 0 then
-		Circuit_DestroySkillCb(inst, wx)
-		
+	if wx._brewerchips == 0 then
 		if wx.wx78_classified ~= nil then
 			wx.wx78_classified:RemoveInherentAction(ACTIONS.OPENWXBREWER)
 		end
@@ -1009,9 +885,10 @@ local WX78_HOF_CREATURES_SCAN =
 
 	lavae                    = { module = "cooker",   maxdata = 5 },
 	lavae_pet                = { module = "cooker",   maxdata = 3 },
+	willow                   = { module = "cooker",   maxdata = 2 }, -- Shh... no one has to know about this.
 
 	cookiecutter             = { module = "dryer",    maxdata = 3 },
-	salty_dog                = { module = "dryer2",   maxdata = 4 },
+	salty_dog                = { module = "dryer",    maxdata = 6 },
 
 	kyno_piko                = { module = "brewer",   maxdata = 4 },
 	kyno_piko_orange         = { module = "brewer",   maxdata = 4 },
@@ -1051,6 +928,7 @@ local WX78_HOF_BIRDS_SCAN =
 	{ "quagmire_pigeon",              GetIsBirdFn, "radar", 2 },
 	{ "kyno_bird_robin_night",        GetIsBirdFn, "radar", 2 },
 	{ "kyno_bird_robin_winter_night", GetIsBirdFn, "radar", 2 },
+	{ "kyno_bird_robin_blue_night",   GetIsBirdFn, "rader", 2 },
 }
 
 for i, definition in ipairs(WX78_HOF_BIRDS_SCAN) do

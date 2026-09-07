@@ -87,6 +87,10 @@ local function OnExtended(inst, target)
 
 		inst:ListenForEvent("onhitother", inst._onhitother, target)
 	end
+
+	if target.components.talker and target:HasTag("player") then
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_FREEZEBUFF_START"))
+	end
 end
 
 local function OnTimerDone(inst, data)
@@ -96,11 +100,12 @@ local function OnTimerDone(inst, data)
 end
 
 local function fn()
+	local inst = CreateEntity()
+
 	if not TheWorld.ismastersim then
 		return
 	end
 
-	local inst = CreateEntity()
 	inst.entity:AddTransform()
 	inst.entity:Hide()
 

@@ -119,6 +119,9 @@ WAXWELL.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "My reprieve is over."
 WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "A little extra timber never hurts."
 WAXWELL.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The trees have stopped being so generous."
 
+WAXWELL.ANNOUNCE_KYNO_THORNSBUFF_START = "A rather sharp defensive measure."
+WAXWELL.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns have served their purpose."
+
 WAXWELL.ANNOUNCE_KYNO_SICKNESSBUFF_END = "At last. I can breathe easily again."
 
 WAXWELL.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Ta cần thứ khác cho việc này."
@@ -1153,6 +1156,7 @@ WAXWELL.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Nếu có đủ thời gian, ta có
 
 WAXWELL.DESCRIBE.KYNO_OCEANTRAP = "Sự tò mò rồi sẽ hại ngươi thôi."
 
+WAXWELL.DESCRIBE.OCEANFISH_GLASS_CARP = "A rather delicate-looking creature."
 WAXWELL.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Ngay cả cá ở đây cũng là sinh vật của màn đêm."
 WAXWELL.DESCRIBE.OCEANFISH_PUFFERFISH = "Một quả bóng đầy nọc độc. Thật kinh khủng."
 WAXWELL.DESCRIBE.OCEANFISH_STURGEON = "Trông như thể nó vừa bơi thẳng ra từ hồ sơ hóa thạch."
@@ -1342,7 +1346,6 @@ WAXWELL.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Wretched fruit better not be thrown at 
 WAXWELL.DESCRIBE.WX78MODULE_GOURMAND = "That robot needs to pull themselves together."
 WAXWELL.DESCRIBE.WX78MODULE_COOKER = "That robot needs to pull themselves together."
 WAXWELL.DESCRIBE.WX78MODULE_DRYER = "That robot needs to pull themselves together."
-WAXWELL.DESCRIBE.WX78MODULE_DRYER2 = "That robot needs to pull themselves together."
 WAXWELL.DESCRIBE.WX78MODULE_BREWER = "That robot needs to pull themselves together."
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "Remains from that robot.",
-}
-
-WAXWELL.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

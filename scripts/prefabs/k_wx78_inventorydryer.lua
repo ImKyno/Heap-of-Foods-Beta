@@ -3,10 +3,6 @@ local assets =
 	Asset("ANIM", "anim/kyno_wx78_inventorydryer.zip"),
 	Asset("ANIM", "anim/ui_wx78_inventorydryer_1x1.zip"),
 
-	Asset("ANIM", "anim/kyno_wx78_inventorydryer2.zip"),
-	Asset("ANIM", "anim/ui_wx78_inventorydryer2_1x1.zip"),
-	Asset("ANIM", "anim/ui_wx78_inventorydryer2_1x2.zip"),
-
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -336,6 +332,7 @@ local function fn()
 
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
+	inst.components.inspectable.nameoverride = "WX78_INVENTORYCONTAINER"
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
@@ -351,72 +348,6 @@ local function fn()
 	inst:AddComponent("dryingrack")
 	inst.components.dryingrack:EnableDrying()
 
-	inst:AddComponent("pickable")
-	inst.components.pickable:SetUp(nil, 0)
-	inst.components.pickable.onpickedfn = OnPicked
-
-	inst.SetPowered = SetPowered
-	inst.OnLoad = OnLoad
-
-	inst:ListenForEvent("itemget", OnItemGet)
-	inst:ListenForEvent("itemlose", OnItemLose)
-
-	MakeHauntableLaunchAndDropFirstItem(inst)
-
-	return inst
-end
-
-local function fn2()
-	local inst = CreateEntity()
-
-	inst.entity:AddTransform()
-	inst.entity:AddAnimState()
-	inst.entity:AddSoundEmitter()
-	inst.entity:AddNetwork()
-
-	inst.AnimState:SetBank("kyno_wx78_inventorydryer2")
-	inst.AnimState:SetBuild("kyno_wx78_inventorydryer2")
-	inst.AnimState:PlayAnimation("dropped_idle")
-
-	MakeInventoryPhysics(inst)
-	MakeInventoryFloatable(inst, "small", 0.35, 1.15, nil, nil, { bank = "kyno_wx78_inventorydryer2", anim = "dropped_idle" })
-
-	inst:AddTag("nosteal")
-	inst:AddTag("pickable_rummage_str")
-	inst:AddTag("no_container_store")
-
-	inst.displaynamefn = DisplayNameFn
-
-	inst.entity:SetPristine()
-
-	if not TheWorld.ismastersim then
-		inst.OnEntityReplicated = function(inst) 
-			if not inst:HasTag("burnt") then
-				inst.replica.container:WidgetSetup("wx78_inventorydryer2") 
-			end
-		end
-
-		return inst
-	end
-
-	inst:AddComponent("inspectable")
-	inst.components.inspectable.getstatus = GetStatus
-	inst.components.inspectable.nameoverride = "WX78_INVENTORYCONTAINER"
-
-	inst:AddComponent("inventoryitem")
-	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
-	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	inst.components.inventoryitem.canbepickedup = false
-
-	inst:AddComponent("container")
-	inst.components.container:WidgetSetup("wx78_inventorydryer2")
-	inst.components.container.onopenfn = OnOpen
-	inst.components.container.onclosefn = OnClose
-	inst.components.container.canbeopened = false
-
-	inst:AddComponent("dryingrack")
-	inst.components.dryingrack:EnableDrying()
-
 	inst:AddComponent("dryingracksaltcollector")
 	inst.components.dryingracksaltcollector:SetOnSaltChangedFn(OnSaltChanged)
 
@@ -425,6 +356,7 @@ local function fn2()
 	inst.components.pickable.onpickedfn = OnPicked
 
 	inst.SetPowered = SetPowered
+
 	inst.OnLoad = OnLoad
 	inst.OnLoadPostPass = OnLoadPostPass
 
@@ -436,5 +368,4 @@ local function fn2()
 	return inst
 end
 
-return Prefab("kyno_wx78_inventorydryer", fn, assets),
-Prefab("kyno_wx78_inventorydryer2", fn2, assets)
+return Prefab("kyno_wx78_inventorydryer", fn, assets)

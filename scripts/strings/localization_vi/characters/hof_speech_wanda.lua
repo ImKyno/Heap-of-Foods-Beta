@@ -119,6 +119,9 @@ WANDA.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "And time has caught up with me again."
 WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "More wood, less work. Perfect."
 WANDA.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "The extra yield has run its course."
 
+WANDA.ANNOUNCE_KYNO_THORNSBUFF_START = "Time to give them a prickly surprise."
+WANDA.ANNOUNCE_KYNO_THORNSBUFF_END = "The thorns have run their course."
+
 WANDA.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Good. I don't have time to be sick."
 
 WANDA.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "Không... ta cần thứ khác."
@@ -1153,6 +1156,7 @@ WANDA.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "Không biết ta có làm đồng h�
 
 WANDA.DESCRIBE.KYNO_OCEANTRAP = "Một nhà tù cho sinh vật biển."
 
+WANDA.DESCRIBE.OCEANFISH_GLASS_CARP = "Beautiful. I wonder how old this species is."
 WANDA.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "Một con cá đến từ những giờ khuya khoắt."
 WANDA.DESCRIBE.OCEANFISH_PUFFERFISH = "Tới lúc xì hơi rồi, nhóc gai góc."
 WANDA.DESCRIBE.OCEANFISH_STURGEON = "Một con cá sống sót qua nhiều thời đại... ta hiểu cảm giác đó."
@@ -1342,7 +1346,6 @@ WANDA.DESCRIBE.KYNO_FOODAMMO_TOMATO = "A waste of food, and time."
 WANDA.DESCRIBE.WX78MODULE_GOURMAND = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_COOKER = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_DRYER = "Aha! I was wondering when they'd started making these."
-WANDA.DESCRIBE.WX78MODULE_DRYER2 = "Aha! I was wondering when they'd started making these."
 WANDA.DESCRIBE.WX78MODULE_BREWER = "Aha! I was wondering when they'd started making these."
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WANDA.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "What's in there?",
-}
-
-WANDA.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

@@ -119,6 +119,9 @@ WEBBER.ANNOUNCE_KYNO_INVINCIBLEBUFF_END = "Aww... we're not that invincible anym
 WEBBER.ANNOUNCE_KYNO_WOODCUTTERBUFF_START = "The trees are giving us more wood!"
 WEBBER.ANNOUNCE_KYNO_WOODCUTTERBUFF_END = "Aww, the trees aren't giving us extra wood anymore."
 
+WEBBER.ANNOUNCE_KYNO_THORNSBUFF_START = "We're all prickly now!"
+WEBBER.ANNOUNCE_KYNO_THORNSBUFF_END = "The prickles are gone."
+
 WEBBER.ANNOUNCE_KYNO_SICKNESSBUFF_END = "Yay! We don't feel sick anymore!"
 
 WEBBER.ANNOUNCE_KYNO_COOKWAREINSTALLER_FAIL = "不是这个。"
@@ -1153,6 +1156,7 @@ WEBBER.DESCRIBE.KYNO_MESSAGEBOTTLE_EMPTY = "我们希望它装满汽水。"
 
 WEBBER.DESCRIBE.KYNO_OCEANTRAP = "东西游进来。晚餐端出来。"
 
+WEBBER.DESCRIBE.OCEANFISH_GLASS_CARP = "It's made of glass!"
 WEBBER.DESCRIBE.OCEANFISH_MIDNIGHT_CARP = "哇！一条诡异的夜鱼！"
 WEBBER.DESCRIBE.OCEANFISH_PUFFERFISH = "哎哟！我们可不想抱那个家伙。"
 WEBBER.DESCRIBE.OCEANFISH_STURGEON = "它看起来好老啊！说不定知道不少渔夫的故事呢！"
@@ -1342,7 +1346,6 @@ WEBBER.DESCRIBE.KYNO_FOODAMMO_TOMATO = "Not the face!"
 WEBBER.DESCRIBE.WX78MODULE_GOURMAND = "Huh. Is that what robot insides look like?"
 WEBBER.DESCRIBE.WX78MODULE_COOKER = "Huh. Is that what robot insides look like?"
 WEBBER.DESCRIBE.WX78MODULE_DRYER = "Huh. Is that what robot insides look like?"
-WEBBER.DESCRIBE.WX78MODULE_DRYER2 = "Huh. Is that what robot insides look like?"
 WEBBER.DESCRIBE.WX78MODULE_BREWER = "Huh. Is that what robot insides look like?"
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
@@ -1353,13 +1356,6 @@ WEBBER.DESCRIBE.KYNO_WX78_INVENTORYCOOKER =
 }
 
 WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER =
-{
-	HELD = "...",
-	NOPOWER = "...",
-	GENERIC = "It was forever in there.",
-}
-
-WEBBER.DESCRIBE.KYNO_WX78_INVENTORYDRYER2 =
 {
 	HELD = "...",
 	NOPOWER = "...",

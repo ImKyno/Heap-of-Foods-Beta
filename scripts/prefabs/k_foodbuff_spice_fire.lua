@@ -104,11 +104,12 @@ local function OnTimerDone(inst, data)
 end
 
 local function fn()
+	local inst = CreateEntity()
+
 	if not TheWorld.ismastersim then
 		return
 	end
 
-	local inst = CreateEntity()
 	inst.entity:AddTransform()
 	inst.entity:Hide()
 

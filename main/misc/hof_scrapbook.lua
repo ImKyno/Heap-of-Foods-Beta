@@ -1546,8 +1546,8 @@ local HOF_SCRAPBOOK_ITEMS =
 		deps           = {"kyno_messagebottle_empty", "kyno_jellyfish_ocean", "kyno_seaweeds", "kyno_jellyfish_rainbow_ocean", "oceanfish_small_1_inv", "oceanfish_small_2_inv",
 		"oceanfish_small_3_inv", "oceanfish_small_4_inv", "oceanfish_small_5_inv", "oceanfish_small_6_inv", "oceanfish_small_7_inv", "oceanfish_small_8_inv",
 		"oceanfish_small_9_inv", "oceanfish_medium_1_inv", "oceanfish_medium_2_inv", "oceanfish_medium_3_inv", "oceanfish_medium_4_inv", "oceanfish_medium_5_inv",
-		"oceanfish_medium_6_inv", "oceanfish_medium_7_inv", "oceanfish_medium_8_inv", "oceanfish_medium_9_inv", "oceanfish_midnight_carp_inv", "oceanfish_pufferfish_inv",
-		"oceanfish_sturgeon_inv", "wobster_sheller_land", "wobster_moonglass_land", "wobster_monkeyisland_land", "cookiecutter"},
+		"oceanfish_medium_6_inv", "oceanfish_medium_7_inv", "oceanfish_medium_8_inv", "oceanfish_medium_9_inv", "oceanfish_glass_carp_inv", "oceanfish_midnight_carp_inv",
+		"oceanfish_pufferfish_inv", "oceanfish_sturgeon_inv", "wobster_sheller_land", "wobster_moonglass_land", "wobster_monkeyisland_land", "cookiecutter"},
 		specialinfo    = "OCEANTRAP",
 	},
 
@@ -1960,22 +1960,6 @@ local HOF_SCRAPBOOK_ITEMS =
 		anim           = "dryer",
 		deps           = {"scandata", "saltrock"},
 		specialinfo    = "WX78MODULE_DRYER",
-	},
-
-	wx78module_dryer2  =
-	{
-		name           = "wx78module_dryer2",
-		type           = "item",
-		subcat         = "upgrademodule",
-		tex            = "wx78module_dryer2.tex",
-		prefab         = "wx78module_dryer2",
-		craftingprefab = "wx78",
-		finiteuses     = 4,
-		bank           = "kyno_wx78_chips",
-		build          = "kyno_wx78_chips",
-		anim           = "dryer2",
-		deps           = {"scandata", "desiccantboosted", "wx78module_dryer"},
-		specialinfo    = "WX78MODULE_DRYER2",
 	},
 
 	wx78module_brewer  =
@@ -4892,6 +4876,27 @@ local HOF_SCRAPBOOK_FOODS =
 		build           = "kyno_roe",
 		anim            = "idle_oceanfish_medium_9",
 		deps            = {"oceanfish_medium_9_inv", "kyno_roe_cooked", "spoiled_food"},
+	},
+
+	kyno_roe_oceanfish_glass_carp =
+	{
+		name            = "kyno_roe_oceanfish_glass_carp",
+		speechname      = "kyno_roe",
+		type            = "food",
+		subcat          = "fishroe",
+		tex             = "kyno_roe_oceanfish_glass_carp.tex",
+		prefab          = "kyno_roe_oceanfish_glass_carp",
+		healthvalue     = -10,
+		hungervalue     = 9.375,
+		sanityvalue     = -10,
+		perishable      = 2880,
+		stacksize       = 20,
+		burnable        = true,
+		foodtype        = "MEAT",
+		bank            = "kyno_roe",
+		build           = "kyno_roe",
+		anim            = "idle_oceanfish_glass_carp",
+		deps            = {"oceanfish_glass_carp_inv", "kyno_roe_cooked", "spoiled_food"},
 	},
 
 	kyno_roe_oceanfish_midnight_carp =
@@ -13414,6 +13419,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 	nukacola_dark      =
 	{
 		name           = "nukacola_dark",
+		speechname     = "nukacola",
 		type           = "food",
 		subcat         = "artisangoods",
 		tex            = "nukacola_dark.tex",
@@ -13439,6 +13445,7 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 	nukacola_twist     =
 	{
 		name           = "nukacola_twist",
+		speechname     = "nukacola",
 		type           = "food",
 		subcat         = "artisangoods",
 		tex            = "nukacola_twist.tex",
@@ -13710,6 +13717,32 @@ local HOF_SCRAPBOOK_PREPAREDBREWS_KEG =
 		animoffsetbgy  = -70,
 		deps           = {"kyno_woodenkeg", "spoiled_food"},
 		specialinfo    = "FOODEFFECTS_DECREASETEMP",
+	},
+
+	nukacola_bramble   =
+	{
+		name           = "nukacola_bramble",
+		speechname     = "nukacola",
+		type           = "food",
+		subcat         = "artisangoods",
+		tex            = "nukacola_bramble.tex",
+		prefab         = "nukacola_bramble",
+		healthvalue    = 40,
+		hungervalue    = 32.5,
+		sanityvalue    = -15,
+		perishable     = 19200,
+		foodtype       = "GOODIES",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_keg1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_keg1", "nukacola_bramble"},
+		anim           = "nukacola_bramble",
+		animoffsety    = 10,
+		animoffsetbgx  = -10,
+		animoffsetbgy  = -80,
+		deps           = {"kyno_woodenkeg", "kyno_bottlecap", "spoiled_food"},
+		specialinfo    = "FOODEFFECTS_NUKACOLA_BRAMBLE",
 	},
 }
 
@@ -15997,6 +16030,32 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		deps           = {"kyno_preservesjar", "kyno_roe_oceanfish_medium_9", "spoiled_food"},
 	},
 
+	agedroe_oceanfish_glass_carp =
+	{
+		name           = "agedroe_oceanfish_glass_carp",
+		speechname     = "agedroe",
+		type           = "food",
+		subcat         = "agedroe",
+		tex            = "agedroe_oceanfish_glass_carp.tex",
+		prefab         = "agedroe_oceanfish_glass_carp",
+		healthvalue    = -25,
+		hungervalue    = 32.5,
+		sanityvalue    = 50,
+		perishable     = 9600,
+		foodtype       = "MEAT",
+		burnable       = true,
+		stacksize      = 40,
+		bank           = "kyno_foodrecipes",
+		build          = "kyno_foodrecipes_jar1",
+		overridesymbol = {"swap_food", "kyno_foodrecipes_jar1", "agedroe_oceanfish_glass_carp"},
+		anim           = "agedroe_oceanfish_glass_carp",
+		animoffsetx    = 12,
+		animoffsety    = 8,
+		animoffsetbgx  = -20,
+		animoffsetbgy  = -130,
+		deps           = {"kyno_preservesjar", "kyno_roe_oceanfish_glass_carp", "spoiled_food"},
+	},
+
 	agedroe_oceanfish_midnight_carp =
 	{
 		name           = "agedroe_oceanfish_midnight_carp",
@@ -16005,7 +16064,7 @@ local HOF_SCRAPBOOK_PREPAREDFOODS_JAR =
 		subcat         = "agedroe",
 		tex            = "agedroe_oceanfish_midnight_carp.tex",
 		prefab         = "agedroe_oceanfish_midnight_carp",
-		healthvalue    = 33,
+		healthvalue    = 40,
 		hungervalue    = 25,
 		sanityvalue    = 10,
 		perishable     = 9600,
@@ -16239,6 +16298,23 @@ local HOF_SCRAPBOOK_CREATURES =
 		specialinfo    = "NIGHTBIRD",
 	},
 
+	kyno_bird_robin_blue_night =
+	{
+		name           = "kyno_bird_robin_blue_night",
+		speechname     = "kyno_bird_robin_night",
+		type           = "creature",
+		subcat         = "bird",
+		tex            = "kyno_bird_robin_blue_night.tex",
+		prefab         = "kyno_bird_robin_blue_night",
+		health         = 25,
+		perishable     = 2400,
+		bank           = "crow",
+		build          = "kyno_bird_robin_blue_night_build",
+		anim           = "idle",
+		deps           = {"cutgrass", "twigs", "flint", "feather_crow", "smallmeat", "cookedsmallmeat", "scarecrow"},
+		specialinfo    = "NIGHTBIRD",
+	},
+
 	kyno_sugarfly      =
 	{
 		name           = "kyno_sugarfly",
@@ -16317,6 +16393,28 @@ local HOF_SCRAPBOOK_CREATURES =
 		hide           = {"ARM_carry", "ARM_carry_up"},
 		deps           = {"kyno_deciduousforest_shop"},
 		specialinfo    = "PARTITIO",
+	},
+
+	oceanfish_glass_carp_inv =
+	{
+		name           = "oceanfish_glass_carp_inv",
+		speechname     = "oceanfish_glass_carp",
+		type           = "creature",
+		subcat         = "oceanfish",
+		tex            = "oceanfish_glass_carp_inv.tex",
+		prefab         = "oceanfish_glass_carp_inv",
+		healthvalue    = -25,
+		hungervalue    = 25,
+		sanityvalue    = 25,
+		perishable     = 480,
+		foodtype       = "LUNAR_SHARDS",
+		fishfarmable   = true,
+		bank           = "kyno_oceanfish_glass_carp",
+		build          = "kyno_oceanfish_glass_carp",
+		anim           = "flop_pst",
+		animoffsetx    = -5,
+		animoffsety    = -10,
+		deps           = {"fishmeat", "fishmeat_small", "moonglass"},
 	},
 
 	oceanfish_midnight_carp_inv =
