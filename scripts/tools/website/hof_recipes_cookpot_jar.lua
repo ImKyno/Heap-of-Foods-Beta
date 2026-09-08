@@ -83,6 +83,7 @@ return {
     "agedroe_oceanfish_medium_7",
     "agedroe_oceanfish_medium_8",
     "agedroe_oceanfish_medium_9",
+    "agedroe_oceanfish_glass_carp",
     "agedroe_oceanfish_midnight_carp",
     "agedroe_tropicalfish",
     "agedroe_pierrotfish",

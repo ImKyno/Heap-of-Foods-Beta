@@ -12,6 +12,7 @@ return {
     "nukacola_quantum",
     "nukacola_dark",
     "nukacola_twist",
+    "nukacola_bramble",
     "nukashine",
     "ricesake",
     "coffee_mocha",
