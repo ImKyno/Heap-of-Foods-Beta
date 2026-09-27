@@ -10,6 +10,10 @@ local FishFarmManager = Class(function(self, inst)
 	self._roe_end_time = nil
 	self._baby_end_time = nil
 
+	-- Time when the entity is asleep.
+	self._roe_sleeptime = nil
+	self._baby_sleeptime = nil
+
 	-- Remaining time while paused/not running.
 	self.roe_time_left = nil
 	self.baby_time_left = nil
@@ -130,6 +134,38 @@ function FishFarmManager:CancelValidityTask()
 	end
 end
 
+function FishFarmManager:TryProduceRoe()
+	if self.roe_time_left == nil or self.roe_time_left > 0 then
+		return false
+	end
+
+	self.roe_time_left = 0
+
+	if not self:IsFishValid() then
+		return false
+	end
+
+	self:ProduceRoe()
+
+	return true
+end
+
+function FishFarmManager:TryProduceBaby()
+	if self.baby_time_left == nil or self.baby_time_left > 0 then
+		return false
+	end
+
+	self.baby_time_left = 0
+
+	if not self:IsFishValid() then
+		return false
+	end
+
+	self:ProduceBaby()
+
+	return true
+end
+
 function FishFarmManager:StartRoeTimer()
 	if self._roe_task ~= nil then
 		return
@@ -147,6 +183,12 @@ function FishFarmManager:StartRoeTimer()
 
 	local time = math.max(0, self.roe_time_left)
 
+	if time <= 0 then
+		self.roe_time_left = 0
+		self:TryProduceRoe()
+		return
+	end
+
 	self._roe_end_time = GetTime() + time
 
 	self._roe_task = self.inst:DoTaskInTime(time, function()
@@ -155,7 +197,7 @@ function FishFarmManager:StartRoeTimer()
 
 		self.roe_time_left = 0
 
-		self:ProduceRoe()
+		self:TryProduceRoe()
 	end)
 end
 
@@ -176,6 +218,12 @@ function FishFarmManager:StartBabyTimer()
 
 	local time = math.max(0, self.baby_time_left)
 
+	if time <= 0 then
+		self.baby_time_left = 0
+		self:TryProduceBaby()
+		return
+	end
+
 	self._baby_end_time = GetTime() + time
 
 	self._baby_task = self.inst:DoTaskInTime(time, function()
@@ -184,7 +232,7 @@ function FishFarmManager:StartBabyTimer()
 
 		self.baby_time_left = 0
 
-		self:ProduceBaby()
+		self:TryProduceBaby()
 	end)
 end
 
@@ -194,6 +242,9 @@ function FishFarmManager:StopWorking()
 
 	self:CancelRoeTask()
 	self:CancelBabyTask()
+
+	self._roe_sleeptime = nil
+	self._baby_sleeptime = nil
 
 	self.roe_time_left = nil
 	self.baby_time_left = nil
@@ -205,7 +256,7 @@ end
 
 -- PauseWorking() Does not reset the timers.
 function FishFarmManager:PauseWorking()
-	self:UpdateRemainingTimes() -- Save exact remaining time before cancelling tasks.
+	self:UpdateRemainingTimes()
 
 	self:CancelRoeTask()
 	self:CancelBabyTask()
@@ -255,8 +306,6 @@ function FishFarmManager:ProduceRoe(skiptask)
 
 	if not valid then
 		self.roe_time_left = 0
-		self:PauseWorking()
-
 		return
 	end
 
@@ -355,8 +404,6 @@ function FishFarmManager:ProduceBaby(skiptask)
 
 	if not valid then
 		self.baby_time_left = 0
-		self:PauseWorking()
-
 		return
 	end
 
@@ -420,13 +467,7 @@ function FishFarmManager:StartWorking()
 		return
 	end
 
-	if not fishfarmable:IsPhaseValid()
-	or not fishfarmable:IsMoonPhaseValid()
-	or not fishfarmable:IsSeasonValid()
-	or not fishfarmable:IsWorldValid() then
-		return
-	end
-
+	-- Timer progression is now independent of fish validity.
 	if self.roe_time_left == nil then
 		self.roe_time_left = fishfarmable:GetRoeTime()
 	end
@@ -447,6 +488,10 @@ function FishFarmManager:StartWorking()
 			self.onstartfn(inst)
 		end
 	end
+
+	-- A timer may already be at zero because it completed during an invalid condition.
+	self:TryProduceRoe()
+	self:TryProduceBaby()
 end
 
 function FishFarmManager:OnAddFuel()
@@ -498,17 +543,14 @@ function FishFarmManager:CheckInternalValidity()
 		return
 	end
 
-	local valid = fishfarmable:IsPhaseValid()
-	and fishfarmable:IsMoonPhaseValid()
-	and fishfarmable:IsSeasonValid()
-	and fishfarmable:IsWorldValid()
+	-- Validity no longer pauses the timers.
+	self:StartWorking()
 
-	if valid then
-		self:StartWorking()
-	else
-		if self._roe_task ~= nil or self._baby_task ~= nil then
-			self:PauseWorking()
-		end
+	-- If a timer completed while invalid, it will be ready at 0.
+	-- Once validity becomes true, production happens immediately.
+	if self:IsFishValid() then
+		self:TryProduceRoe()
+		self:TryProduceBaby()
 	end
 end
 
@@ -531,11 +573,6 @@ function FishFarmManager:WatchWorldStates()
 end
 
 function FishFarmManager:LongUpdate(dt)
-	self:UpdateRemainingTimes() -- Capture exact remaining time before cancelling tasks.
-
-	self:CancelRoeTask()
-	self:CancelBabyTask()
-
 	local container = self.inst.components.container
 	local fueled = self.inst.components.fueled
 
@@ -550,48 +587,99 @@ function FishFarmManager:LongUpdate(dt)
 		return
 	end
 
-	local valid = farmable:IsPhaseValid()
-	and farmable:IsMoonPhaseValid()
-	and farmable:IsSeasonValid()
-	and farmable:IsWorldValid()
-
-	if not valid then
-		return
-	end
-
 	if self.roe_time_left == nil then
 		self.roe_time_left = farmable:GetRoeTime()
-	end
-
-	if dt >= self.roe_time_left then
-		self.roe_time_left = 0
-
-		if not fueled:IsEmpty() then
-			self:ProduceRoe(true)
-		end
-	else
-		self.roe_time_left = math.max(0, self.roe_time_left - dt)
 	end
 
 	if self.baby_time_left == nil then
 		self.baby_time_left = farmable:GetBabyTime()
 	end
 
-	if dt >= self.baby_time_left then
-		self.baby_time_left = 0
+	-- Timer progression is completely independent from validity.
+	if self.roe_time_left > 0 then
+		self.roe_time_left = math.max(0, self.roe_time_left - dt)
+	end
 
-		if not fueled:IsEmpty() then
-			self:ProduceBaby(true)
-		end
-	else
+	if self.baby_time_left > 0 then
 		self.baby_time_left = math.max(0, self.baby_time_left - dt)
 	end
 
+	-- Production IS validity-dependent.
+	-- If the timer reached zero while invalid, it stays at zero.
+	-- Once the fish is valid, production happens immediately.
+	if self:IsFishValid() then
+		if self.roe_time_left <= 0 and not fueled:IsEmpty() then
+			self:ProduceRoe(true)
+		end
+
+		if self.baby_time_left <= 0 and not fueled:IsEmpty() then
+			self:ProduceBaby(true)
+		end
+	end
+
+	-- When LongUpdate is called while awake, recreate the normal
+	-- DoTaskInTime timers with the newly calculated remaining time.
 	self:StartWorking()
+end
+
+function FishFarmManager:OnEntitySleep()
+	local now = GetTime()
+
+	if self._roe_task ~= nil then
+		self:UpdateRemainingTimes()
+
+		self._roe_task:Cancel()
+		self._roe_task = nil
+
+		self._roe_end_time = nil
+		self._roe_sleeptime = now
+	end
+
+	if self._baby_task ~= nil then
+		self:UpdateRemainingTimes()
+
+		self._baby_task:Cancel()
+		self._baby_task = nil
+
+		self._baby_end_time = nil
+		self._baby_sleeptime = now
+	end
+end
+
+function FishFarmManager:OnEntityWake()
+	local now = GetTime()
+	local dt = 0
+
+	if self._roe_sleeptime ~= nil then
+		dt = math.max(dt, now - self._roe_sleeptime)
+		self._roe_sleeptime = nil
+	end
+
+	if self._baby_sleeptime ~= nil then
+		dt = math.max(dt, now - self._baby_sleeptime)
+		self._baby_sleeptime = nil
+	end
+
+	if dt > 0 then
+		self:LongUpdate(dt)
+	else
+		self:CheckInternalValidity()
+	end
 end
 
 function FishFarmManager:OnSave()
 	self:UpdateRemainingTimes()
+
+	-- If the entity is asleep, account for the time elapsed since it went to sleep before saving.
+	local now = GetTime()
+
+	if self._roe_sleeptime ~= nil and self.roe_time_left ~= nil then
+		self.roe_time_left = math.max(0, self.roe_time_left - (now - self._roe_sleeptime))
+	end
+
+	if self._baby_sleeptime ~= nil and self.baby_time_left ~= nil then
+		self.baby_time_left = math.max(0, self.baby_time_left - (now - self._baby_sleeptime))
+	end
 
 	return
 	{
@@ -603,6 +691,9 @@ end
 function FishFarmManager:OnLoad(data)
 	self:CancelRoeTask()
 	self:CancelBabyTask()
+
+	self._roe_sleeptime = nil
+	self._baby_sleeptime = nil
 
 	if data ~= nil then
 		self.roe_time_left = data.roe_time_left
@@ -626,7 +717,7 @@ function FishFarmManager:GetDebugString()
 		return
 	end
 
-	self:UpdateRemainingTimes() -- Update displayed timers without changing them.
+	self:UpdateRemainingTimes()
 
 	local fish = fish_parent.prefab or "Unknown Fish"
 	local roe = fishfarmable:GetRoePrefab() or "Unknown Roe"

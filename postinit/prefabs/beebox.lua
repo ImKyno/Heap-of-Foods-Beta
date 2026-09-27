@@ -20,7 +20,7 @@ if not TUNING.HOF_IS_TCP_ENABLED then
 		if inst.components.harvestable ~= nil then
 			local _onharvestfn = inst.components.harvestable.onharvestfn
 
-			inst.components.harvestable:SetOnHarvestFn(function(inst, picker, produce)
+			inst.components.harvestable:SetOnHarvestFn(function(inst, picker, produce, ...)
 				if not inst:HasTag("burnt") then
 					if picker ~= nil then
 						if picker:HasTag("beefriendly") then
@@ -34,7 +34,7 @@ if not TUNING.HOF_IS_TCP_ENABLED then
 							end
 						else
 							if _onharvestfn ~= nil then
-								_onharvestfn(inst, picker, produce)
+								_onharvestfn(inst, picker, produce, ...)
 							end
 						end
 					end

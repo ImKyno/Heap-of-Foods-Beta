@@ -2,15 +2,16 @@ local _G = GLOBAL
 
 local function CancelPossessedBrewing(inst)
 	if inst.prefab ~= "wx78_possessedbody" then
-		return
-	end
+		local container = inst._brewer_container
 
-	local brewer = inst._brewer_container
-	local container = brewer ~= nil and brewer.components.wxbrewer
+		if container == nil or not container:IsValid() then
+			return
+		end
 
-	if container ~= nil then
-		if container:IsBrewing() or container:IsPaused() then
-			container:CancelBrewing()
+		local brewer = container.components.wxbrewer
+
+		if brewer ~= nil and (brewer:IsBrewing() or brewer:IsPaused()) then
+			brewer:CancelBrewing()
 		end
 	end
 end

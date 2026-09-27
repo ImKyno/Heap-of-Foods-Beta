@@ -875,29 +875,64 @@ AddAction("EATFROM", "Eat From", function(act)
 		return false
 	end
 
-	if doer._has_food_buffered or doer._has_eaten_today then
-		return false
-	end
-
 	local fueled = target.components.fueled
 
 	if fueled == nil or fueled:GetPercent() <= 0 or fueled:IsEmpty() then
 		return false
 	end
 
-	fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
+	if doer:HasTag("beefalo") then
+		local follower = doer.components.follower
+		local leader = follower ~= nil and follower.leader or nil
 
-	target:PushEvent("onfeed") -- Handles animations and other stuff.
+		if leader == nil or not leader:HasTag("bell") then
+			return false
+		end
 
-	local food = SpawnPrefab("seeds")
+		if doer._animalfeeder_cooldown then
+			return false
+		end
 
-	if food ~= nil and doer.components.inventory ~= nil then
-		doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
+		fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME * 4) -- Beefalo consumes more food than chickens.
+
+		if doer.components.hunger ~= nil then
+			-- doer.components.hunger:DoDelta(TUNING.KYNO_ANIMALFEEDER_BEEFALO_HUNGER)
+			doer.components.hunger:SetPercent(1)
+		end
+
+		if doer.components.domesticatable ~= nil then
+			doer.components.domesticatable:DeltaDomestication(TUNING.KYNO_ANIMALFEEDER_BEEFALO_DOMESTICATION)
+			doer.components.domesticatable:DeltaObedience(TUNING.KYNO_ANIMALFEEDER_BEEFALO_OBEDIENCE)
+		end
+
+		target:PushEvent("onfeed")
+
+		_G.StartAnimalFeederCooldown(doer, TUNING.KYNO_ANIMALFEEDER_BEEFALO_COOLDOWN)
+
+		return true
 	end
 
-	-- doer._has_food_buffered = true
+	if doer:HasTag("chicken") then
+		if doer._has_food_buffered or doer._has_eaten_today then
+			return false
+		end
 
-	return true
+		fueled:DoDelta(-TUNING.KYNO_ANIMALFEEDER_CONSUME)
+
+		target:PushEvent("onfeed")
+
+		local food = SpawnPrefab("seeds")
+
+		if food ~= nil and doer.components.inventory ~= nil then
+			doer.components.inventory:GiveItem(food, nil, doer:GetPosition())
+		end
+
+		-- doer._has_food_buffered = true
+
+		return true
+	end
+
+	return false
 end)
 
 -- For boosting pickable plants and farm plants.
@@ -1377,7 +1412,7 @@ ACTIONS.OPENWXBREWER.stroverridefn = function(act)
 	if wx ~= nil and wx._brewer_container_net ~= nil then
 		local container = wx._brewer_container_net:value()
 
-		if container ~= nil and container.GetBrewerActionString ~= nil then
+		if container and container.GetBrewerActionString ~= nil then
 			return container:GetBrewerActionString()
 		end
 	end

@@ -3,7 +3,7 @@ local brain = require("brains/puffermonsterbrain")
 local assets =
 {
 	Asset("ANIM", "anim/kyno_puffermonster.zip"),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
@@ -12,7 +12,7 @@ local prefabs =
 {
 	"monstermeat",
 	"stinger",
-	
+
 	"kyno_swordfish_damage_fx",
 }
 
@@ -21,7 +21,7 @@ SetSharedLootTable("kyno_puffermonster",
 	{"monstermeat", 1.00},
 	{"monstermeat", 1.00},
 	{"monstermeat", 0.33},
-	
+
 	{"stinger",     1.00},
 	{"stinger",     1.00},
 	{"stinger",     0.50},
@@ -65,6 +65,71 @@ local function OnAttackOther(inst, data)
 	end, 5)
 end
 
+local function FindWater(inst)
+	local foundwater = false
+
+	local position = Vector3(inst.Transform:GetWorldPosition())
+	local start_angle = inst.Transform:GetRotation() * DEGREES
+
+	local foundwater = false
+	local radius = 6.5
+
+	local test_fn = function(offset)
+		local x = position.x + offset.x
+		local z = position.z + offset.z
+		return not TheWorld.Map:IsVisualGroundAtPoint(x, 0, z)
+	end
+
+	local offset = nil
+
+	while foundwater == false do
+		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
+
+		if offset and offset.x and offset.z then
+			foundwater = true
+		else
+			radius = radius + 4
+		end
+	end
+
+	return offset
+end
+
+local function CheckBeached(inst)
+	inst._checkgroundtask = nil
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+
+	if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+		local spawnPos = inst:GetPosition()
+		local offset = FindWater(inst)
+
+		spawnPos = spawnPos + offset
+
+		if inst.Physics ~= nil then
+			inst.Physics:Teleport(spawnPos:Get())
+
+			local splash = SpawnPrefab("ocean_splash_med1")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		else
+			inst.Transform:SetPosition(spawnPos:Get())
+
+			local splash = SpawnPrefab("ocean_splash_med2")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		end
+
+		if inst.components.floater ~= nil then
+			inst.components.floater:OnLandedServer()
+		end
+	end
+end
+
+local function OnCollide(inst, other)
+	if inst._checkgroundtask == nil then
+		inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -75,11 +140,11 @@ local function fn()
 
 	MakeCharacterPhysics(inst, 1, 1.25)
 	inst.Physics:SetCollisionGroup(COLLISION.CHARACTERS)
-	
+
 	MakeInventoryFloatable(inst, "med", 0.1, {1.1, 0.9, 1.1})
 	inst.components.floater:SetIsObstacle()
 	inst.components.floater.bob_percent = 0
-	
+
 	inst.AnimState:SetScale(1.1, 1.1, 1.1)
 
 	inst.AnimState:SetBank("kyno_puffermonster")
@@ -93,7 +158,7 @@ local function fn()
 	inst:AddTag("scarytooceanprey")
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
-	
+
 	inst.no_wet_prefix = true
 
 	inst.entity:SetPristine()
@@ -101,16 +166,19 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	local land_time = (POPULATING and math.random() * 5 * FRAMES) or 0
-	
+
 	inst:DoTaskInTime(land_time, function(inst)
 		inst.components.floater:OnLandedServer()
 	end)
-	
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
-	
+
 	inst:AddComponent("eater")
 	inst.components.eater:SetDiet({ FOODTYPE.MEAT }, { FOODTYPE.MEAT })
 	inst.components.eater:SetCanEatHorrible()
@@ -118,14 +186,14 @@ local function fn()
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetChanceLootTable("kyno_puffermonster")
-	
+
 	inst:AddComponent("sanityaura")
 	inst.components.sanityaura.aura = -TUNING.SANITYAURA_MED
 
 	inst:AddComponent("sleeper")
 	inst.components.sleeper:SetResistance(1)
 	inst.components.sleeper.sleeptestfn = nil
-	
+
 	inst:AddComponent("health")
 	inst.components.health:SetMaxHealth(TUNING.KYNO_PUFFERMONSTER_HEALTH)
 	inst.components.health:StartRegen(TUNING.BEEFALO_HEALTH_REGEN, TUNING.BEEFALO_HEALTH_REGEN_PERIOD)
@@ -142,10 +210,10 @@ local function fn()
 	inst.components.combat:SetRange(TUNING.KYNO_PUFFERMONSTER_RANGE)
 	inst.components.combat:SetRetargetFunction(1, Retarget)
 	inst.components.combat:SetKeepTargetFunction(KeepTarget)
-	
+
 	inst:SetBrain(brain)
 	inst:SetStateGraph("SGpuffermonster")
-	
+
 	inst:ListenForEvent("attacked", OnAttacked)
 	inst:ListenForEvent("onattackother", OnAttackOther)
 

@@ -1,25 +1,25 @@
-local assets = 
+local assets =
 {
 	Asset("ANIM", "anim/kyno_jellyfish_rainbow.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_jellyfish.zip"),
-	
+
 	Asset("ANIM", "anim/trophyscale_fish_kyno_jellyfish_rainbow.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
 
-local prefabs = 
+local prefabs =
 {
 	"kyno_jellyfish_rainbow",
 	"kyno_jellyfish_rainbow_dead",
 	"kyno_jellyfish_rainbow_cooked",
 	"kyno_jellyfish_dried",
-	
+
 	"kyno_jellyfish_rainbow_light",
 	"kyno_jellyfish_rainbow_light_fx",
 	"kyno_jellyfish_rainbow_light_greater",
@@ -50,10 +50,10 @@ end
 
 local function TurnOn(inst)
 	inst._switchlightstate:push()
-	
+
 	if inst.Light and not inst.hidden then
 		inst.Light:Enable(true)
-		
+
 		local secs = 1 + math.random()
 		inst.components.lighttweener:StartTween(inst.Light, 0, nil, nil, nil, 0)
 		inst.components.lighttweener:StartTween(inst.Light, INTENSITY, nil, nil, nil, secs, SwapColor)
@@ -68,16 +68,16 @@ end
 
 local function FadeIn(inst)
 	inst.hidden = false
-	
+
 	inst.AnimState:PlayAnimation("idle")
-    
+
 	inst:Show()
 	inst:RemoveTag("NOCLICK")
 end
 
 local function FadeOut(inst)
 	inst.hidden = true
-    
+
 	inst:AddTag("NOCLICK")
 	inst:Hide()
 end
@@ -110,13 +110,13 @@ local function OnWorked(inst, worker)
 		if worker.components.inventory ~= nil then
 			local jellyfish = SpawnPrefab("kyno_jellyfish_rainbow")
 			worker.components.inventory:GiveItem(jellyfish, nil, inst:GetPosition())
-            worker.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
+			worker.SoundEmitter:PlaySound("turnoftides/common/together/water/harvest_plant")
 
 			if jellyfish.components.weighable ~= nil then
 				jellyfish.components.weighable:SetPlayerAsOwner(worker)
 			end
 		end
-		
+
 		inst:PushEvent("detachchild") -- No longer part of the spawner.
 		inst:Remove()
 	end
@@ -147,7 +147,7 @@ local function SetNewHome(inst)
 	if inst.components.knownlocations ~= nil then
 		inst.components.knownlocations:ForgetLocation("home")
 	end
-	
+
 	inst:DoTaskInTime(1, SetHome) -- Set home again.
 end
 
@@ -171,7 +171,7 @@ end
 local function PlayDeadAnim(inst)
 	inst.AnimState:PlayAnimation("death_ground")
 	inst.AnimState:PushAnimation("idle_ground", true)
-	
+
 	inst.components.inventoryitem.canbepickedup = true
 
 	local x, y, z = inst.Transform:GetWorldPosition()
@@ -189,17 +189,17 @@ local function OnDropped(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
 	local onland = TheWorld.Map:IsPassableAtPoint(x, y, z)
 	local replacement = SpawnPrefab(onland and "kyno_jellyfish_rainbow_dead" or "kyno_jellyfish_rainbow_ocean")
-	
+
 	replacement.Transform:SetPosition(x, y, z)
 	replacement:DoTaskInTime(1, SetNewHome)
-	
+
 	inst:Remove()
-	
+
 	if onland then
 		replacement.components.inventoryitem.canbepickedup = false
 		replacement.AnimState:PlayAnimation("stunned_loop", true)
 		replacement:DoTaskInTime(1, PlayDeadAnim)
-    end
+	end
 end
 
 local function OnDroppedDead(inst)
@@ -219,7 +219,7 @@ local function CreateLight(eater, lightprefab)
 
 	local light = SpawnPrefab(lightprefab)
 	light.components.spell:SetTarget(eater)
-	
+
 	if light:IsValid() then
 		if light.components.spell.target == nil then
 			light:Remove()
@@ -230,7 +230,7 @@ local function CreateLight(eater, lightprefab)
 end
 
 local function OnEaten(inst, eater)
-    CreateLight(eater, "kyno_jellyfish_rainbow_light")
+	CreateLight(eater, "kyno_jellyfish_rainbow_light")
 end
 
 local function GetFishKey(inst)
@@ -241,6 +241,71 @@ local function fishresearchfn(inst)
 	return inst:GetFishKey()
 end
 
+local function FindWater(inst)
+	local foundwater = false
+
+	local position = Vector3(inst.Transform:GetWorldPosition())
+	local start_angle = inst.Transform:GetRotation() * DEGREES
+
+	local foundwater = false
+	local radius = 6.5
+
+	local test_fn = function(offset)
+		local x = position.x + offset.x
+		local z = position.z + offset.z
+		return not TheWorld.Map:IsVisualGroundAtPoint(x, 0, z)
+	end
+
+	local offset = nil
+
+	while foundwater == false do
+		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
+
+		if offset and offset.x and offset.z then
+			foundwater = true
+		else
+			radius = radius + 4
+		end
+	end
+
+	return offset
+end
+
+local function CheckBeached(inst)
+	inst._checkgroundtask = nil
+
+	local x, y, z = inst.Transform:GetWorldPosition()
+
+	if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
+		local spawnPos = inst:GetPosition()
+		local offset = FindWater(inst)
+
+		spawnPos = spawnPos + offset
+
+		if inst.Physics ~= nil then
+			inst.Physics:Teleport(spawnPos:Get())
+
+			local splash = SpawnPrefab("ocean_splash_med1")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		else
+			inst.Transform:SetPosition(spawnPos:Get())
+
+			local splash = SpawnPrefab("ocean_splash_med2")
+			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
+		end
+
+		if inst.components.floater ~= nil then
+			inst.components.floater:OnLandedServer()
+		end
+	end
+end
+
+local function OnCollide(inst, other)
+	if inst._checkgroundtask == nil then
+		inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
+	end
+end
+
 local function fn()
 	local inst = CreateEntity()
 
@@ -249,18 +314,18 @@ local function fn()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddLight()
 	inst.entity:AddNetwork()
-	
+
 	inst.Light:SetColour(251/255, 30/255, 30/255)
 	inst.Light:Enable(false)
 	inst.Light:EnableClientModulation(true)
 	inst.Light:SetIntensity(0.65)
 	inst.Light:SetRadius(2)
 	inst.Light:SetFalloff(.45)
-	
+
 	inst.Transform:SetFourFaced()
-	
+
 	MakeCharacterPhysics(inst, 1, 1.25)
-	
+
 	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_jellyfish_rainbow")
@@ -276,24 +341,24 @@ local function fn()
 	inst:AddTag("smallcreature")
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("jellyfish_rainbow")
-	
+
 	inst:SetPrefabNameOverride("KYNO_JELLYFISH_RAINBOW")
-	
+
 	inst:AddComponent("lighttweener")
 	inst.components.lighttweener:StartTween(inst.Light, nil, nil, nil, { 0/255, 180/255, 255/255 }, 4, SwapColor)
-	
+
 	inst.ispink = true
 	inst._switchlightstate = net_event(inst.GUID, "kyno_jellyfish_rainbow_ocean._switchlightstate")
-	
+
 	inst.no_wet_prefix = true
 
-    inst.entity:SetPristine()
+	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		inst:ListenForEvent("kyno_jellyfish_rainbow_ocean._switchlightstate", function(inst, data)
 			if inst.Light and not inst:HasTag("NOCLICK") then
 				local secs = 1 + math.random()
-				
+
 				inst.components.lighttweener:StartTween(inst.Light, 0, nil, nil, nil, 0)
 				inst.components.lighttweener:StartTween(inst.Light, INTENSITY, nil, nil, nil, secs, SwapColor)
 			end
@@ -301,25 +366,28 @@ local function fn()
 
 		return inst
 	end
-	
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
 	inst:AddComponent("inspectable")
-    inst:AddComponent("knownlocations")
+	inst:AddComponent("knownlocations")
 	inst:AddComponent("homeseeker")
 	inst:AddComponent("combat")
 	inst:AddComponent("fader")
 
-    inst:AddComponent("locomotor")
+	inst:AddComponent("locomotor")
 	inst.components.locomotor.walkspeed = TUNING.KYNO_JELLYFISH_RAINBOW_WALKSPEED
 	inst.components.locomotor.pathcaps = { allowocean = true, ignoreLand = true }
 
-    inst:AddComponent("health")
-    inst.components.health:SetMaxHealth(TUNING.KYNO_JELLYFISH_RAINBOW_OCEAN_HEALTH)
-	
+	inst:AddComponent("health")
+	inst.components.health:SetMaxHealth(TUNING.KYNO_JELLYFISH_RAINBOW_OCEAN_HEALTH)
+
 	-- inst:AddComponent("eater")
 	-- inst.components.eater:SetDiet({ FOODGROUP.VEGETARIAN }, { FOODGROUP.VEGETARIAN })
 
-    inst:AddComponent("lootdropper")
-    inst.components.lootdropper:SetLoot({"kyno_jellyfish_rainbow_dead"})
+	inst:AddComponent("lootdropper")
+	inst.components.lootdropper:SetLoot({"kyno_jellyfish_rainbow_dead"})
 
 	inst:AddComponent("sleeper")
 	inst.components.sleeper.sleeptestfn = nil
@@ -328,10 +396,10 @@ local function fn()
 	inst.components.workable:SetWorkAction(ACTIONS.NET)
 	inst.components.workable:SetWorkLeft(1)
 	inst.components.workable:SetOnFinishCallback(OnWorked)
-	
+
 	inst:SetStateGraph("SGjellyfishrainbowocean")
 	inst:SetBrain(brain)
-	
+
 	inst.OnEntityWake = OnWake
 	inst.OnEntitySleep = OnSleep
 
@@ -340,10 +408,10 @@ local function fn()
 
 	inst:ListenForEvent("death", OnDeath)
 
-    MakeHauntablePanic(inst)
-    MakeMediumFreezableCharacter(inst, "jelly")
+	MakeHauntablePanic(inst)
+	MakeMediumFreezableCharacter(inst, "jelly")
 
-    return inst
+	return inst
 end
 
 local function jellyfish()
@@ -355,14 +423,14 @@ local function jellyfish()
 	inst.entity:AddNetwork()
 
 	MakeInventoryPhysics(inst)
-	
+
 	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_jellyfish_rainbow")
 	inst.AnimState:SetBuild("kyno_jellyfish_rainbow")
 	inst.AnimState:PlayAnimation("idle_ground", true)
 	inst.AnimState:SetRayTestOnBB(true)
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("fish")
 	inst:AddTag("fishfarmable")
@@ -377,9 +445,9 @@ local function jellyfish()
 	inst:AddTag("smalloceancreature")
 	inst:AddTag("jellyfish_rainbow")
 	inst:AddTag("fishresearchable")
-	
+
 	inst.scrapbook_proxy = "kyno_jellyfish_rainbow_ocean"
-	
+
 	inst.GetFishKey = GetFishKey
 
 	inst.entity:SetPristine()
@@ -387,31 +455,31 @@ local function jellyfish()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("murderable")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
 	inst:AddComponent("fishresearchable")
 	inst.components.fishresearchable:SetResearchFn(fishresearchfn)
-	
+
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
-	
+
 	inst:AddComponent("health")
 	inst.components.health.murdersound = "hof_sounds/creatures/jellyfish/murder"
-	
+
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_jellyfish_rainbow_dead"})
 
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
-    inst.components.perishable.onperishreplacement = "kyno_jellyfish_rainbow_dead"
-    inst.components.perishable:StartPerishing()
-	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
+	inst.components.perishable.onperishreplacement = "kyno_jellyfish_rainbow_dead"
+	inst.components.perishable:StartPerishing()
+
 	inst:AddComponent("weighable")
 	inst.components.weighable.type = TROPHYSCALE_TYPES.FISH
 	inst.components.weighable:Initialize(MIN_WEIGHT, MAX_WEIGHT)
@@ -419,10 +487,10 @@ local function jellyfish()
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	
+
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_HUGE)
-	
+
 	inst:AddComponent("fishfarmable")
 	inst.components.fishfarmable:SetTimes(TUNING.JELLYFISH_RAINBOW_ROETIME, TUNING.JELLYFISH_RAINBOW_BABYTIME)
 	inst.components.fishfarmable:SetProducts("kyno_roe_jellyfish_rainbow", "kyno_jellyfish_rainbow")
@@ -430,7 +498,7 @@ local function jellyfish()
 	inst.components.fishfarmable:SetMoonPhases({ "new", "quarter", "half", "threequarter", "full" })
 	inst.components.fishfarmable:SetSeasons({ "autumn", "winter", "spring", "summer" })
 	inst.components.fishfarmable:SetWorlds({ "forest", "cave" })
-	
+
 	inst:ListenForEvent("on_landed", OnDropped)
 
 	MakeHauntableLaunchAndPerish(inst)
@@ -448,14 +516,14 @@ local function jellyfish_dead()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_jellyfish_rainbow")
 	inst.AnimState:SetBuild("kyno_jellyfish_rainbow")
 	inst.AnimState:PlayAnimation("idle_ground", true)
 	inst.AnimState:SetRayTestOnBB(true)
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
@@ -470,21 +538,21 @@ local function jellyfish_dead()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_jellyfish_rainbow_cooked"
-	
+
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
-    inst.components.perishable.onperishreplacement = "spoiled_food"
-    inst.components.perishable:StartPerishing()
-	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_ONE_DAY)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+	inst.components.perishable:StartPerishing()
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_JELLYFISH_RAINBOW_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_RAINBOW_HUNGER
@@ -492,15 +560,15 @@ local function jellyfish_dead()
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
 	inst.components.edible:SetOnEatenFn(OnEaten)
-	
+
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("kyno_jellyfish_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)
 	inst.components.dryable:SetBuildFile("kyno_meatrack_jellyfish")
 	inst.components.dryable:SetDriedBuildFile("kyno_meatrack_jellyfish")
-	
+
 	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnDroppedFn(OnDroppedDead)
@@ -520,14 +588,14 @@ local function jellyfish_cooked()
 
 	MakeInventoryPhysics(inst)
 	MakeInventoryFloatable(inst)
-	
+
 	inst.AnimState:SetScale(.8, .8, .8)
 
 	inst.AnimState:SetBank("kyno_jellyfish_rainbow")
 	inst.AnimState:SetBuild("kyno_jellyfish_rainbow")
 	inst.AnimState:PlayAnimation("cooked")
 	inst.AnimState:SetRayTestOnBB(true)
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("fish")
 	inst:AddTag("fishmeat")
@@ -540,28 +608,28 @@ local function jellyfish_cooked()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventoryitem")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
-    inst.components.perishable.onperishreplacement = "spoiled_food"
-    inst.components.perishable:StartPerishing()
-	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+	inst.components.perishable.onperishreplacement = "spoiled_food"
+	inst.components.perishable:StartPerishing()
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_JELLYFISH_RAINBOW_COOKED_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_JELLYFISH_RAINBOW_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_JELLYFISH_RAINBOW_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.secondaryfoodtype = FOODTYPE.MONSTER
-	
+
 	inst:AddComponent("stackable")
-    inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
+	inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM
 
 	MakeHauntableLaunchAndPerish(inst)
 

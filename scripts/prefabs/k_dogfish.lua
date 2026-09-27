@@ -6,11 +6,11 @@ local assets =
 
 	Asset("ANIM", "anim/meat_rack_food_tot.zip"),
 	Asset("ANIM", "anim/kyno_meatrack_dogfish.zip"),
-	
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
@@ -27,12 +27,12 @@ local function SetAboveWater(inst, above)
 	if above then
 		inst.AnimState:SetLayer(LAYER_WORLD)
 		inst.AnimState:SetSortOrder(0)
-		
+
 		inst.Physics:SetCollisionMask(COLLISION.WORLD)
 	else
 		inst.AnimState:SetSortOrder(ANIM_SORT_ORDER_BELOW_GROUND.UNDERWATER)
 		inst.AnimState:SetLayer(LAYER_WIP_BELOW_OCEAN)
-		
+
 		inst.Physics:SetCollisionMask(SWIMMING_COLLISION_MASK)
 	end
 end
@@ -48,7 +48,7 @@ end
 
 local function FindWater(inst)
 	local foundwater = false
-	
+
 	local position = Vector3(inst.Transform:GetWorldPosition())
 	local start_angle = inst.Transform:GetRotation() * DEGREES
 
@@ -65,7 +65,7 @@ local function FindWater(inst)
 
 	while foundwater == false do
 		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
-		
+
 		if offset and offset.x and offset.z then
 			foundwater = true
 		else
@@ -76,33 +76,44 @@ local function FindWater(inst)
 	return offset
 end
 
--- Tihs means we are stuck outside water and need to get out.
--- Happens if we are underwater and emerge while something is above us.
-local function StuckDetection(inst)
-	local platform = inst:GetCurrentPlatform()
+local function CheckBeached(inst)
+	inst._checkgroundtask = nil
 
-	if platform then
+	local x, y, z = inst.Transform:GetWorldPosition()
+
+	if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
 		local spawnPos = inst:GetPosition()
 		local offset = FindWater(inst)
+
 		spawnPos = spawnPos + offset
-				
+
 		if inst.Physics ~= nil then
 			inst.Physics:Teleport(spawnPos:Get())
-			
+
 			local splash = SpawnPrefab("ocean_splash_med1")
 			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		else
 			inst.Transform:SetPosition(spawnPos:Get())
-			
+
 			local splash = SpawnPrefab("ocean_splash_med2")
 			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		end
+
+		if inst.components.floater ~= nil then
+			inst.components.floater:OnLandedServer()
+		end
+	end
+end
+
+local function OnCollide(inst, other)
+	if inst._checkgroundtask == nil then
+		inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
 	end
 end
 
 local function fn()
 	local inst = CreateEntity()
-    
+
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
@@ -130,7 +141,10 @@ local function fn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("knownlocations")
 	inst:AddComponent("combat")
@@ -138,10 +152,10 @@ local function fn()
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.walkspeed = TUNING.KYNO_DOGFISH_WALKSPEED
 	inst.components.locomotor.runspeed = TUNING.KYNO_DOGFISH_RUNSPEED
-	inst.components.locomotor.pathcaps = {allowocean = true, ignoreLand = true}
+	inst.components.locomotor.pathcaps = { allowocean = true, ignoreLand = true }
 
-    inst:AddComponent("health")
-    inst.components.health:SetMaxHealth(TUNING.KYNO_DOGFISH_HEALTH)
+	inst:AddComponent("health")
+	inst.components.health:SetMaxHealth(TUNING.KYNO_DOGFISH_HEALTH)
 
 	inst:AddComponent("lootdropper")
 	inst.components.lootdropper:SetLoot({"kyno_dogfish_dead"})
@@ -156,8 +170,6 @@ local function fn()
 
 	inst:SetBrain(brain)
 	inst:SetStateGraph("SGdogfishocean")
-	
-	inst:DoPeriodicTask(3, StuckDetection) -- Stupid? Yes, but it works.
 
 	MakeHauntablePanic(inst)
 	MakeMediumFreezableCharacter(inst, "dogfish_body")
@@ -179,7 +191,7 @@ local function dogfish_dead()
 	inst.AnimState:SetBank("kyno_dogfish")
 	inst.AnimState:SetBuild("kyno_dogfish")
 	inst.AnimState:PlayAnimation("dead")
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("fishmeat")
 	inst:AddTag("catfood")
@@ -195,14 +207,14 @@ local function dogfish_dead()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventoryitem")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = TUNING.GOLD_VALUES.MEAT
 	inst.components.tradable.octopusvalue = TUNING.OCTOPUS_VALUES.SEAFOOD
-	
+
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "fishmeat_cooked"
 
@@ -211,16 +223,16 @@ local function dogfish_dead()
 	inst.components.sliceable:SetSliceSize(2)
 
    	inst:AddComponent("perishable")
-    inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
-    inst.components.perishable.onperishreplacement = "kyno_spoiled_fish_large"
-    inst.components.perishable:StartPerishing()
-	
+	inst.components.perishable:SetPerishTime(TUNING.PERISH_SUPERFAST)
+	inst.components.perishable.onperishreplacement = "kyno_spoiled_fish_large"
+	inst.components.perishable:StartPerishing()
+
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_DOGFISH_DEAD_HEALTH
 	inst.components.edible.hungervalue = TUNING.KYNO_DOGFISH_DEAD_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_DOGFISH_DEAD_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
-	
+
 	inst:AddComponent("dryable")
 	inst.components.dryable:SetProduct("fishmeat_dried")
 	inst.components.dryable:SetDryTime(TUNING.DRY_FAST)

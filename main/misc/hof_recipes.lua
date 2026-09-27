@@ -876,6 +876,8 @@ for i = 1, NUM_TEASHOP_LEVELS do
 	)
 end
 
+AddDeconstructRecipe("kyno_opalpreciousapple", {Ingredient("kyno_opalpreciouspowder", 6), Ingredient("seeds", 1)})
+
 -- Construction Plans.
 AddRecipe2("kyno_pond_salt2_construction", {}, TECH.LOST,
 	{

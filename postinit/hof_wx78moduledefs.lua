@@ -583,7 +583,7 @@ end
 local function UpdateBrewingTag(wx)
 	if wx ~= nil then
 		local container = wx._brewer_container
-		local brewer = container ~= nil and container.components.wxbrewer or nil
+		local brewer = container and container.components.wxbrewer or nil
 
 		if brewer ~= nil and (brewer:IsBrewing() or brewer:IsPaused()) then
 			wx:AddTag("wx_brewing")
@@ -597,7 +597,7 @@ local function BrewerOnUpdate(wx)
 	local chips = wx._brewerchips or 0
 	local container = wx._brewer_container
 
-	if container ~= nil and container.components.wxbrewer ~= nil then
+	if container and container.components.wxbrewer ~= nil then
 		container.components.wxbrewer.brewtimemult = _G.IsPlayerSkillActivated(wx, "wx78_circuitry_gammabuffs_2")
 		and TUNING.KYNO_WX78_MODULES_BREWER_BREWTIMEMULT or 1
 	end
@@ -614,7 +614,7 @@ end
 local function BrewerOnIsInspecting(wx, data)
 	local container = wx._brewer_container
 
-	if container ~= nil then
+	if container then
 		if wx.components.upgrademoduleowner ~= nil and wx.components.upgrademoduleowner.inspecting then
 			if container.components.container ~= nil and container.components.container:IsOpen() then
 				container.components.container:Close()
@@ -626,7 +626,7 @@ end
 local function BrewerOnEnergyUpdate(wx, data)
 	local container = wx._brewer_container
 
-	if container ~= nil then
+	if container then
 		if data ~= nil and data.new_level ~= nil and data.new_level <= 0 then
 			if container.components.container ~= nil and container.components.container:IsOpen() then
 				container.components.container:Close()
@@ -698,7 +698,7 @@ local function BrewerRemovedFromOwner(inst, wx)
 	local istransfer = WX78UsesBrewerTransfer(wx)
 	local container = wx._brewer_container
 
-	if container ~= nil then
+	if container then
 		local brewer = container.components.wxbrewer
 
 		if istransfer then
@@ -805,7 +805,7 @@ local function BrewerActivate(inst, wx, isloading)
 	if wx._brewerchips == 1 then
 		local container = wx._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil then
 			container.components.wxbrewer:ResumeBrewing()
 		end
 
@@ -830,7 +830,7 @@ local function BrewerDeactivate(inst, wx)
 	
 		local container = wx._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil then
 			container.components.wxbrewer:PauseBrewing()
 		end
 
@@ -870,28 +870,30 @@ table.insert(hof_module_definitions, BREWER_MODULE_DATA)
 local WX78_HOF_CREATURES_SCAN =
 {
 	-- I'm going to use critters for the gourmand circuit since the little shits keep asking for food.
-	critter_kitten           = { module = "gourmand", maxdata = 3 },
-	critter_puppy            = { module = "gourmand", maxdata = 3 },
-	critter_lamb             = { module = "gourmand", maxdata = 3 },
-	critter_dragonling       = { module = "gourmand", maxdata = 3 },
-	critter_glomling         = { module = "gourmand", maxdata = 3 },
-	critter_perdling         = { module = "gourmand", maxdata = 3 },
-	critter_lunarmothling    = { module = "gourmand", maxdata = 3 },
-	critter_eyeofterror      = { module = "gourmand", maxdata = 3 },
-	critter_bulbin           = { module = "gourmand", maxdata = 3 },
-	critter_eets             = { module = "gourmand", maxdata = 3 },
-	wobysmall                = { module = "gourmand", maxdata = 4 }, -- Woby because she's cute.
-	kyno_serenityisland_shop = { module = "gourmand", maxdata = 5 },
+	critter_kitten           = { module = "gourmand",   maxdata = 3 },
+	critter_puppy            = { module = "gourmand",   maxdata = 3 },
+	critter_lamb             = { module = "gourmand",   maxdata = 3 },
+	critter_dragonling       = { module = "gourmand",   maxdata = 3 },
+	critter_glomling         = { module = "gourmand",   maxdata = 3 },
+	critter_perdling         = { module = "gourmand",   maxdata = 3 },
+	critter_lunarmothling    = { module = "gourmand",   maxdata = 3 },
+	critter_eyeofterror      = { module = "gourmand",   maxdata = 3 },
+	critter_bulbin           = { module = "gourmand",   maxdata = 3 },
+	critter_eets             = { module = "gourmand",   maxdata = 3 },
+	wobysmall                = { module = "gourmand",   maxdata = 4 }, -- Woby because she's cute.
+	kyno_serenityisland_shop = { module = "gourmand",   maxdata = 5 },
 
-	lavae                    = { module = "cooker",   maxdata = 5 },
-	lavae_pet                = { module = "cooker",   maxdata = 3 },
-	willow                   = { module = "cooker",   maxdata = 2 }, -- Shh... no one has to know about this.
+	lavae                    = { module = "cooker",     maxdata = 5 },
+	lavae_pet                = { module = "cooker",     maxdata = 3 },
+	willow                   = { module = "cooker",     maxdata = 2 }, -- Shh... no one has to know about this.
 
-	cookiecutter             = { module = "dryer",    maxdata = 3 },
-	salty_dog                = { module = "dryer",    maxdata = 6 },
+	cookiecutter             = { module = "dryer",      maxdata = 3 },
+	salty_dog                = { module = "dryer",      maxdata = 6 },
 
-	kyno_piko                = { module = "brewer",   maxdata = 4 },
-	kyno_piko_orange         = { module = "brewer",   maxdata = 4 },
+	kyno_piko                = { module = "brewer",     maxdata = 4 },
+	kyno_piko_orange         = { module = "brewer",     maxdata = 4 },
+
+	kyno_sugarfly            = { module = "maxsanity1", maxdata = 1 },
 }
 
 -- Register the new circuits and scannable creatures.

@@ -3517,7 +3517,8 @@ local kyno_foods =
 
 	monkeyislandmeal =
 	{
-		test = function(cooker, names, tags) return names.wobster_monkeyisland_land and tags.banana end,
+		test = function(cooker, names, tags) return names.wobster_monkeyisland_land and tags.banana
+		and tags.butter and not tags.inedible end,
 		priority = 35,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_MED,
@@ -3530,15 +3531,17 @@ local kyno_foods =
 		pigcoinvalue = {0, 0, 1},
 		floater = TUNING.HOF_FLOATER,
 		tags = {"monkeyqueenbribe", "marinefood"},
-		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"twigs", 2}}},
+		card_def = {ingredients = {{"wobster_monkeyisland_land", 1}, {"cave_banana", 1}, {"butter", 1}, {"berries", 1}}},
 		oneatenfn = function(inst, eater)
 			if eater.components.inventory ~= nil and eater.components.cursable ~= nil
-			and not (eater.components.health ~= nil and eater.components.health:IsDead()) and
-			not eater:HasTag("playerghost") then
-				local prop = eater.components.inventory:FindItem(function(item) return item.prefab == "cursed_monkey_token" end)
+			and not (eater.components.health ~= nil and eater.components.health:IsDead())
+			and not eater:HasTag("playerghost") then
+				local prop = eater.components.inventory:FindItem(function(item)
+					return item.prefab == "cursed_monkey_token"
+				end)
 
-				if prop ~= nil then
-					eater.components.cursable:RemoveCurse("MONKEY", 10)
+				if prop then
+					eater.components.cursable:RemoveCurse("MONKEY", 999)
 				end
 			end
 		end,

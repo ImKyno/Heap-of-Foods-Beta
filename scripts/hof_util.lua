@@ -718,3 +718,21 @@ function GetWX78TransferKey(wx, inst)
 
 	return tostring(wx.GUID)
 end
+
+function StartAnimalFeederCooldown(inst, time)
+	if inst._animalfeeder_cooldown_task ~= nil then
+		inst._animalfeeder_cooldown_task:Cancel()
+		inst._animalfeeder_cooldown_task = nil
+	end
+
+	inst._animalfeeder_cooldown = true
+	inst._next_animalfeeder_time = time
+	inst._animalfeeder_cooldown_start = GetTime()
+
+	inst._animalfeeder_cooldown_task = inst:DoTaskInTime(time, function(inst)
+		inst._animalfeeder_cooldown_task = nil
+		inst._animalfeeder_cooldown = nil
+		inst._next_animalfeeder_time = nil
+		inst._animalfeeder_cooldown_start = nil
+	end)
+end

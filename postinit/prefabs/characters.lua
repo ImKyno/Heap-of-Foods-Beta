@@ -84,7 +84,7 @@ local function WX78PostInit(inst)
 
 		local container = inst._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil then
 			local brewer = container.components.wxbrewer
 			data.wxbrewer = brewer:OnSave()
 		end
@@ -101,7 +101,7 @@ local function WX78PostInit(inst)
 
 		local container = inst._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil and data ~= nil and data.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil and data ~= nil and data.wxbrewer ~= nil then
 			local brewer = container.components.wxbrewer
 			brewer:OnLoadData(data.wxbrewer)
 		end

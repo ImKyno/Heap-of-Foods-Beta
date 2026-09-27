@@ -26,7 +26,7 @@ local function GetBrewerActionString(inst, owner)
 	local brewer_net = owner ~= nil and owner._brewer_container_net
 	local container = brewer_net ~= nil and brewer_net:value()
 
-	if container ~= nil and container.replica.container ~= nil and container.replica.container:IsOpenedBy(owner) then
+	if container and container.replica.container ~= nil and container.replica.container:IsOpenedBy(owner) then
 		return STRINGS.ACTIONS.RUMMAGE.CLOSE
 	end
 

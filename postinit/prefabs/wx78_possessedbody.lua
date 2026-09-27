@@ -20,7 +20,7 @@ local function WX78PossessedBodyPostInit(inst)
 
 		local container = inst._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil then
 			local brewer = container.components.wxbrewer
 			data.wxbrewer = brewer:OnSave()
 		end
@@ -41,7 +41,7 @@ local function WX78PossessedBodyPostInit(inst)
 
 		local container = inst._brewer_container
 
-		if container ~= nil and container.components.wxbrewer ~= nil then
+		if container and container.components.wxbrewer ~= nil then
 			container.components.wxbrewer:OnLoadData(data.wxbrewer)
 		else
 			local key = _G.GetWX78TransferKey(inst)

@@ -463,6 +463,18 @@ local function GetStatus(inst, viewer)
 	or "GENERIC"
 end
 
+local function OnEntitySleep(inst)
+	if inst.components.fishfarmmanager ~= nil then
+		inst.components.fishfarmmanager:OnEntitySleep()
+	end
+end
+
+local function OnEntityWake(inst)
+	if inst.components.fishfarmmanager ~= nil then
+		inst.components.fishfarmmanager:OnEntityWake()
+	end
+end
+
 local function OnSave(inst, data)
 	if inst.plants ~= nil then
 		data.plants = inst.plants
@@ -571,6 +583,9 @@ local function fn()
 	inst:ListenForEvent("onremove", OnEntityRemove)
 	
 	inst.task = inst:DoTaskInTime(0, OnInit)
+
+	-- inst.OnEntitySleep = OnEntitySleep
+	-- inst.OnEntityWake = OnEntityWake
 
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad

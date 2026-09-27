@@ -100,6 +100,32 @@ local function BeefaloPostInit(inst)
 	inst:ListenForEvent("onthaw", OnThaw)
 	inst:ListenForEvent("freeze", OnFreeze)
 	inst:ListenForEvent("unfreeze", OnUnfreeze)
+
+	local _OnSave = inst.OnSave
+	local _OnLoad = inst.OnLoad
+
+	inst.OnSave = function(inst, data, ...)
+		if _OnSave ~= nil then
+			_OnSave(inst, data, ...)
+		end
+
+		if inst._animalfeeder_cooldown and inst._next_animalfeeder_time ~= nil and inst._animalfeeder_cooldown_start ~= nil then
+			local elapsed = _G.GetTime() - inst._animalfeeder_cooldown_start
+			local remaining = math.max(0, inst._next_animalfeeder_time - elapsed)
+
+			data.animalfeeder_cooldown = remaining
+		end
+	end
+
+	inst.OnLoad = function(inst, data, ...)
+		if _OnLoad ~= nil then
+			_OnLoad(inst, data, ...)
+		end
+
+		if data ~= nil and data.animalfeeder_cooldown ~= nil and data.animalfeeder_cooldown > 0 then
+			_G.StartAnimalFeederCooldown(inst, data.animalfeeder_cooldown)
+		end
+	end
 end
 
 local function BabyBeefaloPostInit(inst)

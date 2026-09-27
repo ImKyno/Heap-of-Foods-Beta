@@ -38,6 +38,8 @@ local INIT_POSTINIT_COMPONENTS =
 	"freezable",
 	"growable",
 	"health",
+	"oceanfishingrod",
+	"piratespawner",
 	"playervision",
 	"pollinator",
 	"regrowthmanager",
@@ -193,6 +195,7 @@ local INIT_POSTINIT_STATEGRAPHS =
 {
 	"SGbearger",
 	"SGbee",
+	"SGmonkeyqueen",
 	"SGshark",
 	"SGwilson",
 	"SGwx78_possessedbody",

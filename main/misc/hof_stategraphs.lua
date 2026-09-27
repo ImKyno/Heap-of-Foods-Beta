@@ -37,7 +37,7 @@ end
 local function ClearPendingBrew(inst)
 	local container = inst._brewer_container
 
-	if container ~= nil and container.components.wxbrewer ~= nil then
+	if container and container.components.wxbrewer ~= nil then
 		container.components.wxbrewer:ClearPendingBrew()
 	end
 end
@@ -475,6 +475,55 @@ AddStategraphState("catcoon",
 				inst.sg:GoToState("idle")
 			end),
 		},
+	}
+)
+
+AddStategraphState("beefalo",
+	State
+	{
+		name = "eatfrom",
+		tags = { "busy" },
+
+		onenter = function(inst, data)
+			inst.components.locomotor:StopMoving()
+
+			inst.AnimState:PlayAnimation("graze_loop", true)
+			inst.SoundEmitter:PlaySound("dontstarve/beefalo/eat_treat")
+
+			inst.sg:SetTimeout(2.0 + math.random() * 2.0)
+
+			if inst.sg.statemem and inst.sg.statemem.full then
+				inst.sg.statemem.full = data.full
+			end
+		end,
+
+		timeline =
+		{
+			TimeEvent(28  * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve/beefalo/chew") end),
+			TimeEvent(56  * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve/beefalo/chew") end),
+			TimeEvent(84  * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve/beefalo/chew") end),
+			TimeEvent(112 * FRAMES, function(inst) inst.SoundEmitter:PlaySound("dontstarve/beefalo/chew") end),
+		},
+
+		ontimeout = function(inst)
+			inst:PerformBufferedAction()
+
+			if inst.components.periodicspawner ~= nil then
+				inst.components.periodicspawner:ForceNextSpawn()
+			end
+
+			if inst.sg.statemem and inst.sg.statemem.full then
+				inst.sg:GoToState("regurgitate")
+			else
+				if inst.sg.statemem and inst.sg.statemem.badfood then
+					inst.sg:GoToState("badfood")
+				elseif inst.components.hunger:GetPercent() > 0.8 then
+					inst.sg:GoToState("flatulate")
+				else
+					inst.sg:GoToState("idle")
+				end
+			end
+		end,
 	}
 )
 
@@ -985,3 +1034,6 @@ end))
 AddStategraphActionHandler("wilson_client", ActionHandler(ACTIONS.OPENWXBREWER, function(inst, action)
 	return "doshortaction"
 end))
+
+-- Beefalo eats from the Feeding Trough.
+AddStategraphActionHandler("beefalo", ActionHandler(ACTIONS.EATFROM, "eatfrom"))

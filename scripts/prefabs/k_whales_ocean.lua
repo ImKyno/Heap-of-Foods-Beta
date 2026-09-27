@@ -5,7 +5,7 @@ local whale_blue_assets =
 {
 	Asset("ANIM", "anim/kyno_whale.zip"),
 	Asset("ANIM", "anim/kyno_whale_blue_build.zip"),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
@@ -14,7 +14,7 @@ local whale_white_assets =
 {
 	Asset("ANIM", "anim/kyno_whale.zip"),
 	Asset("ANIM", "anim/kyno_whale_white_build.zip"),
-	
+
 	Asset("SOUNDPACKAGE", "sound/hof_sounds.fev"),
 	Asset("SOUND", "sound/hof_sfx.fsb"),
 }
@@ -86,7 +86,7 @@ local WHALE_WHITE_MUST_TAGS = { "_combat" }
 local WHALE_WHITE_CANT_TAGS = { "INLIMBO", "outofreach", "bird" } -- Only friendly to birds.
 
 local function RetargetWhite(inst)
-    local function CheckTarget(guy)
+	local function CheckTarget(guy)
 		return inst.components.combat:CanTarget(guy)
 	end
 
@@ -109,7 +109,7 @@ end
 
 local function FindWater(inst)
 	local foundwater = false
-	
+
 	local position = Vector3(inst.Transform:GetWorldPosition())
 	local start_angle = inst.Transform:GetRotation() * DEGREES
 
@@ -126,7 +126,7 @@ local function FindWater(inst)
 
 	while foundwater == false do
 		offset = FindValidPositionByFan(start_angle, radius, 10, test_fn)
-		
+
 		if offset and offset.x and offset.z then
 			foundwater = true
 		else
@@ -137,25 +137,38 @@ local function FindWater(inst)
 	return offset
 end
 
-local function StuckDetection(inst)
-	local platform = inst:GetCurrentPlatform()
+local function CheckBeached(inst)
+	inst._checkgroundtask = nil
 
-	if platform then
+	local x, y, z = inst.Transform:GetWorldPosition()
+
+	if inst:GetCurrentPlatform() ~= nil or TheWorld.Map:IsVisualGroundAtPoint(x, y, z) then
 		local spawnPos = inst:GetPosition()
 		local offset = FindWater(inst)
+
 		spawnPos = spawnPos + offset
-				
+
 		if inst.Physics ~= nil then
 			inst.Physics:Teleport(spawnPos:Get())
-			
+
 			local splash = SpawnPrefab("ocean_splash_med1")
 			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		else
 			inst.Transform:SetPosition(spawnPos:Get())
-			
+
 			local splash = SpawnPrefab("ocean_splash_med2")
 			splash.Transform:SetPosition(inst.Transform:GetWorldPosition())
 		end
+
+		if inst.components.floater ~= nil then
+			inst.components.floater:OnLandedServer()
+		end
+	end
+end
+
+local function OnCollide(inst, other)
+	if inst._checkgroundtask == nil then
+		inst._checkgroundtask = inst:DoTaskInTime(1 + math.random(), CheckBeached)
 	end
 end
 
@@ -179,13 +192,16 @@ local function common()
 	inst:AddTag("animal")
 	inst:AddTag("largecreature")
 	inst:AddTag("largeoceancreature")
-	
+
 	inst.entity:SetPristine()
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
+	inst.Physics:SetCollisionCallback(OnCollide)
+	inst:DoTaskInTime(1 + math.random(), CheckBeached)
+
 	inst:AddComponent("combat")
 	inst:AddComponent("health")
 	inst:AddComponent("knownlocations")
@@ -194,13 +210,11 @@ local function common()
 	inst:AddComponent("locomotor")
 	inst.components.locomotor.pathcaps = { allowocean = true, ignoreLand = true }
 
-    inst:AddComponent("sleeper")
+	inst:AddComponent("sleeper")
 	inst.components.sleeper.sleeptestfn = nil
 	inst.components.sleeper:SetWakeTest(ShouldWakeUp)
-	
+
 	inst.SpawnWhaleWaves = SpawnWhaleWaves
-	
-	inst:DoPeriodicTask(3, StuckDetection)
 
 	inst:SetStateGraph("SGwhaleocean")
 
@@ -213,62 +227,62 @@ local function common()
 end
 
 local function whale_blue()
-    local inst = common()
+	local inst = common()
 
 	inst.AnimState:SetBuild("kyno_whale_blue_build")
-	
+
 	inst.carcass = "kyno_whale_blue_ocean_carcass"
 	inst.sounds = whale_blue_sounds
 
 	if not TheWorld.ismastersim then
-        return inst
-    end
-	
+		return inst
+	end
+
 	inst.hull_damage = -TUNING.KYNO_WHALE_BLUE_HULLDAMAGE
-	
+
 	inst.components.health:SetMaxHealth(TUNING.KYNO_WHALE_BLUE_HEALTH)
 
 	inst.components.combat:SetHurtSound(inst.sounds.hit)
 	inst.components.combat:SetKeepTargetFunction(KeepTargetBlue)
 	inst.components.combat:SetDefaultDamage(TUNING.KYNO_WHALE_BLUE_DAMAGE)
 	inst.components.combat:SetAttackPeriod(TUNING.KYNO_WHALE_ATTACK_PERIOD)
-	
+
 	inst.components.locomotor.walkspeed = TUNING.KYNO_WHALE_BLUE_WALKSPEED
-    inst.components.locomotor.runspeed = TUNING.KYNO_WHALE_BLUE_RUNSPEED
+	inst.components.locomotor.runspeed = TUNING.KYNO_WHALE_BLUE_RUNSPEED
 
 	inst.components.sleeper:SetResistance(3)
 
 	inst:SetBrain(whale_blue_brain)
 
-    return inst
+	return inst
 end
 
 local function whale_white()
 	local inst = common()
 
-    inst.Transform:SetScale(1.25, 1.25, 1.25)
+	inst.Transform:SetScale(1.25, 1.25, 1.25)
 
 	inst.AnimState:SetBuild("kyno_whale_white_build")
-	
+
 	inst:AddTag("scarytoprey")
 	inst:AddTag("scarytooceanprey")
 	inst:AddTag("_named")
-	
+
 	inst.carcass = "kyno_whale_white_ocean_carcass"
 	inst.sounds = whale_white_sounds
 
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst.hull_damage = -TUNING.KYNO_WHALE_WHITE_HULLDAMAGE
-	
+
 	inst:RemoveTag("_named")
-	
+
 	inst:AddComponent("named")
 	inst.components.named.possiblenames = STRINGS.KYNO_WHALE_WHITE_OCEAN_NAMES
 	inst.components.named:PickNewName()
-	
+
 	inst.components.health:SetMaxHealth(TUNING.KYNO_WHALE_WHITE_HEALTH)
 
 	inst.components.combat:SetHurtSound(inst.sounds.hit)
