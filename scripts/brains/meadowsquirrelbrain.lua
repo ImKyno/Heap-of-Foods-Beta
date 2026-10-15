@@ -56,6 +56,7 @@ end
 local ITEM_CANT_TAGS =
 {
 	"INLIMBO",
+	"NOCLICK",
 	"trap",
 	"irreplaceable",
 	"heavy",

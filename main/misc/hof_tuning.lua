@@ -3,7 +3,7 @@ local require  = _G.require
 local TechTree = require("techtree")
 
 -- Mod Tunings.
-TUNING.HOF_DEBUG_MODE = true
+TUNING.HOF_DEBUG_MODE = false
 TUNING.HOF_RETROFIT_ENABLED = true
 
 TUNING.HOF_DAILYRECIPES_ENABLED = true

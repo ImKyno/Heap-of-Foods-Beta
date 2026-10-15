@@ -344,11 +344,22 @@ function FishFarmManager:ProduceRoe(skiptask)
 			local pos = Vector3(inst.Transform:GetWorldPosition())
 			roe.Transform:SetPosition(pos.x, pos.y, pos.z)
 
-			if container:GiveItem(roe, 2, pos) then
+			container:GiveItem(roe, 2, pos)
+
+			if container:GetItemInSlot(2) == roe then
 				fueled:DoDelta(-self.consumefuel_roe)
 				produced = true
 			else
-				roe:Remove()
+				for i = self.slot_start, self.slot_end do
+					if container:GetItemInSlot(i) == roe then
+						container:RemoveItem(roe, true)
+						break
+					end
+				end
+
+				if roe:IsValid() then
+					roe:Remove()
+				end
 			end
 		end
 	end

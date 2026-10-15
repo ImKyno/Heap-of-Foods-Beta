@@ -1,131 +1,130 @@
+-- Cold Buff is for Summer.
 local function OnAttachedCold(inst, target)
 	inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / 180)
+	inst.Transform:SetPosition(0, 0, 0)
+
+	if target.components.temperature ~= nil then
+		target.components.temperature:SetInsulationModifier(SEASONS.SUMMER, inst, TUNING.INSULATION_MED)
 	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnTimerDoneCold(inst, data)
-    if data.name == "kyno_coldbuff" then
-        inst.components.debuff:Stop()
-    end
+	if data.name == "kyno_coldbuff" then
+		inst.components.debuff:Stop()
+	end
 end
 
 local function OnDetachedCold(inst, target)
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / TUNING.FREEZING_KILL_TIME)
-	elseif target:HasTag("bernieowner") and target.components.temperature ~= nil then
-		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_FREEZING_KILL_TIME)
+	if target.components.temperature ~= nil then
+		target.components.temperature:RemoveInsulationModifier(SEASONS.SUMMER, inst)
 	end
-	
-    inst:Remove()
+
+	inst:Remove()
 end
 
 local function OnExtendedCold(inst, target)
 	inst.components.timer:StopTimer("kyno_coldbuff")
-    inst.components.timer:StartTimer("kyno_coldbuff", TUNING.KYNO_COLDBUFF_DURATION)
+	inst.components.timer:StartTimer("kyno_coldbuff", TUNING.KYNO_COLDBUFF_DURATION)
 
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetFreezingHurtRate(TUNING.WILSON_HEALTH / 180)
+	if target.components.temperature ~= nil then
+		target.components.temperature:SetInsulationModifier(SEASONS.SUMMER, inst, TUNING.INSULATION_MED)
 	end
 end
 
 local function coldfn()
-    if not TheWorld.ismastersim then 
-		return 
+	if not TheWorld.ismastersim then
+		return
 	end
 
-    local inst = CreateEntity()
-    inst.entity:AddTransform()
-    inst.entity:Hide()
-  
-    inst.persists = false
+	local inst = CreateEntity()
 
-    inst:AddTag("CLASSIFIED")
+	inst.entity:AddTransform()
+	inst.entity:Hide()
 
-    inst:AddComponent("debuff")
-    inst.components.debuff:SetAttachedFn(OnAttachedCold)
-    inst.components.debuff:SetDetachedFn(OnDetachedCold)
-    inst.components.debuff:SetExtendedFn(OnExtendedCold)
-    inst.components.debuff.keepondespawn = true
+	inst.persists = false
 
-    inst:AddComponent("timer")
+	inst:AddTag("CLASSIFIED")
+
+	inst:AddComponent("debuff")
+	inst.components.debuff:SetAttachedFn(OnAttachedCold)
+	inst.components.debuff:SetDetachedFn(OnDetachedCold)
+	inst.components.debuff:SetExtendedFn(OnExtendedCold)
+	inst.components.debuff.keepondespawn = true
+
+	inst:AddComponent("timer")
 	inst.components.timer:StartTimer("kyno_coldbuff", TUNING.KYNO_COLDBUFF_DURATION)
-	
-    inst:ListenForEvent("timerdone", OnTimerDoneCold)
 
-    return inst
+	inst:ListenForEvent("timerdone", OnTimerDoneCold)
+
+	return inst
 end
 
+-- Heat Buff is for Winter.
 local function OnAttachedHeat(inst, target)
 	inst.entity:SetParent(target.entity)
-    inst.Transform:SetPosition(0, 0, 0)
-	
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / 180)
+	inst.Transform:SetPosition(0, 0, 0)
+
+	if target.components.temperature ~= nil then
+		target.components.temperature:SetInsulationModifier(SEASONS.WINTER, inst, TUNING.INSULATION_MED)
 	end
-	
-    inst:ListenForEvent("death", function()
-        inst.components.debuff:Stop()
-    end, target)
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnTimerDoneHeat(inst, data)
-    if data.name == "kyno_heatbuff" then
-        inst.components.debuff:Stop()
-    end
+	if data.name == "kyno_heatbuff" then
+		inst.components.debuff:Stop()
+	end
 end
 
 local function OnDetachedHeat(inst, target)
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / TUNING.FREEZING_KILL_TIME)
-	elseif target:HasTag("bernieowner") and target.components.temperature ~= nil then
-		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / TUNING.WILLOW_OVERHEAT_KILL_TIME)
+	if target.components.temperature ~= nil then
+		target.components.temperature:RemoveInsulationModifier(SEASONS.WINTER, inst)
 	end
-	
-    inst:Remove()
+
+	inst:Remove()
 end
 
 local function OnExtendedHeat(inst, target)
 	inst.components.timer:StopTimer("kyno_heatbuff")
-    inst.components.timer:StartTimer("kyno_heatbuff", TUNING.KYNO_HEATBUFF_DURATION)
+	inst.components.timer:StartTimer("kyno_heatbuff", TUNING.KYNO_HEATBUFF_DURATION)
 
-	if target:HasTag("player") and target.components.temperature ~= nil then
-		target.components.temperature:SetOverheatHurtRate(TUNING.WILSON_HEALTH / 180)
+	if target.components.temperature ~= nil then
+		target.components.temperature:SetInsulationModifier(SEASONS.WINTER, inst, TUNING.INSULATION_MED)
 	end
 end
 
 local function heatfn()
-    if not TheWorld.ismastersim then 
-		return 
+	if not TheWorld.ismastersim then
+		return
 	end
 
-    local inst = CreateEntity()
-    inst.entity:AddTransform()
-    inst.entity:Hide()
-  
-    inst.persists = false
+	local inst = CreateEntity()
+	inst.entity:AddTransform()
+	inst.entity:Hide()
 
-    inst:AddTag("CLASSIFIED")
+	inst.persists = false
 
-    inst:AddComponent("debuff")
-    inst.components.debuff:SetAttachedFn(OnAttachedHeat)
-    inst.components.debuff:SetDetachedFn(OnDetachedHeat)
-    inst.components.debuff:SetExtendedFn(OnExtendedHeat)
-    inst.components.debuff.keepondespawn = true
+	inst:AddTag("CLASSIFIED")
 
-    inst:AddComponent("timer")
+	inst:AddComponent("debuff")
+	inst.components.debuff:SetAttachedFn(OnAttachedHeat)
+	inst.components.debuff:SetDetachedFn(OnDetachedHeat)
+	inst.components.debuff:SetExtendedFn(OnExtendedHeat)
+	inst.components.debuff.keepondespawn = true
+
+	inst:AddComponent("timer")
 	inst.components.timer:StartTimer("kyno_heatbuff", TUNING.KYNO_HEATBUFF_DURATION)
-	
-    inst:ListenForEvent("timerdone", OnTimerDoneHeat)
 
-    return inst
+	inst:ListenForEvent("timerdone", OnTimerDoneHeat)
+
+	return inst
 end
 
 return Prefab("kyno_coldbuff", coldfn),

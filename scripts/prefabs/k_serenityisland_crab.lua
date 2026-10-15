@@ -162,7 +162,6 @@ local function fn()
 	inst:SetBrain(brain)
 
 	inst:DoTaskInTime(0, SetHome)
-	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME)
 
 	inst:ListenForEvent("onpickup", OnPickUp)
 	inst:ListenForEvent("ondropped", OnDropped)
@@ -178,6 +177,8 @@ local function fn()
 			end
 		end
 	end)
+
+	MakeFeedableSmallLivestock(inst, TUNING.RABBIT_PERISH_TIME)
 
 	return inst
 end

@@ -6,10 +6,10 @@ local brewing = require("hof_brewing")
 local assets =
 {
 	Asset("ANIM", "anim/kyno_itemshowcaser.zip"),
-		
+
 	Asset("IMAGE", "images/minimapimages/hof_minimapimages.tex"),
 	Asset("ATLAS", "images/minimapimages/hof_minimapimages.xml"),
-		
+
 	Asset("IMAGE", "images/inventoryimages/hof_inventoryimages.tex"),
 	Asset("ATLAS", "images/inventoryimages/hof_inventoryimages.xml"),
 	Asset("ATLAS_BUILD", "images/inventoryimages/hof_inventoryimages.xml", 256),
@@ -19,21 +19,21 @@ local prefabs =
 {
 	"collapse_small",
 }
-	
+
 local FOOD_ONEOF_TAGS =
 {
 	"preparedfood",
 	"preparedbrew",
 	"itemshowcaser_valid",
 }
-	
+
 local function GetCookerForFood(foodname)
 	for cooker, recipes in pairs(cooking.recipes) do
 		if recipes[foodname] ~= nil then
 			return cooker
 		end
 	end
-		
+
 	return nil
 end
 
@@ -64,7 +64,7 @@ local function GetBaseFoodPrefab(item)
 
 	return item.prefab
 end
-	
+
 local function OnHammered(inst)
 	inst.components.lootdropper:DropLoot()
 
@@ -91,6 +91,7 @@ local function OnFoodGiven(inst, item, giver)
 	end
 
 	if item.components.perishable ~= nil then
+		inst._wasperishing = item.components.perishable:IsPerishing()
 		item.components.perishable:StopPerishing()
 	end
 
@@ -108,18 +109,20 @@ local function OnFoodGiven(inst, item, giver)
 	if item.Follower == nil then
 		item.entity:AddFollower()
 	end
-	
+
 	item.Follower:FollowSymbol(inst.GUID, "swap_object", 0, 0, 0, true)
-	
+
 	local basefood = GetBaseFoodPrefab(item)
 	local cooker = GetCookerForFood(basefood) -- Spiced Foods relies on base prefab.
 	local brewer = GetBrewerForFood(item.prefab)
 
-	print("ITEM:", item.prefab)
-	print("BASE:", basefood)
-	print("COOKER:", tostring(cooker))
-	print("BREWER:", tostring(brewer))
-		
+	if TUNING.HOF_DEBUG_MODE then
+		print("ITEM:", item.prefab)
+		print("BASE:", basefood)
+		print("COOKER:", tostring(cooker))
+		print("BREWER:", tostring(brewer))
+	end
+
 	inst.AnimState:ShowSymbol("cooker_overlay")
 
 	if cooker == "portablecookpot" then
@@ -131,16 +134,12 @@ local function OnFoodGiven(inst, item, giver)
 	else
 		inst.AnimState:OverrideSymbol("cooker_overlay", "kyno_itemshowcaser", "swap_cooker")
 	end
-	
-	-- SPECIAL CASES!
-	if item ~= nil then
-		if item.prefab == "batnosehat" and item.components.perishable ~= nil then
-			item.components.perishable:StopPerishing()
-		end
-	end
 end
 
 local function OnFoodTaken(inst, item, taker, wholestack)
+	inst.AnimState:ClearOverrideSymbol("cooker_overlay")
+	inst.AnimState:HideSymbol("cooker_overlay")
+
 	inst.SoundEmitter:PlaySound("dontstarve/creatures/together/stagehand/hit")
 
 	if not wholestack then
@@ -154,7 +153,9 @@ local function OnFoodTaken(inst, item, taker, wholestack)
 	end
 
 	if item.components.perishable ~= nil then
-		item.components.perishable:StartPerishing()
+		if inst._wasperishing then
+			item.components.perishable:StartPerishing()
+		end
 	end
 
 	if item.components.propagator ~= nil then
@@ -165,20 +166,10 @@ local function OnFoodTaken(inst, item, taker, wholestack)
 
 	item:RemoveTag("NOCLICK")
 	item.Follower:StopFollowing()
-		
-	inst.AnimState:ClearOverrideSymbol("cooker_overlay")
-	inst.AnimState:HideSymbol("cooker_overlay")
-	
-	-- SPECIAL CASES!
-	if item ~= nil then
-		if item.prefab == "batnosehat" and item.components.perishable ~= nil then
-			item.components.perishable:StopPerishing()
-		end
-	end
 end
 
 local function GetStatus(inst, viewer)
-	return inst.components.inventoryitemholder:IsHolding() and "FULL" 
+	return inst.components.inventoryitemholder:IsHolding() and "FULL"
 	or "EMPTY"
 end
 
@@ -206,11 +197,11 @@ local function fn()
 
 	inst:AddTag("structure")
 	inst:AddTag("itemshowcaser")
-	
+
 	inst.AnimState:HideSymbol("cooker_overlay")
 
 	inst.takeitem = net_entity(inst.GUID, "gelblob_storage.takeitem")
-		
+
 	inst:SetPrefabNameOverride("KYNO_ITEMSHOWCASER")
 
 	inst.entity:SetPristine()
@@ -234,9 +225,9 @@ local function fn()
 	inst.components.inventoryitemholder:SetAcceptStacks(true)
 	inst.components.inventoryitemholder:SetOnItemGivenFn(OnFoodGiven)
 	inst.components.inventoryitemholder:SetOnItemTakenFn(OnFoodTaken)
-	
+
 	inst.OnBuilt = OnBuilt
-	
+
 	inst:ListenForEvent("onbuilt", OnBuilt)
 
 	MakeHauntableWork(inst)
