@@ -273,9 +273,9 @@ local kyno_warly_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood", "honeyed"},
 		card_def = {ingredients = {{"berries", 1}, {"goatmilk", 1}, {"kyno_syrup", 1}, {"ice", 1}}},
-		prefabs = { "kyno_heatbuff" },
+		prefabs = { "kyno_coldbuff" },
 		oneatenfn = function(inst, eater)
-			eater:AddDebuff("kyno_heatbuff", "kyno_heatbuff")
+			eater:AddDebuff("kyno_coldbuff", "kyno_coldbuff")
 		end,
 	},
 
@@ -378,9 +378,9 @@ local kyno_warly_foods =
 		floater = TUNING.HOF_FLOATER,
 		tags = {"masterfood"},
 		card_def = {ingredients = {{"kyno_kokonut_halved", 1}, {"green_cap", 1}, {"succulent_picked", 1}, {"pepper", 1}}},
-		prefabs = { "kyno_coldbuff" },
+		prefabs = { "kyno_heatbuff" },
 		oneatenfn = function(inst, eater)
-			eater:AddDebuff("kyno_coldbuff", "kyno_coldbuff")
+			eater:AddDebuff("kyno_heatbuff", "kyno_heatbuff")
 		end,
 	},
 

@@ -41,7 +41,7 @@ This is an intermission update that brings some new content, quality of life imp
 
 Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
-󰀌 Mod Version: 7.5-B
+󰀌 Mod Version: 7.6-B
 󰀧 Update: Between Courses
 ]],
 		zh  =
@@ -56,7 +56,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
-󰀌 Mod 版本： 7.5-B
+󰀌 Mod 版本： 7.6-B
 󰀧 更新内容： 餐间时光
 ]],
 		zht =
@@ -71,7 +71,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
-󰀌 Mod 版本： 7.5-B
+󰀌 Mod 版本： 7.6-B
 󰀧 更新內容： 餐間時光
 ]],
 		pt  =
@@ -86,7 +86,7 @@ Esta é uma atualização de intermissão que traz novos conteúdos, melhorias d
 
 Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
-󰀌 Versão do Mod: 7.5-B
+󰀌 Versão do Mod: 7.6-B
 󰀧 Atualização: Entre os Pratos
 ]],
 		pl  =
@@ -101,7 +101,7 @@ Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnie
 
 Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
-󰀌 Wersja Moda: 7.5-B
+󰀌 Wersja Moda: 7.6-B
 󰀧 Aktualizacja: Między Danami
 ]],
 		es  =
@@ -116,7 +116,7 @@ Esta es una actualización de transición que trae nuevo contenido, mejoras de c
 
 Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
-󰀌 Versión del Mod: 7.5-B
+󰀌 Versión del Mod: 7.6-B
 󰀧 Actualización: Entre Platos
 ]],
 		vi  =
@@ -131,7 +131,7 @@ Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanece
 
 Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
-󰀌 Phiên bản Mod: 7.5-B
+󰀌 Phiên bản Mod: 7.6-B
 󰀧 Cập nhật: Giữa Các Món Ăn
 ]],
 		kr =
@@ -146,7 +146,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 
 이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
 
-󰀌 Mod Version: 7.5-B
+󰀌 Mod Version: 7.6-B
 󰀧 Update: 식사 사이
 ]],
 	},
@@ -366,26 +366,56 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 			{
 				DISABLED =
 				{
-					"Seasonal Recipes can be cooked without restrictions.",
-					zh  = "季节性料理烹饪不受任何限制",
-					zht = "季節性食譜可在任何時間無限制地烹飪。",
-					pt  = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
-					pl  = "Sezonowe przepisy można gotować bez żadnych ograniczeń.",
-					es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
-					vi  = "Có thể nấu các món ăn theo mùa mà không có bất kỳ giới hạn nào.",
-					kr  = "언제나 시즌 레시피를 요리할 수 있습니다.",
+					NAME =
+					{
+						"No Restriction",
+						zh  = "无限制",
+            			zht = "無限制",
+            			pt  = "Sem Restrição",
+            			pl  = "Bez ograniczeń",
+            			es  = "Sin restricciones",
+            			vi  = "Không hạn chế",
+            			kr  = "제한 없음",
+					},
+
+					HOVER =
+					{
+						"Seasonal Recipes can be cooked without restrictions.",
+						zh  = "季节性料理烹饪不受任何限制",
+						zht = "季節性食譜可在任何時間無限制地烹飪。",
+						pt  = "Receitas Sazonais podem ser cozinhadas sem nenhuma restrição.",
+						pl  = "Sezonowe przepisy można gotować bez żadnych ograniczeń.",
+						es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
+						vi  = "Có thể nấu các món ăn theo mùa mà không có bất kỳ giới hạn nào.",
+						kr  = "언제나 시즌 레시피를 요리할 수 있습니다.",
+					},
 				},
 
 				ENABLED =
 				{
-					"Seasonal Recipes can only be cooked when Special Events are active.",
-					zh  = "季节性料理只能在特殊活动开启时烹制。",
-					zht = "季節性食譜只能在特別活動進行時烹飪。",
-					pt  = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
-					pl  = "Sezonowe przepisy można gotować tylko wtedy, gdy aktywne są specjalne wydarzenia.",
-					es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
-					vi  = "Chỉ có thể nấu các món ăn theo mùa khi các Sự Kiện Đặc Biệt đang diễn ra.",
-					kr  = "특별 이벤트 기간에만 시즌 레시피를 요리할 수 있습니다.",
+					NAME =
+					{
+						"Restricted",
+						zh  = "受限制",
+            			zht = "受限制",
+            			pt  = "Restrito",
+            			pl  = "Ograniczone",
+            			es  = "Restringido",
+            			vi  = "Có giới hạn",
+            			kr  = "제한됨",
+					},
+
+					HOVER =
+					{
+						"Seasonal Recipes can only be cooked when Special Events are active.",
+						zh  = "季节性料理只能在特殊活动开启时烹制。",
+						zht = "季節性食譜只能在特別活動進行時烹飪。",
+						pt  = "Receitas Sazonais só podem ser cozinhadas durante Eventos Especiais.",
+						pl  = "Sezonowe przepisy można gotować tylko wtedy, gdy aktywne są specjalne wydarzenia.",
+						es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
+						vi  = "Chỉ có thể nấu các món ăn theo mùa khi các Sự Kiện Đặc Biệt đang diễn ra.",
+						kr  = "특별 이벤트 기간에만 시즌 레시피를 요리할 수 있습니다.",
+					},
 				},
 			},
 		},
@@ -1950,7 +1980,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "7.5-B"
+version                      = "7.6-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -2041,14 +2071,14 @@ local SEASONALFOOD_HOVER     = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALF
 local SEASONALFOOD_OPTIONS   =
 {
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.DISABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.DISABLED),
-		data                 = true
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.ENABLED.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.ENABLED.HOVER),
+		data                 = false
 	},
 	{
-		description          = ChooseTranslationTable(STRINGS.SETTINGS.ENABLED),
-		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.ENABLED),
-		data                 = false
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.DISABLED.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.SEASONALFOOD.HOVER_OPTIONS.DISABLED.HOVER),
+		data                 = true
 	}
 }
 
