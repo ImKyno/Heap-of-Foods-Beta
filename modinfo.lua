@@ -41,7 +41,7 @@ This is an intermission update that brings some new content, quality of life imp
 
 Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
-󰀌 Mod Version: 7.3-B
+󰀌 Mod Version: 7.5-B
 󰀧 Update: Between Courses
 ]],
 		zh  =
@@ -56,7 +56,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
-󰀌 Mod 版本： 7.3-B
+󰀌 Mod 版本： 7.5-B
 󰀧 更新内容： 餐间时光
 ]],
 		zht =
@@ -71,7 +71,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
-󰀌 Mod 版本： 7.3-B
+󰀌 Mod 版本： 7.5-B
 󰀧 更新內容： 餐間時光
 ]],
 		pt  =
@@ -86,7 +86,7 @@ Esta é uma atualização de intermissão que traz novos conteúdos, melhorias d
 
 Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
-󰀌 Versão do Mod: 7.3-B
+󰀌 Versão do Mod: 7.5-B
 󰀧 Atualização: Entre os Pratos
 ]],
 		pl  =
@@ -101,7 +101,7 @@ Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnie
 
 Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
-󰀌 Wersja Moda: 7.3-B
+󰀌 Wersja Moda: 7.5-B
 󰀧 Aktualizacja: Między Danami
 ]],
 		es  =
@@ -116,7 +116,7 @@ Esta es una actualización de transición que trae nuevo contenido, mejoras de c
 
 Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
-󰀌 Versión del Mod: 7.3-B
+󰀌 Versión del Mod: 7.5-B
 󰀧 Actualización: Entre Platos
 ]],
 		vi  =
@@ -131,7 +131,7 @@ Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanece
 
 Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
-󰀌 Phiên bản Mod: 7.3-B
+󰀌 Phiên bản Mod: 7.5-B
 󰀧 Cập nhật: Giữa Các Món Ăn
 ]],
 		kr =
@@ -146,7 +146,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 
 이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
 
-󰀌 Mod Version: 7.3-B
+󰀌 Mod Version: 7.5-B
 󰀧 Update: 식사 사이
 ]],
 	},
@@ -991,6 +991,90 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 4 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 4 Ngày.",
 						kr  = "속도 효과가 4일동안 지속됩니다.", 
+					},
+				},
+			},
+		},
+
+		LEGACYSPEED =
+		{
+			NAME =
+			{
+				"Speed Effect Mode",
+				zh  = "速度效果模式",
+				zht = "速度效果模式",
+				pt  = "Modo do Efeito de Velocidade",
+				pl  = "Tryb Efektu Prędkości",
+				es  = "Modo del Efecto de Velocidad",
+				vi  = "Chế Độ Hiệu Ứng Tốc Độ",
+				kr  = "속도 효과 모드",
+			},
+
+			HOVER =
+			{
+				"Which values should the Speed Effect use?",
+				zh  = "速度效果应使用哪种数值？",
+				zht = "速度效果應使用哪種數值？",
+				pt  = "Quais valores o Efeito de Velocidade deve usar?",
+				pl  = "Jakich wartości powinien używać Efekt Prędkości?",
+				es  = "¿Qué valores debe usar el Efecto de Velocidad?",
+				vi  = "Hiệu Ứng Tốc Độ nên sử dụng các giá trị nào?",
+				kr  = "속도 효과에 어떤 값을 사용할까요?",
+			},
+
+			HOVER_OPTIONS =
+			{
+				LEGACY =
+				{
+					NAME =
+					{
+						"Classic",
+						zh  = "旧版",
+						zht = "舊版",
+						pt  = "Clássico",
+						pl  = "Starszy",
+						es  = "Clásico",
+						vi  = "Cũ",
+						kr  = "레거시",
+					},
+
+					HOVER =
+					{
+						"Speed Effect will use the Classic value of 80%.",
+						zh  = "速度效果将使用旧版的 80% 数值。",
+						zht = "速度效果將使用舊版的 80% 數值。",
+						pt  = "O Efeito de Velocidade irá usar o valor Clássico de 80%.",
+						pl  = "Efekt Prędkości będzie korzystać ze starszej wartości 80%.",
+						es  = "El Efecto de Velocidad usará el valor clásico del 80%.",
+						vi  = "Hiệu Ứng Tốc Độ sẽ sử dụng giá trị cũ là 80%.",
+						kr  = "속도 효과가 기존 값인 80%를 사용합니다.",
+					},
+				},
+
+				DEFAULT =
+				{
+					NAME =
+					{
+						"Default",
+						zh  = "默认",
+						zht = "預設",
+						pt  = "Padrão",
+						pl  = "Domyślny",
+						es  = "Predeterminado",
+						vi  = "Mặc Định",
+						kr  = "기본값",
+					},
+
+					HOVER =
+					{
+						"Speed Effect will use the Default value of 50%.",
+						zh  = "速度效果将使用默认的 50% 数值。",
+						zht = "速度效果將使用預設的 50% 數值。",
+						pt  = "O Efeito de Velocidade irá usar o valor Padrão de 50%.",
+						pl  = "Efekt Prędkości będzie korzystać z domyślnej wartości 50%.",
+						es  = "El Efecto de Velocidad usará el valor predeterminado del 50%.",
+						vi  = "Hiệu Ứng Tốc Độ sẽ sử dụng giá trị mặc định là 50%.",
+						kr  = "속도 효과가 기본값인 50%를 사용합니다.",
 					},
 				},
 			},
@@ -1866,7 +1950,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "7.3-B"
+version                      = "7.5-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -2131,6 +2215,22 @@ local COFFEETIMER_OPTIONS    =
 	}
 }
 
+local LEGACYSPEED_LABEL      = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.NAME)
+local LEGACYSPEED_HOVER      = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.HOVER)
+local LEGACYSPEED_OPTIONS    =
+{
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.HOVER_OPTIONS.DEFAULT.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.HOVER_OPTIONS.DEFAULT.HOVER),
+		data                 = false
+	},
+	{
+		description          = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.HOVER_OPTIONS.LEGACY.NAME),
+		hover                = ChooseTranslationTable(STRINGS.SETTINGS.LEGACYSPEED.HOVER_OPTIONS.LEGACY.HOVER),
+		data                 = true
+	}
+}
+
 local SCRAPBOOK_LABEL        = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.NAME)
 local SCRAPBOOK_HOVER        = ChooseTranslationTable(STRINGS.SETTINGS.SCRAPBOOK.HOVER)
 local SCRAPBOOK_OPTIONS      =
@@ -2381,6 +2481,7 @@ configuration_options        =
 	{ name                   = "SPICEPACK",        label = SPICEPACK_LABEL,     hover = SPICEPACK_HOVER,     options = SPICEPACK_OPTIONS,     default = false, client = false },
 	{ name                   = "COFFEESPEED",      label = COFFEESPEED_LABEL,   hover = COFFEESPEED_HOVER,   options = COFFEESPEED_OPTIONS,   default = true,  client = false },
 	{ name                   = "COFFEEDURATION",   label = COFFEETIMER_LABEL,   hover = COFFEETIMER_HOVER,   options = COFFEETIMER_OPTIONS,   default = 480,   client = false },
+	{ name                   = "LEGACYSPEED",      label = LEGACYSPEED_LABEL,   hover = LEGACYSPEED_HOVER,   options = LEGACYSPEED_OPTIONS,   default = false, cleint = false },
 	{ name                   = "COFFEEDROPRATE",   label = COFFEEDROP_LABEL,    hover = COFFEEDROP_HOVER,    options = COFFEEDROP_OPTIONS,    default = 4,     client = false },
 	-- Miscellaneous Options.
 	{ name                   = "EXTRAS",           label = EXTRAS_LABEL,        hover = EXTRAS_HOVER,        options = NONE_OPTIONS,          default = false, client = false },

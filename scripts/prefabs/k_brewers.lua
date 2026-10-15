@@ -341,7 +341,7 @@ local function kegfn()
 end
 
 local function jarfn()
-	return commonfn("kyno_brewers_jar", "kyno_brewers_jar", "kyno_preservesjar", {"preservesjar"}, .5, 1.8)
+	return commonfn("kyno_brewers_jar", "kyno_brewers_jar", "kyno_preservesjar", {"preservesjar"}, .5, 1)
 end
 
 local function placerfn(inst)
@@ -351,4 +351,4 @@ end
 return Prefab("kyno_woodenkeg", kegfn, assets, prefabs),
 Prefab("kyno_preservesjar", jarfn, assets, prefabs),
 MakePlacer("kyno_woodenkeg_placer", "kyno_brewers_keg", "kyno_brewers_keg", "idle", false, nil, nil, 1.1, nil, nil, placerfn),
-MakePlacer("kyno_preservesjar_placer", "kyno_brewers_jar", "kyno_brewers_jar", "idle", false, nil, nil, 1.8, nil, nil, placerfn)
+MakePlacer("kyno_preservesjar_placer", "kyno_brewers_jar", "kyno_brewers_jar", "idle", false, nil, nil, 1, nil, nil, placerfn)

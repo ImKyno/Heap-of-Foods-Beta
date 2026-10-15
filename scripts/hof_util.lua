@@ -736,3 +736,88 @@ function StartAnimalFeederCooldown(inst, time)
 		inst._animalfeeder_cooldown_start = nil
 	end)
 end
+
+local FOOD_SPEED_MULTIPLIER_KEYS =
+{
+    positive = "kyno_speedbuff_positive",
+    negative = "kyno_speedbuff_negative",
+}
+
+function UpdateFoodSpeedMultiplier(inst, target, key, modifier, group)
+    if inst == nil or target == nil or not target:IsValid() then
+        return
+    end
+
+    group = group or "positive"
+
+    local data = inst._speedmultiplier_data
+
+    if data == nil then
+        data = {}
+        inst._speedmultiplier_data = data
+    end
+
+    local active = target._food_speedmultiplier_active
+
+    if active == nil then
+        active = {}
+        target._food_speedmultiplier_active = active
+    end
+
+    local previous = active[group]
+
+    if previous ~= nil and previous.inst ~= inst then
+        if TUNING.HOF_LEGACY_SPEED then
+            if target.components.locomotor ~= nil then
+                target.components.locomotor:RemoveExternalSpeedMultiplier(target, previous.key)
+            end
+        elseif target.components.playerspeedmult ~= nil then
+            target.components.playerspeedmult:RemoveSpeedMult(FOOD_SPEED_MULTIPLIER_KEYS[group])
+        end
+    end
+
+    data.key = key
+    data.modifier = modifier
+    data.group = group
+
+    active[group] = { inst = inst, key = key, modifier = modifier }
+
+    if TUNING.HOF_LEGACY_SPEED then
+        if target.components.locomotor ~= nil then
+            target.components.locomotor:SetExternalSpeedMultiplier(target, key, modifier)
+        end
+    elseif target.components.playerspeedmult ~= nil then
+        target.components.playerspeedmult:SetSpeedMult(FOOD_SPEED_MULTIPLIER_KEYS[group], modifier)
+    end
+end
+
+function RemoveFoodSpeedMultiplier(inst, target)
+    if inst == nil then
+        return
+    end
+
+    local data = inst._speedmultiplier_data
+
+    if data == nil then
+        return
+    end
+
+    if target ~= nil and target:IsValid() then
+        local active = target._food_speedmultiplier_active
+        local current = active ~= nil and active[data.group] or nil
+
+        if current ~= nil and current.inst == inst then
+            active[data.group] = nil
+
+            if TUNING.HOF_LEGACY_SPEED then
+                if target.components.locomotor ~= nil then
+                    target.components.locomotor:RemoveExternalSpeedMultiplier(target, current.key)
+                end
+            elseif target.components.playerspeedmult ~= nil then
+                target.components.playerspeedmult:RemoveSpeedMult(FOOD_SPEED_MULTIPLIER_KEYS[data.group])
+            end
+        end
+    end
+
+    inst._speedmultiplier_data = nil
+end

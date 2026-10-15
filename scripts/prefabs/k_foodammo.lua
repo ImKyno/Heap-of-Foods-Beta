@@ -112,7 +112,7 @@ local function TrySpawnTomato(target, min_scale, max_scale, duration)
 	end
 end
 
-local function OnUpdateSauce(target, t0)
+local function OnUpdateSauce(target, t0, inst)
 	local elapsed = GetTime() - t0
 
 	if elapsed < TUNING.KYNO_TOMATO_TRAIL_DURATION then
@@ -126,9 +126,7 @@ local function OnUpdateSauce(target, t0)
 
 		target:RemoveTag("tomato_afflicted")
 
-		if target.components.locomotor ~= nil then
-			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "tomato_afflicted")
-		end
+		RemoveFoodSpeedMultiplier(inst, target)
 
 		target:PushEvent("tomato_afflicted")
 	end
@@ -143,8 +141,8 @@ local function OnHitTomato(inst, attacker, target)
 		else
 			target:AddTag("tomato_afflicted")
 
-			if target.components.locomotor ~= nil and not target:HasAnyTag("flying", "playerghost") then
-				target.components.locomotor:SetExternalSpeedMultiplier(target, "tomato_afflicted", TUNING.KYNO_TOMATO_TRAIL_SPEED)
+			if not target:HasAnyTag("flying", "playerghost") then
+				UpdateFoodSpeedMultiplier(inst, target, "tomato_afflicted", TUNING.KYNO_TOMATO_TRAIL_SPEED, "negative")
 			end
 
 			pushstartevent = true

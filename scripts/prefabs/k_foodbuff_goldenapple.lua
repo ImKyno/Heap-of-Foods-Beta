@@ -423,16 +423,22 @@ local function OnDetached(inst, target)
 	end
 
 	-- Slow down for a bit after using it.
-	if target.components.locomotor ~= nil and target:HasTag("player") then
-		target:AddTag("groggy")
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_goldenapplebuff", TUNING.KYNO_ALCOHOL_SPEED)
+	if target:HasTag("player") then
+		if not target:HasTag("groggy") then
+			target:AddTag("groggy")
+		end
+
+		UpdateFoodSpeedMultiplier(inst, target, "kyno_alcoholbuff", TUNING.KYNO_ALCOHOL_SPEED, "negative")
 	end
 
 	-- Pay with your life suckass!
 	target:DoTaskInTime(5, function(target)
-		if target.components.locomotor ~= nil and target:HasTag("player") then
-			target:RemoveTag("groggy")
-			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_goldenapplebuff")
+		if target:HasTag("player") then
+			if target:HasTag("groggy") then
+				target:RemoveTag("groggy")
+			end
+
+			RemoveFoodSpeedMultiplier(inst, target)
 		end
 
 		if target.components.health ~= nil then

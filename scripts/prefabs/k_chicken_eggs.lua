@@ -2,7 +2,7 @@ local assets =
 {
 	Asset("ANIM", "anim/kyno_chicken_eggs.zip"),
 	Asset("ANIM", "anim/kyno_chicken_eggs_large.zip"),
-	
+
 	Asset("ANIM", "anim/swap_chicken_eggs_large.zip"),
 }
 
@@ -17,7 +17,7 @@ local prefabs =
 	"reticule",
 	"reticuleaoe",
 	"reticuleaoeping",
-	
+
 	"kyno_chicken2",
 	"kyno_chicken_egg_fx",
 }
@@ -37,7 +37,7 @@ local NO_TAGS_CHICKENEGG = { "chicken", "INLIMBO", "ghost", "playerghost", "FX",
 
 local function RefreshEggs(inst)
 	local stacksize = inst.components.stackable ~= nil and inst.components.stackable:StackSize() or 1
-	
+
 	if stacksize >= 30 then
 		inst.components.inventoryitem:ChangeImageName("kyno_chicken_egg_stack3")
 	elseif stacksize >= 20 then
@@ -83,50 +83,46 @@ local function RefreshLargeEggs(inst)
 	if inst._eggstyle == nil then
 		inst._eggstyle = math.random(1, 5)
 	end
-	
+
 	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs_large", "egg"..inst._eggstyle)
 	inst.components.inventoryitem:ChangeImageName(GetLargeEggImage(inst._eggstyle))
 end
 
 local function ShouldNotAggro(attacker, target)
 	local targets_target = target.components.combat ~= nil and target.components.combat.target or nil
-	
+
 	return targets_target ~= nil and targets_target:IsValid() and targets_target ~= attacker and attacker ~= nil and attacker:IsValid()
 	and (GetTime() - target.components.combat.lastwasattackedbytargettime) < 4
 	and (targets_target.components.health ~= nil and not targets_target.components.health:IsDead())
 end
 
-local function SetDebuffs(target, fx, numstacks)
+local function SetDebuffs(target, fx, numstacks, inst)
 	local speed = TUNING.KYNO_CHICKEN_EGG_GIANT_SLOW ^ numstacks
 	local damage = TUNING.KYNO_CHICKEN_EGG_GIANT_DAMAGEMOD ^ numstacks
-	
-	if target.components.locomotor then
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_chickeneggbuff", speed)
-	end
-	
+
+	UpdateFoodSpeedMultiplier(inst, target, "kyno_chickeneggbuff", speed, "negative")
+
 	if target.components.combat then
 		target.components.combat.externaldamagemultipliers:SetModifier(target, damage, "kyno_chickeneggbuff")
 	end
-	
+
 	fx:SetFXLevel(numstacks)
 end
 
-local function DoRefresh(target, data)
+local function DoRefresh(target, data, inst)
 	table.remove(data.tasks, 1)
-	
+
 	if #data.tasks > 0 then
-		SetDebuffs(target, data.fx, #data.tasks)
+		SetDebuffs(target, data.fx, #data.tasks, inst)
 	else
 		data.fx:KillFX()
-		
-		if target.components.locomotor then
-			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_chickeneggbuff")
-		end
-		
+
+		RemoveFoodSpeedMultiplier(inst, target)
+
 		if target.components.combat then
 			target.components.combat.externaldamagemultipliers:RemoveModifier(target, "kyno_chickeneggbuff")
 		end
-		
+
 		target._slow = nil
 	end
 end
@@ -145,7 +141,7 @@ local function DoExplode(inst, thrower, target, no_hit_tags, damage, ismaintarge
 	end
 
 	local hit_a_target = false
-	
+
 	for i, v in ipairs(entities) do
 		if v:IsValid() and v.entity:IsVisible() and inst.components.combat:CanTarget(v) then
 			hit_a_target = true
@@ -159,18 +155,18 @@ local function DoExplode(inst, thrower, target, no_hit_tags, damage, ismaintarge
 			if not v.components.health:IsDead() and v:HasTag("stunnedbybomb") then
 				v:PushEvent("stunbomb")
 			end
-			
+
 			if v.components.locomotor then
 				local data = v._slow
 				local shouldrefresh
-		
+
 				if data == nil then
 					data = { tasks = {}, fx = SpawnPrefab("kyno_chicken_egg_slow_fx") }
 					data.fx.entity:SetParent(v.entity)
 					data.fx:StartFX(v, not ismaintarget and math.random() * 0.3 or nil)
-			
+
 					v._slow = data
-			
+
 					shouldrefresh = true
 				elseif #data.tasks < TUNING.KYNO_CHICKEN_EGG_GIANT_STACK then
 					shouldrefresh = true
@@ -181,7 +177,7 @@ local function DoExplode(inst, thrower, target, no_hit_tags, damage, ismaintarge
 				table.insert(data.tasks, v:DoTaskInTime(TUNING.KYNO_CHICKEN_EGG_GIANT_DURATION, DoRefresh, data))
 
 				if shouldrefresh then
-					SetDebuffs(v, data.fx, #data.tasks)
+					SetDebuffs(v, data.fx, #data.tasks, inst)
 				end
 
 				if not (ismaintarget or ShouldNotAggro(attacker, v)) and v.components.combat and v.components.combat:CanBeAttacked() then
@@ -201,7 +197,7 @@ local function OnEquip(inst, owner)
 	local symbol = "swap_chicken_eggs_large"..style
 
 	owner.AnimState:OverrideSymbol("swap_object", "swap_chicken_eggs_large", symbol)
-    
+
 	owner.AnimState:Show("ARM_carry")
 	owner.AnimState:Hide("ARM_normal")
 end
@@ -222,11 +218,11 @@ end
 
 local function SpawnEggCrackEffects(inst)
 	local x, y, z = inst.Transform:GetWorldPosition()
-	
+
 	local fx1 = SpawnPrefab("kyno_chicken_egg_fx")
 	fx1.Transform:SetPosition(x, y, z)
 	fx1.SoundEmitter:PlaySound("dangerous_sea/creatures/water_plant/burr_burst")
-	
+
 	local fx2 = SpawnPrefab("kyno_swordfish_damage_fx")
 	fx2.Transform:SetPosition(x, y, z)
 end
@@ -236,7 +232,7 @@ local function OnInventoryThrown(inst)
 	inst.persists = false
 
 	inst.AnimState:PlayAnimation("spin_loop", true)
-	
+
 	if inst._eggstyle == nil then
 		inst._eggstyle = math.random(1, 5)
 	end
@@ -272,12 +268,12 @@ local function ReticuleTargetFn()
 	-- Min range was chosen to not hit yourself. (2 is the hit range).
 	for r = 6.5, 3.5, -.25 do
 		pos.x, pos.y, pos.z = ThePlayer.entity:LocalToWorldSpace(r, 0, 0)
-		
+
 		if ground:IsPassableAtPoint(pos:Get()) and not ground:IsGroundTargetBlocked(pos) then
 			return pos
 		end
 	end
-	
+
 	return pos
 end
 
@@ -324,16 +320,16 @@ end
 local function OnHatch(inst)
 	local fx = SpawnPrefab("kyno_chicken_egg_fx")
 	fx.Transform:SetPosition(inst.Transform:GetWorldPosition())
-	
+
 	local chicken = SpawnPrefab("kyno_chicken2")
-    chicken.Transform:SetPosition(inst.Transform:GetWorldPosition())
-    
+	chicken.Transform:SetPosition(inst.Transform:GetWorldPosition())
+
 	if chicken.components.sleeper ~= nil then
 		chicken.components.sleeper:GoToSleep()
 	end
-	
+
 	chicken.SoundEmitter:PlaySound("dontstarve/creatures/egg/egg_hatch_crack")
-	
+
 	inst:Remove()
 end
 
@@ -344,7 +340,7 @@ local function OnCheckHatch(inst)
 	and inst.components.playerprox:IsPlayerClose() -- Can't use inst:IsAsleep(), check if someone is nearby instead.
 	and not inst.components.inventoryitem:IsHeld() then
 		local x, _, z = inst.Transform:GetWorldPosition()
-		
+
 		if TheWorld.Map:IsVisualGroundAtPoint(x, 0, z) and inst.components.hatchableegg.ready_to_hatch then
 			OnHatch(inst)
 		end
@@ -374,7 +370,7 @@ local function OnLoad(inst, data)
 	if data ~= nil and data.eggstyle then
 		inst._eggstyle = data.eggstyle
 	end
-	
+
 	inst:DoTaskInTime(0, RefreshEggs)
 end
 
@@ -382,7 +378,7 @@ local function OnLoadLarge(inst, data)
 	if data ~= nil and data.eggstyle then
 		inst._eggstyle = data.eggstyle
 	end
-	
+
 	inst:DoTaskInTime(0, RefreshLargeEggs)
 end
 
@@ -404,7 +400,7 @@ local function chicken_eggfn()
 
 	inst.AnimState:SetBank("kyno_chicken_eggs")
 	inst.AnimState:SetBuild("kyno_chicken_eggs")
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("catfood")
@@ -416,13 +412,13 @@ local function chicken_eggfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst._eggstyle = nil
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 	inst.components.tradable.rocktribute = 1
@@ -444,15 +440,15 @@ local function chicken_eggfn()
 
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
-	
+
 	inst:DoTaskInTime(0, RefreshEggs)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoad
-	
+
 	inst:ListenForEvent("ondropped", RefreshEggs)
 	inst:ListenForEvent("stacksizechange", RefreshEggs)
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -465,7 +461,7 @@ local function chicken_egg_giantfn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-	
+
 	inst.Transform:SetTwoFaced()
 
 	MakeInventoryPhysics(inst)
@@ -474,7 +470,7 @@ local function chicken_egg_giantfn()
 	inst.AnimState:SetBank("kyno_chicken_eggs_large")
 	inst.AnimState:SetBuild("kyno_chicken_eggs_large")
 	inst.AnimState:PlayAnimation("idle", true)
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("catfood")
@@ -485,7 +481,7 @@ local function chicken_egg_giantfn()
 	inst:AddTag("projectile")
 	inst:AddTag("eggfood")
 	inst:AddTag("complexprojectile")
-	
+
 	inst:AddComponent("reticule")
 	inst.components.reticule.targetfn = ReticuleTargetFn
 	inst.components.reticule.twinstickcheckscheme = true
@@ -498,16 +494,16 @@ local function chicken_egg_giantfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst._eggstyle = nil
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
 	inst.components.tradable.rocktribute = 2
-	
+
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
 
@@ -521,10 +517,10 @@ local function chicken_egg_giantfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	
+
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_SUPERTINY)
-	
+
 	inst:AddComponent("complexprojectile")
 	inst.components.complexprojectile:SetHorizontalSpeed(15)
 	inst.components.complexprojectile:SetGravity(-35)
@@ -540,25 +536,25 @@ local function chicken_egg_giantfn()
 	inst.components.combat:SetDefaultDamage(TUNING.WATERPLANT.ITEM_DAMAGE)
 	inst.components.combat:SetRange(TUNING.WATERPLANT.ATTACK_AOE)
 	inst.components.combat:SetKeepTargetFunction(KeepTargetFn)
-	
+
 	inst:AddComponent("hatchableegg")
 	inst.components.hatchableegg:SetHeatTypes(true, false)
 	inst.components.hatchableegg:StartCrackMode("kyno_chicken_egg_large_cracked", TUNING.KYNO_CHICKEN_EGG_GIANT_CRACKTIME)
 	inst.components.hatchableegg:SetOnCrackFn(OnCrack)
-	
+
 	inst:AddComponent("equippable")
 	inst.components.equippable:SetOnEquip(OnEquip)
 	inst.components.equippable:SetOnUnequip(OnUnequip)
-	
+
 	inst:DoTaskInTime(0, RefreshLargeEggs)
-	
+
 	inst.OnSave = OnSave
 	inst.OnLoad = OnLoadLarge
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
 	inst:ListenForEvent("ondropped", RefreshLargeEggs)
 	inst:ListenForEvent("onputininventory", RefreshLargeEggs)
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -571,7 +567,7 @@ local function chicken_egg_crackedfn()
 	inst.entity:AddAnimState()
 	inst.entity:AddSoundEmitter()
 	inst.entity:AddNetwork()
-	
+
 	inst.Transform:SetTwoFaced()
 
 	MakeInventoryPhysics(inst)
@@ -581,7 +577,7 @@ local function chicken_egg_crackedfn()
 	inst.AnimState:SetBuild("kyno_chicken_eggs_large")
 	inst.AnimState:PlayAnimation("idle_happy", true)
 	inst.AnimState:OverrideSymbol("egg1", "kyno_chicken_eggs_large", "egg_cracked")
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("cookable")
 	inst:AddTag("catfood")
@@ -595,13 +591,13 @@ local function chicken_egg_crackedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst.components.inspectable.getstatus = GetStatus
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 5
-	
+
 	inst:AddComponent("cookable")
 	inst.components.cookable.product = "kyno_chicken_egg_cooked"
 
@@ -616,22 +612,22 @@ local function chicken_egg_crackedfn()
 	inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem:SetOnPutInInventoryFn(OnPutInInventory)
 	inst.components.inventoryitem:SetOnDroppedFn(OnDropped)
-	
+
 	inst:AddComponent("luckitem")
 	inst.components.luckitem:SetLuck(TUNING.KYNO_LUCK_TINY)
-	
+
 	inst:AddComponent("playerprox")
 	inst.components.playerprox:SetTargetMode(inst.components.playerprox.TargetModes.AnyPlayer)
 	inst.components.playerprox:SetOnPlayerNear(OnCheckHatch)
 	inst.components.playerprox:SetDist(8, 16)
-	
+
 	inst:AddComponent("hatchableegg")
 	inst.components.hatchableegg:SetAllowedPhases(true, true, true)
 	inst.components.hatchableegg:StartIncubateMode(TUNING.KYNO_CHICKEN_EGG_GIANT_HATCHTIME)
 	inst.components.hatchableegg:SetOnHatchFn(OnCheckHatch)
-	
+
 	inst.OnLoadPostPass = OnLoadPostPass
-	
+
 	MakeHauntableLaunchAndPerish(inst)
 
 	return inst
@@ -650,7 +646,7 @@ local function chicken_egg_cookedfn()
 	inst.AnimState:SetBank("kyno_chicken_eggs")
 	inst.AnimState:SetBuild("kyno_chicken_eggs")
 	inst.AnimState:PlayAnimation("cooked")
-	
+
 	inst:AddTag("meat")
 	inst:AddTag("eggfood")
 	inst:AddTag("chicken_egg")
@@ -660,26 +656,26 @@ local function chicken_egg_cookedfn()
 	if not TheWorld.ismastersim then
 		return inst
 	end
-	
+
 	inst:AddComponent("inspectable")
 	inst:AddComponent("inventoryitem")
 	inst:AddComponent("bait")
-	
+
 	inst:AddComponent("tradable")
 	inst.components.tradable.goldvalue = 1
 
 	inst:AddComponent("edible")
 	inst.components.edible.healthvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HEALTH
-	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HUNGER 
+	inst.components.edible.hungervalue = TUNING.KYNO_CHICKEN_EGG_COOKED_HUNGER
 	inst.components.edible.sanityvalue = TUNING.KYNO_CHICKEN_EGG_COOKED_SANITY
 	inst.components.edible.foodtype = FOODTYPE.MEAT
 	inst.components.edible.ismeat = true
-	
+
 	inst:AddComponent("perishable")
 	inst.components.perishable:SetPerishTime(TUNING.PERISH_SLOW)
 	inst.components.perishable:StartPerishing()
 	inst.components.perishable.onperishreplacement = "rottenegg"
-	
+
 	inst:AddComponent("stackable")
 	inst.components.stackable.maxsize = TUNING.STACK_SIZE_SMALLITEM
 
@@ -697,13 +693,13 @@ local function projectilefn()
 	inst.entity:AddPhysics()
 	inst.entity:AddNetwork()
 
-    SetThrownPhysics(inst)
+	SetThrownPhysics(inst)
 	inst.Physics:SetDontRemoveOnSleep(true)
 
-    inst.AnimState:SetBank("kyno_chicken_eggs_large")
-    inst.AnimState:SetBuild("kyno_chicken_eggs_large")
-    inst.AnimState:PlayAnimation("idle")
-	
+	inst.AnimState:SetBank("kyno_chicken_eggs_large")
+	inst.AnimState:SetBuild("kyno_chicken_eggs_large")
+	inst.AnimState:PlayAnimation("idle")
+
 	inst:AddTag("NOCLICK")
 	inst:AddTag("notarget")
 	inst:AddTag("noattack")
@@ -713,7 +709,7 @@ local function projectilefn()
 	inst:SetPrefabNameOverride("KYNO_CHICKEN_EGG_LARGE")
 
 	inst.entity:SetPristine()
-	
+
 	if not TheWorld.ismastersim then
 		return inst
 	end

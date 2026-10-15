@@ -161,12 +161,11 @@ local function OnAttached(inst, target)
 	inst.entity:SetParent(target.entity)
 	inst.Transform:SetPosition(0, 0, 0)
 
-	inst:ListenForEvent("death", function()
-		inst.components.debuff:Stop()
-	end, target)
+	if target.components.talker and target:HasTag("player") then
+		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
+	end
 
-	-- Play a nice and distant jukebox melody...
-	target:PushEvent("playnukashine")
+	target:PushEvent("playnukashine") -- Play a nice and distant jukebox melody...
 
 	if target.components.playervision ~= nil then
 		target.components.playervision:PushForcedNightVision(inst, 1, ANCIENTFRUIT_NIGHTVISION_COLOURCUBES, true)
@@ -177,20 +176,21 @@ local function OnAttached(inst, target)
 		target.components.sanity.externalmodifiers:SetModifier(inst, -TUNING.DAPPERNESS_TINY)
 	end
 
-	-- From Strength Buff.
-	if target.components.talker and target:HasTag("player") then
-		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_POPBUFF_START"))
-	end
-
-	if target.components.locomotor ~= nil and target:HasTag("player") then
-		target:AddTag("groggy")
-
-		target.components.locomotor:SetExternalSpeedMultiplier(target, "kyno_nukashinebuff", TUNING.KYNO_ALCOHOL_SPEED)
-	end
-
 	if target.components.combat ~= nil and target:HasTag("player") then
 		target.components.combat.externaldamagemultipliers:SetModifier(inst, TUNING.KYNO_ALCOHOL_STRENGTH_MEDSMALL, "kyno_nukashinebuff")
 	end
+
+	if target:HasTag("player") then
+		if not target:HasTag("groggy") then
+			target:AddTag("groggy")
+		end
+
+		UpdateFoodSpeedMultiplier(inst, target, "kyno_alcoholbuff", TUNING.KYNO_ALCOHOL_SPEED, "negative")
+	end
+
+	inst:ListenForEvent("death", function()
+		inst.components.debuff:Stop()
+	end, target)
 end
 
 local function OnDetached(inst, target)
@@ -206,15 +206,16 @@ local function OnDetached(inst, target)
 			target.components.sanity.externalmodifiers:RemoveModifier(inst)
 		end
 
-		-- From Strength Buff.
-		if target.components.locomotor ~= nil and target:HasTag("player") then
-			target:RemoveTag("groggy")
-
-			target.components.locomotor:RemoveExternalSpeedMultiplier(target, "kyno_nukashinebuff")
-		end
-
 		if target.components.combat ~= nil and target:HasTag("player") then
 			target.components.combat.externaldamagemultipliers:RemoveModifier(inst, "kyno_nukashinebuff")
+		end
+
+		if target:HasTag("player") then
+			if target:HasTag("groggy") then
+				target:RemoveTag("groggy")
+			end
+
+			RemoveFoodSpeedMultiplier(inst, target)
 		end
 
 		-- Will not say anything when buff ends, because they already do when teleported.
