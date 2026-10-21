@@ -607,11 +607,11 @@ function FishFarmManager:LongUpdate(dt)
 	end
 
 	-- Timer progression is completely independent from validity.
-	if self.roe_time_left > 0 then
+	if self.roe_time_left ~= nil and self.roe_time_left > 0 then
 		self.roe_time_left = math.max(0, self.roe_time_left - dt)
 	end
 
-	if self.baby_time_left > 0 then
+	if self.baby_time_left ~= nil and self.baby_time_left > 0 then
 		self.baby_time_left = math.max(0, self.baby_time_left - dt)
 	end
 
@@ -619,11 +619,15 @@ function FishFarmManager:LongUpdate(dt)
 	-- If the timer reached zero while invalid, it stays at zero.
 	-- Once the fish is valid, production happens immediately.
 	if self:IsFishValid() then
-		if self.roe_time_left <= 0 and not fueled:IsEmpty() then
+		if self.roe_time_left ~= nil and self.roe_time_left <= 0 and not fueled:IsEmpty() then
 			self:ProduceRoe(true)
 		end
 
-		if self.baby_time_left <= 0 and not fueled:IsEmpty() then
+		if fueled:IsEmpty() then
+			return
+		end
+
+		if self.baby_time_left ~= nil and self.baby_time_left <= 0 and not fueled:IsEmpty() and self:IsFishValid() then
 			self:ProduceBaby(true)
 		end
 	end

@@ -2,53 +2,44 @@ local _G = GLOBAL
 
 -- For increasing fishing yields.
 AddComponentPostInit("fishingrod", function(self)
-	local oldReel = self.Reel
+	local _Collect = self.Collect
 
-	function self:Reel(...)
-		local ret = {oldReel(self, ...)}
+	function self:Collect(...)
+		local fisherman = self.fisherman
+		local caughtfish = self.caughtfish
 
-		if self.target ~= nil and self.caughtfish ~= nil and self.fisherman ~= nil and self.fisherman.tagvar_skilledfisherman then
-			local extraFish = _G.SpawnPrefab(self.caughtfish.prefab)
+		if _Collect ~= nil then
+			_Collect(self, ...)
+		end
 
-			if self.fisherman ~= nil and extraFish.components.weighable ~= nil then
-				extraFish.components.weighable:SetPlayerAsOwner(self.fisherman)
+		if fisherman and caughtfish then
+			if not fisherman.tagvar_skilledfisherman then
+				return
 			end
 
-			local spawnPos = self.fisherman:GetPosition()
-			local offset = spawnPos - self.target:GetPosition()
-			spawnPos = spawnPos + offset:GetNormalized()
+			local extrafish = _G.SpawnPrefab(caughtfish.prefab)
 
-			self.inst:DoTaskInTime(.8, function()
-				if extraFish.Physics ~= nil then
-					extraFish.Physics:Teleport(spawnPos:Get())
-				else
-					extraFish.Transform:SetPosition(spawnPos:Get())
+			if extrafish ~= nil then
+				extrafish.Transform:SetPosition(caughtfish.Transform:GetWorldPosition())
+
+				if extrafish.components.weighable ~= nil then
+					extrafish.components.weighable:SetPlayerAsOwner(fisherman)
 				end
-			end)
+			end
 
 			-- Random chance for one more extra fish.
 			if _G.TryLuckRoll(self.fisherman, TUNING.KYNO_FISHINGBUFF_EXTRA_FISH_CHANCE, HofLuckFormulas.SkilledFisherman) then
-				local extraFish2 = _G.SpawnPrefab(self.caughtfish.prefab)
+				local extrafish2 = _G.SpawnPrefab(caughtfish.prefab)
 
-				if self.fisherman ~= nil and extraFish2.components.weighable ~= nil then
-					extraFish2.components.weighable:SetPlayerAsOwner(self.fisherman)
-				end
+				if extrafish2 ~= nil then
+					extrafish2.Transform:SetPosition(caughtfish.Transform:GetWorldPosition())
 
-				local spawnPos = self.fisherman:GetPosition()
-				local offset = spawnPos - self.target:GetPosition()
-				spawnPos = spawnPos + offset:GetNormalized()
-
-				self.inst:DoTaskInTime(.8, function()
-					if extraFish2.Physics ~= nil then
-						extraFish2.Physics:Teleport(spawnPos:Get())
-					else
-						extraFish2.Transform:SetPosition(spawnPos:Get())
+					if extrafish2.components.weighable ~= nil then
+						extrafish2.components.weighable:SetPlayerAsOwner(fisherman)
 					end
-				end)
+				end
 			end
 		end
-
-		return unpack(ret)
 	end
 
 	-- From Island Adventures: https://steamcommunity.com/sharedfiles/filedetails/?id=1467214795

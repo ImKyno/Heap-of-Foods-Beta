@@ -12,7 +12,7 @@ local StaticLayout    = require("map/static_layout")
 -- The numbers below represents each turf in the setpiece file.
 _G.SERENITYISLAND_GROUNDS                =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.OCEAN_COASTAL_SHORE,     -- 1
 	WORLD_TILES.ROCKY,                   -- 2
 	WORLD_TILES.SAVANNA,                 -- 3
 	WORLD_TILES.QUAGMIRE_CITYSTONE,      -- 4
@@ -21,7 +21,7 @@ _G.SERENITYISLAND_GROUNDS                =
 
 _G.MEADOWISLAND_GROUNDS                  =
 {
-	WORLD_TILES.OCEAN_BRINEPOOL,         -- 1
+	WORLD_TILES.OCEAN_COASTAL_SHORE,     -- 1
 	WORLD_TILES.MONKEY_GROUND,           -- 2
 	WORLD_TILES.HOF_FIELDS,              -- 3
 	WORLD_TILES.HOF_TIDALMARSH,          -- 4

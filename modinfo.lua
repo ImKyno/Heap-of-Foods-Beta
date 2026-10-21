@@ -368,10 +368,10 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				{
 					NAME =
 					{
-						"No Restriction",
+						"No Restrictions",
 						zh  = "无限制",
             			zht = "無限制",
-            			pt  = "Sem Restrição",
+            			pt  = "Sem Restrições",
             			pl  = "Bez ograniczeń",
             			es  = "Sin restricciones",
             			vi  = "Không hạn chế",

@@ -52,7 +52,7 @@ local function SayFar(inst)
 end
 
 local function SayNear(inst)
-	if not inst:HasAnyTag("pigelder_gifted", "pigelder_gifted2") then
+	if not inst:HasTag("pigelder_gifted") then
 		Say(inst, "PIGELDER_TALK_NEAR1")
 	else
 		Say(inst, "PIGELDER_TALK_NEAR2")
@@ -118,18 +118,10 @@ local function PlayThrowSound(inst)
 end
 
 local function TestItem(inst, item, giver)
-	if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube") then
+	if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item:HasTag("pigelderfood")) then
 		if inst:HasTag("pigelder_gifted") then
 			giver:PushEvent("serenityislandshopfail")
-			return false
-		end
 
-		return true
-	end
-
-	if item.components.inventoryitem ~= nil and (item.prefab == "gorge_crab_roll" or item.prefab == "gorge_crab_ravioli") then
-		if inst:HasTag("pigelder_gifted2") then
-			giver:PushEvent("serenityislandshopfail")
 			return false
 		end
 
@@ -141,12 +133,13 @@ local function TestItem(inst, item, giver)
 	end
 
 	giver:PushEvent("serenityislandshopfail")
+
 	return false
 end
 
 local function OnGetItemFromPlayer(inst, giver, item, isnight)
 	if not inst:HasTag("pigelder_gifted") then
-		if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item.prefab == "gorge_caramel_cube") then
+		if item.components.inventoryitem ~= nil and (item.prefab == "lobsterdinner" or item:HasTag("pigelderfood")) then
 			inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
 
 			inst:DoTaskInTime(1, function()
@@ -163,25 +156,6 @@ local function OnGetItemFromPlayer(inst, giver, item, isnight)
 
 			inst:AddTag("pigelder_gifted")
 			inst.foodgift = true
-		end
-	end
-
-	if not inst:HasTag("pigelder_gifted2") then
-		if item.components.inventoryitem ~= nil and (item.prefab == "gorge_crab_roll" or item.prefab == "gorge_crab_ravioli") then
-			inst.SoundEmitter:PlaySound("hookline_2/characters/hermit/friendship_music/10")
-
-			inst:DoTaskInTime(1, function()
-				SayThanks(inst)
-			end)
-
-			-- New Recipes available in the shop!
-			if inst.components.craftingstation ~= nil then
-				local blueprint = "kyno_pond_salt2_construction_blueprint"
-				inst.components.craftingstation:LearnItem(blueprint, blueprint.."_p")
-			end
-
-			inst:AddTag("pigelder_gifted2")
-			inst.foodgift2 = true
 		end
 	end
 
@@ -238,10 +212,6 @@ local function OnLoad(inst, data)
 	if data ~= nil then
 		if data.foodgift then
 			inst:AddTag("pigelder_gifted")
-		end
-
-		if data.foodgift2 then
-			inst:AddTag("pigelder_gifted2")
 		end
 	end
 end

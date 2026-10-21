@@ -164,7 +164,6 @@ local function PlayerPostInit(inst)
 
 	inst.OnLearnFish = OnLearnFish
 	inst.OnLearnRoe = OnLearnRoe
-	inst.OnFishCaught = OnFishCaught
 
 	inst:ListenForEvent("learnfish", inst.OnLearnFish)
 	inst:ListenForEvent("learnroe", inst.OnLearnRoe)

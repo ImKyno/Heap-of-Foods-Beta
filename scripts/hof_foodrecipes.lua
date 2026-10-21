@@ -1302,7 +1302,7 @@ local kyno_foods =
 		pigcoinvalue = {3, 1, 1},
 		floater = TUNING.HOF_FLOATER,
 		luckitem = { luck = TUNING.KYNO_LUCK_SUPERTINY },
-		tags = {"honeyed"},
+		tags = {"honeyed", "pigelderfood"},
 		card_def = {ingredients = {{"kyno_syrup", 1}, {"kyno_sugar", 1}, {"goatmilk", 2}}},
 	},
 
