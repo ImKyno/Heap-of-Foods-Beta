@@ -131,4 +131,5 @@ HofLuckFormulas =
 	SugarBombsExplosion = CommonChanceUnluckMultAndLuckHyperbolic(3, 5),
 	CriticalDamage = CommonChanceLuckAdditiveCapped(0.1, 0.40), -- Caps at 40% chance.
 	RandomBuffDeath = CommonChanceUnluckMultAndLuckHyperbolic(8, 0.15),
+	AlphabetSoupDuplicateItem = CommonChanceLuckAdditiveCapped(0.1, 0.50),
 }

@@ -965,7 +965,7 @@ STRINGS.RECIPE_DESC.KYNO_ROE_M = "Fish eggs ready for cooking."
 
 STRINGS.NAMES.KYNO_ROE_COOKED = "Cooked Roe"
 
-STRINGS.NAMES.KYNO_SHARK_FIN = "Shark Fin"
+STRINGS.NAMES.KYNO_SHARK_FIN = "Rockjaw Fin"
 STRINGS.RECIPE_DESC.KYNO_SHARK_FIN_M = "Fin ripped from an abominable shark."
 
 STRINGS.NAMES.KYNO_BEANBUGS = "Bean Bugs"

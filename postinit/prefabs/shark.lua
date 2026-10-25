@@ -6,10 +6,8 @@ local function SharkPostInit(inst)
 		return inst
 	end
 
-	if not TUNING.HOF_IS_TCP_ENABLED then
-		if inst.components.lootdropper ~= nil then
-			inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
-		end
+	if inst.components.lootdropper ~= nil then
+		inst.components.lootdropper:AddChanceLoot("kyno_shark_fin", 1.00)
 	end
 end
 
