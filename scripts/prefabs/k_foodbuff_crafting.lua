@@ -97,6 +97,10 @@ local function OnAttached(inst, target)
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRAFTINGBUFF_START"))
 	end
 
+	if target.kyno_craftingbuff_active ~= nil then
+        target.kyno_craftingbuff_active:set(true)
+    end
+
 	target:ListenForEvent("builditem", OnBuildItem)
 
 	inst:ListenForEvent("death", function()
@@ -108,6 +112,10 @@ local function OnDetached(inst, target)
 	if target.components.talker and target:HasTag("player") then
 		target.components.talker:Say(GetString(target, "ANNOUNCE_KYNO_CRAFTINGBUFF_END"))
 	end
+
+	if target.kyno_craftingbuff_active ~= nil then
+        target.kyno_craftingbuff_active:set(false)
+    end
 
 	target:RemoveEventCallback("builditem", OnBuildItem)
 

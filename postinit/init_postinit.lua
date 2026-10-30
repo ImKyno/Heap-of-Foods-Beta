@@ -205,6 +205,7 @@ local INIT_POSTINIT_WIDGETS =
 {
 	"brewbookpage",
 	"cookbookpage_crockpot",
+	"craftingmenu_ingredients",
 	"invslot",
 	"itemtile",
 	"upgrademoduledisplay",

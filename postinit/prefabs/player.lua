@@ -62,6 +62,8 @@ end
 local function PlayerPostInit(inst)
 	inst:AddComponent("fishregistryupdater")
 
+	inst.kyno_craftingbuff_active = net_bool(inst.GUID, "kyno_craftingbuff.active", "kyno_craftingbuff_dirty")
+
 	if not _G.TheWorld.ismastersim then
 		return inst
 	end

@@ -414,7 +414,7 @@ local kyno_foods_keg =
 
 	juice_cactus =
 	{
-		test = function(brewer, names, tags) return (names.cactus_meat or (names.cactus_flower and names.cactus_flower == 2)) and tags.frozen end,
+		test = function(brewer, names, tags) return ((names.cactus_meat or 0) + (names.cactus_flower or 0) == 2) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.VEGGIE,
 		perishtime = TUNING.PERISH_SLOW,
@@ -1198,7 +1198,7 @@ local kyno_foods_keg =
 
 	twistedtequila =
 	{
-		test = function(cooker, names, tags) return names.kyno_aloe and names.kyno_spotspice_leaf and tags.frozen end,
+		test = function(brewer, names, tags) return names.kyno_aloe and names.kyno_spotspice_leaf and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1225,7 +1225,7 @@ local kyno_foods_keg =
 
 	nukacola =
 	{
-		test = function(cooker, names, tags) return names.kyno_sugar and tags.syrup and tags.frozen
+		test = function(brewer, names, tags) return names.kyno_sugar and tags.syrup and tags.frozen
 		and not (names.wormlight or names.wormlight_lesser) end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
@@ -1256,7 +1256,7 @@ local kyno_foods_keg =
 
 	nukacola_quantum =
 	{
-		test = function(cooker, names, tags) return names.kyno_sugar and (names.wormlight or names.wormlight_lesser) and tags.frozen end,
+		test = function(brewer, names, tags) return names.kyno_sugar and (names.wormlight or names.wormlight_lesser) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1308,7 +1308,7 @@ local kyno_foods_keg =
 
 	nukacola_dark =
 	{
-		test = function(cooker, names, tags) return names.nukacola and names.horrorfuel and tags.frozen end,
+		test = function(brewer, names, tags) return names.nukacola and names.horrorfuel and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1342,7 +1342,7 @@ local kyno_foods_keg =
 
 	nukacola_twist =
 	{
-		test = function(cooker, names, tags) return names.nukacola and names.cactus_flower and tags.frozen end,
+		test = function(brewer, names, tags) return names.nukacola and names.cactus_flower and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,
@@ -1622,7 +1622,7 @@ local kyno_foods_keg =
 
 	nukacola_bramble =
 	{
-		test = function(cooker, names, tags) return names.nukacola and (names.cactus_meat or names.durian) and tags.frozen end,
+		test = function(brewer, names, tags) return names.nukacola and (names.cactus_meat or names.durian) and tags.frozen end,
 		priority = 30,
 		foodtype = FOODTYPE.GOODIES,
 		perishtime = TUNING.PERISH_SUPERSLOW,

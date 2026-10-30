@@ -14,6 +14,7 @@ local STRINGS =
 		es  = "Montón de Alimentos (Heap of Foods)",
 		vi  = "Vua Đầu Bếp (Heap of Foods)",
 		kr  = "풍족한 요리 (Heap of Foods)",
+		ua  = "Купа Їжі",
 	},
 
 	NAME_BETA =
@@ -26,6 +27,7 @@ local STRINGS =
 		es  = "Montón de Alimentos - Rama Beta (Heap of Foods - Beta Branch)",
 		vi  = "Vua Đầu Bếp - Nhánh Beta (Heap of Foods - Beta Branch)",
 		kr  = "풍족한 요리 - 베타(Heap of Foods - Beta Branch)",
+		ua  = "Купа Їжі (Бета Гілка)",
 	},
 
 	DESCRIPTION =
@@ -41,7 +43,7 @@ This is an intermission update that brings some new content, quality of life imp
 
 Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
-󰀌 Mod Version: 7.7-B
+󰀌 Mod Version: 7.8-B
 󰀧 Update: Between Courses
 ]],
 		zh  =
@@ -56,7 +58,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
-󰀌 Mod 版本： 7.7-B
+󰀌 Mod 版本： 7.8-B
 󰀧 更新内容： 餐间时光
 ]],
 		zht =
@@ -71,7 +73,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
-󰀌 Mod 版本： 7.7-B
+󰀌 Mod 版本： 7.8-B
 󰀧 更新內容： 餐間時光
 ]],
 		pt  =
@@ -86,7 +88,7 @@ Esta é uma atualização de intermissão que traz novos conteúdos, melhorias d
 
 Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
-󰀌 Versão do Mod: 7.7-B
+󰀌 Versão do Mod: 7.8-B
 󰀧 Atualização: Entre os Pratos
 ]],
 		pl  =
@@ -101,7 +103,7 @@ Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnie
 
 Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
-󰀌 Wersja Moda: 7.7-B
+󰀌 Wersja Moda: 7.8-B
 󰀧 Aktualizacja: Między Danami
 ]],
 		es  =
@@ -116,7 +118,7 @@ Esta es una actualización de transición que trae nuevo contenido, mejoras de c
 
 Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
-󰀌 Versión del Mod: 7.7-B
+󰀌 Versión del Mod: 7.8-B
 󰀧 Actualización: Entre Platos
 ]],
 		vi  =
@@ -131,7 +133,7 @@ Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanece
 
 Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
-󰀌 Phiên bản Mod: 7.7-B
+󰀌 Phiên bản Mod: 7.8-B
 󰀧 Cập nhật: Giữa Các Món Ăn
 ]],
 		kr =
@@ -146,8 +148,23 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 
 이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
 
-󰀌 Mod Version: 7.7-B
+󰀌 Mod Version: 7.8-B
 󰀧 Update: 식사 사이
+]],
+		ua =
+[[
+󰀄 Додає понад 200 абсолютно нових страв для приготування в горщику , а також нові інгредієнти. Приємного приготування!
+
+󰀠 Також додає нові біоми десь посеред океану!
+󰀦 Дізнайтеся, як приготувати кожну страву, тут: https://heap-of-foods.com
+
+󰀏 Оновлення Між стравами:
+Це проміжне оновлення, що додає новий контент, покращення ігрового процесу та коригування вже наявних функцій.
+
+Тепер уночі можна зустріти нічних птахів; на світанку вони відлітають. Якщо такого птаха посадити в клітку, він спатиме вдень і в сутінках.
+
+Версія моду: 7.8-B
+Оновлення: Між стравами
 ]],
 	},
 
@@ -163,6 +180,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 			es  = "Desactivada",
 			vi  = "Tắt",
 			kr  = "비활성화",
+			ua  = "Вимкнено",
 		},
 
 		ENABLED =
@@ -175,6 +193,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 			es  = "Activada",
 			vi  = "Bật",
 			kr  = "활성화",
+			ua  = "Увімкнено",
 		},
 
 		GENERAL =
@@ -189,6 +208,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones generales",
 				vi  = "Tùy Chọn Cơ Bản",
 				kr  = "일반 설정",
+				ua  = "Головні опції",
 			},
 
 			HOVER =
@@ -201,6 +221,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones generales para todo el mod.",
 				vi  = "Các tùy chọn cơ bản cho toàn bộ mod.",
 				kr  = "모드 전체에 적용되는 일반 설정입니다.",
+				ua  = "Головні опції для усього моду",
 			},
 		},
 
@@ -216,6 +237,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones varias",
 				vi  = "Tùy Chọn Khác",
 				kr  = "기타 설정",
+				ua  = "Другорядні опції",
 			},
 
 			HOVER =
@@ -228,6 +250,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones varias para el mod.",
 				vi  = "Các tùy chọn linh tinh cho mod.",
 				kr  = "이 모드의 기타 설정입니다.",
+				ua  = "Другорядні опції для усього моду",
 			},
 		},
 
@@ -243,6 +266,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones Experimentales",
 				vi  = "Tùy Chọn Thử Nghiệm",
 				kr  = "실험적 설정",
+				ua  = "Експериментальні опції",
 			},
 
 			HOVER =
@@ -255,6 +279,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones experimentales del mod. ¡En fase de prueba!",
 				vi  = "Các tùy chọn thử nghiệm cho Mod. Vẫn đang trong quá trình phát triển và kiểm tra!",
 				kr  = "모드 실험적 설정. 테스트 중!",
+				ua  = "Експериментальні опції. Ще у розробці!",
 			},
 		},
 
@@ -270,6 +295,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones de Retrofit",
 				vi  = "Tùy Chọn Cải Tạo",
 				kr  = "기존 맵 적용 설정",
+				ua  = "Варіанти модернізації",
 			},
 
 			HOVER =
@@ -282,6 +308,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones de retrofitting para mundos antiguos.",
 				vi  = "Các tùy chọn cải tạo dành cho thế giới cũ.",
 				kr  = "오래된 세계에 모드 콘텐츠를 추가하는 설정입니다.",
+				ua  = "Варіанти модернізації для старих серверів",
 			},
 		},
 
@@ -297,6 +324,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Idioma",
 				vi  = "Ngôn Ngữ",
 				kr  = "언어",
+				ua  = "Мова",
 			},
 
 			HOVER =
@@ -309,6 +337,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Elige el idioma para el mod.\nPuedes enviar tu traducción en nuestro Discord.",
 				vi  = "Chọn ngôn ngữ cho mod.\nBạn có thể đóng góp bản dịch tại Discord của chúng tôi.",
 				kr  = "모드에 적용할 언어를 선택하세요.\n작성하신 번역은 저희 디스코드(Discord)를 통해 제출하실 수 있습니다.",
+				ua  = "Виберіть мову для цього моду. Ви можете надіслати свій переклад у наш Discord.",
 			},
 
 			HOVER_OPTIONS =
@@ -321,6 +350,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Español",
 				vi  = "Tiếng Việt",
 				kr  = "한국어",
+				ua  = "Українська",
 
 				DESCRIPTION =
 				{
@@ -332,6 +362,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Autor: Desconocido",
 					vi  = "Người dịch: Saikuno",
 					kr  = "번역: 김헤모",
+					ua  = "Автор: Vovanguard",
 				},
 			},
 		},
@@ -348,6 +379,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Recetas de temporada",
 				vi  = "Công Thức Theo Mùa",
 				kr  = "시즌 레시피",
+				ua  = "Сезонні страви",
 			},
 
 			HOVER =
@@ -360,6 +392,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Las recetas de temporada solo pueden cocinarse durante eventos especiales?",
 				vi  = "Công thức theo mùa có nên chỉ nấu được trong các Sự Kiện Đặc Biệt?",
 				kr  = "시즌 레시피를 특별 이벤트 기간에만 허용할까요?",
+				ua  = "Чи варто сезонним стравам з'являтися лише під час спеціальних подій?",
 			},
 
 			HOVER_OPTIONS =
@@ -376,6 +409,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
             			es  = "Sin restricciones",
             			vi  = "Không hạn chế",
             			kr  = "제한 없음",
+            			ua  = "Ніяких обмежень",
 					},
 
 					HOVER =
@@ -388,6 +422,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Las recetas de temporada se pueden cocinar sin restricciones.",
 						vi  = "Có thể nấu các món ăn theo mùa mà không có bất kỳ giới hạn nào.",
 						kr  = "언제나 시즌 레시피를 요리할 수 있습니다.",
+						ua  = "Ніяких обмежень для приготування сезонних страв.",
 					},
 				},
 
@@ -403,6 +438,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
             			es  = "Restringido",
             			vi  = "Có giới hạn",
             			kr  = "제한됨",
+            			ua  = "Обмеження",
 					},
 
 					HOVER =
@@ -415,6 +451,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Las recetas de temporada solo se pueden cocinar cuando los eventos especiales están activos.",
 						vi  = "Chỉ có thể nấu các món ăn theo mùa khi các Sự Kiện Đặc Biệt đang diễn ra.",
 						kr  = "특별 이벤트 기간에만 시즌 레시피를 요리할 수 있습니다.",
+						ua  = "Сезонні страви можна готувати тільки якщо спеціальні події активовані",
 					},
 				},
 			},
@@ -432,6 +469,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Recetas de Cerdo Largo",
 				vi  = "Công Thức Thịt Người",
 				kr  = "인육 레시피",
+				ua  = "Рецепти страв із людського м’яса",
 			},
 
 			HOVER =
@@ -444,6 +482,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían los jugadores soltar cerdo largo al morir?\nNota: Si se desactiva, algunas recetas no podrán cocinarse.",
 				vi  = "Người chơi có rơi ra Thịt Người khi tử trận không?\nLưu ý: Nếu tắt, một số Công Thức sẽ không thể nấu được.",
 				kr  = "사망한 플레이어가 인육을 드롭하도록 설정합니다.\n주의: 이 옵션을 끄면 일부 요리법을 사용할 수 없습니다.",
+				ua  = "Чи повинні гравці після смерті залишати по собі м'ясо?\nПримітка: якщо цю опцію вимкнути, деякі рецепти стане неможливо приготувати.",
 			},
 
 			HOVER_OPTIONS =
@@ -458,6 +497,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los jugadores no soltarán cerdo largo al morir.",
 					vi  = "Người chơi sẽ không rơi ra Thịt Người khi tử trận.",
 					kr  = "플레이어가 사망해도 인육이 생성되지 않습니다.",
+					ua  = "Гравці не залишають після себе м'ясо",
 				},
 
 				ENABLED =
@@ -470,6 +510,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los jugadores pueden tener la posibilidad de soltar cerdo largo al morir.",
 					vi  = "Người chơi sẽ có tỷ lệ rơi ra Thịt Người khi tử trận.",
 					kr  = "플레이어가 사망하면 가끔 인육이 생성됩니다.",
+					ua  = "Гравці можуть залишити м'ясо після себе.",
 				},
 			},
 		},
@@ -486,6 +527,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Tasa de caída de plantas de café",
 				vi  = "Tỷ Lệ Rơi Cây Cà Phê",
 				kr  = "커피나무 드롭 확률",
+				ua  = "Кількість випадаючих рослин кави",
 			},
 
 			HOVER =
@@ -498,6 +540,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Cuántas plantas de café debería soltar la Libélula?",
 				vi  = "Dragonfly sẽ rơi ra bao nhiêu Cây Cà Phê?",
 				kr  = "용파리가 얼마나 많은 커피나무를 드롭하나요?",
+				ua  = "Скільки кущів кави випаде з Дракономухи?",
 			},
 
 			HOVER_OPTIONS =
@@ -512,6 +555,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La Libélula no soltará plantas de café.",
 					vi  = "Dragonfly sẽ không đánh rơi Cây Cà Phê.",
 					kr  = "용파리가 커피나무를 드롭하지 않습니다.",
+					ua  = "З дракономухи не випадатимуть кущі кави.",
 				},
 
 				AMOUNT4 =
@@ -524,6 +568,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La Libélula soltará 4 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 4 Cây Cà Phê.",
 					kr  = "용파리가 커피나무를 4개 드롭합니다.",
+					ua  = "4 кущі.",
 				},
 
 				AMOUNT8 =
@@ -536,6 +581,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La Libélula soltará 8 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 8 Cây Cà Phê.",
 					kr  = "용파리가 커피나무를 8개 드롭합니다.",
+					ua  = "8 кущів.",
 				},
 
 				AMOUNT12 =
@@ -548,6 +594,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La Libélula soltará 12 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 12 Cây Cà Phê.",
 					kr  = "용파리가 커피나무를 12개 드롭합니다.",
+					ua  = "12 кущів.",
 				},
 
 				AMOUNT16 =
@@ -560,6 +607,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La Libélula soltará 16 plantas de café.",
 					vi  = "Dragonfly sẽ đánh rơi 16 Cây Cà Phê.",
 					kr  = "용파리가 커피나무를 16개 드롭합니다.",
+					ua  = "16 кущів.",
 				},
 			},
 		},
@@ -576,6 +624,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Restricción alcohólica",
 				vi  = "Giới Hạn Đồ Uống Có Cồn",
 				kr  = "알코올 제한",
+				ua  = "Алкогольні обмеження",
 			},
 
 			HOVER =
@@ -588,6 +637,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían algunos personajes no poder beber bebidas alcohólicas?",
 				vi  = "Một số nhân vật có nên bị cấm uống các loại đồ uống có cồn không?",
 				kr  = "일부 캐릭터가 알코올성 음료를 마실 수 없도록 제한할까요?",
+				ua  = "Чи повинні деякі гравці мати алкогольні обмеження?",
 			},
 
 			HOVER_OPTIONS =
@@ -602,6 +652,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Todos los personajes pueden beber bebidas alcohólicas.",
 					vi  = "Tất cả nhân vật đều có thể uống các loại đồ uống có cồn.",
 					kr  = "모든 캐릭터가 알코올성 음료를 마실 수 있습니다.",
+					ua  = "Всі персонажі можуть вживати алкоголь.",
 				},
 
 				ENABLED =
@@ -614,6 +665,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Algunos personajes como Webber, Wendy, etc. no podrán beber bebidas alcohólicas.",
 					vi  = "Một số nhân vật như Webber, Wendy, v.v. sẽ không thể uống các loại đồ uống có cồn.",
 					kr  = "웨버, 웬디를 포함한 몇 캐릭터가 알코올성 음료를 마실 수 없습니다.",
+					ua  = "Деякі персонажі, накшталт Уеббера, Уенді та інш. не можуть вживати алкоголь",
 				},
 			},
 		},
@@ -630,6 +682,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Gigantes de la comida",
 				vi  = "Triệu Hồi Giants Từ Thức Ăn",
 				kr  = "거대 보스 소환 설정",
+				ua  = "Гіганти від їжі",
 			},
 
 			HOVER =
@@ -642,6 +695,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían aparecer gigantes cuando los jugadores coman sus comidas especiales?",
 				vi  = "Người chơi có triệu hồi Giants khi ăn thức ăn đặc biệt không?",
 				kr  = "플레이어가 전용 음식을 먹었을 때 거대 보스를 소환하게 할까요?",
+				ua  = "Чи повинні з'являтись Гіганти, коли гравець вживає особливу страву?",
 			},
 
 			HOVER_OPTIONS =
@@ -656,6 +710,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los jugadores no invocarán gigantes al comer sus comidas especiales.",
 					vi  = "Người chơi sẽ không triệu hồi Giants khi ăn thức ăn đặc biệt.",
 					kr  = "전용 음식을 먹어도 거대 보스가 소환되지 않습니다.",
+					ua  = "Гігант не з'явиться після вживання особливої страви.",
 				},
 
 				ENABLED =
@@ -668,6 +723,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los jugadores invocarán gigantes al comer sus comidas especiales.",
 					vi  = "Người chơi sẽ triệu hồi Giants khi ăn thức ăn đặc biệt.",
 					kr  = "전용 음식을 먹으면 거대 보스가 소환됩니다.",
+					ua  = "З'явиться Гігант після вживання особливої страви.",
 				},
 			},
 		},
@@ -684,6 +740,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Elastiespaciador para refrigeradores",
 				vi  = "Bộ Mở Rộng Không Gian Cho Tủ Lạnh",
 				kr  = "공간신축기 냉장고 설정",
+				ua  = "Еласторозпірка для холодильників",
 			},
 
 			HOVER =
@@ -696,6 +753,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería el Elastiespaciador poder mejorar las neveras y las cajas de sal?\nNota: Si se desactiva posteriormente, puede causar errores visuales.",
 				vi  = "Bộ Mở Rộng Không Gian có thể nâng cấp Tủ Lạnh và Hộp Muối không?\nLưu ý: Nếu sau này tắt đi, có thể gây ra lỗi hiển thị.",
 				kr  = "공간신축기로 냉장고와 소금항아리를 업그레이드할 수 있게 할까요?\n주의: 기능 적용 후 이 옵션을 다시 비활성화하면 그래픽 오류가 발생할 수 있습니다.",
+				ua  = "Чи повинна еласторозпірка працювати з холодильниками та сольовими контейнерами?\nПримітка: якщо вимкнути згодом, це може спричинити візуальні дефекти.",
 			},
 
 			HOVER_OPTIONS =
@@ -710,6 +768,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Elastiespaciador no mejorará las neveras ni las cajas de sal.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ không thể nâng cấp Tủ Lạnh và Hộp Muối.",
 					kr  = "공간신축기는 냉장고와 소금항아리에 적용되지 않습니다.",
+					ua  = "Еласторозпірка не працює з холодильниками та сольовими контейнерами.",
 				},
 
 				ENABLED =
@@ -722,6 +781,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Elastiespaciador mejorará las neveras y las cajas de sal, permitiendo pilas infinitas de objetos.",
 					vi  = "Bộ Mở Rộng Không Gian sẽ nâng cấp Tủ Lạnh và Hộp Muối, cho phép xếp chồng vật phẩm vô hạn.",
 					kr  = "공간신축기로 냉장고와 소금항아리를 업그레이드 할 수 있습니다.",
+					ua  = "Працює з холодильниками та сольовими контейнерами.",
 				},
 			},
 		},
@@ -738,6 +798,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es = "Rework de la Bolsa del Chef",
 				vi = "Cải tiến Túi Đầu Bếp",
 				kr = "요리사의 주머니 개편",
+				ua = "Переробка набору шеф-кухаря",
 			},
 
 			HOVER =
@@ -750,6 +811,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería rehacerse la Bolsa del Chef? La modifica por completo y añade nuevas funciones.",
 				vi  = "Có nên cải tiến Túi Đầu Bếp không? Thay đổi hoàn toàn và thêm các tính năng mới cho nó.",
 				kr  = "요리사의 주머니를 개편할까요? 주머니를 전면적으로 변경하고 새로운 기능을 추가합니다.",
+				ua  = "Чи варто переробити «Сумку кухаря»? Вона зазнає змін, а також отримує нові функції. Її більше не можна екіпірувати — натомість вона стає портативним сховищем.",
 			},
 
 			HOVER_OPTIONS =
@@ -764,6 +826,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es = "Bolsa del Chef predeterminada.",
 					vi = "Túi Đầu Bếp mặc định.",
 					kr = "기본 요리사의 주머니.",
+					ua = "Звичайна сумка кухаря",
 				},
 
 				ENABLED =
@@ -776,6 +839,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es = "La Bolsa del Chef será rediseñada y recibirá nuevas funciones.",
 					vi = "Túi Đầu Bếp sẽ được cải tiến và bổ sung các tính năng mới.",
 					kr = "요리사의 주머니가 개편되고 새로운 기능이 추가됩니다.",
+					ua = "Сумка кухаря зазнає змін, а також отримує нові функції.",
 				},
 			},
 		},
@@ -792,6 +856,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Efecto de velocidad",
 				vi  = "Hiệu Ứng Tăng Tốc Từ Thức Ăn",
 				kr  = "음식의 속도 효과",
+				ua  = "Ефект прикорення від їжі",
 			},
 
 			HOVER =
@@ -804,6 +869,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían los alimentos otorgar el efecto de velocidad al consumirse?\nEsta opción solo se aplica a ciertos alimentos.",
 				vi  = "Món ăn có nên gia tăng tốc độ di chuyển khi ăn không?\nTùy chọn này chỉ áp dụng cho một số món ăn nhất định.",
 				kr  = "음식의 속도 효과를 유지할까요?\n이 설정은 일부 특정 음식에만 적용됩니다.",
+				ua  = "Чи повинні продукти надавати ефект швидкості при вживанні?\nЦя опція стосується лише певних продуктів.",
 			},
 
 			HOVER_OPTIONS =
@@ -818,6 +884,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los alimentos no otorgarán el efecto de velocidad al consumirse.",
 					vi  = "Món ăn sẽ không cho hiệu ứng Tăng Tốc khi ăn.",
 					kr  = "특정 요리를 먹어도 속도 효과가 적용되지 않습니다.",
+					ua  = "Їжа не надає ефекту прискорення при вживанні.",
 				},
 
 				ENABLED =
@@ -830,6 +897,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los alimentos otorgarán el efecto de velocidad al consumirse.",
 					vi  = "Món ăn sẽ ban cho hiệu ứng Tăng Tốc khi ăn.",
 					kr  = "특정 요리를 먹으면 속도 효과가 적용됩니다.",
+					ua  = "Надається ефект прискорення при вживанні їжі.",
 				},
 			},
 		},
@@ -846,6 +914,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Duración del efecto de velocidad",
 				vi  = "Thời Gian Hiệu Ứng Tăng Tốc",
 				kr  = "속도 효과 지속시간",
+				ua  = "Тривалість ефекту прискорення",
 			},
 
 			HOVER =
@@ -858,6 +927,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Cuánto debería durar el efecto de velocidad otorgado por los alimentos?",
 				vi  = "Hiệu ứng Tăng Tốc từ món ăn sẽ kéo dài bao lâu?",
 				kr  = "속도 효과를 얼마나 오래 지속할까요?",
+				ua  = "Як довго має тривати ефект прискорення від їжі?",
 			},
 
 			HOVER_OPTIONS =
@@ -874,6 +944,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Muy corto",
 						vi  = "Cực Ngắn",
 						kr  = "매우 짧음",
+						ua  = "Дуже короткий",
 					},
 
 					HOVER =
@@ -886,6 +957,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 2 minutos.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Phút.",
 						kr  = "속도 효과가 2분 지속됩니다.",
+						ua  = "Ефект прискорення діє 2 хвилини.",
 					},
 				},
 
@@ -901,6 +973,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Corto",
 						vi  = "Ngắn",
 						kr  = "짧음",
+						ua  = "Короткий",
 					},
 
 					HOVER =
@@ -913,6 +986,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará medio día.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong Nửa Ngày.",
 						kr  = "속도 효과가 4분 지속됩니다.",
+						ua  = "Ефект прискорення діє 12 годин.",
 					},
 				},
 
@@ -928,6 +1002,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Predeterminado",
 						vi  = "Mặc Định",
 						kr  = "기본",
+						ua  = "За замовчуванням",
 					},
 
 					HOVER =
@@ -940,6 +1015,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 1 día.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1 Ngày.",
 						kr  = "속도 효과가 하루동안 지속됩니다.",
+						ua  = "Ефект прискорення діє 1 добу.",
 					},
 				},
 
@@ -955,6 +1031,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Promedio",
 						vi  = "Trung Bình",
 						kr  = "약간 길어짐",
+						ua  = "Середній",
 					},
 
 					HOVER =
@@ -967,6 +1044,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 1.5 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 1.5 Ngày.",
 						kr  = "속도 효과가 하루 반동안 지속됩니다.",
+						ua  = "Ефект прискорення діє 1.5 доби.",
 					},
 				},
 
@@ -982,6 +1060,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Largo",
 						vi  = "Dài",
 						kr  = "길어짐",
+						ua  = "Довгий",
 					},
 
 					HOVER =
@@ -994,6 +1073,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 2 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 2 Ngày.",
 						kr  = "속도 효과가 2일동안 지속됩니다.",
+						ua  = "Ефект прискорення діє 2 доби.",
 					},
 				},
 
@@ -1009,6 +1089,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Muy largo",
 						vi  = "Cực Dài",
 						kr  = "매우 길어짐", 
+						ua  = "Дуже довгий", 
 					},
 
 					HOVER =
@@ -1021,6 +1102,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El efecto de velocidad durará 4 días.",
 						vi  = "Hiệu ứng Tăng Tốc sẽ kéo dài trong 4 Ngày.",
 						kr  = "속도 효과가 4일동안 지속됩니다.", 
+						ua  = "Ефект прискорення діє 4 доби.", 
 					},
 				},
 			},
@@ -1038,6 +1120,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Modo del Efecto de Velocidad",
 				vi  = "Chế Độ Hiệu Ứng Tốc Độ",
 				kr  = "속도 효과 모드",
+				ua  = "Режим прискорення швидкості",
 			},
 
 			HOVER =
@@ -1050,6 +1133,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Qué valores debe usar el Efecto de Velocidad?",
 				vi  = "Hiệu Ứng Tốc Độ nên sử dụng các giá trị nào?",
 				kr  = "속도 효과에 어떤 값을 사용할까요?",
+				ua  = "Які значення має використовувати ефект швидкості?",
 			},
 
 			HOVER_OPTIONS =
@@ -1066,6 +1150,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Clásico",
 						vi  = "Cũ",
 						kr  = "레거시",
+						ua  = "Класичні",
 					},
 
 					HOVER =
@@ -1078,6 +1163,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Efecto de Velocidad usará el valor clásico del 80%.",
 						vi  = "Hiệu Ứng Tốc Độ sẽ sử dụng giá trị cũ là 80%.",
 						kr  = "속도 효과가 기존 값인 80%를 사용합니다.",
+						ua  = "Класичні значення у 80% прискорення.",
 					},
 				},
 
@@ -1093,6 +1179,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Predeterminado",
 						vi  = "Mặc Định",
 						kr  = "기본값",
+						ua  = "За замовчуванням",
 					},
 
 					HOVER =
@@ -1105,6 +1192,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Efecto de Velocidad usará el valor predeterminado del 50%.",
 						vi  = "Hiệu Ứng Tốc Độ sẽ sử dụng giá trị mặc định là 50%.",
 						kr  = "속도 효과가 기본값인 50%를 사용합니다.",
+						ua  = "Значення за замовчуванням - 50% ефекту прискорення.",
 					},
 				},
 			},
@@ -1122,6 +1210,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Scrapbook del Mod",
 				vi  = "Sổ Tay Mod",
 				kr  = "모드 스크랩북",
+				ua  = "Альбом модифікації",
 			},
 
 			HOVER =
@@ -1134,6 +1223,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían añadirse los contenidos del mod al Scrapbook?",
 				vi  = "Có nên thêm nội dung của Mod vào Sổ Tay không?",
 				kr  = "모드 컨텐츠를 스크랩북에 추가할까요?",
+				ua  = "Чи варто додати вміст мода до альбому?",
 			},
 
 			HOVER_OPTIONS =
@@ -1148,6 +1238,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Scrapbook predeterminado.",
 					vi  = "Sổ Tay mặc định.",
 					kr  = "원본 스크랩북을 유지합니다.",
+					ua  = "Альбом за замовчуванням.",
 				},
 
 				ENABLED =
@@ -1160,6 +1251,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Los contenidos del mod se añadirán al Scrapbook.",
 					vi  = "Nội dung của Mod sẽ được thêm vào Sổ Tay.",
 					kr  = "모드 컨텐츠를 스크랩북에 추가합니다.",
+					ua  = "Вміст моду буде додаватись до альбому.",
 				},
 			},
 		},
@@ -1176,6 +1268,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Página de Especialidades del Chef",
 				vi  = "Trang Món Đặc Biệt Của Đầu Bếp",
 				kr  = "셰프의 스페셜 요리책 페이지",
+				ua  = "Сторінка спеціальних рецептів від Шефа",
 			},
 
 			HOVER =
@@ -1188,6 +1281,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían las recetas de Warly aparecer en la página \"Especialidades del Chef\" en lugar de en \"Recetas del Mod\" en el libro de cocina?",
 				vi  = "Công thức của Warly có nên xuất hiện ở trang \"Món Đặc Biệt\" thay vì \"Công Thức Mod\" trong Sách Nấu Ăn không?",
 				kr  = "요리책에서 왈리의 레시피를 \"모드 레시피\" 대신 \"셰프의 스페셜 요리\" 탭에 표시할까요?",
+				ua  = "Чи варто перемістити рецепти Уорлі до \"Спеціальних рецептів від Шефа\" замість \"Рецептів модифікацій\" у Книзі рецептів?",
 			},
 
 			HOVER_OPTIONS =
@@ -1202,6 +1296,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Las recetas de Warly aparecerán en la página \"Recetas del Mod\" del libro de cocina.",
 					vi  = "Công thức của Warly không xuất hiện ở trang \"Công Thức Mod\" trong Sách Nấu Ăn.",
 					kr  = "왈리의 레시피를 \"모드 레시피\" 에 표시합니다.",
+					ua  = "Рецепти Уорлі будуть відображені у \"Рецептах модифікацій\" Книги рецептів.",
 				},
 
 				ENABLED =
@@ -1214,6 +1309,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Las recetas de Warly aparecerán en la página \"Especialidades del Chef\" del libro de cocina.",
 					vi  = "Công thức của Warly có xuất hiện ở trang \"Món Đặc Biệt\" trong Sách Nấu Ăn.",
 					kr  = "왈리의 레시피를 \"셰프의 스페셜 요리\"에 표시합니다.",
+					ua  = "Рецепти Уорлі будуть відображені у \"Спеціальних рецептів від Шефа\" у Книзі рецептів.",
 				},
 			},
 		},
@@ -1230,6 +1326,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Especias Complementarias del Chef",
 				vi  = "Gia Vị Đặc Biệt Của Đầu Bếp",
 				kr  = "셰프의 완벽한 향신료",
+				ua  = "Комплементарні спеції від Шефа",
 			},
 
 			HOVER =
@@ -1242,6 +1339,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería Warly poder fabricar y usar una variedad de nuevas Especias de Mods?\nNo se recomienda desactivarlo posteriormente.",
 				vi  = "Warly có thể chế biến và sử dụng thêm các loại Gia Vị mới từ Mod không?\nKhông khuyến khích tắt tính năng này sau khi đã bật.",
 				kr  = "왈리가 새로운 모드 향신료를 만들고 사용하게 할까요?\n활성화 후 다시 비활성화 하는 것은 추천하지 않습니다.",
+				ua  = "Чи повинен Уорлі мати можливість створення нових спецій з моду?\nНе рекомендується відключати після начала гри.",
 			},
 
 			HOVER_OPTIONS =
@@ -1256,6 +1354,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Warly solo podrá fabricar y usar Especias Vanilla.",
 					vi  = "Warly sẽ chỉ có thể chế biến và sử dụng Gia Vị mặc định.",
 					kr  = "왈리가 기존의 향신료만 만들고 사용하게 합니다.",
+					ua  = "Уорлі не матиме можливість створення нових спецій.",
 				},
 
 				ENABLED =
@@ -1268,6 +1367,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Warly podrá fabricar y usar Especias Vanilla y del Mod.",
 					vi  = "Warly có thể chế biến và sử dụng cả Gia Vị mặc định lẫn Gia Vị từ Mod.",
 					kr  = "왈리가 기존의 향신료와 모드 향신료를 사용하게 합니다.",
+					ua  = "Уорлі може робити нові спеції",
 				},
 			},
 		},
@@ -1284,6 +1384,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Recetas del Molino Portátil",
 				vi  = "Công Thức Máy Nghiền Di Động",
 				kr  = "휴대용 제분기 레시피",
+				ua  = "Рецепти для портативного млина",
 			},
 
 			HOVER =
@@ -1296,6 +1397,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería el Molino Portátil de Warly tener las recetas de la Piedra de Molienda?",
 				vi  = "Máy Nghiền Di Động của Warly có nên sở hữu các công thức của Cối Nghiền không?",
 				kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 있게 할까요?",
+				ua  = "Чи має портативний млин Уорлі містити рецепти з Жорна?",
 			},
 
 			HOVER_OPTIONS =
@@ -1310,6 +1412,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Molino Portátil de Warly no tendrá las recetas de la Piedra de Molienda.",
 					vi  = "Máy Nghiền Di Động của Warly không có các công thức của Cối Nghiền.",
 					kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 없습니다.",
+					ua  = "Портативний млин не матиме рецептів з Жорна",
 				},
 
 				ENABLED =
@@ -1322,6 +1425,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Molino Portátil de Warly tendrá las recetas de la Piedra de Molienda.",
 					vi  = "Máy Nghiền Di Động của Warly có toàn bộ công thức của Cối Nghiền.",
 					kr  = "왈리의 휴대용 제분기에서 갈림돌 레시피를 사용할 수 있습니다.",
+					ua  = "У портативного млина Уорлі будуть рецепти з Жорна",
 				},
 			},
 		},
@@ -1338,6 +1442,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Detener la descomposición de alimentos",
 				vi  = "Ngăn Chặn Thực Phẩm Hỏng",
 				kr  = "요리 신선도 유지",
+				ua  = "Затримати швидкість псування їжі",
 			},
 
 			HOVER =
@@ -1350,6 +1455,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería la comida echarse a perder si está dentro de la Olla?",
 				vi  = "Món ăn có bị hỏng khi đang nằm trong Nồi Hầm không?",
 				kr  = "요리솥에 있는 요리를 상하지 않게 할까요?",
+				ua  = "Чи повинна їжа псуватись у казані?",
 			},
 
 			HOVER_OPTIONS =
@@ -1364,6 +1470,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La comida se echará a perder dentro de la Olla, Olla portátil, etc.",
 					vi  = "Món ăn sẽ bị thiu hỏng khi nằm trong Nồi Hầm, Nồi Hầm Di Động, v.v.",
 					kr  = "요리솥에 있어도 요리가 상합니다. 휴대용 요리솥 포함.",
+					ua  = "Їжа псується у казані, портативному казані та інших його версіях.",
 				},
 
 				ENABLED =
@@ -1376,6 +1483,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "La comida no se echará a perder dentro de la Olla, Olla portátil, etc.",
 					vi  = "Món ăn sẽ giữ được độ tươi ngon vĩnh viễn khi nằm trong Nồi Hầm, Nồi Hầm Di Động, v.v.",
 					kr  = "요리솥에 있으면 요리가 상하지 않습니다. 휴대용 요리솥 포함.",
+					ua  = "Відключене псування їжі у казані.",
 				},
 			},
 		},
@@ -1392,6 +1500,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Receta del Cubo de Caca",
 				vi  = "Công Thức Thùng Phân",
 				kr  = "거름통 레시피",
+				ua  = "Рецепт Відр-а-лайна",
 			},
 
 			HOVER =
@@ -1404,6 +1513,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería el Cubo de Caca usar el Cubo en lugar de su receta predeterminada?",
 				vi  = "Thùng Phân có nên yêu cầu sử dụng Xô (Bucket) để chế tạo thay vì công thức mặc định không?",
 				kr  = "거름통을 만들 때 양동이를 사용할까요?",
+				ua  = "Чи має рецепт Відр-о-лайна використовувати пусте відро замість свого стандартного рецепта?",
 			},
 
 			HOVER_OPTIONS =
@@ -1418,6 +1528,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Cubo de Caca no usará el Cubo. (Receta predeterminada).",
 					vi  = "Thùng Phân không cần Xô (Bucket) để chế tạo. (Công thức mặc định).",
 					kr  = "거름통을 만들 때 양동이를 사용하지 않습니다. (기존 레시피)",
+					ua  = "Відр-о-лайна не використовуватиме відро (Рецепт за замовчуванням)",
 				},
 
 				ENABLED =
@@ -1430,6 +1541,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Cubo de Caca usará el Cubo como ingrediente de su receta.",
 					vi  = "Thùng Phân có dùng Xô (Bucket) làm nguyên liệu chế tạo chính.",
 					kr  = "거름통을 만들 때 양동이를 사용합니다.",
+					ua  = "Відр-о-лайна використовуватиме відро як інгредієнт для створення.",
 				},
 			},
 		},
@@ -1446,18 +1558,20 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Extras para Scrapbook del Mod",
 				vi  = "Thông Tin Bổ Sung Sổ Tay Mod",
 				kr  = "추가 모드 도감 정보",
+				ua  = "Додаткова інформація про мод у Альбомі",
 			},
 
 			HOVER =
 			{
-				"Should additional information about Mod Contents be shown in the Scrapbook?\n\Requires Mod Scrapbook to be enabled.",
-				zh  = "是否应在剪贴簿中显示模组内容的附加信息？\n\需要启用 Mod Scrapbook。",
-				zht = "是否應在剪貼簿中顯示模組內容的附加資訊？\n\需要啟用 Mod Scrapbook。",
-				pt  = "Permitir que informações adicionais sobre conteúdos do Mod sejam mostradas no Scrapbook?\n\Requer que o Scrapbook do Mod esteja ativado.",
-				pl  = "Czy w albumie powinny być wyświetlane dodatkowe informacje dotyczące zawartości modyfikacji?\n\Wymagana jest włączona funkcja Mod Scrapbook.",
-				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook?\n\Requiere que Scrapbook del Mod esté habilitado.",
-				vi  = "Có nên hiển thị thêm thông tin chi tiết về các vật phẩm của Mod trong Sổ Tay không?\n\Yêu cầu phải Bật tính năng Sổ Tay Mod trước.",
-				kr  = "도감에 모드 콘텐츠에 대한 추가 정보를 표시할까요?\n모드 도감(Mod Scrapbook) 설정이 활성화되어 있어야 합니다.",
+				"Should additional information about Mod Contents be shown in the Scrapbook? Requires Mod Scrapbook to be enabled.",
+				zh  = "是否应在剪贴簿中显示模组内容的附加信息？需要启用 Mod Scrapbook。",
+				zht = "是否應在剪貼簿中顯示模組內容的附加資訊？需要啟用 Mod Scrapbook。",
+				pt  = "Permitir que informações adicionais sobre conteúdos do Mod sejam mostradas no Scrapbook? Requer que o Scrapbook do Mod esteja ativado.",
+				pl  = "Czy w albumie powinny być wyświetlane dodatkowe informacje dotyczące zawartości modyfikacji? Wymagana jest włączona funkcja Mod Scrapbook.",
+				es  = "¿Debería mostrarse información adicional sobre el contenido del Mod en el Scrapbook? Requiere que Scrapbook del Mod esté habilitado.",
+				vi  = "Có nên hiển thị thêm thông tin chi tiết về các vật phẩm của Mod trong Sổ Tay không? Yêu cầu phải Bật tính năng Sổ Tay Mod trước.",
+				kr  = "도감에 모드 콘텐츠에 대한 추가 정보를 표시할까요? 모드 도감(Mod Scrapbook) 설정이 활성화되어 있어야 합니다.",
+				ua  = "Чи має додаткова інформація з моду з'явитись у Альбомі? Альбом моду має бути увімкненим",
 			},
 
 			HOVER_OPTIONS =
@@ -1472,6 +1586,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Original Scrapbook del Mod sin información adicional.",
 					vi  = "Sổ Tay Mod nguyên bản, không có thông tin bổ sung.",
 					kr  = "원본 스크랩북의 정보만 표시합니다.",
+					ua  = "Оригінальний Альбом моду без додаткової інформації.",
 				},
 
 				ENABLED =
@@ -1484,6 +1599,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Scrapbook del Mod con información adicional.",
 					vi  = "Sổ Tay Mod kèm theo thông tin chi tiết bổ sung.",
 					kr  = "모드 스크랩북의 정보도 표시합니다.",
+					ua  = "Альбом моду з додатковою інформацією.",
 				},
 			},
 		},
@@ -1500,11 +1616,12 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "CC del Archipiélago de la Serenidad",
 				vi  = "Bộ Lọc Màu Quần Đảo Thanh Bình",
 				kr  = "세레니티 군도 CC",
+				ua  = "Кольорові Куби Архіпелагу Спокою",
 			},
 
 			HOVER =
 			{
-				"This option is experimental and it's under testing.\n\Should the Serenity Archipelago have special Colour Cubes?",
+				"This option is experimental and it's under testing.\nShould the Serenity Archipelago have special Colour Cubes?",
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为宁静群岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為寧靜群島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nO Arquipélago da Serenidade deve ter Colour Cubes especiais?",
@@ -1512,6 +1629,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería el Archipiélago de la Serenidad tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nQuần Đảo Thanh Bình có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
 				kr  = "이 옵션은 현재 테스트 중인 실험적 기능입니다.\n세레니티 군도에 전용 화면 색감 필터를 적용할까요?",
+				ua  = "Цей параметр є експериментальним і перебуває на стадії тестування.\n\nЧи повинен архіпелаг Спокою мати особливі кольорові куби (забарвлення атмосфери)?",
 			},
 
 			HOVER_OPTIONS =
@@ -1526,6 +1644,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Colour Cubes predeterminados para el Archipiélago de la Serenidad.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Quần Đảo Thanh Bình.",
 					kr  = "세레니티 군도에 기존 색감 필터를 적용합니다.",
+					ua  = "Кольорові куби за замовчуванням.",
 				},
 
 				MARKER =
@@ -1540,6 +1659,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
 						kr  = "마커 모드",
+						ua  = "Режим маркеру",
 					},
 
 					HOVER =
@@ -1552,6 +1672,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
 						kr  = "마커 모드는 새로 만든 월드나 콘텐츠가 추가된 월드에서만 작동합니다.",
+						ua  = "Режим маркерів працює лише для нових або адаптованих світів.",
 					},
 				},
 
@@ -1567,6 +1688,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Modo Estático",
 						vi  = "Chế Độ Tĩnh",
 						kr  = "스태틱 모드",
+						ua  = "Статичний режим",
 					},
 
 					HOVER =
@@ -1579,6 +1701,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
 						vi  = "Chế độ Tĩnh hoạt động trong mọi trường hợp. Yêu cầu khởi động lại Server.",
 						kr  = "스태틱 모드는 신규 및 콘텐츠 추가 월드 모두에서 작동합니다.\n적용하려면 서버를 재시작해야 합니다.",
+						ua  = "Статичний режим має працювати для обох сценаріїв.\nПотребує рестарта сервера.",
 					},
 				},
 			},
@@ -1596,11 +1719,12 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "CC de la Isla Costera",
 				vi  = "Bộ Lọc Màu Đảo Ven Biển",
 				kr  = "해안 섬 CC",
+				ua  = "Колірний куб Узбережного Острова",
 			},
 
 			HOVER =
 			{
-				"This option is experimental and it's under testing.\n\Should the Seaside Island have special Colour Cubes?",
+				"This option is experimental and it's under testing.\nShould the Seaside Island have special Colour Cubes?",
 				zh  = "此选项为实验性功能，正在测试中。\n是否应为海滨岛启用特殊 色块？",
 				zht = "此選項為實驗性功能，正在測試中。\n是否應為海濱島啟用特殊 色塊？",
 				pt  = "Esta opção é experimental e está em teste.\nA Ilha Beira-mar deve ter Colour Cubes especiais?",
@@ -1608,6 +1732,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Esta opción es experimental y está en pruebas.\n¿Debería la Isla Costera tener Colour Cubes especiales?",
 				vi  = "Đây là tính năng thử nghiệm.\nĐảo Ven Biển có nên sở hữu Bộ lọc màu sắc riêng biệt không?",
 				kr  = "이 옵션은 현재 테스트 중인 실험적 기능입니다.\n해안 섬에 전용 화면 색감 필터를 적용할까요?",
+				ua  = "Цей параметр є експериментальним і перебуває на стадії тестування.\nЧи повинен Узбережний Острів мати свій особливий Колірний куб?",
 			},
 
 			HOVER_OPTIONS =
@@ -1622,6 +1747,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Colour Cubes predeterminados para la Isla Costera.",
 					vi  = "Sử dụng Bộ lọc màu sắc mặc định cho Đảo Ven Biển.",
 					kr  = "해안 섬에 기존 색감 필터를 적용합니다.",
+					ua  = "Колірний куб за замовчуванням.",
 				},
 
 				MARKER =
@@ -1636,6 +1762,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Modo Marcador",
 						vi  = "Chế Độ Đánh Dấu",
 						kr  = "마커 모드",
+						ua  = "Режим маркеру",
 					},
 
 					HOVER =
@@ -1648,6 +1775,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Modo Marcador solo funciona en Mundos Nuevos o Retroadaptados.",
 						vi  = "Chế độ Đánh Dấu chỉ hoạt động với Thế Giới Mới hoặc Thế Giới Đã Cải Tạo.",
 						kr  = "마커 모드는 새로 만든 월드나 콘텐츠가 추가된 월드에서만 작동합니다.",
+						ua  = "Режим маркерів працює лише для нових або адаптованих світів.",
 					},
 				},
 
@@ -1663,6 +1791,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "Modo Estático",
 						vi  = "Chế Độ Tĩnh",
 						kr  = "스태틱 모드",
+						ua  = "Статичний режим",
 					},
 
 					HOVER =
@@ -1675,6 +1804,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 						es  = "El Modo Estático debería funcionar en ambos escenarios. Requiere reiniciar el servidor.",
 						vi  = "Chế độ Tĩnh hoạt động trong mọi trường hợp. Yêu cầu khởi động lại Server.",
 						kr  = "스태틱 모드는 신규 및 콘텐츠 추가 월드 모두에서 작동합니다.\n적용하려면 서버를 재시작해야 합니다.",
+						ua  = "Статичний режим має працювати для обох сценаріїв.\nПотребує рестарта сервера.",
 					},
 				},
 			},
@@ -1692,6 +1822,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Transformaciones de la Luna Llena",
 				vi  = "Biến Đổi Trăng Tròn",
 				kr  = "보름달 변화",
+				ua  = "Перетворення в повний місяць",
 			},
 
 			HOVER =
@@ -1704,6 +1835,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Deberían transformarse algunas cosas durante las noches de luna llena?\nActualmente afecta a: los hongos.",
 				vi  = "Một số vật thể có nên biến đổi vào Đêm Trăng Tròn không?\nHiện tại chỉ ảnh hưởng đến: Nấm.",
 				kr  = "보름달 밤 동안 일부 오브젝트의 변화 여부를 결정합니다.\n현재 적용 대상: 버섯",
+				ua  = "Чи повинні деякі речі змінюватися у Повню?\nНаразі це впливає на: гриби.",
 			},
 
 			HOVER_OPTIONS =
@@ -1718,6 +1850,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Algunas cosas no se transformarán durante las noches de luna llena.",
 					vi  = "Một số vật thể không biến đổi vào Đêm Trăng Tròn.",
 					kr  = "보름달 밤이 되어도 일부 오브젝트가 변화하지 않습니다.",
+					ua  = "Деякі речі не будуть змінюватися під час ночей у Повню.",
 				},
 
 				ENABLED =
@@ -1730,6 +1863,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Algunas cosas se transformarán durante las noches de luna llena.",
 					vi  = "Một số vật thể có biến đổi vào Đêm Trăng Tròn.",
 					kr  = "보름달 밤이 되면 일부 오브젝트가 변화합니다.",
+					ua  = "Деякі речі змінюються під час ночей у Повню.",
 				},
 			},
 		},
@@ -1746,6 +1880,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Retrofit Automático",
 				vi  = "Tự Động Cải Tạo",
 				kr  = "자동 컨텐츠 추가",
+				ua  = "Автоматичне адаптування",
 			},
 
 			HOVER =
@@ -1758,6 +1893,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debe el Servidor comprobar cada vez si el Mundo necesita algún Retrofit durante la inicialización? Esta opción no se desactivará automáticamente después.",
 				vi  = "Server có nên tự động kiểm tra xem thế giới có cần cải tạo mỗi khi khởi động không? Tùy chọn này sẽ không tự động tắt sau đó.",
 				kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사하도록 설정할까요?\n이 옵션은 검사가 끝난 후에도 자동으로 비활성화되지 않습니다.",
+				ua  = "Чи повинен сервер під час ініціалізації перевіряти, чи потребує цей світ адаптації?\nЦя опція не вимикається автоматично після завершення перевірки.",
 			},
 
 			HOVER_OPTIONS =
@@ -1772,6 +1908,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Servidor no comprobará los Retrofits durante la inicialización.",
 					vi  = "Server không tự kiểm tra Cải Tạo khi khởi động.",
 					kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사하지 않습니다.",
+					ua  = "Не перевіряти сервер на адаптацію під час ініціалізації.",
 				},
 
 				ENABLED =
@@ -1784,6 +1921,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "El Servidor comprobará los Retrofits durante la inicialización.",
 					vi  = "Server có tự động kiểm tra Cải Tạo mỗi khi khởi động.",
 					kr  = "서버가 켜질 때 월드에 콘텐츠 추가가 필요한지 검사합니다.",
+					ua  = "Перевірка сервера на адаптацію.",
 				},
 			},
 		},
@@ -1800,6 +1938,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Intercambios Retrofitados",
 				vi  = "Cải Tạo Giao Dịch",
 				kr  = "거래 컨텐츠 추가",
+				ua  = "Адаптація торгівлі",
 			},
 
 			HOVER =
@@ -1812,6 +1951,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿Debería el Rey Cerdo poder intercambiar objetos por objetos del mod?\nEsto también se aplica al Anciano Cerdo en mundos Lights Out.",
 				vi  = "Vua Heo có thể trao đổi vật phẩm lấy vật phẩm từ Mod không?\nĐiều này cũng áp dụng cho Trưởng Lão Heo trong thế giới Lights Out.",
 				kr  = "돼지왕과 거래할 때 모드 전용 아이템을 보상으로 받을 수 있게 할까요?\n이 설정은 라이트 아웃 세계의 장로 돼지에게도 적용됩니다.",
+				ua  = "Чи повинен Король Свиней мати змогу обмінювати речі на предмети з модифікації?\nЦе також стосується Короля Свиней у світах без світла",
 			},
 
 			HOVER_OPTIONS =
@@ -1826,6 +1966,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Ciertos objetos no se pueden intercambiar por objetos del mod.",
 					vi  = "Không thể trao đổi vật phẩm lấy vật phẩm từ Mod.",
 					kr  = "특정 품목은 모드 아이템 교환 거래 대상에서 제외됩니다.",
+					ua  = "Не можна обмінюватись на предмети з моду.",
 				},
 
 				ENABLED =
@@ -1838,6 +1979,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Ciertos objetos se pueden intercambiar por objetos del mod.",
 					vi  = "Có thể trao đổi vật phẩm lấy vật phẩm từ Mod.",
 					kr  = "일부 특정 품목에 한해 모드 아이템 교환 거래가 가능합니다.",
+					ua  = "Деякі речі можна обміняти на предмети з моду.",
 				},
 			},
 		},
@@ -1854,6 +1996,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones del cliente",
 				vi  = "Tùy Chọn Của Khách Hàng",
 				kr  = "클라이언트 옵션",
+				ua  = "Налаштування клієнту",
 			},
 
 			HOVER =
@@ -1866,6 +2009,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Opciones de cliente para todo el mod.",
 				vi  = "Các tùy chọn phía người dùng cho toàn bộ bản mod.",
 				kr  = "전체 모드에 대한 클라이언트 옵션입니다.",
+				ua  = "Налаштування клієнту для усього моду.",
 			},
 		},
 
@@ -1881,6 +2025,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Mostras Valores de las Monedas",
 				vi  = "Hiển Thị Giá Trị Tiền Xu",
 				kr  = "동전 가치 표시",
+				ua  = "Показати значення монет",
 			},
 
 			HOVER =
@@ -1893,6 +2038,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿El Libro de Cocina y el Libro de Fermentación deberían mostrar los valores de las monedas de la receta seleccionada?",
 				vi  = "Sổ Nấu Ăn và Sổ Lên Men có nên hiển thị giá trị đồng xu của công thức đã chọn không?",
 				kr  = "요리책과 발효책에 선택한 레시피의 동전 가치를 표시하시겠습니까?",
+				ua  = "Чи мають Книга рецептів та Книга броварства показувати цінність у коїнах для вибраного рецепта?",
 			},
 
 			HOVER_OPTIONS =
@@ -1907,6 +2053,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Libro de Cocina y Libro de Fermentación predeterminados.",
 					vi  = "Sổ Nấu Ăn và Sổ Lên Men mặc định.",
 					kr  = "기본 요리책과 발효책.",
+					ua  = "Книга рецептів та Книга броварства за замовчуванням.",
 				},
 
 				ENABLED =
@@ -1919,6 +2066,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Ambos libros mostrarán los valores de las monedas de la receta seleccionada.",
 					vi  = "Cả hai cuốn sách sẽ hiển thị giá trị đồng xu của công thức đã chọn.",
 					kr  = "두 책 모두 선택한 레시피의 동전 가치를 표시합니다.",
+					ua  = "Обидві книги будуть показувати цінність рецептів у коїнах.",
 				},
 			},
 		},
@@ -1935,6 +2083,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "Mostrar Botón del sitio web",
 				vi  = "Nút Hiển Thị Trang Web",
 				kr  = "웹사이트 표시 버튼",
+				ua  = "Показувати кнопку Веб-сайту",
 			},
 
 			HOVER =
@@ -1947,6 +2096,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 				es  = "¿El Libro de Cocina y el Libro de Fermentación deberían tener un botón para abrir la receta seleccionada en el sitio web del mod?",
 				vi  = "Sổ Nấu Ăn và Sổ Lên Men có nên có nút mở công thức đã chọn trên trang web của mod không?",
 				kr  = "요리책과 발효책에 선택한 레시피를 모드 웹사이트에서 열 수 있는 버튼을 추가하시겠습니까?",
+				ua  = "Чи мають Книга рецептів та Книга броварства показувати кнопку Веб-сторінки?",
 			},
 
 			HOVER_OPTIONS =
@@ -1961,6 +2111,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Libro de Cocina y Libro de Fermentación predeterminados.",
 					vi  = "Sổ Nấu Ăn và Sổ Lên Men mặc định.",
 					kr  = "기본 요리책과 발효책.",
+					ua  = "Книга рецептів та Книга броварства за замовчуванням.",
 				},
 
 				ENABLED =
@@ -1973,6 +2124,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 					es  = "Ambos libros tendrán el botón para abrir la receta seleccionada.",
 					vi  = "Cả hai cuốn sách sẽ có nút để mở công thức đã chọn.",
 					kr  = "두 책 모두 선택한 레시피를 열 수 있는 버튼이 추가됩니다.",
+					ua  = "Обидві книги будуть мати кнопку рецептів яка веде на Веб-сторінку.",
 				},
 			},
 		},
@@ -1980,7 +2132,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "7.7-B"
+version                      = "7.8-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 
@@ -2063,6 +2215,11 @@ local LANGUAGE_OPTIONS       =
 		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.kr,
 		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.kr,
 		data                 = "kr"
+	},
+	{
+		description          = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.ua,
+		hover                = STRINGS.SETTINGS.LANGUAGE.HOVER_OPTIONS.DESCRIPTION.ua,
+		data                 = "ua"
 	}
 }
 
