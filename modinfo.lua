@@ -43,7 +43,7 @@ This is an intermission update that brings some new content, quality of life imp
 
 Nocturnal birds can now be found during the night and will fly away at dawn. When caged they will sleep during the day and dusk.
 
-󰀌 Mod Version: 7.8-B
+󰀌 Mod Version: 7.9-B
 󰀧 Update: Between Courses
 ]],
 		zh  =
@@ -58,7 +58,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鸟现在可以在夜间找到，并会在黎明时飞走。被关在鸟笼中时，它们会在白天和黄昏时睡觉。
 
-󰀌 Mod 版本： 7.8-B
+󰀌 Mod 版本： 7.9-B
 󰀧 更新内容： 餐间时光
 ]],
 		zht =
@@ -73,7 +73,7 @@ Nocturnal birds can now be found during the night and will fly away at dawn. Whe
 
 夜行鳥現在可以在夜間找到，並會在黎明時飛走。被關在鳥籠中時，牠們會在白天和黃昏時睡覺。
 
-󰀌 Mod 版本： 7.8-B
+󰀌 Mod 版本： 7.9-B
 󰀧 更新內容： 餐間時光
 ]],
 		pt  =
@@ -88,7 +88,7 @@ Esta é uma atualização de intermissão que traz novos conteúdos, melhorias d
 
 Pássaros noturnos agora podem ser encontrados durante a noite e voarão para longe ao amanhecer. Quando estiverem em gaiolas, eles dormirão durante o dia e ao anoitecer.
 
-󰀌 Versão do Mod: 7.8-B
+󰀌 Versão do Mod: 7.9-B
 󰀧 Atualização: Entre os Pratos
 ]],
 		pl  =
@@ -103,7 +103,7 @@ Jest to aktualizacja przejściowa, która wprowadza nową zawartość, usprawnie
 
 Nocne ptaki można teraz spotkać w nocy i odlatują one o świcie. Zamknięte w klatkach będą spać w ciągu dnia oraz o zmierzchu.
 
-󰀌 Wersja Moda: 7.8-B
+󰀌 Wersja Moda: 7.9-B
 󰀧 Aktualizacja: Między Danami
 ]],
 		es  =
@@ -118,7 +118,7 @@ Esta es una actualización de transición que trae nuevo contenido, mejoras de c
 
 Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanecer. Cuando estén enjauladas, dormirán durante el día y al anochecer.
 
-󰀌 Versión del Mod: 7.8-B
+󰀌 Versión del Mod: 7.9-B
 󰀧 Actualización: Entre Platos
 ]],
 		vi  =
@@ -133,7 +133,7 @@ Ahora se pueden encontrar aves nocturnas durante la noche, y volarán al amanece
 
 Các loài chim sống về đêm giờ đây có thể được tìm thấy vào ban đêm và sẽ bay đi khi bình minh. Khi được nhốt trong lồng, chúng sẽ ngủ vào ban ngày và lúc chạng vạng.
 
-󰀌 Phiên bản Mod: 7.8-B
+󰀌 Phiên bản Mod: 7.9-B
 󰀧 Cập nhật: Giữa Các Món Ăn
 ]],
 		kr =
@@ -148,7 +148,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 
 이제 밤에 야행성 새를 만날 수 있으며, 새벽이 되면 날아가 버립니다. 새장에 가두면 낮과 해질녘에 잠을 잡니다.
 
-󰀌 Mod Version: 7.8-B
+󰀌 Mod Version: 7.9-B
 󰀧 Update: 식사 사이
 ]],
 		ua =
@@ -163,7 +163,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 
 Тепер уночі можна зустріти нічних птахів; на світанку вони відлітають. Якщо такого птаха посадити в клітку, він спатиме вдень і в сутінках.
 
-Версія моду: 7.8-B
+Версія моду: 7.9-B
 Оновлення: Між стравами
 ]],
 	},
@@ -2132,7 +2132,7 @@ Các loài chim sống về đêm giờ đây có thể được tìm thấy và
 }
 
 name                         = ChooseTranslationTable(STRINGS.NAME)
-version                      = "7.8-B"
+version                      = "7.9-B"
 
 description                  = ChooseTranslationTable(STRINGS.DESCRIPTION)
 

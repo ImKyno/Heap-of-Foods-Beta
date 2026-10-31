@@ -34,6 +34,120 @@ local function IsMinigameItem(inst)
 	return inst:HasTag("minigameitem")
 end
 
+local function SetPocketRummageMem(inst, item)
+	inst.sg.mem.pocket_rummage_item = item
+end
+
+local function OwnsPocketRummageContainer(inst, item)
+	local owner = item.components.inventoryitem and item.components.inventoryitem:GetGrandOwner() or nil
+
+	if owner == inst then
+		return true
+	end
+
+	local mount = inst.components.rider and inst.components.rider:GetMount() or nil
+
+	if owner == mount or item == mount then
+		return true
+	end
+end
+
+local function IsHoldingPocketRummageActionItem(holder, item)
+	local owner = item.components.inventoryitem and item.components.inventoryitem.owner or nil
+
+	return owner == holder
+	or (owner.components.inventoryitem == nil and owner.entity:GetParent() == holder)
+end
+
+local function ClosePocketRummageMem(inst, item)
+	if item == nil then
+		item = inst.sg.mem.pocket_rummage_item
+	elseif item ~= inst.sg.mem.pocket_rummage_item then
+		return
+	end
+
+	if item then
+		inst.sg.mem.pocket_rummage_item = nil
+
+		if OwnsPocketRummageContainer(inst, item) and item.components.container then
+			item.components.container:Close(inst)
+		end
+	end
+end
+
+local function CheckPocketRummageMem(inst)
+	local item = inst.sg.mem.pocket_rummage_item
+
+	if item then
+		if not (item.components.container and item.components.container:IsOpenedBy(inst)
+		and OwnsPocketRummageContainer(inst, item)) then
+			SetPocketRummageMem(inst, nil)
+		else
+			local stayopen = inst.sg.statemem.keep_pocket_rummage_mem_onexit
+
+			if not stayopen and inst.sg.statemem.is_going_to_action_state then
+				local buffaction = inst:GetBufferedAction()
+
+				if buffaction and (buffaction.action == ACTIONS.BUILD
+				or (buffaction.action == ACTIONS.DROP and buffaction.invobject ~= item)
+				or (buffaction.invobject and IsHoldingPocketRummageActionItem(item, buffaction.invobject))) then
+					stayopen = true
+				end
+			end
+
+			if not stayopen then
+				ClosePocketRummageMem(inst)
+			end
+		end
+	end
+end
+
+local function TryResumePocketRummage(inst)
+	local item = inst.sg.mem.pocket_rummage_item
+
+	if item then
+		if item.components.container and item.components.container:IsOpenedBy(inst) and OwnsPocketRummageContainer(inst, item) then
+			inst.sg.statemem.keep_pocket_rummage_mem_onexit = true
+			inst.sg:GoToState("start_pocket_rummage", item)
+
+			return true
+		end
+
+		inst.sg.mem.pocket_rummage_item = nil
+	end
+
+	return false
+end
+
+local function UpdateActionMeter(inst)
+	inst.player_classified.actionmeter:set_local(math.min(255, math.floor(inst.sg.timeinstate * 10 + 2.5)))
+end
+
+local function StartActionMeter(inst, duration)
+	if inst.HUD ~= nil then
+		inst.HUD:ShowRingMeter(inst:GetPosition(), duration)
+	end
+
+	inst.player_classified.actionmetertime:set(math.min(255, math.floor(duration * 10 + .5)))
+	inst.player_classified.actionmeter:set(2)
+
+	if inst.sg.mem.actionmetertask == nil then
+		inst.sg.mem.actionmetertask = inst:DoPeriodicTask(.1, UpdateActionMeter)
+	end
+end
+
+local function StopActionMeter(inst, flash)
+	if inst.HUD ~= nil then
+		inst.HUD:HideRingMeter(flash)
+	end
+
+	if inst.sg.mem.actionmetertask ~= nil then
+		inst.sg.mem.actionmetertask:Cancel()
+		inst.sg.mem.actionmetertask = nil
+		inst.player_classified.actionmeter:set(flash and 1 or 0)
+	end
+end
+
 local function ClearPendingBrew(inst)
 	local container = inst._brewer_container
 
@@ -154,7 +268,7 @@ AddStategraphState("wilson_client",
 AddStategraphState("wilson",
 	State{
 		name = "pickable_tall",
-		tags = { "doing", "busy", "nodangle" },
+		tags = { "doing", "busy", "nodangle", "keep_pocket_rummage" },
 
 		onenter = function(inst, timeout)
 			if timeout == nil then
@@ -164,6 +278,7 @@ AddStategraphState("wilson",
 			end
 
 			inst.sg:SetTimeout(inst:HasTag("fasthands") and 0.3 or timeout)
+
 			inst.components.locomotor:Stop()
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make")
 
@@ -178,6 +293,11 @@ AddStategraphState("wilson",
 			if inst.bufferedaction ~= nil then
 				inst.sg.statemem.action = inst.bufferedaction
 
+				if inst.bufferedaction.action.actionmeter then
+					inst.sg.statemem.actionmeter = true
+					StartActionMeter(inst, timeout)
+				end
+
 				if inst.bufferedaction.target ~= nil and inst.bufferedaction.target:IsValid() then
 					inst.bufferedaction.target:PushEvent("startlongaction", inst)
 				end
@@ -187,15 +307,18 @@ AddStategraphState("wilson",
 		timeline =
 		{
 			TimeEvent(3 * FRAMES, function(inst)
-				if inst.sg.statemem.delayed then
-					inst.sg:RemoveStateTag("busy")
-				end
+				inst.sg:RemoveStateTag("busy")
 			end),
 		},
 
 		ontimeout = function(inst)
 			inst.SoundEmitter:KillSound("make")
 			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pst" or "build_pst")
+
+			if inst.sg.statemem.actionmeter then
+				inst.sg.statemem.actionmeter = nil
+				StopActionMeter(inst, true)
+			end
 
 			inst.sg:RemoveStateTag("busy")
 			inst:PerformBufferedAction()
@@ -205,7 +328,9 @@ AddStategraphState("wilson",
 		{
 			EventHandler("animqueueover", function(inst)
 				if inst.AnimState:AnimDone() then
-					inst.sg:GoToState("idle")
+					if not TryResumePocketRummage(inst) then
+						inst.sg:GoToState("idle")
+					end
 				end
 			end),
 		},
@@ -213,10 +338,16 @@ AddStategraphState("wilson",
 		onexit = function(inst)
 			inst.SoundEmitter:KillSound("make")
 
-			if inst.bufferedaction == inst.sg.statemem.action
-			and (inst.components.playercontroller == nil or inst.components.playercontroller.lastheldaction ~= inst.bufferedaction) then
+			if inst.sg.statemem.actionmeter then
+				StopActionMeter(inst, false)
+			end
+
+			if inst.bufferedaction == inst.sg.statemem.action and
+			(inst.components.playercontroller == nil or inst.components.playercontroller.lastheldaction ~= inst.bufferedaction) then
 				inst:ClearBufferedAction()
 			end
+
+			CheckPocketRummageMem(inst)
 		end,
 	}
 )
@@ -224,16 +355,18 @@ AddStategraphState("wilson",
 AddStategraphState("wilson_client",
 	State{
 		name = "pickable_tall",
-		tags = { "doing", "busy", "nodangle" },
+		tags = { "doing", "busy" },
+		server_states = { "pickable_tall" },
 
 		onenter = function(inst)
 			inst.components.locomotor:Stop()
+
 			inst.SoundEmitter:PlaySound("dontstarve/wilson/make_trap", "make_preview")
 
 			if inst.bufferedaction ~= nil and inst.bufferedaction.target ~= nil then
 				local rider = inst.replica.rider
-				inst.sg.statemem.dohighaction = (inst.bufferedaction.target:HasTag("high_dolongaction") and (rider == nil or not rider:IsRiding())) or false
-            end
+				inst.sg.statemem.dohighaction = (inst.bufferedaction.target:HasTag("pickable_tall") and (rider == nil or not rider:IsRiding())) or false
+			end
 
 			inst.AnimState:PlayAnimation(inst.sg.statemem.dohighaction and "construct_pre" or "build_pre")
 			inst.AnimState:PushAnimation(inst.sg.statemem.dohighaction and "construct_loop" or "build_loop", true)

@@ -16,6 +16,7 @@ local HOF_FERTILIZERTWEAK  = GetModConfigData("FERTILIZERTWEAK")
 local DefaultAtlas         = "images/inventoryimages.xml"
 local DefaultAtlas1        = "images/inventoryimages1.xml"
 local DefaultAtlas2        = "images/inventoryimages2.xml"
+local DefaultAtlas3        = "images/inventoryimages3.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- Wurt can craft her structures on Tidal Marsh ground.
@@ -494,7 +495,7 @@ AddCharacterRecipe("potatosack2", {Ingredient("cutgrass", 4), Ingredient("papyru
 	{
 		builder_tag         = "strongman",
 		product             = "potatosack",
-		atlas               = DefaultAtlas2,
+		atlas               = DefaultAtlas3,
 		image               = "potato_sack_full.tex",
 	},
 	{"CONTAINERS", "COOKING"}
@@ -816,7 +817,7 @@ if HOF_WARLYMEALGRINDER then
 			nounlock            = true,
 			no_deconstruction   = true,
 			actionstr           = "MEALGRINDER",
-			product             = "kyno_opalpreciouspwoder",
+			product             = "kyno_opalpreciouspowder",
 			builder_tag         = "professionalchef",
 			numtogive           = 3,
 		},
