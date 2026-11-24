@@ -14,10 +14,14 @@ local FishRegistryPopupScreen    = require("screens/fishregistrypopupscreen")
 -- Daily Recipe Card.
 local DailyRecipeCardPopupScreen = require("screens/dailyrecipecardpopupscreen")
 
+-- Contributors Stone.
+local ContributorsPopupScreen    = require("screens/contributorspopupscreen")
+
 -- New Popups.
 AddPopup("BREWBOOK")
 AddPopup("FISHREGISTRY")
 AddPopup("DAILYRECIPECARD")
+AddPopup("CONTRIBUTORS")
 
 _G.POPUPS.BREWBOOK.fn = function(inst, show)
 	if inst.HUD then
@@ -45,6 +49,16 @@ _G.POPUPS.DAILYRECIPECARD.fn = function(inst, show)
 			inst.HUD:CloseDailyRecipeCardScreen()
 		elseif not inst.HUD:OpenDailyRecipeCardScreen() then
 			_G.POPUPS.DAILYRECIPECARD:Close(inst)
+		end
+	end
+end
+
+_G.POPUPS.CONTRIBUTORS.fn = function(inst, show)
+	if inst.HUD then
+		if not show then
+			inst.HUD:CloseContributorsScreen()
+		elseif not inst.HUD:OpenContributorsScreen() then
+			_G.POPUPS.CONTRIBUTORS:Close(inst)
 		end
 	end
 end
@@ -103,6 +117,25 @@ AddClassPostConstruct("screens/playerhud", function(playerhud)
 		self:CloseDailyRecipeCardScreen()
 		self.dailyrecipecardscreen = DailyRecipeCardPopupScreen(self.owner)
 		self:OpenScreenUnderPause(self.dailyrecipecardscreen)
+
+		return true
+	end
+
+	-- Contributors Statue.
+	playerhud.CloseContributorsScreen = function(self)
+		if self.contributorsscreen then
+			if self.contributorsscreen.inst:IsValid() then
+				_G.TheFrontEnd:PopScreen(self.contributorsscreen)
+			end
+
+			self.contributorsscreen = nil
+		end
+	end
+
+	playerhud.OpenContributorsScreen = function(self)
+		self:CloseContributorsScreen()
+		self.contributorsscreen = ContributorsPopupScreen(self.owner)
+		self:OpenScreenUnderPause(self.contributorsscreen)
 
 		return true
 	end

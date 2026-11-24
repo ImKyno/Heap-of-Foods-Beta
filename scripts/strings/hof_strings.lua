@@ -911,6 +911,36 @@ STRINGS.FISHREGISTRY =
 	BABY_TIME_MORE_DAY = "More than 6 days",
 }
 
+STRINGS.CONTRIBUTORS =
+{
+	TITLE = "Contributors",
+	DESCRIPTION1 = "This page celebrates all the extraordinary people who have contributed to this project.",
+	DESCRIPTION2 = "Learn more about being a Contributor",
+
+	BADGES =
+	{
+		TITLE = "Badges",
+
+		ARTIST = "Artist",
+		BETATESTER = "Beta Tester",
+		CHATTER = "Sous-Chef",
+		CONTENTCREATOR = "Content Creator",
+		DEVELOPER = "Developer",
+		DONATOR = "Donator",
+		GUIDECREATOR = "Guide Creator",
+		LOC_KR = "Translator - 한국어",
+		LOC_PT = "Translator - Português",
+		LOC_PL = "Translator - Polski",
+		LOC_UA = "Translator - Українська",
+		LOC_VI = "Translator - Tiếng Việt",
+		LOC_ZH = "Translator - 简体中文",
+		SECRET = "The Fact Finder",
+		WIKIWRITER = "Wiki Writer",
+	},
+
+	FAVORITEFOODS = "Favorite Foods",
+}
+
 STRINGS.FISHERMERM_TALK_RUNAWAY = "Florpy glorp glop!"
 STRINGS.FISHERMERM_TALK_PANIC = "GLOP GLOP GLOP!"
 STRINGS.FISHERMERM_TALK_GO_HOME = "Wort wort flort."

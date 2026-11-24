@@ -19,6 +19,12 @@ Assets =
 	Asset("ANIM", "anim/kyno_wx78_status.zip"),
 	Asset("ANIM", "anim/kyno_wx78_status_chest.zip"),
 
+	Asset("IMAGE", "images/hof_contributors.tex"),
+	Asset("ATLAS", "images/hof_contributors.xml"),
+
+	Asset("IMAGE", "images/hof_contributors_icons.tex"),
+	Asset("ATLAS", "images/hof_contributors_icons.xml"),
+
 	Asset("IMAGE", "images/hof_dailyrecipecard.tex"),
 	Asset("ATLAS", "images/hof_dailyrecipecard.xml"),
 

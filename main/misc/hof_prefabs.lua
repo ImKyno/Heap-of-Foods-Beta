@@ -28,6 +28,7 @@ PrefabFiles =
 	"k_chilled_shard",
 	"k_coffeebeans",
 	"k_construction_plans",
+	"k_contributorsstatue",
 	"k_cook_robot",
 	"k_cookware_fire",
 	"k_cookware_grill",

@@ -1,16 +1,17 @@
-local Widget = require("widgets/widget")
-local Image = require("widgets/image")
+local Widget      = require("widgets/widget")
+local Image       = require("widgets/image")
 local ImageButton = require("widgets/imagebutton")
-local TextButton = require("widgets/textbutton")
-local UIAnim = require("widgets/uianim")
-local Text = require("widgets/text")
-local Grid = require("widgets/grid")
-local Spinner = require("widgets/spinner")
-local TEMPLATES = require("widgets/redux/templates")
-local brewing = require("hof_brewing")
-local cooking = require("cooking")
+local TextButton  = require("widgets/textbutton")
+local UIAnim      = require("widgets/uianim")
+local Text        = require("widgets/text")
+local Grid        = require("widgets/grid")
+local Spinner     = require("widgets/spinner")
+local TEMPLATES   = require("widgets/redux/templates")
+local brewing     = require("hof_brewing")
+local cooking     = require("cooking")
 
 require("util")
+
 local FILTER_ALL = "ALL"
 
 local function MakeDetailsLine(details_root, x, y, scale, image_override)

@@ -1,25 +1,25 @@
-local Image = require("widgets/image")
+local Image       = require("widgets/image")
 local ImageButton = require("widgets/imagebutton")
-local Widget = require("widgets/widget")
-local Text = require("widgets/text")
-local Grid = require("widgets/grid")
-local Spinner = require("widgets/spinner")
-local TEMPLATES = require("widgets/redux/templates")
-local Page = require("widgets/redux/brewbookpage")
-local brewing = require("hof_brewing")
-local cooking = require("cooking")
+local Widget      = require("widgets/widget")
+local Text        = require("widgets/text")
+local Grid        = require("widgets/grid")
+local Spinner     = require("widgets/spinner")
+local TEMPLATES   = require("widgets/redux/templates")
+local Page        = require("widgets/redux/brewbookpage")
+local brewing     = require("hof_brewing")
+local cooking     = require("cooking")
 
 require("util")
 
 local BrewbookWidget = Class(Widget, function(self, parent)
-    Widget._ctor(self, "BrewbookWidget")
+	Widget._ctor(self, "BrewbookWidget")
 
-    self.root = self:AddChild(Widget("root"))
+	self.root = self:AddChild(Widget("root"))
 
 	local tab_root = self.root:AddChild(Widget("tab_root"))
 
 	local backdrop = self.root:AddChild(Image("images/quagmire_recipebook.xml", "quagmire_recipe_menu_bg.tex"))
-    backdrop:ScaleToSize(900, 550)
+	backdrop:ScaleToSize(900, 550)
 
 	if not TheCookbook:ApplyOnlineProfileData() then
 		local msg = not TheInventory:HasSupportForOfflineSkins() and (TheFrontEnd ~= nil and TheFrontEnd:GetIsOfflineMode() or not TheNet:IsOnlineMode()) and STRINGS.UI.COOKBOOK.ONLINE_DATA_USER_OFFLINE or STRINGS.UI.COOKBOOK.ONLINE_DATA_DOWNLOAD_FAILED
@@ -53,8 +53,8 @@ local BrewbookWidget = Class(Widget, function(self, parent)
 		tab.text:SetPosition(0, -2)
 		tab.clickoffset = Vector3(0,5,0)
 		tab:SetOnClick(function()
-	        self.last_selected:Unselect()
-	        self.last_selected = tab
+			self.last_selected:Unselect()
+			self.last_selected = tab
 			tab:Select()
 			tab:MoveToFront()
 			if self.panel ~= nil then
@@ -63,7 +63,7 @@ local BrewbookWidget = Class(Widget, function(self, parent)
 			self.panel = self.root:AddChild(data.build_panel_fn())
 			self.focus_forward = self.panel.parent_default_focus
 
-		    if TheInput:ControllerAttached() then
+			if TheInput:ControllerAttached() then
 				self.panel.parent_default_focus:SetFocus()
 			end
 
@@ -119,18 +119,18 @@ function BrewbookWidget:OnControlTabs(control, down)
 end
 
 function BrewbookWidget:OnControl(control, down)
-    if BrewbookWidget._base.OnControl(self, control, down) then return true end
+	if BrewbookWidget._base.OnControl(self, control, down) then return true end
 
 	return self:OnControlTabs(control, down)
 end
 
 function BrewbookWidget:GetHelpText()
-    local controller_id = TheInput:GetControllerID()
-    local t = {}
+	local controller_id = TheInput:GetControllerID()
+	local t = {}
 
-    table.insert(t, TheInput:GetLocalizedControl(controller_id, CONTROL_OPEN_CRAFTING).."/"..TheInput:GetLocalizedControl(controller_id, CONTROL_OPEN_INVENTORY).. " " .. STRINGS.UI.HELP.CHANGE_TAB)
+	table.insert(t, TheInput:GetLocalizedControl(controller_id, CONTROL_OPEN_CRAFTING).."/"..TheInput:GetLocalizedControl(controller_id, CONTROL_OPEN_INVENTORY).. " " .. STRINGS.UI.HELP.CHANGE_TAB)
 
-    return table.concat(t, "  ")
+	return table.concat(t, "  ")
 end
 
 return BrewbookWidget
