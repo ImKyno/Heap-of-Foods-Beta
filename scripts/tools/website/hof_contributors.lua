@@ -11,11 +11,17 @@ local contributors =
 			prefab = "wormwood",
 			base_skin = "wormwood_pumpkin",
 
+			skinmode =
+			{
+				type = "stage_4",
+				play_emotes = true,
+			},
+
 			clothing =
 			{
-				body = "wormwood_pumpkin",
-				hand = "wormwood_pumpkin",
-				legs = "wormwood_pumpkin",
+				body = "body_wormwood_pumpkin",
+				hand = "hand_wormwood_pumpkin",
+				legs = "legs_wormwood_pumpkin",
 				feet = nil,
 			},
 
@@ -33,6 +39,35 @@ local contributors =
 		name = "alisonetc",
 		icon = "contributor_alisonetc.tex",
 		badges = { "donator" },
+		favoritefoods = { "coffee", "icedtea", "bubbletea", "sweetpotatosouffle", "chickenwings" },
+		puppet = 
+		{
+			prefab = "wolfgang",
+			base_skin = "wolfgang_western",
+
+			skinmode =
+			{
+				type = "mighty_skin",
+				play_emotes = true,
+			},
+
+			clothing =
+			{
+				body = "body_wolfgang_western",
+				hand = nil,
+				legs = "legs_wolfgang_western",
+				feet = nil,
+			},
+
+			emotes = 
+			{
+				"emote_flex",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_hambatnautical",
+		},
 	},
 	{
 		name = "Bombobbit",
@@ -62,7 +97,8 @@ local contributors =
 	{
 		name = "Eventide",
 		icon = "contributor_eventide.tex",
-		badges = { "donator", "betatester", "chatter", "wikiwriter", "loc_pt" },
+		badges = { "donator", "betatester", "wikiwriter", "loc_pt" },
+		specialbadges = { "chatter", "secret" },
 		favoritefoods = { "jawsbreaker", "gorge_bacon_wrapped", "onigiris", "sugarbombs", "nukacola_quantum" },
 		puppet = 
 		{
@@ -79,7 +115,6 @@ local contributors =
 
 			emotes = 
 			{
-				"idle_wathgrithr",
 				"research",
 				"emoteXL_kiss",
 			},
@@ -134,9 +169,9 @@ local contributors =
 
 			emotes = 
 			{
-				"idle_wurt",
 				"emote_loop_carol",
 				"emoteXL_waving2",
+				"emoteXL_waving3",
 			},
 
 			emote_interval = { 15, 30 },
@@ -164,7 +199,6 @@ local contributors =
 
 			emotes = 
 			{
-				"idle_woodie",
 				"emote_sleepy",
 			},
 
@@ -188,6 +222,29 @@ local contributors =
 		icon = "contributor_malthy.tex",
 		badges = { "donator" },
 		favoritefoods = { "coffee", "beer", "paleale", "mandrakebeer", "piraterum" },
+		puppet = 
+		{
+			prefab = "woodie",
+			base_skin = "woodie_hippie",
+
+			clothing =
+			{
+				body = "body_woodie_hippie",
+				hand = "hand_woodie_hippie",
+				legs = "legs_woodie_hippie",
+				feet = "feet_woodie_hippie",
+			},
+
+			emotes =
+			{
+				"emoteXL_sad",
+				"emoteXL_annoyed",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_flames",
+		},
 	},
 	{
 		name = "Milanjorim7",
@@ -225,7 +282,6 @@ local contributors =
 
 			emotes = 
 			{
-				"idle_willow",
 				"research",
 				"emoteXL_waving3",
 			},
@@ -249,12 +305,61 @@ local contributors =
 		name = "Raccoon",
 		icon = "contributor_raccoon.tex",
 		badges = { "donator" },
+		favoritefoods = { "gorge_steak_frites", "chickenburger", "completebreakfast", "gorge_carrot_cake", "icedtea" },
+		puppet = 
+		{
+			prefab = "warly",
+			base_skin = "warly_chef",
+
+			clothing =
+			{
+				body = "body_warly_victorian",
+				hand = nil,
+				legs = "legs_warly_victorian",
+				feet = "feet_warly_victorian",
+			},
+
+			emotes = 
+			{
+				"emoteXL_waving1",
+				"emoteXL_happycheer",
+				"emoteXL_annoyed",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_fishboxnautical",
+		},
 	},
 	{
 		name = "Rodra",
 		icon = "contributor_rodra.tex",
 		badges = { "donator" },
 		favoritefoods = { "gorge_cheeseburger", "brownie", "berrysundae", "brigadeiro", "gorge_meat_skewers" },
+		puppet = 
+		{
+			prefab = "wagstaff",
+			base_skin = "wagstaff",
+
+			clothing =
+			{
+				body = nil,
+				hand = nil,
+				legs = nil,
+				feet = nil,
+			},
+
+			emotes = 
+			{
+				"emote_impatient",
+				"emoteXL_facepalm",
+				"emoteXL_waving2",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_factory",
+		},
 	},
 	{
 		name = "Saikuno",

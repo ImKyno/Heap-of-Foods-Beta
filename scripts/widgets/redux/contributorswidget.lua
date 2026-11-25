@@ -1,8 +1,9 @@
-
+local Button               = require("widgets/button")
 local Image                = require("widgets/image")
 local ImageButton          = require("widgets/imagebutton")
 local Widget               = require("widgets/widget")
 local Text                 = require("widgets/text")
+local TextButton           = require("widgets/textbutton")
 local Puppet               = require("widgets/skinspuppet")
 local PlayerAvatarPortrait = require("widgets/redux/playeravatarportrait")
 local TEMPLATES            = require("widgets/redux/templates")
@@ -51,18 +52,51 @@ end)
 function ContributorsWidget:BuildBackground()
 	self.background_root = self.root:AddChild(Widget("background_root"))
 
-	AddImage(self.background_root, "background",      0,  30, nil, 1.20, 1.20)
-	AddImage(self.background_root, "line_break",   -190, 215, nil, 0.70, 0.70)
+	AddImage(self.background_root, "background", 0, 30, nil, 1.20, 1.20)
+	AddImage(self.background_root, "line_break", -190, 260, nil, 0.70, 0.70)
 
 	local title = self.background_root:AddChild(Text(HEADERFONT, 40, STRINGS.CONTRIBUTORS.TITLE, UICOLOURS.BLACK))
 
-	title:SetPosition(-190, 240)
+	title:SetPosition(-190, 285)
 	title:SetScale(1.10, 1.10)
 
-	local description = self.background_root:AddChild(Text(HEADERFONT, 40, STRINGS.CONTRIBUTORS.DESCRIPTION, UICOLOURS.BLACK))
+	local description1 = self.background_root:AddChild(Text(HEADERFONT, 20, STRINGS.CONTRIBUTORS.DESCRIPTION1, UICOLOURS.BLACK))
 
-	description:SetPosition(0, 240)
-	description:SetScale(1.10, 1.10)
+	description1:SetPosition(-190, 225)
+	description1:SetRegionSize(430, 45)
+	description1:SetHAlign(ANCHOR_MIDDLE)
+	description1:SetVAlign(ANCHOR_MIDDLE)
+
+	local description2 = self.background_root:AddChild(TextButton("images/ui.xml", "blank.tex", "blank.tex", "blank.tex", "blank.tex"))
+
+	description2:SetPosition(-190, -232) -- 182
+	description2:SetScale(1, 1)
+	description2:SetFont(HEADERFONT)
+	description2:SetText(STRINGS.CONTRIBUTORS.DESCRIPTION2)
+	description2:SetTextColour(UICOLOURS.BLACK)
+	description2:SetTextFocusColour(UICOLOURS.BLACK)
+	description2:SetTextSize(20)
+
+	local function UpdateButtonSize()
+		local width, height = description2.text:GetRegionSize()
+		description2.image:SetSize(width * 0.98, height)
+	end
+
+	UpdateButtonSize()
+
+	description2:SetOnGainFocus(function()
+		description2.text:SetSize(21)
+		UpdateButtonSize()
+	end)
+
+	description2:SetOnLoseFocus(function()
+		description2.text:SetSize(20)
+		UpdateButtonSize()
+	end)
+
+	description2:SetOnClick(function()
+		VisitURL("https://heap-of-foods.com/contributors", false)
+	end)
 
 	self.details_background = self.background_root:AddChild(Image(BG_ATLAS, "background_card.tex"))
 	self.details_background:SetPosition(240, 30)
@@ -189,9 +223,10 @@ function ContributorsWidget:PopulateContributorDetails(data)
 	self.details_decor_root:KillAllChildren()
 	self.details_root:KillAllChildren()
 
-	AddImage(self.details_decor_root, "line_break",       0,  215, nil, 0.80, 0.80)
-	AddImage(self.details_decor_root, "line_short",       0,  -90, nil, 0.80, 0.80)
-	AddImage(self.details_decor_root, "line_short",       0, -170, nil, 0.80, 0.80)
+	AddImage(self.details_decor_root, "line_break", 0,  215, nil, 0.80, 0.80)
+	AddImage(self.details_decor_root, "line_short", 0,  -25, nil, 0.80, 0.80)
+	AddImage(self.details_decor_root, "line_short", 0, -100, nil, 0.80, 0.80)
+	AddImage(self.details_decor_root, "line_short", 0, -170, nil, 0.80, 0.80)
 
 	local name = self.details_root:AddChild(Text(HEADERFONT, 40, data.name, UICOLOURS.BLACK))
 
@@ -200,6 +235,7 @@ function ContributorsWidget:PopulateContributorDetails(data)
 
 	self:BuildContributorPortrait(data)
 	self:BuildContributorBadges(data)
+	self:BuildContributorSpecialBadges(data)
 	self:BuildFavoriteFoods(data)
 end
 
@@ -209,18 +245,19 @@ function ContributorsWidget:BuildContributorPortrait(data)
 	self.puppet_root = self.details_root:AddChild(Widget("puppet_root"))
 
 	self.portrait = self.puppet_root:AddChild(PlayerAvatarPortrait())
-	self.portrait:SetScale(1.15, 1.15)
-	self.portrait:SetPosition(0, 65)
+	self.portrait:SetScale(0.90, 0.90)
+	self.portrait:SetPosition(0, 95)
 
 	self.portrait:HideHoverText()
 	self.portrait:AlwaysHideRankBadge()
 
-	self.portrait:SetSkins(config.prefab or "wilson", config.base_skin or (config.prefab or "wilson").."_none",
-	config.clothing or { body = nil, hand = nil, legs = nil, feet = nil })
+	self.portrait:SetCustomSkins(config.prefab or "wilson", config.base_skin or (config.prefab or "wilson").."_none",
+	config.clothing or { body = nil, hand = nil, legs = nil, feet = nil }, true, config.skinmode, config.monkey_curse)
 
-	self.portrait.puppet.enable_idle_emotes = false
-	self.portrait.puppet.play_non_idle_emotes = false
-	self.portrait.puppet.add_change_emote_for_idle = false
+	if config.prefab == "wagstaff" then
+		self.portrait.puppet.animstate:OverrideSymbol("face", "wagstaff_face_swap", "face")
+		self.portrait.puppet.animstate:OverrideSymbol("swap_hat", "hat_gogglesnormal", "swap_hat")
+	end
 
 	if config.portrait ~= nil then
 		self.portrait:SetBackground(config.portrait)
@@ -249,14 +286,12 @@ function ContributorsWidget:BuildContributorBadges(data)
 	end
 
 	local badge_root = self.details_root:AddChild(Widget("badge_root"))
-	badge_root:SetScale(0.80, 0.80)
+	badge_root:SetScale(0.70, 0.70)
 
 	local badge_name = self.details_root:AddChild(Text(HEADERFONT, 20, STRINGS.CONTRIBUTORS.BADGES.TITLE, UICOLOURS.BLACK))
+	badge_name:SetPosition(0, -12)
 
-	badge_name:SetPosition(0, -76)
-	badge_name:SetScale(1.10, 1.10)
-
-	local spacing = 60
+	local spacing = 55
 	local count = #data.badges
 	local start_x = -((count - 1) * spacing) / 2
 
@@ -270,8 +305,42 @@ function ContributorsWidget:BuildContributorBadges(data)
 		if texture ~= nil then
 			local image = badge_root:AddChild(Image(atlas, texture:match("%.tex$") and texture or texture..".tex"))
 
-			image:SetPosition(start_x + (i - 1) * spacing, -150)
-			image:SetScale(0.50, 0.50)
+			image:SetPosition(start_x + (i - 1) * spacing, -70)
+			image:SetScale(0.45, 0.45)
+
+			local hover = STRINGS.CONTRIBUTORS.BADGES[string.upper(name)] or name
+			image:SetHoverText(hover)
+		end
+	end
+end
+
+function ContributorsWidget:BuildContributorSpecialBadges(data)
+	if data.specialbadges == nil then
+		return
+	end
+
+	local badge_root = self.details_root:AddChild(Widget("special_badge_root"))
+	badge_root:SetScale(0.70, 0.70)
+
+	local badge_name = self.details_root:AddChild(Text(HEADERFONT, 20, STRINGS.CONTRIBUTORS.BADGES.TITLE_SPECIAL, UICOLOURS.BLACK))
+	badge_name:SetPosition(0, -87)
+
+	local spacing = 55
+	local count = #data.specialbadges
+	local start_x = -((count - 1) * spacing) / 2
+
+	for i, badge in ipairs(data.specialbadges) do
+		local atlas = type(badge) == "table" and badge.atlas or BG_ATLAS
+		local name = type(badge) == "table" and badge.name or badge
+
+		local is_translator = name:match("^loc_") ~= nil
+		local texture = type(badge) == "table" and badge.texture or (is_translator and "badge_translator" or "badge_"..name)
+
+		if texture ~= nil then
+			local image = badge_root:AddChild(Image(atlas, texture:match("%.tex$") and texture or texture..".tex"))
+
+			image:SetPosition(start_x + (i - 1) * spacing, -177)
+			image:SetScale(0.45, 0.45)
 
 			local hover = STRINGS.CONTRIBUTORS.BADGES[string.upper(name)] or name
 			image:SetHoverText(hover)
@@ -325,15 +394,18 @@ function ContributorsWidget:OnUpdate(dt)
 		return
 	end
 
+	local puppet = self.portrait.puppet
+
 	self.portrait:EmoteUpdate(dt)
 
 	if self.puppet_emote_timer ~= nil then
 		self.puppet_emote_timer = self.puppet_emote_timer - dt
 
 		if self.puppet_emote_timer <= 0 then
-			local emote = self.puppet_emotes[math.random(#self.puppet_emotes)]
-
-			self.portrait.puppet:DoEmote(emote, false, true)
+			if puppet.animstate:IsCurrentAnimation("idle_loop") then
+				local emote = self.puppet_emotes[math.random(#self.puppet_emotes)]
+				puppet:DoEmote(emote, false, true)
+			end
 
 			self.puppet_emote_timer = math.random(self.puppet_emote_interval[1], self.puppet_emote_interval[2])
 		end

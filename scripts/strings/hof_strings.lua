@@ -914,12 +914,13 @@ STRINGS.FISHREGISTRY =
 STRINGS.CONTRIBUTORS =
 {
 	TITLE = "Contributors",
-	DESCRIPTION1 = "This page celebrates all the extraordinary people who have contributed to this project.",
+	DESCRIPTION1 = "This page celebrates all the extraordinary people\nwho have contributed to this project.",
 	DESCRIPTION2 = "Learn more about being a Contributor",
 
 	BADGES =
 	{
 		TITLE = "Badges",
+		TITLE_SPECIAL = "Special Badges",
 
 		ARTIST = "Artist",
 		BETATESTER = "Beta Tester",

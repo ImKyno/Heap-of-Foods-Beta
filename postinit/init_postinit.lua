@@ -208,6 +208,7 @@ local INIT_POSTINIT_WIDGETS =
 	"craftingmenu_ingredients",
 	"invslot",
 	"itemtile",
+	"playeravatarportrait",
 	"upgrademoduledisplay",
 }
 
