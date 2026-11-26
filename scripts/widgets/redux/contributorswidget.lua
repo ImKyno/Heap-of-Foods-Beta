@@ -33,11 +33,14 @@ local function AddImage(parent, texture, x, y, atlas, scale_x, scale_y)
 	return image
 end
 
-local ContributorsWidget = Class(Widget, function(self, parent)
+local ContributorsWidget = Class(Widget, function(self, owner, target)
 	Widget._ctor(self, "ContributorsWidget")
 
 	self.root = self:AddChild(Widget("root"))
 	self.root:SetScale(1, 1)
+
+	self.owner = owner
+	self.target = target
 
 	self.selected_contributor = nil
 
@@ -363,8 +366,8 @@ function ContributorsWidget:PopulateContributorDetails(data)
 
 	local name = self.details_root:AddChild(Text(HEADERFONT, 40, data.name, UICOLOURS.BLACK))
 
-	name:SetPosition(0, 240)
-	name:SetScale(1.10, 1.10)
+	name:SetPosition(0, 245)
+	name:SetScale(1.05, 1.05)
 
 	self:BuildContributorPortrait(data)
 	self:BuildContributorBadges(data)
@@ -401,7 +404,7 @@ function ContributorsWidget:BuildContributorPortrait(data)
 	end
 
 	self.puppet_emotes = config.emotes or {}
-	self.puppet_emote_interval = config.emote_interval or { 15, 30 }
+	self.puppet_emote_interval = config.emote_interval or { 12, 24 }
 
 	if #self.puppet_emotes > 0 then
 		local emote = self.puppet_emotes[math.random(#self.puppet_emotes)]

@@ -4,9 +4,11 @@ local ImageButton        = require("widgets/imagebutton")
 local TEMPLATES          = require("widgets/redux/templates")
 local ContributorsWidget = require("widgets/redux/contributorswidget")
 
-local ContributorsPopupScreen = Class(Screen, function(self, owner)
-	self.owner = owner
+local ContributorsPopupScreen = Class(Screen, function(self, owner, target)
 	Screen._ctor(self, "ContributorsPopupScreen")
+
+	self.owner = owner
+	self.target = target
 
 	local black = self:AddChild(ImageButton("images/global.xml", "square.tex"))
 	black.image:SetVRegPoint(ANCHOR_MIDDLE)
@@ -24,7 +26,7 @@ local ContributorsPopupScreen = Class(Screen, function(self, owner)
 	root:SetVAnchor(ANCHOR_MIDDLE)
 	root:SetPosition(0, -25)
 
-	self.contributors = root:AddChild(ContributorsWidget(owner))
+	self.contributors = root:AddChild(ContributorsWidget(owner, self, target))
 	self.default_focus = self.contributors.parent_default_focus or self.contributors
 
 	SetAutopaused(true)

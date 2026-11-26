@@ -66,29 +66,10 @@ local function MakeHat(data)
 		end
 	end
 
-	local function OnEquipVanity(inst, owner, from_ground)
-		if owner ~= nil then
-			owner.tagvar_anniversary_cheermaker = false
-
-			if owner.components.luckuser ~= nil then
-				owner.components.luckuser:RemoveLuckSource(inst)
-			end
-		end
-	end
-
-	local function OnUnequipVanity(inst, owner)
-		if owner ~= nil then
-			if inst.components.equippable ~= nil then
-				inst.components.equippable:Unequip(owner)
-			end
-
-			if inst.components.equippable:IsEquipped() then
-				owner.tagvar_anniversary_cheermaker = true
-
-				if owner.components.luckuser ~= nil then
-					owner.components.luckuser:SetLuckSource(TUNING.KYNO_LUCK_MED, inst)
-				end
-			end
+	local function OnLoad(inst, data)
+		if inst.components.legacyentity ~= nil then
+			inst.components.legacyentity.loaded = true
+			inst.components.legacyentity.islegacy = true
 		end
 	end
 
@@ -126,13 +107,16 @@ local function MakeHat(data)
 			return inst
 		end
 
-		inst.onequipvanity = OnEquipVanity
-		inst.onunequipvanity = OnUnequipVanity
-
 		inst:AddComponent("tradable")
 		inst:AddComponent("snowmandecor")
 		inst:AddComponent("inventoryitem")
 		inst:AddComponent("inspectable")
+
+		if data.legacy then
+			inst:AddComponent("legacyentity")
+
+			inst.OnLoad = OnLoad
+		end
 
 		inst:AddComponent("waterproofer")
 		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
@@ -172,17 +156,18 @@ local hats =
 		nameoverride = false,
 	},
 
-	-- We started doing the event on the 5th Anniversary, so its like the first.
-	-- 5th Anniversary (Hat 1)
+	-- We started doing the event on the 5th Anniversary, so this is the first hat.
+	-- 5th Anniversary (Paragon)
 	{
 		name         = "kyno_hofbirthday_5hat",
 		bank         = "hofbirthday_5hat",
 		build        = "hat_hofbirthday_5",
 		imagename    = "kyno_hofbirthday_5hat",
 		nameoverride = true,
+		legacy       = true,
 	},
 
-	-- 6th Anniversary (Hat 2)
+	-- 6th Anniversary (Amethyst)
 	{
 		name         = "kyno_hofbirthday_6hat",
 		bank         = "hofbirthday_6hat",

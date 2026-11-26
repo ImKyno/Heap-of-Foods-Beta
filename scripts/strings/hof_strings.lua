@@ -918,7 +918,7 @@ STRINGS.CONTRIBUTORS =
 	HYPERLINK = "Learn more about being a Contributor!",
 	SEARCH = "Search Contributor",
 	NO_RESULTS = "No Contributor with this name was found.",
-	GLOSSARY = "Badges Glossary",
+	GLOSSARY = "Badge Glossary",
 
 	BADGES =
 	{
@@ -2391,6 +2391,9 @@ STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "Anniversary Popcorn"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "Anniversary Hat"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "Wear it and start the party!"
+
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "Anniversary Hat - Paragon"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_6HAT = "Anniversary Hat - Amethyst"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy's Anniversary Hat"
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_PARTITIOHAT = "Partitio's Anniversary Hat"

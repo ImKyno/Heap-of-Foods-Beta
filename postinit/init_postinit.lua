@@ -3,6 +3,7 @@ local _G = GLOBAL
 local INIT_POSTINIT_MISC =
 {
 	"sim",
+	"mainfunctions",
 	"modcompatibility",
 	"entityscript",
 	"preparedfoods",
@@ -25,6 +26,7 @@ local INIT_POSTINIT_COMPONENTS =
 {
 	"ambientsound",
 	"birdspawner",
+	"builder",
 	"burnable",
 	"combat",
 	"container",

@@ -29,10 +29,13 @@ local function AddImage(parent, texture, x, y, atlas, scale_x, scale_y)
 	return image
 end
 
-local ContributorsGlossaryWidget = Class(Widget, function(self)
+local ContributorsGlossaryWidget = Class(Widget, function(self, owner, target)
 	Widget._ctor(self, "ContributorsGlossaryWidget")
 
 	self.root = self:AddChild(Widget("root"))
+
+	self.owner = owner
+	self.target = target
 
 	local black = self:AddChild(ImageButton("images/global.xml", "square.tex"))
 
@@ -70,7 +73,7 @@ function ContributorsGlossaryWidget:BuildBadgeList()
 	self.list_root:SetPosition(0, 0)
 
 	local cell_width = 440
-	local cell_height = 90
+	local cell_height = 97
 
 	local badges = {}
 
@@ -156,17 +159,19 @@ function ContributorsGlossaryWidget:BuildBadgeList()
 	})
 
 	self.badge_grid.up_button:SetTextures(BG_ATLAS, "arrow_scroll_up_hover.tex")
-	self.badge_grid.up_button:SetScale(0.50)
+	self.badge_grid.up_button:SetScale(0.40)
+	self.badge_grid.up_button:SetPosition(0, 185)
 
 	self.badge_grid.down_button:SetTextures(BG_ATLAS, "arrow_scroll_down_hover.tex")
-	self.badge_grid.down_button:SetScale(0.50)
+	self.badge_grid.down_button:SetScale(0.40)
+	self.badge_grid.down_button:SetPosition(0, -185)
 
 	self.badge_grid.scroll_bar_line:SetTexture(BG_ATLAS, "scroll_bar.tex")
-	self.badge_grid.scroll_bar_line:SetScale(0.96)
+	self.badge_grid.scroll_bar_line:SetScale(0.83)
 
 	self.badge_grid.position_marker:SetTextures(BG_ATLAS, "scroll_bar_handle.tex")
 	self.badge_grid.position_marker.image:SetTexture(BG_ATLAS, "scroll_bar_handle.tex")
-	self.badge_grid.position_marker:SetScale(0.60)
+	self.badge_grid.position_marker:SetScale(0.50)
 
 	self.list_root:AddChild(self.badge_grid)
 	self.badge_grid:SetPosition(0, 0)

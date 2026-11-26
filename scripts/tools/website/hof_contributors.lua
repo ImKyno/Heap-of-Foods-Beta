@@ -1,4 +1,15 @@
 -- Auto-generated from data/contributors.json
+local function GetMimeEmotes()
+	local emotes = {}
+
+	for i = 1, 13 do
+		local emote = "mime"..i
+		emotes[#emotes + 1] = emote
+	end
+
+	return emotes
+end
+
 local contributors =
 {
 	{
@@ -29,9 +40,9 @@ local contributors =
 			emotes = 
 			{
 				"emote_flex",
+				"emoteXL_waving1",
+				"emoteXL_waving2",
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_amuletorangeplanet",
 		},
@@ -63,9 +74,9 @@ local contributors =
 			emotes = 
 			{
 				"emote_flex",
+				"emoteXL_waving2",
+				"emoteXL_waving3",
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_hambatnautical",
 		},
@@ -94,8 +105,6 @@ local contributors =
 				"emote_sleepy",
 				"emoteXL_loop_dance7",
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_researchlab3crystal",
 		},
@@ -144,9 +153,8 @@ local contributors =
 			{
 				"research",
 				"emoteXL_kiss",
+				"emoteXL_waving2",
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_quagmiretournamentgold",
 		},
@@ -202,8 +210,6 @@ local contributors =
 				"emoteXL_waving3",
 			},
 
-			emote_interval = { 15, 30 },
-
 			portrait = "playerportrait_bg_yule1",
 		},
 	},
@@ -215,12 +221,12 @@ local contributors =
 		favoritefoods = { "chickeneggstew", "coconutwater", "gorge_creamy_fish", "gorge_onion_cake", "spidercake" },
 		puppet = 
 		{
-			prefab = "woodie",
-			base_skin = "woodie_shadow",
+			prefab = "skinpuppet_woodlegs",
+			base_skin = "skinpuppet_woodlegs",
 
 			clothing =
 			{
-				body = "body_woodie_shadow",
+				body = nil,
 				hand = nil,
 				legs = nil,
 				feet = nil,
@@ -229,11 +235,11 @@ local contributors =
 			emotes = 
 			{
 				"emote_sleepy",
+				"emote_yawn",
+				"emoteXL_waving1",
 			},
 
-			emote_interval = { 15, 30 },
-
-			portrait = "playerportrait_bg_forestaltar",
+			portrait = "playerportrait_bg_steeringwheelnautical",
 		},
 	},
 	{
@@ -270,8 +276,6 @@ local contributors =
 				"emoteXL_annoyed",
 			},
 
-			emote_interval = { 15, 30 },
-
 			portrait = "playerportrait_bg_flames",
 		},
 	},
@@ -304,9 +308,8 @@ local contributors =
 				"emote_swoon",
 				"emoteXL_bonesaw",
 				"emoteXL_waving3",
+				unpack(GetMimeEmotes()),
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_cottontree",
 		},
@@ -340,8 +343,6 @@ local contributors =
 				"research",
 				"emoteXL_waving3",
 			},
-
-			emote_interval = { 15, 30 },
 
 			portrait = "playerportrait_bg_flames",
 		},
@@ -382,8 +383,6 @@ local contributors =
 				"emoteXL_annoyed",
 			},
 
-			emote_interval = { 15, 30 },
-
 			portrait = "playerportrait_bg_fishboxnautical",
 		},
 	},
@@ -413,8 +412,6 @@ local contributors =
 				"emoteXL_waving2",
 			},
 
-			emote_interval = { 15, 30 },
-
 			portrait = "playerportrait_bg_factory",
 		},
 	},
@@ -427,6 +424,29 @@ local contributors =
 		name = "Sir Eugene",
 		icon = "contributor_sir_eugene.tex",
 		badges = { "donator" },
+		favoritefoods = { "coffee", "icedtea", "bubbletea", "sweetpotatosouffle", "chickenwings" },
+		puppet = 
+		{
+			prefab = "wurt",
+			base_skin = "wurt_nature",
+
+			clothing =
+			{
+				body = "body_wurt_nature",
+				hand = "hand_wurt_nature",
+				legs = "legs_wurt_nature",
+				feet = nil,
+			},
+
+			emotes = 
+			{
+				"emote_swoon",
+				"emoteXL_kiss",
+				"emoteXL_waving1",
+			},
+
+			portrait = "playerportrait_bg_mushroom",
+		},
 	},
 	{
 		name = "Vovanguarde",

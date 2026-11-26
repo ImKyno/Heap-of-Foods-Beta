@@ -1,7 +1,8 @@
 local MapData =
 {
-	["DinaMemorial_Spawner"]    = true,
-	["FruitTreeShop_Spawner"]   = true,
+	["DinaMemorial_Spawner"]       = true,
+	["FruitTreeShop_Spawner"]      = true,
+	["ContributorsGarden_Spawner"] = true,
 }
 
 local MapTags =
@@ -56,6 +57,16 @@ local MapTags =
 		tagdata["FruitTreeShop_Spawner"] = false
 
 		return "STATIC", "FruitTreeShop"
+	end,
+
+	["ContributorsGarden_Spawner"] = function(tagdata, level)
+		if tagdata["ContributorsGarden_Spawner"] == false then
+			return
+		end
+
+		tagdata["ContributorsGarden_Spawner"] = false
+
+		return "STATIC", "ContributorsGarden"
 	end,
 }
 

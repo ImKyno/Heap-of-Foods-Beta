@@ -352,6 +352,25 @@ for k, roomname in pairs(DinaMemorialRooms) do
 	end)
 end
 
+local ContributorsGardenRooms =
+{
+	"FlowerPatch",
+	"GrassyMoleColony",
+	"EvilFlowerPatch",
+	"BGGrassBurnt",
+	"BeeClearing",
+}
+
+for k, roomname in pairs(ContributorsGardenRooms) do
+	AddRoomPreInit(roomname, function(room)
+		if not room.tags then
+			room.tags = { "ContributorsGarden_Spawner" }
+		elseif room.tags then
+			table.insert(room.tags, "ContributorsGarden_Spawner")
+		end
+	end)
+end
+
 local OCEAN_SETPIECES =
 {
 	"hof_oceansetpiece_crates",
@@ -387,6 +406,7 @@ AddTaskSetPreInitAny(function(tasksetdata)
 
 	table.insert(tasksetdata.required_prefabs, "kyno_dinamemorial_marker")
 	table.insert(tasksetdata.required_prefabs, "kyno_deciduousforest_shop")
+	table.insert(tasksetdata.required_prefabs, "kyno_contributors_marker")
 end)
 
 -- Caves Worldgen.

@@ -59,6 +59,12 @@ local function OnHealingSickness(inst)
 	end
 end
 
+-- These are popups that should be closed that do not have an automatic close handler elsewhere.
+local function OnClosePopups(inst)
+	inst:ShowPopUp(_G.POPUPS.DAILYRECIPECARD, false)
+	inst:ShowPopUp(_G.POPUPS.CONTRIBUTORS, false)
+end
+
 local function PlayerPostInit(inst)
 	inst:AddComponent("fishregistryupdater")
 
@@ -169,6 +175,8 @@ local function PlayerPostInit(inst)
 
 	inst:ListenForEvent("learnfish", inst.OnLearnFish)
 	inst:ListenForEvent("learnroe", inst.OnLearnRoe)
+
+	inst:ListenForEvent("ms_closepopups", OnClosePopups)
 end
 
 AddPlayerPostInit(PlayerPostInit)
