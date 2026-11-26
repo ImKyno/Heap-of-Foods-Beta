@@ -158,6 +158,18 @@ Layouts["OctopusKingShop"]               = StaticLayout.Get("map/static_layouts/
 	},
 })
 
+Layouts["ContributorsGarden"]            = StaticLayout.Get("map/static_layouts/hof_contributors_garden",
+{
+	start_mask                           = PLACE_MASK.IGNORE_IMPASSABLE,
+	fill_mask                            = PLACE_MASK.IGNORE_IMPASSABLE,
+	force_rotation                       = LAYOUT_ROTATION.NORTH,
+	add_topology                         =
+	{
+		room_id                          = "StaticLayout:ContributorsGarden",
+		tags                             = {"ContributorsArea"},
+	},
+})
+
 local function monkeyisland_prefabs_area(area, data)
 	local prefabs = _G.PickSomeWithDups(math.floor(area / 5 + 0.5),
 		{

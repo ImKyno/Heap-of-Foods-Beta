@@ -4,7 +4,8 @@ local contributors =
 	{
 		name = "adai1198",
 		icon = "contributor_adai1198.tex",
-		badges = { "donator", "developer", "chatter" },
+		badges = { "donator", "developer" },
+		specialbadges = { "supporter" },
 		favoritefoods = { "coffee", "icedtea", "bubbletea", "sweetpotatosouffle", "chickenwings" },
 		puppet = 
 		{
@@ -39,7 +40,7 @@ local contributors =
 		name = "alisonetc",
 		icon = "contributor_alisonetc.tex",
 		badges = { "donator" },
-		favoritefoods = { "coffee", "icedtea", "bubbletea", "sweetpotatosouffle", "chickenwings" },
+		favoritefoods = { "coffee", "twistedtequila", "musselbouillabaise", "monstermuffin", "gorge_manicotti" },
 		puppet = 
 		{
 			prefab = "wolfgang",
@@ -73,6 +74,31 @@ local contributors =
 		name = "Bombobbit",
 		icon = "contributor_bombobbit.tex",
 		badges = { "wikiwriter" },
+		favoritefoods = { "coconutwater", "chimas", "twistedtequila", "sugarbombs_explosive", "opalpreciouscream" },
+		puppet = 
+		{
+			prefab = "wurt",
+			base_skin = "wurt_toadstool_d",
+
+			clothing =
+			{
+				body = "body_flannel_purple_grape",
+				hand = "hand_shortgloves_purple_violet",
+				legs = "legs_pinstripe_pants_purple_violet",
+				feet = "feet_bunnyslippers_purple_mauve",
+			},
+
+			emotes = 
+			{
+				"emote_yawn",
+				"emote_sleepy",
+				"emoteXL_loop_dance7",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_researchlab3crystal",
+		},
 	},
 	{
 		name = "CookieV",
@@ -87,7 +113,8 @@ local contributors =
 	{
 		name = "Dmitry Grach",
 		icon = "contributor_dmitry.tex",
-		badges = { "guidecreator", "chatter", "secret" },
+		badges = { "guidecreator" },
+		specialbadges = { "supporter", "secret" },
 	},
 	{
 		name = "Dr_Brzeszczot",
@@ -98,7 +125,7 @@ local contributors =
 		name = "Eventide",
 		icon = "contributor_eventide.tex",
 		badges = { "donator", "betatester", "wikiwriter", "loc_pt" },
-		specialbadges = { "chatter", "secret" },
+		specialbadges = { "supporter", "secret" },
 		favoritefoods = { "jawsbreaker", "gorge_bacon_wrapped", "onigiris", "sugarbombs", "nukacola_quantum" },
 		puppet = 
 		{
@@ -133,6 +160,7 @@ local contributors =
 		name = "Francierton Games",
 		icon = "contributor_francierton_games.tex",
 		badges = { "guidecreator", "contentcreator" },
+		specialbadges = { "supporter" },
 	},
 	{
 		name = "Glooms",
@@ -182,7 +210,8 @@ local contributors =
 	{
 		name = "Leonidas IV",
 		icon = "contributor_leonidas_iv.tex",
-		badges = { "donator", "developer", "chatter" },
+		badges = { "donator", "developer" },
+		specialbadges = { "supporter" },
 		favoritefoods = { "chickeneggstew", "coconutwater", "gorge_creamy_fish", "gorge_onion_cake", "spidercake" },
 		puppet = 
 		{
@@ -255,7 +284,32 @@ local contributors =
 		name = "Mina",
 		icon = "contributor_mina.tex",
 		badges = { "donator" },
+		specialbadges = { "supporter" },
 		favoritefoods = { "warlytea", "coffee", "mandrakebeer", "kokonutcookies", "bowlofpopcorn" },
+		puppet = 
+		{
+			prefab = "wes",
+			base_skin = "wes_western",
+
+			clothing =
+			{
+				body = "body_walter_shadow",
+				hand = nil,
+				legs = "legs_waxwell_pirate",
+				feet = "feet_willow_yule",
+			},
+
+			emotes = 
+			{
+				"emote_swoon",
+				"emoteXL_bonesaw",
+				"emoteXL_waving3",
+			},
+
+			emote_interval = { 15, 30 },
+
+			portrait = "playerportrait_bg_cottontree",
+		},
 	},
 	{
 		name = "NanaHugs",
@@ -265,8 +319,9 @@ local contributors =
 	{
 		name = "Nuka-Cherry",
 		icon = "contributor_nuka_cherry.tex",
-		badges = { "donator", "betatester", "chatter" },
-		favoritefoods = { "nukacola", "nukacola_quantum", "nukacola_dark", "nukacola_twist", "nukashine" },
+		badges = { "donator", "betatester" },
+		specialbadges = { "supporter" },
+		favoritefoods = { "nukacola", "nukacola_quantum", "nukacola_dark", "nukacola_twist", "nukacola_bramble" },
 		puppet = 
 		{
 			prefab = "willow",
@@ -299,7 +354,8 @@ local contributors =
 	{
 		name = "Pep",
 		icon = "contributor_pep.tex",
-		badges = { "donator", "artist", "chatter", "secret" },
+		badges = { "donator", "artist" },
+		specialbadges = { "supporter", "secret" },
 	},
 	{
 		name = "Raccoon",
@@ -335,6 +391,7 @@ local contributors =
 		name = "Rodra",
 		icon = "contributor_rodra.tex",
 		badges = { "donator" },
+		specialbadges = { "supporter" },
 		favoritefoods = { "gorge_cheeseburger", "brownie", "berrysundae", "brigadeiro", "gorge_meat_skewers" },
 		puppet = 
 		{

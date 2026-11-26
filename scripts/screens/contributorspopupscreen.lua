@@ -46,6 +46,16 @@ function ContributorsPopupScreen:OnBecomeActive()
 end
 
 function ContributorsPopupScreen:OnControl(control, down)
+	if not down and (control == CONTROL_MENU_BACK or control == CONTROL_CANCEL) then
+		local glossary = self.contributors.glossary_widget
+
+		if glossary ~= nil and glossary:IsVisible() then
+			glossary:Hide()
+			TheFrontEnd:GetSound():PlaySound("dontstarve/HUD/click_move")
+			return true
+		end
+	end
+
 	if ContributorsPopupScreen._base.OnControl(self, control, down) then
 		return true
 	end

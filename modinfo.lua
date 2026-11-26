@@ -14,7 +14,7 @@ local STRINGS =
 		es  = "Montón de Alimentos (Heap of Foods)",
 		vi  = "Vua Đầu Bếp (Heap of Foods)",
 		kr  = "풍족한 요리 (Heap of Foods)",
-		ua  = "Купа Їжі",
+		ua  = "Купа Їжі (Heap of Foods)",
 	},
 
 	NAME_BETA =

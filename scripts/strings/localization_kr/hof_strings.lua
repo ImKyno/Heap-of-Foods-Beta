@@ -911,6 +911,39 @@ STRINGS.FISHREGISTRY =
 	BABY_TIME_MORE_DAY = "6일 이상",
 }
 
+STRINGS.CONTRIBUTORS =
+{
+	TITLE = "Contributors",
+	DESCRIPTION1 = "This monument celebrates all the extraordinary people\nwho have contributed to this project.",
+	HYPERLINK = "Learn more about being a Contributor!",
+	SEARCH = "Search Contributor",
+	NO_RESULTS = "No Contributor with this name was found.",
+
+	BADGES =
+	{
+		TITLE = "Badges",
+		TITLE_SPECIAL = "Special Badges",
+
+		ARTIST = "Artist",
+		BETATESTER = "Beta Tester",
+		CONTENTCREATOR = "Content Creator",
+		DEVELOPER = "Developer",
+		DONATOR = "Donator",
+		GUIDECREATOR = "Guide Creator",
+		LOC_KR = "Translator - 한국어",
+		LOC_PT = "Translator - Português",
+		LOC_PL = "Translator - Polski",
+		LOC_UA = "Translator - Українська",
+		LOC_VI = "Translator - Tiếng Việt",
+		LOC_ZH = "Translator - 简体中文",
+		SECRET = "The Fact Finder",
+		SUPPORTER = "Early Supporter",
+		WIKIWRITER = "Wiki Writer",
+	},
+
+	FAVORITEFOODS = "Favorite Foods",
+}
+
 STRINGS.FISHERMERM_TALK_RUNAWAY = "플로피 글로프 글롭!"
 STRINGS.FISHERMERM_TALK_PANIC = "글롭 글롭 글롭!"
 STRINGS.FISHERMERM_TALK_GO_HOME = "워트 워트 플로트."
@@ -2323,7 +2356,7 @@ STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "팝콘 없는 파티가 �
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "기념 팝콘"
 
-STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "기념 고깔모자"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "기념 고깔모자"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "이걸 쓰고 파티를 즐겨보세요!"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "새미의 기념 모자"

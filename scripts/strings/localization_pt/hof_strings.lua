@@ -911,6 +911,39 @@ STRINGS.FISHREGISTRY =
 	BABY_TIME_MORE_DAY = "Mais de 6 dias",
 }
 
+STRINGS.CONTRIBUTORS =
+{
+	TITLE = "Contribuidores",
+	DESCRIPTION1 = "Esse monumento celebra todas as pessoas extraordinárias\nque contribuiram para esse projeto.",
+	HYPERLINK = "Saiba mais em como se tornar um Contribuidor!",
+	SEARCH = "Pesquisar Contribuidor",
+	NO_RESULTS = "Nenhum Contribuidor com este nome foi encontrado.",
+
+	BADGES =
+	{
+		TITLE = "Insígnias",
+		TITLE_SPECIAL = "Insígnias Especiais",
+
+		ARTIST = "Artista",
+		BETATESTER = "Beta Tester",
+		CONTENTCREATOR = "Criador de Conteúdo",
+		DEVELOPER = "Desenvolvedor",
+		DONATOR = "Doador",
+		GUIDECREATOR = "Criador de Guia",
+		LOC_KR = "Tradutor - 한국어",
+		LOC_PT = "Tradutor - Português",
+		LOC_PL = "Tradutor - Polski",
+		LOC_UA = "Tradutor - Українська",
+		LOC_VI = "Tradutor - Tiếng Việt",
+		LOC_ZH = "Tradutor - 简体中文",
+		SECRET = "Descobridor de Fatos",
+		SUPPORTER = "Apoiador",
+		WIKIWRITER = "Escritor da Wiki",
+	},
+
+	FAVORITEFOODS = "Comidas Favoritas",
+}
+
 STRINGS.FISHERMERM_TALK_RUNAWAY = "Florpy glorp glop!"
 STRINGS.FISHERMERM_TALK_PANIC = "GLOP GLOP GLOP!"
 STRINGS.FISHERMERM_TALK_GO_HOME = "Wort wort flort."
@@ -2323,7 +2356,7 @@ STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Que graça tem uma festa 
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "Pipoca de Aniversário"
 
-STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "Chapéu de Aniversário"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "Chapéu de Aniversário"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "Que a festa comece!"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Chapéu de Aniversário do Sammy"

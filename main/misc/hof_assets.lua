@@ -467,6 +467,7 @@ local HOF_ICONS =
 	"kyno_hermitcrabtea_icenettles",
 	"kyno_hermitcrabtea_sugartree_petals",
 	"kyno_hofbirthday_5hat",
+	"kyno_hofbirthday_6hat",
 	"kyno_hofbirthday_balloons",
 	"kyno_hofbirthday_cake",
 	"kyno_hofbirthday_cake_slice1",

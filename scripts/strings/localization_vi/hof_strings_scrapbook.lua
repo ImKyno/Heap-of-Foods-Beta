@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Sau khi đặt trên đại dương, 
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Để nó phơi khô lâu hơn sẽ tiếp tục nâng cao chất lượng."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Dùng nó để thắp sáng Bánh Kỷ Niệm và bắt đầu bữa tiệc!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Cho phép thu thập Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "Cho phép thu thập Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 6 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chiếc mũ kỷ niệm đặc biệt của Sammy.\nCho phép nhận Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Chiếc mũ kỷ niệm đặc biệt của Partitio.\nCho phép nhận Niềm Vui Kỷ Niệm.\n\nMừng Kỷ Niệm 5 Năm Vua Đầu Bếp!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Nghiên cứu cá và trứng cá sẽ thêm chúng vào Sổ Cá."

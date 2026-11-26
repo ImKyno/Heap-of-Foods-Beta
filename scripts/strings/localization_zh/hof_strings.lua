@@ -911,6 +911,39 @@ STRINGS.FISHREGISTRY =
 	BABY_TIME_MORE_DAY = "多于六天",
 }
 
+STRINGS.CONTRIBUTORS =
+{
+	TITLE = "Contributors",
+	DESCRIPTION1 = "This monument celebrates all the extraordinary people\nwho have contributed to this project.",
+	HYPERLINK = "Learn more about being a Contributor!",
+	SEARCH = "Search Contributor",
+	NO_RESULTS = "No Contributor with this name was found.",
+
+	BADGES =
+	{
+		TITLE = "Badges",
+		TITLE_SPECIAL = "Special Badges",
+
+		ARTIST = "Artist",
+		BETATESTER = "Beta Tester",
+		CONTENTCREATOR = "Content Creator",
+		DEVELOPER = "Developer",
+		DONATOR = "Donator",
+		GUIDECREATOR = "Guide Creator",
+		LOC_KR = "Translator - 한국어",
+		LOC_PT = "Translator - Português",
+		LOC_PL = "Translator - Polski",
+		LOC_UA = "Translator - Українська",
+		LOC_VI = "Translator - Tiếng Việt",
+		LOC_ZH = "Translator - 简体中文",
+		SECRET = "The Fact Finder",
+		SUPPORTER = "Early Supporter",
+		WIKIWRITER = "Wiki Writer",
+	},
+
+	FAVORITEFOODS = "Favorite Foods",
+}
+
 STRINGS.FISHERMERM_TALK_RUNAWAY = "快跑 快跑 快跑!"
 STRINGS.FISHERMERM_TALK_PANIC = "可怕 可怕 可怕!"
 STRINGS.FISHERMERM_TALK_GO_HOME = "回家 回家 回家。"
@@ -2323,7 +2356,7 @@ STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "没有爆米花的派对�
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "周年庆爆米花"
 
-STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "周年庆帽子"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "周年庆帽子"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "戴上它，派对即刻开启！"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "萨米的周年庆帽子"

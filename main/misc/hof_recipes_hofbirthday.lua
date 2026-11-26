@@ -14,9 +14,10 @@ local DefaultAtlas2        = "images/inventoryimages2.xml"
 local CraftingFilterAtlas  = "images/tabimages/hof_tabimages.xml"
 
 -- Anniversary Event.
-AddRecipe2("kyno_hofbirthday_5hat", {}, TECH.HOFBIRTHDAY,
+AddRecipe2("kyno_hofbirthday_6hat", {}, TECH.HOFBIRTHDAY,
 	{
 		hint_msg           = "NEEDSHOFBIRTHDAY",
+		nameoverride       = "kyno_hofbirthday_hat",
 		description        = "kyno_hofbirthday_hat",
 	},
 	{"SPECIAL_EVENT", "CLOTHING"}

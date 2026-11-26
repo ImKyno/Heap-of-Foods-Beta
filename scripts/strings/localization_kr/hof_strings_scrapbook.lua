@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "바다에 설치하면 물고기가 �
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "더 오랜 기간 동안 건조되도록 내버려 두면 품질이 더욱 향상됩니다."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "이것으로 기념 케이크에 불을 붙이고 파티를 시작하세요!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "축제의 기운를 수집할 수 있게 해줍니다.\n\n풍족한 요리(Heap of Foods)의 5주년을 기념합니다!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "축제의 기운를 수집할 수 있게 해줍니다.\n\n풍족한 요리(Heap of Foods)의 6주년을 기념합니다!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "새미의 특별 기념 모자입니다.\n축제의 기운를 수집할 수 있게 해줍니다.\n\n풍족한 요리(Heap of Foods)의 5주년을 기념합니다!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "파르티티오의 특별 기념 모자입니다.\n축제의 기운를 수집할 수 있게 해줍니다.\n\n풍족한 요리(Heap of Foods)의 5주년을 기념합니다!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "물고기와 어류 알을 조사하여 물고기 도감에 등록합니다."

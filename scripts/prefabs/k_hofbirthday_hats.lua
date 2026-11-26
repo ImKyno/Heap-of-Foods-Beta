@@ -116,6 +116,10 @@ local function MakeHat(data)
 		inst.components.floater:SetVerticalOffset(0.1)
 		inst.components.floater:SetScale(0.6)
 
+		if data.nameoverride then
+			inst:SetPrefabNameOverride("KYNO_HOFBIRTHDAY_HAT")
+		end
+
 		inst.entity:SetPristine()
 
 		if not TheWorld.ismastersim then
@@ -128,11 +132,7 @@ local function MakeHat(data)
 		inst:AddComponent("tradable")
 		inst:AddComponent("snowmandecor")
 		inst:AddComponent("inventoryitem")
-
 		inst:AddComponent("inspectable")
-		if data.nameoverride then
-			inst.components.inspectable.nameoverride = "KYNO_HOFBIRTHDAY_HAT"
-		end
 
 		inst:AddComponent("waterproofer")
 		inst.components.waterproofer:SetEffectiveness(TUNING.WATERPROOFNESS_SMALL)
@@ -179,6 +179,15 @@ local hats =
 		bank         = "hofbirthday_5hat",
 		build        = "hat_hofbirthday_5",
 		imagename    = "kyno_hofbirthday_5hat",
+		nameoverride = true,
+	},
+
+	-- 6th Anniversary (Hat 2)
+	{
+		name         = "kyno_hofbirthday_6hat",
+		bank         = "hofbirthday_6hat",
+		build        = "hat_hofbirthday_6",
+		imagename    = "kyno_hofbirthday_6hat",
 		nameoverride = true,
 	},
 }

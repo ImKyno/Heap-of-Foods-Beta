@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Once set on the ocean, it will trigge
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Leaving it to dry for longer periods will further enhance its quality."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use it to light up the Anniversary Cake and start the party!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "Allows the gathering of Anniversary Cheer.\n\nCelebrating the 6th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Sammy's special anniversary hat.\nAllows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Partitio's special anniversary hat.\nAllows the gathering of Anniversary Cheer.\n\nCelebrating the 5th Anniversary of Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Researching fish and roes adds to the Fish Registry."

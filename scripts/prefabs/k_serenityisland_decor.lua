@@ -92,7 +92,6 @@ local function rubblefn()
     inst.AnimState:SetBank("quagmire_rubble")
     inst.AnimState:SetBuild("quagmire_rubble")
 
-	inst:AddTag("DECOR")
     inst:AddTag("NOBLOCK")
 
 	inst.entity:SetPristine()

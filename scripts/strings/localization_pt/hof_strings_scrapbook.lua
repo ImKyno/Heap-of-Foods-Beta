@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Uma vez colocado no oceano, será ati
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Deixar secar por períodos mais longos melhorará ainda mais a sua qualidade."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Use para acender o Bolo de Aniversário e começar a festa!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
+    STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "Permite conseguir Espirito de Aniversário.\n\nComemorando o 6º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Chapéu de aniversário especial do Sammy.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Chapéu de aniversário especial do Partitio.\nPermite conseguir Espirito de Aniversário.\n\nComemorando o 5º Aniversário do Amontoado de Comidas!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Pesquisar peixes e ovas os adiciona ao Registro de Peixes."

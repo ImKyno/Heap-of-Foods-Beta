@@ -1657,7 +1657,7 @@ local HOF_SCRAPBOOK_ITEMS =
 
 	kyno_hofbirthday_5hat =
 	{
-		name           = "kyno_hofbirthday_5hat",
+		name           = "kyno_hofbirthday_hat",
 		speechname     = "kyno_hofbirthday_hat",
 		type           = "item",
 		subcat         = "hat",
@@ -1673,6 +1673,26 @@ local HOF_SCRAPBOOK_ITEMS =
 		animoffsetbgx  = -30,
 		animoffsetbgy  = -50,
 		specialinfo    = "HOFBIRTHDAY_HAT5",
+	},
+
+	kyno_hofbirthday_6hat =
+	{
+		name           = "kyno_hofbirthday_hat",
+		speechname     = "kyno_hofbirthday_hat",
+		type           = "item",
+		subcat         = "hat",
+		tex            = "kyno_hofbirthday_6hat.tex",
+		prefab         = "kyno_hofbirthday_6hat",
+		dapperness     = 0.022222222222222,
+		waterproofer   = 0.2,
+		snowmandecor   = true,
+		bank           = "hofbirthday_6hat",
+		build          = "hat_hofbirthday_6",
+		anim           = "anim",
+		animoffsety    = 20,
+		animoffsetbgx  = -30,
+		animoffsetbgy  = -50,
+		specialinfo    = "HOFBIRTHDAY_HAT6",
 	},
 
 	kyno_hofbirthday_popcornmachine =

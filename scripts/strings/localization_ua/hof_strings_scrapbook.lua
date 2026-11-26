@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Якщо встановити її в
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Якщо залишити сушитися на довше, це ще більше покращить якість продукту."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Використовуйте її, щоб запалити ювілейний торт і розпочати вечірку!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Дозволяє збирати Ювілейний святковий настрій.\n\nСвяткуємо 5-ту річницю Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "Дозволяє збирати Ювілейний святковий настрій.\n\nСвяткуємо 6-ту річницю Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Особливий ювілейний капелюх Семмі.\nДозволяє отримувати Ювілейний святковий настрій.\n\nСвяткуємо 5-ту річницю Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Особливий ювілейний капелюх Партиціо.\nДозволяє отримувати Ювілейний святковий настрій.\n\nСвяткуємо 5-ту річницю Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Вивчена риба та ікра додається до реєстру риб"

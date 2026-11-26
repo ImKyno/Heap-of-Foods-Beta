@@ -182,6 +182,7 @@ STRINGS.SCRAPBOOK.SPECIALINFO.OCEANTRAP = "Po ustawieniu w oceanie, uruchamia si
 STRINGS.SCRAPBOOK.SPECIALINFO.DRYAGAIN = "Pozostawienie do wyschnięcia na dłuższy czas jeszcze bardziej poprawi jego jakość."
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_CANDLE = "Użyj, aby zapalić Tort Rocznicowy i rozpocząć imprezę!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT5 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
+STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_HAT6 = "Umożliwia gromadzenie się w celu świętowania rocznicy.\n\nŚwiętujemy 6. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_SAMMYHAT = "Specjalny kapelusz rocznicowy Sammy'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.HOFBIRTHDAY_PARTITIOHAT = "Specjalny kapelusz rocznicowy Partitio'ego.\nPozwala na zdobycie radości rocznicowej.\n\nŚwiętujemy 5. rocznicę istnienia Heap of Foods!"
 STRINGS.SCRAPBOOK.SPECIALINFO.FISHREGISTRYHAT = "Badania ryb i ikry przyczyniają się do wzbogacenia Rejestru Ryb."

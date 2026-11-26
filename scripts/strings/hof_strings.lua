@@ -914,29 +914,64 @@ STRINGS.FISHREGISTRY =
 STRINGS.CONTRIBUTORS =
 {
 	TITLE = "Contributors",
-	DESCRIPTION1 = "This page celebrates all the extraordinary people\nwho have contributed to this project.",
-	DESCRIPTION2 = "Learn more about being a Contributor",
+	DESCRIPTION1 = "This monument celebrates all the extraordinary people who have contributed to this project.",
+	HYPERLINK = "Learn more about being a Contributor!",
+	SEARCH = "Search Contributor",
+	NO_RESULTS = "No Contributor with this name was found.",
+	GLOSSARY = "Badges Glossary",
 
 	BADGES =
 	{
 		TITLE = "Badges",
 		TITLE_SPECIAL = "Special Badges",
+		TITLE_RARITY = "Rarity",
 
 		ARTIST = "Artist",
+		ARTIST_DESC = "Awarded to those who contribute with artwork for the Mod.",
+		ARTIST_RARITY = "Unique",
+
 		BETATESTER = "Beta Tester",
-		CHATTER = "Sous-Chef",
+		BETATESTER_DESC = "Awarded to those who have participated in a Closed Beta of the Mod.",
+		BETATESTER_RARITY = "Unique",
+
 		CONTENTCREATOR = "Content Creator",
+		CONTENTCREATOR_DESC = "Awarded to those who stream or create videos about the Mod.",
+		CONTENTCREATOR_RARITY = "Unique",
+
 		DEVELOPER = "Developer",
+		DEVELOPER_DESC = "Awarded to those who contribute to the development of the Mod.",
+		DEVELOPER_RARITY = "Unique",
+
 		DONATOR = "Donator",
+		DONATOR_DESC = "Awarded to those who have donated any amount to support the Mod.",
+		DONATOR_RARITY = "Unique",
+
 		GUIDECREATOR = "Guide Creator",
+		GUIDECREATOR_DESC = "Awarded to those who create Guides for the Mod.",
+		GUIDECREATOR_RARITY = "Unique",
+
+		LOC = "Translator",
+		LOC_DESC = "Awarded to those who contribute to the Mod's localization.",
+		LOC_RARITY = "Unique",
+
 		LOC_KR = "Translator - 한국어",
 		LOC_PT = "Translator - Português",
 		LOC_PL = "Translator - Polski",
 		LOC_UA = "Translator - Українська",
 		LOC_VI = "Translator - Tiếng Việt",
 		LOC_ZH = "Translator - 简体中文",
+
 		SECRET = "The Fact Finder",
+		SECRET_DESC = "Awarded to those who have discovered one of the Mod's secrets.",
+		SECRET_RARITY = "Ultra Rare",
+
+		SUPPORTER = "Early Supporter",
+		SUPPORTER_DESC = "Awarded to those who supported the Mod during its early days.",
+		SUPPORTER_RARITY = "Legacy",
+
 		WIKIWRITER = "Wiki Writer",
+		WIKIWRITER_DESC = "Awarded to those who contribute knowledge and information to the Mod's Wiki.",
+		WIKIWRITER_RARITY = "Unique",
 	},
 
 	FAVORITEFOODS = "Favorite Foods",
@@ -2354,7 +2389,7 @@ STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "What is a party without s
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "Anniversary Popcorn"
 
-STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "Anniversary Hat"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "Anniversary Hat"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "Wear it and start the party!"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Sammy's Anniversary Hat"

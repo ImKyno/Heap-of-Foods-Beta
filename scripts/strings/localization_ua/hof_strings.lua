@@ -909,6 +909,39 @@ STRINGS.FISHREGISTRY =
 	BABY_TIME_MORE_DAY = "Більше 6 днів",
 }
 
+STRINGS.CONTRIBUTORS =
+{
+	TITLE = "Contributors",
+	DESCRIPTION1 = "This monument celebrates all the extraordinary people\nwho have contributed to this project.",
+	HYPERLINK = "Learn more about being a Contributor!",
+	SEARCH = "Search Contributor",
+	NO_RESULTS = "No Contributor with this name was found.",
+
+	BADGES =
+	{
+		TITLE = "Badges",
+		TITLE_SPECIAL = "Special Badges",
+
+		ARTIST = "Artist",
+		BETATESTER = "Beta Tester",
+		CONTENTCREATOR = "Content Creator",
+		DEVELOPER = "Developer",
+		DONATOR = "Donator",
+		GUIDECREATOR = "Guide Creator",
+		LOC_KR = "Translator - 한국어",
+		LOC_PT = "Translator - Português",
+		LOC_PL = "Translator - Polski",
+		LOC_UA = "Translator - Українська",
+		LOC_VI = "Translator - Tiếng Việt",
+		LOC_ZH = "Translator - 简体中文",
+		SECRET = "The Fact Finder",
+		SUPPORTER = "Early Supporter",
+		WIKIWRITER = "Wiki Writer",
+	},
+
+	FAVORITEFOODS = "Favorite Foods",
+}
+
 STRINGS.FISHERMERM_TALK_RUNAWAY = "Флорпі глорп глоп!"
 STRINGS.FISHERMERM_TALK_PANIC = "ГЛОП ГЛОП ГЛОП!"
 STRINGS.FISHERMERM_TALK_GO_HOME = "Ворт ворт флорт."
@@ -2322,7 +2355,7 @@ STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_POPCORNMACHINE = "Хіба це вечір�
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_POPCORN = "Святковий попкорн"
 
-STRINGS.NAMES.KYNO_HOFBIRTHDAY_5HAT = "Річничний капелюх"
+STRINGS.NAMES.KYNO_HOFBIRTHDAY_HAT = "Річничний капелюх"
 STRINGS.RECIPE_DESC.KYNO_HOFBIRTHDAY_HAT = "Одягай та починай вечірку!"
 
 STRINGS.NAMES.KYNO_HOFBIRTHDAY_SAMMYHAT = "Святковий капелюх Семмі"
